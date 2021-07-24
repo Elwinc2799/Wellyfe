@@ -43,19 +43,19 @@ class LoginButton extends StatelessWidget {
 
   Container buildSignInText() {
     return Container(
-        alignment: Alignment.center,
-        child: NeumorphicText(
-          "Sign In",
-          style: NeumorphicStyle(
-            depth: 20,
-            color: Colors.grey[700],
-          ),
-          textStyle: NeumorphicTextStyle(
-            fontSize: 20,
-            fontFamily: "NunitoSans",
-            fontWeight: FontWeight.w800,
-          )
+      alignment: Alignment.center,
+      child: NeumorphicText(
+        "Sign In",
+        style: NeumorphicStyle(
+          depth: 20,
+          color: Colors.grey[700],
         ),
-      );
+        textStyle: NeumorphicTextStyle(
+          fontSize: 20,
+          fontFamily: "NunitoSans",
+          fontWeight: FontWeight.w800,
+        )
+      ),
+    );
   }
 }

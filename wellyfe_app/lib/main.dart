@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/SignInModel.dart';
-import 'package:wellyfe_app/Screen/LiquidMenu/LiquidMenuScreen.dart';
+import 'package:wellyfe_app/Screen/SignInScreen/SignInScreen.dart';
 
 void main() {
   runApp(
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Wellyfe',
-      home: LiquidMenuScreen(),
+      home: SignInScreen(),
     );
   }
 }
