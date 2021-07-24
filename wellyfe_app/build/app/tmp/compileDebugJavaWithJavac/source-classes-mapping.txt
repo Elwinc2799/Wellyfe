@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/ericcheah/wellyfe_app/BuildConfig.java
+ com.ericcheah.wellyfe_app.BuildConfig
