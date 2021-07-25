@@ -19,7 +19,7 @@ class _SignInFormState extends State<SignInForm> {
         children: [
           TextFieldLabel(label: "Email"),
           buildEmailFormField(),
-          SizedBox(height: size.height * 0.05),
+          SizedBox(height: size.height * 0.025),
           TextFieldLabel(label: "Password"),
           buildPasswordFormField(),
         ],
@@ -39,6 +39,10 @@ class _SignInFormState extends State<SignInForm> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          prefixIcon: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: NeumorphicIcon(Icons.scatter_plot_sharp, size: 40)
+          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
@@ -63,7 +67,10 @@ class _SignInFormState extends State<SignInForm> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          prefixIcon: NeumorphicIcon(Icons.person, size: 40),
+          prefixIcon: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: NeumorphicIcon(Icons.person, size: 40),
+          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",

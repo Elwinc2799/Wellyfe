@@ -25,6 +25,8 @@ class SocialMediaIcon extends StatelessWidget {
           style: NeumorphicStyle(
             boxShape: NeumorphicBoxShape.circle(),
             shape: NeumorphicShape.convex,
+            lightSource: LightSource.topLeft,
+            depth: 20,
           ),
         ),
       ),
