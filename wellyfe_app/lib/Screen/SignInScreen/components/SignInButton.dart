@@ -4,7 +4,10 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 class SignInButton extends StatelessWidget {
   const SignInButton({
     Key? key,
+    required this.function,
   }) : super(key: key);
+
+  final VoidCallback function;
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +17,16 @@ class SignInButton extends StatelessWidget {
       child: Container(
         width: size.width * 0.50,
         child: NeumorphicButton(
-          onPressed: () {},
+          onPressed: function,
           child: Center(
             child: Text(
-              "Sign In",
-              style: TextStyle(
-                fontFamily: "NunitoSans",
-                fontSize: 20,
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-              ),
+            "Sign In",
+            style: TextStyle(
+              fontFamily: "NunitoSans",
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
             ),
           ),
           style: NeumorphicStyle(

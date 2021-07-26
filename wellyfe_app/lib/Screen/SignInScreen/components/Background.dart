@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:wellyfe_app/constants.dart';
 
 class Background extends StatelessWidget {
   const Background({
@@ -21,19 +20,24 @@ class Background extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Positioned(
-            top: size.height * 0.025,
+            top: size.height * 0.01,
             right: -size.width * 0.2,
-            child: NeumorphicIcon(
-              Icons.wb_cloudy_sharp,
-              size: 350,
-              style: NeumorphicStyle(
-                shape: NeumorphicShape.convex,
-                depth: 20,
-                border: NeumorphicBorder(
-                  color: Colors.grey[300],
-                  width: 0.8,
+            child: Stack(
+              children: [
+                NeumorphicIcon(
+                  Icons.wb_cloudy_sharp,
+                  size: size.width * 0.6,
+                  style: NeumorphicStyle(
+                    surfaceIntensity: 0.5,
+                    shape: NeumorphicShape.concave,
+                    depth: 20,
+                    border: NeumorphicBorder(
+                      color: Colors.grey[300],
+                      width: 0.8,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ),
           children,

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 class AlreadyHaveAnAccount extends StatelessWidget {
   const AlreadyHaveAnAccount({
     Key? key,
-    this.login = true,
+    required this.login,
     required this.press,
   }) : super(key: key);
 
   final bool login;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
           ),
         ),
         GestureDetector(
+          onTap: press,
           child: Text(
             login ? "Sign Up!" : "Sign In!",
             style: TextStyle(

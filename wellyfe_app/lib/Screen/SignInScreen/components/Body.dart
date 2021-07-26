@@ -6,6 +6,7 @@ import 'package:wellyfe_app/Screen/SignInScreen/components/OrDivider.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInForm.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SocialMediaIcon.dart';
+import 'package:wellyfe_app/Screen/SignUpScreen/SignUpScreen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -14,18 +15,28 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0, 100.0, 20.0, 0),
+        padding: const EdgeInsets.fromLTRB(30.0, 100.0, 20.0, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Welcome to Wellyfe",
+              "Wellyfe,",
               style: TextStyle(
                 fontSize: 25,
                 fontFamily: "NunitoSans",
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w700,
                 color: Colors.black.withOpacity(.5)
+              ),
+            ),
+            SizedBox(height: size.height * 0.005),
+            Text(
+              "where care comes first.",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontFamily: "NunitoSans",
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black.withOpacity(.5)
               ),
             ),
             SizedBox(height: size.height * 0.005),
@@ -56,7 +67,7 @@ class Body extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.025),
-            SignInButton(),
+            SignInButton(function: () {}),
             SizedBox(height: size.height * 0.025),
             OrDivider(),
             SizedBox(height: size.height * 0.005),
@@ -81,7 +92,14 @@ class Body extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.025),
-            AlreadyHaveAnAccount(press: () {}),
+            AlreadyHaveAnAccount(
+              login: true,
+              press: () { Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return SignUpScreen();
+                },
+              ));
+            }),
           ],
         ),
       ),
