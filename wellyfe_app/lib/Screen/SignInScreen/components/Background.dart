@@ -29,7 +29,7 @@ class Background extends StatelessWidget {
                   size: size.width * 0.6,
                   style: NeumorphicStyle(
                     surfaceIntensity: 0.5,
-                    shape: NeumorphicShape.concave,
+                    shape: NeumorphicShape.convex,
                     depth: 20,
                     border: NeumorphicBorder(
                       color: Colors.grey[300],

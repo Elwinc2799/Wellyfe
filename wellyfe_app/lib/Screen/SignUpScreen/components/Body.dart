@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wellyfe_app/Screen/SignInScreen/SignInScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/OrDivider.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SocialMediaIcon.dart';

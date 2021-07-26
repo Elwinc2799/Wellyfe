@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import '../../ScheduleOverviewScreen/components/ScheduleOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/OrDivider.dart';
@@ -67,7 +68,13 @@ class Body extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.025),
-            SignInButton(function: () {}),
+            SignInButton(function: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ScheduleOverviewScreen();
+                }
+              ));
+            }),
             SizedBox(height: size.height * 0.025),
             OrDivider(),
             SizedBox(height: size.height * 0.005),
@@ -94,12 +101,14 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.025),
             AlreadyHaveAnAccount(
               login: true,
-              press: () { Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return SignUpScreen();
-                },
-              ));
-            }),
+              press: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return SignUpScreen();
+                  }
+                )
+              );}
+            ),
           ],
         ),
       ),
