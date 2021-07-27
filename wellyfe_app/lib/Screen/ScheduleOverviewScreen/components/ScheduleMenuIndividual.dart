@@ -18,7 +18,7 @@ class ScheduleMenuIndividual extends StatelessWidget {
 
     return Container(
       width: size.width * 0.4,
-      height: size.height * 0.125,
+      height: size.height * 0.115,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
           color: Color(0XFFEDF1F4),
@@ -38,8 +38,8 @@ class ScheduleMenuIndividual extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-              top: size.height * (0.125 / 3),
-              left: size.width * (0.4 / 15),
+              top: size.height * (0.125 / 3.75),
+              left: size.width * (0.4 / 12.5),
               child: Image(image: AssetImage(asset))
           ),
           Positioned(

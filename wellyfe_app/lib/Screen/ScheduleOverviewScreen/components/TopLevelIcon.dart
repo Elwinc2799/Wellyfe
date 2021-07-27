@@ -26,20 +26,20 @@ class TopLevelIcon extends StatelessWidget {
           child: Image(image: AssetImage(asset))
         ),
         decoration: BoxDecoration(
-            color: Colors.grey[200],
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            boxShadow: [
-              BoxShadow(
-                blurRadius: 5.0,
-                offset: Offset(-3, -3),
-                color: Colors.white
-              ),
-              BoxShadow(
-                blurRadius: 5.0,
-                offset: Offset(3, 3),
-                color: Colors.black.withOpacity(.25)
-              )
-            ]
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 5.0,
+              offset: Offset(-3, -3),
+              color: Colors.white
+            ),
+            BoxShadow(
+              blurRadius: 5.0,
+              offset: Offset(3, 3),
+              color: Colors.black.withOpacity(.25)
+            )
+          ]
         ),
       ),
     );
