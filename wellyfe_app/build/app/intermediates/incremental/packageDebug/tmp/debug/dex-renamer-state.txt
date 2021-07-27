@@ -1,4 +1,4 @@
-#Tue Jul 27 08:07:23 SGT 2021
+#Tue Jul 27 09:26:36 SGT 2021
 base.0=D\:\\Wellyfe\\wellyfe_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

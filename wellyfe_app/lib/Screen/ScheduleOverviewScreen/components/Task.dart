@@ -69,11 +69,13 @@ class _TaskState extends State<Task> {
               Positioned(
                 right: 0,
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 55.0),
-                  child: Icon(
-                    Icons.arrow_drop_down_rounded,
-                    size: size.width * 0.075,
-                    color: Color(0XFF344460),
+                  padding: const EdgeInsets.only(right: 25.0),
+                  child: Container(
+                    child: Icon(
+                      Icons.arrow_drop_down_rounded,
+                      size: size.width * 0.075,
+                      color: Color(0XFF344460),
+                    ),
                   ),
                 ),
               )
