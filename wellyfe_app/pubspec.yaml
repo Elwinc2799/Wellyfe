@@ -32,6 +32,7 @@ dependencies:
   lottie: ^1.1.0
   provider: ^5.0.0
   intl: ^0.17.0
+  syncfusion_flutter_charts: ^19.2.48
 
 dev_dependencies:
   flutter_test:
@@ -82,5 +83,8 @@ flutter:
         weight: 300
       - asset: assets/fonts/NunitoSans-Semibold.ttf
         weight: 500
+  - family: Nunito
+    fonts:
+      - asset: assets/fonts/Nunito-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

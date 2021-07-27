@@ -77,7 +77,7 @@ class Body extends StatelessWidget {
             }),
             SizedBox(height: size.height * 0.025),
             OrDivider(),
-            SizedBox(height: size.height * 0.005),
+            SizedBox(height: size.height * 0.001),
             Padding(
               padding: const EdgeInsets.fromLTRB(100.0, 0, 100.0, 0),
               child: Row(
