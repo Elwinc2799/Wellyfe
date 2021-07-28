@@ -19,65 +19,67 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4f8c179-52db-4ac6-8c47-a8973b22a28b" name="Default Changelist" comment="Schedule Analysis created">
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/AreaChart.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/LegendIndividual.dart" afterDir="false" />
+    <list default="true" id="e4f8c179-52db-4ac6-8c47-a8973b22a28b" name="Default Changelist" comment="Schedule Analysis updated">
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/ScheduleTimeScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/Body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/DayIndividual.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/DaysList.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/MidLevelDivider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/Timeline.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/TopLevelBar.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/debug_android_application.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/flutter_assets.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/93e727c16dcd6840d254d0a2d5a6d987/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/debug_android_application.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/flutter_assets.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/kernel_snapshot.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/outputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/outputs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/assets/logo/calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/assets/logo/calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/assets/logo/chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/assets/logo/chart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/assets/logo/search.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/AssetManifest.json.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/AssetManifest.json.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/NOTICES.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/NOTICES.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/isolate_snapshot_data.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/isolate_snapshot_data.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/logo/calendar.png.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/logo/calendar.png.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/logo/chart.png.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/logo/chart.png.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/logo/search.png.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/external_libs_dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/external_libs_dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/.last_build_id" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/.last_build_id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/NOTICES" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/assets/logo/calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/assets/logo/calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/assets/logo/chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/assets/logo/chart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/assets/logo/search.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/AssetManifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/NOTICES" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/isolate_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/isolate_snapshot_data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/assets/logo/calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/assets/logo/calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/assets/logo/chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/assets/logo/chart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/assets/logo/search.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_native_libs/debug/out/lib/x86/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_native_libs/debug/out/lib/x86/libflutter.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_native_libs/debug/out/lib/x86_64/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/merged_native_libs/debug/out/lib/x86_64/libflutter.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/stripped_native_libs/debug/out/lib/x86/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/stripped_native_libs/debug/out/lib/x86/libflutter.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/stripped_native_libs/debug/out/lib/x86_64/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/stripped_native_libs/debug/out/lib/x86_64/libflutter.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/kotlin/compileDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/kotlin/compileDebugKotlin/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/kotlin/compileDebugKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/kotlin/compileDebugKotlin/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Core/Data/TaskData.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Core/Data/TaskData.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/AreaChart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/AreaChart.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/Body.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/BubbleChart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/BubbleChart.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/GraphContainer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/GraphContainer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/GraphLabel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/GraphTitle.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/TopLevelBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/TopLevelBar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/MidLevelBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/MidLevelBar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TaskContainer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TaskContainer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TaskList.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TaskList.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TopLevelBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TopLevelBar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TopLevelIcon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TopLevelIcon.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +113,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Wellyfe\wellyfe_app\lib\Screen\ScheduleTimeScreen" />
       <recent name="D:\Wellyfe\wellyfe_app\lib\Screen\ScheduleOverviewScreen" />
       <recent name="D:\Wellyfe\wellyfe_app\lib\Screen\ScheduleOverviewScreen\components" />
       <recent name="D:\Wellyfe\wellyfe_app\lib\Core\Model" />
       <recent name="D:\Wellyfe\wellyfe_app\lib\Screen\SignIn\components" />
-      <recent name="D:\Wellyfe\wellyfe_app\assets\json" />
     </key>
   </component>
   <component name="RunManager">
@@ -231,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627375480971</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Schedule Analysis updated">
+      <created>1627431241088</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1627431241088</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,48 +267,53 @@
     <MESSAGE value="Schedule Menu updated" />
     <MESSAGE value="Schedule Menu updated 2" />
     <MESSAGE value="Schedule Analysis created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Schedule Analysis created" />
+    <MESSAGE value="Schedule Analysis updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Schedule Analysis updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="518" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1627019135604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="518" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1627019135604" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627105156717">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627436904404">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1627105156717" />
-    <state width="1172" height="165" key="GridCell.Tab.0.bottom" timestamp="1627391427235">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1627436904404" />
+    <state width="1175" height="163" key="GridCell.Tab.0.bottom" timestamp="1627464763097">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1172" height="165" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627391427235" />
-    <state width="1172" height="165" key="GridCell.Tab.0.center" timestamp="1627391427235">
+    <state width="1175" height="163" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627464763097" />
+    <state width="1175" height="163" key="GridCell.Tab.0.center" timestamp="1627464763096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1172" height="165" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1627391427235" />
-    <state width="1172" height="165" key="GridCell.Tab.0.left" timestamp="1627391427235">
+    <state width="1175" height="163" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1627464763096" />
+    <state width="1175" height="163" key="GridCell.Tab.0.left" timestamp="1627464763096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1172" height="165" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1627391427235" />
-    <state width="1172" height="165" key="GridCell.Tab.0.right" timestamp="1627391427235">
+    <state width="1175" height="163" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1627464763096" />
+    <state width="1175" height="163" key="GridCell.Tab.0.right" timestamp="1627464763097">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1172" height="165" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1627391427235" />
+    <state width="1175" height="163" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1627464763097" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1626937267824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626937267824" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1627375497183">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1627431246915">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1627375497183" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1627431246915" />
+    <state x="100" y="100" width="1035" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1627465965310">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="100" y="100" width="1035" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1627465965310" />
     <state x="426" y="187" key="run.anything.popup" timestamp="1627303783386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="426" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1627303783386" />
-    <state x="279" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1627282492846">
+    <state x="279" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1627452601301">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="279" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1627282492846" />
+    <state x="279" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1627452601301" />
   </component>
 </project>

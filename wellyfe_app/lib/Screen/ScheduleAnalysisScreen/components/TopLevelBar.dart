@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/ScheduleOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/TopLevelIcon.dart';
 import 'package:intl/intl.dart';
+import 'package:wellyfe_app/Screen/ScheduleTimeScreen/ScheduleTimeScreen.dart';
 
 class TopLevelBar extends StatelessWidget {
   TopLevelBar({
@@ -17,8 +18,12 @@ class TopLevelBar extends StatelessWidget {
       children: [
         TopLevelIcon(
           asset: "assets/logo/calendar.png",
-          function: () {},
-          angle: 0,
+          function: () { Navigator.pushReplacement(context, MaterialPageRoute(
+              builder: (context) {
+                return ScheduleTimeScreen();
+              }
+            ));
+          },
         ),
         Text(
           DateFormat('EEEE, d MMM').format(date),
@@ -30,14 +35,13 @@ class TopLevelBar extends StatelessWidget {
           ),
         ),
         TopLevelIcon(
-          asset: "assets/logo/search.png",
+          asset: "assets/logo/home.png",
           function: () { Navigator.pushReplacement(context, MaterialPageRoute(
               builder: (context) {
                 return ScheduleOverviewScreen();
               }
             ));
           },
-          angle: 0,
         ),
       ],
     );

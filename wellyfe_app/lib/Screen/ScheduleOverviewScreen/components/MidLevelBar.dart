@@ -22,7 +22,7 @@ class MidLevelBar extends StatelessWidget {
         GestureDetector(
           onTap: () {},
           child: Text(
-            "View All",
+            "Add new task",
             style: TextStyle(
               fontSize: 25,
               fontFamily: "NunitoSans",

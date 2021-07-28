@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Screen/ScheduleAnalysisScreen/components/AreaChart.dart';
 import 'package:wellyfe_app/Screen/ScheduleAnalysisScreen/components/BubbleChart.dart';
 import 'package:wellyfe_app/Screen/ScheduleAnalysisScreen/components/GraphTitle.dart';
-import 'package:wellyfe_app/constants.dart';
 
 class GraphContainer extends StatelessWidget {
   const GraphContainer({
@@ -36,7 +35,7 @@ class GraphContainer extends StatelessWidget {
           ),
         ),
         decoration: BoxDecoration(
-          color: backgroundColor.withOpacity(0.8),
+          color: Color(0xFFE0E5EC),
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           boxShadow: [
             BoxShadow(

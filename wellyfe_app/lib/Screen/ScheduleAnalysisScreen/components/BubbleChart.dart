@@ -22,7 +22,7 @@ class BubbleChart extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 5.0),
       child: Container(
-        height: size.height * 0.225,
+        height: size.height * 0.2,
         width: size.width * 0.8,
         child: SfCartesianChart(
           plotAreaBorderWidth: 0,

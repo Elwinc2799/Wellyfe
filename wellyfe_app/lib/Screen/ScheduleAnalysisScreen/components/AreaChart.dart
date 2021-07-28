@@ -41,7 +41,7 @@ class AreaChart extends StatelessWidget {
             )
           ),
           primaryYAxis: NumericAxis(
-            interval: 1,
+            interval: 1, //TODO CHANGE INTERVAL TO SUM / 4
             majorGridLines: MajorGridLines(
               width: 0,
             ),
@@ -58,7 +58,15 @@ class AreaChart extends StatelessWidget {
           series: <ChartSeries>[
             SplineAreaSeries<TaskData, String>(
               splineType: SplineType.cardinal,
-              cardinalSplineTension: 5,
+              cardinalSplineTension: 1,
+              color: Color(0XFF668ED4).withOpacity(0.5),
+              dataSource: taskDataList,
+              xValueMapper: (TaskData taskData, _) => DateFormat('EEEE').format(taskData.dateTime).substring(0, 3),
+              yValueMapper: (TaskData taskData, _) => taskData.switchDateOccurrences(taskDataList) + 0.3,
+            ),
+            SplineAreaSeries<TaskData, String>(
+              splineType: SplineType.cardinal,
+              cardinalSplineTension: 1,
               color: Color(0XFF668ED4),
               dataSource: taskDataList,
               xValueMapper: (TaskData taskData, _) => DateFormat('EEEE').format(taskData.dateTime).substring(0, 3),

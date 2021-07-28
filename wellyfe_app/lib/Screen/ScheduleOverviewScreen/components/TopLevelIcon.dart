@@ -5,11 +5,9 @@ class TopLevelIcon extends StatelessWidget {
     Key? key,
     required this.asset,
     required this.function,
-    required this.angle,
   }) : super(key: key);
 
   final String asset;
-  final double angle;
   final VoidCallback function;
 
   @override
@@ -21,10 +19,7 @@ class TopLevelIcon extends StatelessWidget {
       child: Container(
         height: size.height * 0.055,
         width: size.width * 0.1,
-        child: Transform.rotate(
-          angle: angle,
-          child: Image(image: AssetImage(asset))
-        ),
+        child: Image(image: AssetImage(asset),width: 100, height: 100,),
         decoration: BoxDecoration(
           color: Colors.grey[200],
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
