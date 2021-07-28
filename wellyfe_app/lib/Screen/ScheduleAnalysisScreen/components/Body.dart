@@ -21,7 +21,15 @@ class Body extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 20.0),
               child: Column(
                 children: [
-                  GraphContainer(isBubble: false),
+                  GraphContainer(
+                    isBubble: true,
+                    title: "Priority",
+                  ),
+                  SizedBox(height: size.height * 0.05),
+                  GraphContainer(
+                    isBubble: false,
+                    title: "Activity",
+                  ),
                 ],
               ),
             ),
