@@ -7,12 +7,14 @@ class TaskData {
     this.taskPriority,
     this.dateTime,
     this.isDone,
+    this.status,
   );
 
   final String taskName;
   final int taskPriority;
   final DateTime dateTime;
   final bool isDone;
+  final status;
 
   Color findColor() {
     switch(this.taskPriority) {

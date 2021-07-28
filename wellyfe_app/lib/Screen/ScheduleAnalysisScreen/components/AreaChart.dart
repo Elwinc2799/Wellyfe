@@ -5,14 +5,14 @@ import 'package:wellyfe_app/Core/Data/TaskData.dart';
 
 class AreaChart extends StatelessWidget {
   final List<TaskData> taskDataList = [
-    TaskData("Testing 1", 1, DateTime.utc(2021, DateTime.july, 26), false),
-    TaskData("Testing 5", 1, DateTime.utc(2021, DateTime.july, 26), false),
-    TaskData("Testing 5", 3, DateTime.utc(2021, DateTime.july, 27), false),
-    TaskData("Testing 2", 2, DateTime.utc(2021, DateTime.july, 28), false),
-    TaskData("Testing 3", 3, DateTime.utc(2021, DateTime.july, 29), false),
-    TaskData("Testing 4", 3, DateTime.utc(2021, DateTime.july, 30), false),
-    TaskData("Testing 6", 1, DateTime.utc(2021, DateTime.july, 31), false),
-    TaskData("Testing 7", 1, DateTime.utc(2021, DateTime.july, 25), false),
+    TaskData("Testing 1", 1, DateTime.utc(2021, DateTime.july, 26), false, "Ongoing"),
+    TaskData("Testing 5", 1, DateTime.utc(2021, DateTime.july, 26), false, "Ongoing"),
+    TaskData("Testing 5", 3, DateTime.utc(2021, DateTime.july, 27), false, "Ongoing"),
+    TaskData("Testing 2", 2, DateTime.utc(2021, DateTime.july, 28), false, "Ongoing"),
+    TaskData("Testing 3", 3, DateTime.utc(2021, DateTime.july, 29), false, "Ongoing"),
+    TaskData("Testing 4", 3, DateTime.utc(2021, DateTime.july, 30), false, "Ongoing"),
+    TaskData("Testing 6", 1, DateTime.utc(2021, DateTime.july, 31), false, "Ongoing"),
+    TaskData("Testing 7", 1, DateTime.utc(2021, DateTime.july, 25), false, "Ongoing"),
   ];
 
   @override
