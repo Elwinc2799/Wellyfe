@@ -58,7 +58,7 @@ class _DaysListState extends State<DaysList> {
                       dayNumber: days[i].day
                     ),
                     style: NeumorphicRadioStyle(
-                      selectedColor: Colors.lightBlue[50],
+                      selectedColor: Colors.blue[100],
                       unselectedColor: Colors.white.withOpacity(0.5),
                       shape: NeumorphicShape.convex,
                       selectedDepth: 0,

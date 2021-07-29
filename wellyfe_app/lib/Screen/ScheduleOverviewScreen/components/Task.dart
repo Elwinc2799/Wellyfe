@@ -21,67 +21,51 @@ class _TaskState extends State<Task> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
+      height: size.height * 0.075,
       child: Column(
         children: [
-          Stack(
+          Row(
             children: [
-              Row(
-                children: [
-                  NeumorphicCheckbox(
-                    value: isChecked,
-                    onChanged: (dynamic) {
-                      setState(() {
-                        isChecked = !isChecked;
-                      });
-                    },
-                    style: NeumorphicCheckboxStyle(
-                      boxShape: NeumorphicBoxShape.circle(),
-                      unselectedDepth: 10,
-                      selectedColor: Color(0XFF9371FF),
-                    ),
-                  ),
-                  SizedBox(width: size.width * 0.05),
-                  Container(
-                    width: size.width * 0.6,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          widget.task,
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontFamily: "NunitoSans",
-                            fontWeight: FontWeight.w500,
-                            color: isChecked ? Colors.grey[400] : Color(0XFF344460),
-                            decoration: isChecked ? TextDecoration.lineThrough : null,
-                          ),
-                        ),
-                        SizedBox(height: size.height * 0.02),
-                        Divider(
-                          color: Colors.grey[600],
-                          height: 1.5,
-                        ),
-                      ],
-                    )
-                  ),
-                ],
-              ),
-              Positioned(
-                right: 0,
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 25.0),
-                  child: Container(
-                    child: Icon(
-                      Icons.arrow_drop_down_rounded,
-                      size: size.width * 0.075,
-                      color: Color(0XFF344460),
-                    ),
-                  ),
+              NeumorphicCheckbox(
+                value: isChecked,
+                onChanged: (dynamic) {
+                  setState(() {
+                    isChecked = !isChecked;
+                  });
+                },
+                style: NeumorphicCheckboxStyle(
+                  boxShape: NeumorphicBoxShape.circle(),
+                  unselectedDepth: -20,
+                  selectedColor: Color(0XFF9371FF),
                 ),
-              )
+              ),
+              SizedBox(width: size.width * 0.05),
+              Container(
+                width: size.width * 0.6,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget.task,
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontFamily: "NunitoSans",
+                        fontWeight: FontWeight.w600,
+                        color: isChecked ? Colors.grey[400] : Color(0XFF344460),
+                        decoration: isChecked ? TextDecoration.lineThrough : null,
+                      ),
+                    ),
+                  ],
+                )
+              ),
             ],
           ),
-          SizedBox(height: size.height * 0.02),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(80.0, 0, 50.0, 0),
+            child: Divider(
+              thickness: 1.5,
+            ),
+          ),
         ],
       ),
     );

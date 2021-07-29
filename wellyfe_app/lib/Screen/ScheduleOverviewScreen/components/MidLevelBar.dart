@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/ScheduleNewTask/ScheduleNewTask.dart';
 
 class MidLevelBar extends StatelessWidget {
   const MidLevelBar({
@@ -21,7 +22,11 @@ class MidLevelBar extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ScheduleNewTask();
+                }
+            ));
           },
           child: Text(
             "Add new task",

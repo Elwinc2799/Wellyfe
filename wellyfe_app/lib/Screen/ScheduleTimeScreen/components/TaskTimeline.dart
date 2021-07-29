@@ -45,8 +45,8 @@ class TaskTimeline extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Color(0xFFFFFFFF).withOpacity(0.15),
-                Color(0xFFFFFFFF).withOpacity(0.5),
+                color.withOpacity(0.05),
+                color.withOpacity(0.35),
               ],
               stops: [
                 0.1,
@@ -58,7 +58,7 @@ class TaskTimeline extends StatelessWidget {
               end: Alignment.bottomRight,
               colors: [
                 Color(0xFFFFFFFF).withOpacity(0.25),
-                Color((0xFFFFFFFF)).withOpacity(0.75),
+                Color(0xFFFFFFFF).withOpacity(0.75),
               ],
             ),
             child: Row(
