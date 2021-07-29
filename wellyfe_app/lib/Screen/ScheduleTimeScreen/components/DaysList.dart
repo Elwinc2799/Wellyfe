@@ -12,7 +12,7 @@ class DaysList extends StatefulWidget {
 }
 
 class _DaysListState extends State<DaysList> {
-  String groupValue = "";
+  String groupValue = "Mo";
 
   static List<DateTime> getDaysInBetween() {
     DateTime now = DateTime.now();

@@ -21,7 +21,7 @@ class TopLevelBar extends StatelessWidget {
         TopLevelIcon(
           asset: "assets/logo/calendar.png",
           function: () {
-            TaskData.updateTaskDataList("");
+            TaskData.updateTaskDataList("Mo");
             TaskTimelineList.listChanged();
 
             Navigator.pushReplacement(context, MaterialPageRoute(
