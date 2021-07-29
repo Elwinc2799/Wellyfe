@@ -27,7 +27,7 @@ class GraphTitle extends StatelessWidget {
                   fontSize: 30,
                   fontFamily: "NunitoSans",
                   fontWeight: FontWeight.w800,
-                  color: Color(0XFF344460),
+                  color: Color(0XFFB8C6DE),
                 ),
               ),
               Padding(

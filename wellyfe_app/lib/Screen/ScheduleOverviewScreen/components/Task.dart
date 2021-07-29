@@ -37,7 +37,7 @@ class _TaskState extends State<Task> {
                     style: NeumorphicCheckboxStyle(
                       boxShape: NeumorphicBoxShape.circle(),
                       unselectedDepth: 10,
-                      selectedColor: Colors.teal,
+                      selectedColor: Color(0XFF9371FF),
                     ),
                   ),
                   SizedBox(width: size.width * 0.05),

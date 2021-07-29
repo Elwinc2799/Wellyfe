@@ -21,7 +21,8 @@ class TopLevelIcon extends StatelessWidget {
         width: size.width * 0.1,
         child: Image(image: AssetImage(asset),width: 100, height: 100,),
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          border: Border.all(color: Color(0xffd6dff0)),
+          color: Color(0xffe4effe),
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           boxShadow: [
             BoxShadow(

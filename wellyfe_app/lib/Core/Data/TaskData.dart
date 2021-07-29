@@ -16,6 +16,28 @@ class TaskData {
   final bool isDone;
   final status;
 
+  static List<TaskData> taskDataList = [
+    TaskData("Testing 1", 1, DateTime.utc(2021, DateTime.july, 26, 10), false, "Ongoing"),
+    TaskData("Testing 5", 1, DateTime.utc(2021, DateTime.july, 26, 11), false, "Ongoing"),
+    TaskData("2", 2, DateTime.utc(2021, DateTime.july, 26, 12), false, "Ongoing"),
+    TaskData("Testing 5", 3, DateTime.utc(2021, DateTime.july, 26, 13), false, "Ongoing"),
+    TaskData("Testing 3", 3, DateTime.utc(2021, DateTime.july, 26, 14), false, "Ongoing"),
+    TaskData("Testing 4", 3, DateTime.utc(2021, DateTime.july, 26, 15), false, "Ongoing"),
+    TaskData("Testing 6", 1, DateTime.utc(2021, DateTime.july, 26, 16), false, "Ongoing"),
+    TaskData("Testing 7", 1, DateTime.utc(2021, DateTime.july, 26, 17), false, "Ongoing"),
+    TaskData("Testing 7", 1, DateTime.utc(2021, DateTime.july, 27, 17), false, "Ongoing"),
+    TaskData("Testing 1", 1, DateTime.utc(2021, DateTime.july, 26), false, "Ongoing"),
+    TaskData("Testing 5", 1, DateTime.utc(2021, DateTime.july, 26), false, "Ongoing"),
+    TaskData("Testing 5", 3, DateTime.utc(2021, DateTime.july, 27), false, "Ongoing"),
+    TaskData("Testing 2", 2, DateTime.utc(2021, DateTime.july, 28), false, "Ongoing"),
+    TaskData("Testing 3", 3, DateTime.utc(2021, DateTime.july, 29), false, "Ongoing"),
+    TaskData("Testing 4", 3, DateTime.utc(2021, DateTime.july, 30), false, "Ongoing"),
+    TaskData("Testing 6", 1, DateTime.utc(2021, DateTime.july, 31), false, "Ongoing"),
+    TaskData("Testing 7", 1, DateTime.utc(2021, DateTime.july, 25), false, "Ongoing"),
+  ];
+
+  static List<TaskData> newTaskDataList = updateTaskDataList("Mo");
+
   Color findColor() {
     switch(this.taskPriority) {
       case 1:
@@ -79,5 +101,44 @@ class TaskData {
     }
 
     return -1;
+  }
+
+  static List<TaskData> updateTaskDataList(String date) {
+    newTaskDataList = [];
+
+    for (var i = 0; i < taskDataList.length; i++) {
+      if (DateFormat('EEEE').format(taskDataList[i].dateTime).substring(0, 2) == date)
+        newTaskDataList.add(taskDataList[i]);
+    }
+
+    return newTaskDataList;
+  }
+
+  String timeConversion(int hour) {
+    if (hour < 10)
+      return "0" + hour.toString();
+    return hour.toString();
+  }
+
+  String priorityConversion() {
+    switch(this.taskPriority) {
+      case 1:
+        return "Low";
+      case 2:
+        return "Medium";
+      case 3:
+        return "High";
+    }
+
+    return "";
+  }
+
+  String timeUtilityFunction(int time) {
+    if (time == 12)
+      return timeConversion(time) + " PM";
+    else if (time < 12)
+      return timeConversion(time) + " AM";
+    else
+      return timeConversion(time - 12) + " PM";
   }
 }

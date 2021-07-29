@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/PriorityTitleStatus.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/Timeline.dart';
 
@@ -34,24 +35,31 @@ class TaskTimeline extends StatelessWidget {
             endTime: endTime,
           ),
           SizedBox(width: size.width * 0.1),
-          Container(
+          GlassmorphicContainer(
             height: size.height * 0.125,
             width: size.width * 0.65,
-            decoration: BoxDecoration(
-                color: Color(0XFFEDF1F4),
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 5.0,
-                      offset: Offset(-3, -3),
-                      color: Colors.white
-                  ),
-                  BoxShadow(
-                      blurRadius: 5.0,
-                      offset: Offset(3, 3),
-                      color: Colors.black.withOpacity(.25)
-                  )
-                ]
+            border: 2.5,
+            borderRadius: 15,
+            blur: 2,
+            linearGradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFFFFFFFF).withOpacity(0.15),
+                Color(0xFFFFFFFF).withOpacity(0.5),
+              ],
+              stops: [
+                0.1,
+                1,
+              ]
+            ),
+            borderGradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFFFFFFFF).withOpacity(0.25),
+                Color((0xFFFFFFFF)).withOpacity(0.75),
+              ],
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,

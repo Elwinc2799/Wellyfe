@@ -32,6 +32,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "clay_containers",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/clay_containers-0.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/clock-1.1.0",
       "packageUri": "lib/",
@@ -76,6 +82,12 @@
     {
       "name": "flutter_test",
       "rootUri": "file:///C:/Flutter/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "glassmorphism",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/glassmorphism-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -194,7 +206,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-07-28T09:52:38.274688Z",
+  "generated": "2021-07-29T02:00:56.510423Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

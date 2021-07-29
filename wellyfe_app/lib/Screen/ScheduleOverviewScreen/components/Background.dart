@@ -17,6 +17,31 @@ class Background extends StatelessWidget {
       width: size.width,
       child: Stack(
         children: [
+          Positioned(
+            top: -200,
+            left: -100,
+            child: Container(
+              width: size.width * 0.5,
+              height: size.height * 0.5,
+              decoration: BoxDecoration(
+                color: Color(0xFFECF3FE),
+                shape: BoxShape.circle,
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            child: Container(
+              width: size.width,
+              height: size.height * 0.425,
+              decoration: BoxDecoration(
+                color: Color(0xFFECF3FE),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.elliptical(3000, 1500),
+                )
+              ),
+            ),
+          ),
           children,
         ],
       ),

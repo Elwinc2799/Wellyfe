@@ -1,20 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:wellyfe_app/Core/Data/TaskData.dart';
 
 class AreaChart extends StatelessWidget {
-  final List<TaskData> taskDataList = [
-    TaskData("Testing 1", 1, DateTime.utc(2021, DateTime.july, 26), false, "Ongoing"),
-    TaskData("Testing 5", 1, DateTime.utc(2021, DateTime.july, 26), false, "Ongoing"),
-    TaskData("Testing 5", 3, DateTime.utc(2021, DateTime.july, 27), false, "Ongoing"),
-    TaskData("Testing 2", 2, DateTime.utc(2021, DateTime.july, 28), false, "Ongoing"),
-    TaskData("Testing 3", 3, DateTime.utc(2021, DateTime.july, 29), false, "Ongoing"),
-    TaskData("Testing 4", 3, DateTime.utc(2021, DateTime.july, 30), false, "Ongoing"),
-    TaskData("Testing 6", 1, DateTime.utc(2021, DateTime.july, 31), false, "Ongoing"),
-    TaskData("Testing 7", 1, DateTime.utc(2021, DateTime.july, 25), false, "Ongoing"),
-  ];
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -60,17 +51,17 @@ class AreaChart extends StatelessWidget {
               splineType: SplineType.cardinal,
               cardinalSplineTension: 1,
               color: Color(0XFF668ED4).withOpacity(0.5),
-              dataSource: taskDataList,
+              dataSource: TaskData.taskDataList,
               xValueMapper: (TaskData taskData, _) => DateFormat('EEEE').format(taskData.dateTime).substring(0, 3),
-              yValueMapper: (TaskData taskData, _) => taskData.switchDateOccurrences(taskDataList) + 0.3,
+              yValueMapper: (TaskData taskData, _) => taskData.switchDateOccurrences(TaskData.taskDataList) + taskData.switchDateOccurrences(TaskData.taskDataList) * 0.25,
             ),
             SplineAreaSeries<TaskData, String>(
               splineType: SplineType.cardinal,
               cardinalSplineTension: 1,
               color: Color(0XFF668ED4),
-              dataSource: taskDataList,
+              dataSource: TaskData.taskDataList,
               xValueMapper: (TaskData taskData, _) => DateFormat('EEEE').format(taskData.dateTime).substring(0, 3),
-              yValueMapper: (TaskData taskData, _) => taskData.switchDateOccurrences(taskDataList),
+              yValueMapper: (TaskData taskData, _) => taskData.switchDateOccurrences(TaskData.taskDataList),
             ),
           ],
         ),

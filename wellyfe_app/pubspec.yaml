@@ -33,6 +33,8 @@ dependencies:
   provider: ^5.0.0
   intl: ^0.17.0
   syncfusion_flutter_charts: ^19.2.48
+  glassmorphism: ^2.0.1
+  clay_containers: ^0.3.2
 
 dev_dependencies:
   flutter_test:
