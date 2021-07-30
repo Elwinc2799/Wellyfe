@@ -9,6 +9,11 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
+
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -54,6 +59,7 @@ class _SignUpFormState extends State<SignUpForm> {
           color: Colors.black.withOpacity(.5),
         ),
         obscureText: true,
+        controller: _passwordController,
       ),
     );
   }
@@ -82,6 +88,7 @@ class _SignUpFormState extends State<SignUpForm> {
           color: Colors.black.withOpacity(.5),
         ),
         obscureText: true,
+        controller: _confirmPasswordController,
       ),
     );
   }
@@ -109,6 +116,7 @@ class _SignUpFormState extends State<SignUpForm> {
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
+        controller: _emailController,
       ),
     );
   }

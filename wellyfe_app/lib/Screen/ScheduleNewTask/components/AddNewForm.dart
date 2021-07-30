@@ -8,9 +8,14 @@ class AddNewForm extends StatefulWidget {
 }
 
 class _AddNewFormState extends State<AddNewForm> {
-  String dropdownValue = "Low";
-  String startTime = "6 AM";
-  String endTime = "7 AM";
+
+  final _taskTitleController = TextEditingController();
+  TextEditingController _taskDateController = TextEditingController();
+
+  DateTime selectedDate = DateTime.now();
+  String priorityValue = "Low";
+  String startTimeValue = "6 AM";
+  String endTimeValue = "7 AM";
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +30,9 @@ class _AddNewFormState extends State<AddNewForm> {
           SizedBox(height: size.height * 0.025),
           TextFieldLabel(label: "Priority"),
           buildPriorityForm(),
+          SizedBox(height: size.height * 0.025),
+          TextFieldLabel(label: "Date"),
+          buildDateForm(),
           SizedBox(height: size.height * 0.025),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -63,7 +71,7 @@ class _AddNewFormState extends State<AddNewForm> {
             height: 2,
             color: Colors.transparent,
           ),
-          value: startTime,
+          value: startTimeValue,
           icon: Icon(Icons.arrow_drop_down_rounded),
           style: TextStyle(
             fontFamily: "NunitoSans",
@@ -73,7 +81,7 @@ class _AddNewFormState extends State<AddNewForm> {
           ),
           onChanged: (String? newValue) {
             setState(() {
-              startTime = newValue!;
+              startTimeValue = newValue!;
             });
           },
           items: <String>["6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM"]
@@ -100,7 +108,7 @@ class _AddNewFormState extends State<AddNewForm> {
             height: 2,
             color: Colors.transparent,
           ),
-          value: endTime,
+          value: endTimeValue,
           icon: Icon(Icons.arrow_drop_down_rounded),
           style: TextStyle(
             fontFamily: "NunitoSans",
@@ -110,7 +118,7 @@ class _AddNewFormState extends State<AddNewForm> {
           ),
           onChanged: (String? newValue) {
             setState(() {
-              endTime = newValue!;
+              endTimeValue = newValue!;
             });
           },
           items: <String>["7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM"]
@@ -120,6 +128,50 @@ class _AddNewFormState extends State<AddNewForm> {
               child: Text(value),
             );
           }).toList(),
+        ),
+      ),
+    );
+  }
+
+  GestureDetector buildDateForm() {
+    return GestureDetector(
+      // onTap: _selectDate(context),
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.425,
+        height: MediaQuery.of(context).size.width * 0.11,
+        decoration: buildNeumorphicTextField(),
+        child: TextFormField(
+          onTap: () async {
+            FocusScope.of(context).requestFocus(new FocusNode());
+
+            DateTime? newSelectedDate = await showDatePicker(
+              context: context,
+              initialDate: DateTime.now(),
+              firstDate:DateTime(2021),
+              lastDate: DateTime(2025),
+            );
+            
+            _taskDateController.value = TextEditingValue(text: newSelectedDate.toString().substring(0, 10));
+          },
+          decoration: InputDecoration(
+            hintText: "Enter the date",
+            hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+            enabledBorder: outlineBorder(),
+            focusedBorder: outlineBorder(),
+            contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            prefixIcon: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: NeumorphicIcon(Icons.access_time_outlined, size: 40),
+            ),
+          ),
+          style: TextStyle(
+            fontFamily: "NunitoSans",
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+            color: Colors.black.withOpacity(.5),
+          ),
+          controller: _taskDateController,
         ),
       ),
     );
@@ -137,7 +189,7 @@ class _AddNewFormState extends State<AddNewForm> {
             height: 2,
             color: Colors.transparent,
           ),
-          value: dropdownValue,
+          value: priorityValue,
           icon: Icon(Icons.arrow_drop_down_rounded),
           style: TextStyle(
             fontFamily: "NunitoSans",
@@ -147,7 +199,7 @@ class _AddNewFormState extends State<AddNewForm> {
           ),
           onChanged: (String? newValue) {
             setState(() {
-              dropdownValue = newValue!;
+              priorityValue = newValue!;
             });
           },
           items: <String>["Low", "Medium", "High"]
@@ -175,7 +227,7 @@ class _AddNewFormState extends State<AddNewForm> {
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           prefixIcon: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: 15),
             child: NeumorphicIcon(Icons.bubble_chart, size: 40),
           ),
         ),
@@ -185,26 +237,27 @@ class _AddNewFormState extends State<AddNewForm> {
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
+        controller: _taskTitleController,
       ),
     );
   }
 
   BoxDecoration buildNeumorphicTextField() {
     return BoxDecoration(
-        color: Color(0XFFE4EDFF),
-        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 5.0,
-            offset: Offset(-3, -3),
-            color: Colors.white.withOpacity(.7)
-          ),
-          BoxShadow(
-            blurRadius: 5.0,
-            offset: Offset(3, 3),
-            color: Colors.black.withOpacity(.15)
-          )
-        ]
+      color: Color(0XFFE4EDFF),
+      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+      boxShadow: [
+        BoxShadow(
+          blurRadius: 5.0,
+          offset: Offset(-3, -3),
+          color: Colors.white.withOpacity(.7)
+        ),
+        BoxShadow(
+          blurRadius: 5.0,
+          offset: Offset(3, 3),
+          color: Colors.black.withOpacity(.15)
+        )
+      ]
     );
   }
 }

@@ -9,6 +9,10 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
+
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -51,6 +55,7 @@ class _SignInFormState extends State<SignInForm> {
           color: Colors.black.withOpacity(.5),
         ),
         obscureText: true,
+        controller: _passwordController,
       ),
     );
   }
@@ -78,6 +83,7 @@ class _SignInFormState extends State<SignInForm> {
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
+        controller: _emailController,
       ),
     );
   }
