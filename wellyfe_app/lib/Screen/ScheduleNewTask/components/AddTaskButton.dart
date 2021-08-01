@@ -32,7 +32,7 @@ class AddTaskButton extends StatelessWidget {
           style: NeumorphicStyle(
             shape: NeumorphicShape.concave,
             boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(100)),
-            color: Color(0XFFFF27B0),
+            color: Color(0XFF83A4D4).withOpacity(0.5),
             depth: 20,
           ),
         ),

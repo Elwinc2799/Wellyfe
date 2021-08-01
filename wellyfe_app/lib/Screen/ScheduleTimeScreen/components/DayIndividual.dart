@@ -43,7 +43,14 @@ class _DayIndividualState extends State<DayIndividual> {
               fontWeight: FontWeight.w800,
               color: Color(0XFF344460).withOpacity(0.5),
             ),
-          )
+          ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          //   child: Divider(
+          //     thickness: 3,
+          //     color: Colors.red ,
+          //   ),
+          // )
         ],
       ),
     );

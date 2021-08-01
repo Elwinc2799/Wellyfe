@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/FitnessManagementOverviewScreen.dart';
 import '../../ScheduleOverviewScreen/ScheduleOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/Background.dart';
@@ -71,7 +72,7 @@ class Body extends StatelessWidget {
             SignInButton(function: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return ScheduleOverviewScreen();
+                  return FitnessManagementOverviewScreen();
                 }
               ));
             }),

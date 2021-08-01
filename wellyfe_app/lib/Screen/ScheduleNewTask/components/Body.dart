@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0, 200.0, 20.0, 0),
+        padding: const EdgeInsets.fromLTRB(30.0, 150.0, 20.0, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,7 +36,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.05),
             AddNewForm(),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.075),
             AddTaskButton(
               function: () {},
             ),

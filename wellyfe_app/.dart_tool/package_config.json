@@ -62,8 +62,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "equatable",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/equatable-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/fake_async-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "fl_chart",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/fl_chart-0.36.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -76,6 +88,12 @@
     {
       "name": "flutter_neumorphic",
       "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/flutter_neumorphic-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_rounded_date_picker",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/flutter_rounded_date_picker-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -124,6 +142,12 @@
     {
       "name": "path",
       "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path-1.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pedantic",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/pedantic-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -206,7 +230,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-07-29T02:00:56.510423Z",
+  "generated": "2021-07-30T23:57:32.894984Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

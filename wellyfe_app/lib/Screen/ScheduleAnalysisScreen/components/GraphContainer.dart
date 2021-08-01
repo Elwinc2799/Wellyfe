@@ -17,30 +17,6 @@ class GraphContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    // return Center(
-    //   child: ClayContainer(
-    //     width: size.width * 0.85,
-    //     emboss: true,
-    //     color: Color(0xFFE4EDFF),
-    //     borderRadius: 25,
-    //     child: Padding(
-    //       padding: const EdgeInsets.all(20.0),
-    //       child: Column(
-    //         crossAxisAlignment: CrossAxisAlignment.start,
-    //         children: [
-    //           GraphTitle(
-    //             title: title,
-    //             isBubble: isBubble,
-    //           ),
-    //           Center(
-    //             child: isBubble ? BubbleChart() : AreaChart(),
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
-
     return Center(
       child: GlassmorphicContainer(
         width: size.width * 0.85,
@@ -49,16 +25,16 @@ class GraphContainer extends StatelessWidget {
         border: 2.5,
         blur: 0,
         linearGradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color(0xFFFFFFFF).withOpacity(0.15),
-              Color(0xFFFFFFFF).withOpacity(0.5),
-            ],
-            stops: [
-              0.1,
-              1,
-            ]
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xFFFFFFFF).withOpacity(0.15),
+            Color(0xFFFFFFFF).withOpacity(0.5),
+          ],
+          stops: [
+            0.1,
+            1,
+          ]
         ),
         borderGradient: LinearGradient(
           begin: Alignment.topLeft,

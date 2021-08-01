@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:wellyfe_app/Screen/ScheduleNewTask/components/TextFieldLabel.dart';
 
 class AddNewForm extends StatefulWidget {
@@ -137,20 +139,111 @@ class _AddNewFormState extends State<AddNewForm> {
     return GestureDetector(
       // onTap: _selectDate(context),
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.425,
+        width: MediaQuery.of(context).size.width * 0.45,
         height: MediaQuery.of(context).size.width * 0.11,
         decoration: buildNeumorphicTextField(),
         child: TextFormField(
           onTap: () async {
             FocusScope.of(context).requestFocus(new FocusNode());
 
-            DateTime? newSelectedDate = await showDatePicker(
+            DateTime? newSelectedDate = await showRoundedDatePicker(
               context: context,
-              initialDate: DateTime.now(),
-              firstDate:DateTime(2021),
-              lastDate: DateTime(2025),
+              theme: ThemeData(primaryColor: Color(0XFFE4EDFF)),
+              styleDatePicker: MaterialRoundedDatePickerStyle(
+                textStyleDayButton: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Nunito",
+                  color: Color(0XFFB1BDD3),
+                ),
+                textStyleYearButton: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Nunito",
+                  color: Color(0XFFB1BDD3),
+                ),
+                textStyleDayHeader: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Nunito",
+                  color: Color(0XFFB1BDD3),
+                ),
+                textStyleCurrentDayOnCalendar: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Nunito",
+                  color: Color(0XFFB1BDD3),
+                  fontWeight: FontWeight.bold,
+                ),
+                textStyleDayOnCalendar: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Nunito",
+                  color: Color(0XFFB1BDD3),
+                ),
+                textStyleDayOnCalendarSelected: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Nunito",
+                  color: Colors.black.withOpacity(0.5),
+                  fontWeight: FontWeight.bold,
+                ),
+                textStyleMonthYearHeader: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Nunito",
+                  color: Colors.black.withOpacity(0.5),
+                  fontWeight: FontWeight.bold,
+                ),
+                textStyleDayOnCalendarDisabled: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Nunito",
+                  color: Color(0XFFB1BDD3).withOpacity(0.5),
+                  fontWeight: FontWeight.bold,
+                ),
+                paddingDatePicker: EdgeInsets.all(0),
+                paddingMonthHeader: EdgeInsets.all(32),
+                paddingActionBar: EdgeInsets.all(16),
+                paddingDateYearHeader: EdgeInsets.all(32),
+                sizeArrow: 50,
+                colorArrowNext: Color(0XFFB1BDD3),
+                colorArrowPrevious: Color(0XFFB1BDD3),
+                marginLeftArrowPrevious: 16,
+                marginTopArrowPrevious: 16,
+                marginTopArrowNext: 16,
+                marginRightArrowNext: 32,
+                textStyleButtonAction: TextStyle(fontSize: 28, color: Color(0XFFB1BDD3)),
+                textStyleButtonPositive:
+                TextStyle(fontSize: 28, color: Color(0XFFB1BDD3), fontWeight: FontWeight.bold),
+                textStyleButtonNegative: TextStyle(fontSize: 28, color: Color(0XFFB1BDD3).withOpacity(0.5)),
+                decorationDateSelected: BoxDecoration(color: Colors.pink[100], shape: BoxShape.circle),
+                backgroundPicker: Color(0XFFE4EDFF),
+                backgroundActionBar: Color(0XFFE4EDFF),
+                backgroundHeaderMonth: Color(0XFFE4EDFF),
+              ),
+              styleYearPicker: MaterialRoundedYearPickerStyle(
+                textStyleYear: TextStyle(fontSize: 40, color: Colors.white),
+                textStyleYearSelected:
+                TextStyle(fontSize: 56, color: Colors.white, fontWeight: FontWeight.bold),
+                heightYearRow: 100,
+                backgroundPicker: Colors.deepPurple[400],
+              ),
+              listDateDisabled: [
+              ],
+              onTapDay: (DateTime dateTime, bool available) {
+                if (!available) {
+                  showDialog(
+                    context: context,
+                    builder: (c) => CupertinoAlertDialog(
+                      title: Text("This date cannot be selected."),
+                      actions: <Widget>[
+                        CupertinoDialogAction(
+                          child: Text("OK"),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          }
+                        )
+                      ],
+                    )
+                  );
+                }
+                return available;
+              }
             );
-            
+
             _taskDateController.value = TextEditingValue(text: newSelectedDate.toString().substring(0, 10));
           },
           decoration: InputDecoration(
