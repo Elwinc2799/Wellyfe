@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/Background.dart';
+import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/StepsContainer.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -14,10 +14,12 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-
+            StepsContainer()
           ],
         ),
       ),
     );
   }
 }
+
+

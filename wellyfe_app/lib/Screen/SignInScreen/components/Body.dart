@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/FitnessManagementOverviewScreen.dart';
-import '../../ScheduleOverviewScreen/ScheduleOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/OrDivider.dart';
@@ -9,6 +7,7 @@ import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInForm.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SocialMediaIcon.dart';
 import 'package:wellyfe_app/Screen/SignUpScreen/SignUpScreen.dart';
+import 'package:wellyfe_app/Screen/SleepTrackerScreen/SleepTrackerScreen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -72,7 +71,7 @@ class Body extends StatelessWidget {
             SignInButton(function: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return FitnessManagementOverviewScreen();
+                  return SleepTrackerScreen();
                 }
               ));
             }),
