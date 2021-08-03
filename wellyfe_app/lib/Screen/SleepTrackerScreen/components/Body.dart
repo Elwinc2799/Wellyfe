@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/Clock.dart';
+import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/Stopwatch.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/TitleTime.dart';
 
 class Body extends StatelessWidget {
@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 100.0, horizontal: 30.0),
+        padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0),
         child: Center(
           child: Column(
             children: [
@@ -52,31 +52,10 @@ class Body extends StatelessWidget {
                 ],
               ),
               SizedBox(height: size.height * 0.05),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  height: size.height * 0.075,
-                  width: size.width * 0.6,
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.15),
-                    border: Border.all(
-                      color: Colors.white.withOpacity(0.25),
-                      width: 5
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(15.0))
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Stop Tracking",
-                      style: TextStyle(
-                        color: Colors.white.withOpacity(0.5),
-                        fontWeight: FontWeight.w800,
-                        fontFamily: "Nunito",
-                        fontSize: 25,
-                      ),
-                    ),
-                  ),
-                )
+              Container(
+                child: Stopwatch(
+
+                ),
               )
             ],
           ),
@@ -85,4 +64,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-

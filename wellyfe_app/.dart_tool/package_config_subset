@@ -106,10 +106,10 @@ provider
 2.12
 file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/provider-5.0.0/
 file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/provider-5.0.0/lib/
-sleek_circular_slider
+rxdart
 2.12
-file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/sleek_circular_slider-2.0.1/
-file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/sleek_circular_slider-2.0.1/lib/
+file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/rxdart-0.27.1/
+file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/rxdart-0.27.1/lib/
 source_span
 2.12
 file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/source_span-1.8.1/
@@ -118,6 +118,10 @@ stack_trace
 2.12
 file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/stack_trace-1.10.0/
 file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/stack_trace-1.10.0/lib/
+stop_watch_timer
+2.12
+file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/stop_watch_timer-1.3.1/
+file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/stop_watch_timer-1.3.1/lib/
 stream_channel
 2.12
 file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/stream_channel-2.1.0/

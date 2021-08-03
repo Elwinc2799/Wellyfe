@@ -7,7 +7,7 @@ import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInForm.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SocialMediaIcon.dart';
 import 'package:wellyfe_app/Screen/SignUpScreen/SignUpScreen.dart';
-import 'package:wellyfe_app/Screen/SleepTrackerScreen/SleepTrackerScreen.dart';
+import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/SleepTrackerOverviewScreen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -71,7 +71,7 @@ class Body extends StatelessWidget {
             SignInButton(function: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return SleepTrackerScreen();
+                  return SleepTrackerOverviewScreen();
                 }
               ));
             }),

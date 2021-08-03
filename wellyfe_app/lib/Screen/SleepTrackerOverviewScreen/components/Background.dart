@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/Painter/BottomLeftPainter.dart';
-import 'Painter/TopRightPainter.dart';
 
 class Background extends StatelessWidget {
   const Background({
@@ -19,17 +17,7 @@ class Background extends StatelessWidget {
       width: size.width,
       child: Stack(
         children: [
-          CustomPaint(
-            size: MediaQuery.of(context).size,
-            painter: TopRightPainter(),
-          ),
-          PositionedDirectional(
-            bottom: -500,
-            child: CustomPaint(
-              size: MediaQuery.of(context).size,
-              painter: BottomLeftPainter(),
-            ),
-          ),
+
           children,
         ],
       ),
