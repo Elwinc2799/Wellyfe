@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/Clock.dart';
+import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/SleepWakeTime.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/Stopwatch.dart';
-import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/TitleTime.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -38,24 +38,10 @@ class Body extends StatelessWidget {
               SizedBox(height: size.height * 0.05),
               Clock(),
               SizedBox(height: size.height * 0.025),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  TitleTime(
-                    title: "In The\nBed At",
-                    time: "10:00 PM",
-                  ),
-                  TitleTime(
-                    title: "Out Of\nBed At",
-                    time: "6:00 AM",
-                  )
-                ],
-              ),
+              SleepWakeTime(),
               SizedBox(height: size.height * 0.05),
               Container(
-                child: Stopwatch(
-
-                ),
+                child: Stopwatch(),
               )
             ],
           ),
