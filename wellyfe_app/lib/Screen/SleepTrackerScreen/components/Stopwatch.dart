@@ -37,7 +37,7 @@ class _StopwatchState extends State<Stopwatch> {
               value,
               hours: true,
               minute: true,
-              second: true,
+              second: false,
               milliSecond: false,
             );
             return Text(

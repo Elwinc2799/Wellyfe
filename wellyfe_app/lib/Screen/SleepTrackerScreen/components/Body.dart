@@ -24,7 +24,7 @@ class Body extends StatelessWidget {
                   fontSize: 40,
                 ),
               ),
-              SizedBox(height: size.height * 0.02),
+              SizedBox(height: size.height * 0.01),
               Text(
                 "As the day comes to an end, throw all your worries and troubles away.",
                 textAlign: TextAlign.center,
@@ -35,9 +35,9 @@ class Body extends StatelessWidget {
                   fontSize: 25,
                 ),
               ),
-              SizedBox(height: size.height * 0.075),
-              Clock(),
               SizedBox(height: size.height * 0.05),
+              Clock(),
+              SizedBox(height: size.height * 0.025),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

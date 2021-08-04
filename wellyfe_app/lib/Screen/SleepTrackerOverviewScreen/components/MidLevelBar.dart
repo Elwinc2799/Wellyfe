@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/SleepTrackerAnalysisScreen/SleepTrackerAnalysisScreen.dart';
 
 class MidLevelBar extends StatelessWidget {
   const MidLevelBar({
@@ -15,17 +16,26 @@ class MidLevelBar extends StatelessWidget {
           style: TextStyle(
             fontSize: 25,
             fontFamily: "Nunito",
-            fontWeight: FontWeight.w900,
-            color: Colors.white.withOpacity(0.75),
+            fontWeight: FontWeight.w700,
+            color: Color(0XFF394D70),
           ),
         ),
-        Text(
-          "See all",
-          style: TextStyle(
-            fontSize: 25,
-            fontFamily: "Nunito",
-            fontWeight: FontWeight.w900,
-            color: Color(0XFF585867),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return SleepTrackerAnalysisScreen();
+                }
+            ));
+          },
+          child: Text(
+            "More",
+            style: TextStyle(
+              fontSize: 25,
+              fontFamily: "NunitoSans",
+              fontWeight: FontWeight.w800,
+              color: Color(0XFF394D70),
+            ),
           ),
         ),
       ],

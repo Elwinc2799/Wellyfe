@@ -236,13 +236,19 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "wave",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/wave-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "wellyfe_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-08-02T11:53:00.584815Z",
+  "generated": "2021-08-03T23:40:39.537963Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

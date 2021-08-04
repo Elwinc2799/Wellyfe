@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 40),
+        padding: const EdgeInsets.fromLTRB(40, 70, 40, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +34,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.025),
             TrackingContainer(),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.035),
             MidLevelBar(),
             SizedBox(height: size.height * 0.025),
             Column(

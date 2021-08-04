@@ -17,7 +17,14 @@ class Background extends StatelessWidget {
       width: size.width,
       child: Stack(
         children: [
-
+          Container(
+            height: size.height,
+            width: size.width,
+            child: Image(
+              image: AssetImage("assets/pictures/background.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
           children,
         ],
       ),

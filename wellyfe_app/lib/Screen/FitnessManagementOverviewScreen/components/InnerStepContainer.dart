@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/LineChart.dart';
+import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/StepsLineChart.dart';
 
 class InnerStepContainer extends StatelessWidget {
   const InnerStepContainer({

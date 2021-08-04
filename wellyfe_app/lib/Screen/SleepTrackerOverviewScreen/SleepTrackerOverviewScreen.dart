@@ -5,7 +5,6 @@ class SleepTrackerOverviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFF2E2E3E),
       body: Body(),
     );
   }

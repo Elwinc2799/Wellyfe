@@ -38,6 +38,7 @@ dependencies:
   flutter_rounded_date_picker: ^2.0.2
   fl_chart: ^0.36.3
   stop_watch_timer: ^1.3.1
+  wave: ^0.2.0
 
 dev_dependencies:
   flutter_test:
@@ -91,5 +92,8 @@ flutter:
   - family: Nunito
     fonts:
       - asset: assets/fonts/Nunito-Regular.ttf
+  - family: Georama
+    fonts:
+      - asset: assets/fonts/Georama-Light.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

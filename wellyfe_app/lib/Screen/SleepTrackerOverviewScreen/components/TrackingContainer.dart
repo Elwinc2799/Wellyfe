@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wave/config.dart';
+import 'package:wave/wave.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/SleepTrackerScreen.dart';
 
 class TrackingContainer extends StatelessWidget {
@@ -16,42 +18,48 @@ class TrackingContainer extends StatelessWidget {
         width: size.width - 80,
         height: size.height * 0.225,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(30.0)),
-            gradient: LinearGradient(
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
-              colors: [
-                Color(0XFF373749),
-                Color(0XFF4D4D65),
-              ],
+          color: Color(0XFFE1E2EB),
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          boxShadow: [
+            BoxShadow(
+                blurRadius: 5.0,
+                offset: Offset(-3, -3),
+                color: Colors.white.withOpacity(0.75)
             ),
-            boxShadow: [
-              BoxShadow(
+            BoxShadow(
                 blurRadius: 5.0,
-                color: Colors.black54,
-                offset: Offset(3.0, 3.0),
-              ),
-              BoxShadow(
-                blurRadius: 5.0,
-                color: Color(0XFF303030),
-                offset: Offset(-3.0, -3.0),
-              )
-            ]
+                offset: Offset(3, 3),
+                color: Colors.black.withOpacity(.25)
+            )
+          ]
         ),
         child: Stack(
           children: [
+            WaveWidget(
+              config: CustomConfig(
+                gradients: [[Color(0xFFCDD2EB), Color(0xFFD0D4E9)]],
+                durations: [35000],
+                heightPercentages: [0.5, 0.6],
+                blur: MaskFilter.blur(BlurStyle.inner, 10),
+                gradientBegin: Alignment.bottomLeft,
+                gradientEnd: Alignment.topRight,
+              ),
+              waveAmplitude: 3,
+              heightPercentange: 0.3,
+              size: size,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 40.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Good Sleep is a Reachable Dream.",
+                    "Good sleep is a reachable dream.",
                     style: TextStyle(
                       fontSize: 27.5,
                       fontFamily: "Nunito",
                       fontWeight: FontWeight.w900,
-                      color: Color(0XFFD8D8EA),
+                      color: Color(0XFF394D70),
                     ),
                   ),
                   SizedBox(height: size.height * 0.01),
@@ -61,7 +69,7 @@ class TrackingContainer extends StatelessWidget {
                       fontSize: 20,
                       fontFamily: "Nunito",
                       fontWeight: FontWeight.w900,
-                      color: Color(0XFFD8D8EA).withOpacity(0.5),
+                      color: Color(0XFF394D70).withOpacity(0.5),
                     ),
                   ),
                   SizedBox(height: size.height * 0.025),
