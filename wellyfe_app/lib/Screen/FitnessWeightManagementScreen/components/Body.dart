@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/Background.dart';
+import 'package:wellyfe_app/Screen/FitnessWeightManagementScreen/components/BMIContainer.dart';
 import 'package:wellyfe_app/Screen/FitnessWeightManagementScreen/components/CaloriesBurntContainer.dart';
 import 'package:wellyfe_app/Screen/FitnessWeightManagementScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/FitnessWeightManagementScreen/components/WaterIntakeContainer.dart';
@@ -12,31 +14,37 @@ class Body extends StatelessWidget {
 
     return Background(
         children: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 100.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TopLevelBar(),
-              SizedBox(height: size.height * 0.05),
-              WeightContainer(),
-              SizedBox(height: size.height * 0.05),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                child: Row(
-                  children: [
-                    CaloriesBurntContainer(),
-                    SizedBox(width: size.width * 0.05),
-                    WaterIntakeContainer(),
-                  ],
+          padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0),
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TopLevelBar(),
+                SizedBox(height: size.height * 0.05),
+                WeightContainer(),
+                SizedBox(height: size.height * 0.025),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Row(
+                    children: [
+                      CaloriesBurntContainer(),
+                      SizedBox(width: size.width * 0.05),
+                      WaterIntakeContainer(),
+                    ],
+                  ),
                 ),
-              )
-            ],
+                SizedBox(height: size.height * 0.025),
+                BMIContainer(),
+              ],
+            ),
           ),
         ),
     );
   }
 }
+
 
 
 
