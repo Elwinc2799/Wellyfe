@@ -19,54 +19,6 @@ class ScheduleMenuIndividual extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    // return Neumorphic(
-    //   style: NeumorphicStyle(
-    //     shape: NeumorphicShape.convex,
-    //     color: Color(0XFFE4EDFF),
-    //     boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(20.0)),
-    //   ),
-    //   child: Container(
-    //     width: size.width * 0.4,
-    //     height: size.height * 0.115,
-    //     child: Stack(
-    //       children: [
-    //         Positioned(
-    //             top: size.height * (0.125 / 3.75),
-    //             left: size.width * (0.4 / 12.5),
-    //             child: Image(image: AssetImage(asset))
-    //         ),
-    //         Positioned(
-    //           top: size.height * (0.125 / 4.5),
-    //           left: size.width * (0.4 / 7) * 2.5,
-    //           child: Column(
-    //             crossAxisAlignment: CrossAxisAlignment.start,
-    //             children: [
-    //               Text(
-    //                 total.toString(),
-    //                 style: TextStyle(
-    //                   fontSize: 30,
-    //                   fontFamily: "NunitoSans",
-    //                   fontWeight: FontWeight.w700,
-    //                   color: Color(0XFFB1BDD3),
-    //                 ),
-    //               ),
-    //               Text(
-    //                 title,
-    //                 style: TextStyle(
-    //                   fontSize: 20,
-    //                   fontFamily: "NunitoSans",
-    //                   fontWeight: FontWeight.w700,
-    //                   color: Color(0XFFB1BDD3),
-    //                 ),
-    //               )
-    //             ],
-    //           ),
-    //         )
-    //       ],
-    //     ),
-    //   ),
-    // );
-
     return Container(
       width: size.width * 0.4,
       height: size.height * 0.115,
@@ -105,7 +57,7 @@ class ScheduleMenuIndividual extends StatelessWidget {
                     fontSize: 30,
                     fontFamily: "NunitoSans",
                     fontWeight: FontWeight.w700,
-                    color: Color(0XFFB1BDD3),
+                    color: Color(0XFF394D70),
                   ),
                 ),
                 Text(
@@ -114,7 +66,7 @@ class ScheduleMenuIndividual extends StatelessWidget {
                     fontSize: 20,
                     fontFamily: "NunitoSans",
                     fontWeight: FontWeight.w700,
-                    color: Color(0XFFB1BDD3),
+                    color: Color(0XFF394D70),
                   ),
                 )
               ],

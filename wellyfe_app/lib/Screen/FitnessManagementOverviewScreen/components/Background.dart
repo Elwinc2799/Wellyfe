@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 
 class Background extends StatelessWidget {
   const Background({
@@ -13,35 +12,19 @@ class Background extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return GlassmorphicContainer(
-      height: size.height,
+    return Container(
       width: size.width,
-      borderRadius: 25,
-      border: 2.5,
-      blur: 20,
-      linearGradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color(0XFFBAF9FF).withOpacity(0.35),
-            Color(0XFFE1E2F8).withOpacity(0.5),
-          ],
-          stops: [
-            0.1,
-            1,
-          ]
-      ),
-      borderGradient: LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: [
-          Color(0xFFFFFFFF).withOpacity(0.25),
-          Color((0xFFFFFFFF)).withOpacity(0.75),
-        ],
-      ),
+      height: size.height,
       child: Stack(
         children: [
-
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/pictures/background5.jpg"),
+              ),
+            ),
+          ),
           children,
         ],
       ),

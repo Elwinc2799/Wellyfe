@@ -18,11 +18,24 @@ class Body extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TopLevelBar(),
-              SizedBox(height: size.height * 0.001),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 20.0),
+                padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+                      child: Text(
+                        "W E E K L Y",
+                        style: TextStyle(
+                          fontFamily: "Nunito",
+                          color: Color(0XFF394D70),
+                          fontSize: 30,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                    ),
                     GraphContainer(
                       isBubble: true,
                       title: "Priority",

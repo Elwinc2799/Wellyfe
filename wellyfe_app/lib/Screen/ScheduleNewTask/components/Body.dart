@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
                 fontSize: 25,
                 fontFamily: "NunitoSans",
                 fontWeight: FontWeight.w400,
-                color: Color(0XFFB1BDD3)
+                color: Color(0XFF394D70)
               ),
             ),
             SizedBox(height: size.height * 0.005),
@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
                 fontSize: 40,
                 fontFamily: "NunitoSans",
                 fontWeight: FontWeight.bold,
-                color: Color(0XFFB1BDD3),
+                color: Color(0XFF394D70),
               ),
             ),
             SizedBox(height: size.height * 0.05),

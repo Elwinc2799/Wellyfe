@@ -29,12 +29,12 @@ class Body extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: Text(
-                      "Task",
+                      "A G E N D A",
                       style: TextStyle(
+                        fontFamily: "Nunito",
+                        color: Color(0XFF394D70),
                         fontSize: 30,
-                        fontFamily: "NunitoSans",
-                        fontWeight: FontWeight.w800,
-                        color: Color(0XFFB1BDD3),
+                        fontWeight: FontWeight.w900,
                       ),
                     ),
                   ),

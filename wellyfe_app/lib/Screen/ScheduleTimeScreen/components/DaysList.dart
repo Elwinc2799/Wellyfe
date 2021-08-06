@@ -59,7 +59,7 @@ class _DaysListState extends State<DaysList> {
                       // TODO ADD PRIORITY INDICATOR
                     ),
                     style: NeumorphicRadioStyle(
-                      selectedColor: Colors.blue[100],
+                      selectedColor: Colors.teal[50],
                       unselectedColor: Colors.white.withOpacity(0.5),
                       shape: NeumorphicShape.convex,
                       selectedDepth: 0,

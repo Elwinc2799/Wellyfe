@@ -17,7 +17,7 @@ class MidLevelBar extends StatelessWidget {
             fontSize: 25,
             fontFamily: "NunitoSans",
             fontWeight: FontWeight.w800,
-            color: Color(0XFFB1BDD3),
+            color: Color(0XFF394D70),
           ),
         ),
         GestureDetector(

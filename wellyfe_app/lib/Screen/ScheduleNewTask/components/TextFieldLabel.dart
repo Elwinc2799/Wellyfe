@@ -18,7 +18,7 @@ class TextFieldLabel extends StatelessWidget {
           fontSize: 20,
           fontFamily: "NunitoSans",
           fontWeight: FontWeight.bold,
-          color: Color(0XFFB1BDD3),
+          color: Color(0XFF394D70),
         ),
       ),
     );
