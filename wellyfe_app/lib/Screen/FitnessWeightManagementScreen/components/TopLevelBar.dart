@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/FitnessActivityManagementScreen/FitnessActivityManagementScreen.dart';
 
 class TopLevelBar extends StatelessWidget {
   const TopLevelBar({
@@ -24,7 +25,7 @@ class TopLevelBar extends StatelessWidget {
           ),
           SizedBox(width: size.width * 0.025),
           Text(
-            "Activity",
+            "Health Status",
             style: TextStyle(
               fontSize: 30,
               fontFamily: "NunitoSans",
@@ -34,8 +35,15 @@ class TopLevelBar extends StatelessWidget {
           ),
           SizedBox(width: size.width * 0.05),
           GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(
+                  builder: (context) {
+                    return FitnessActivityManagementScreen();
+                  }
+              ));
+            },
             child: Text(
-              "Health Status",
+              "Activity",
               style: TextStyle(
                 fontSize: 30,
                 fontFamily: "NunitoSans",

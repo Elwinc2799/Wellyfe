@@ -19,14 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4f8c179-52db-4ac6-8c47-a8973b22a28b" name="Default Changelist" comment="Sleep tracker stopwatch updated">
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/FitnessOverviewIndividual.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/RemainingCalories.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/TopLevelBar.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/FitnessWeightManagementScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/Body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/WeightContainer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/WeightLineChart.dart" afterDir="false" />
+    <list default="true" id="e4f8c179-52db-4ac6-8c47-a8973b22a28b" name="Default Changelist" comment="Fitness screen created">
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessActivityManagementScreen/FitnessActivityManagementScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessActivityManagementScreen/components/Body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessActivityManagementScreen/components/StepsBarChart.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessActivityManagementScreen/components/StepsLowerContainer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessActivityManagementScreen/components/TopLevelBar.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/CaloriesBurntContainer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/WaterIntakeContainer.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/app.dill" afterDir="false" />
@@ -40,7 +40,6 @@
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/AssetManifest.json.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/AssetManifest.json.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" afterDir="false" />
@@ -54,24 +53,9 @@
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/Background.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/Background.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/Body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/InnerStepContainer.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/StepsContainer.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/StepsLineChart.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessManagementOverviewScreen/components/TitleDataMonth.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/Body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/TopLevelBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleAnalysisScreen/components/TopLevelBar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleNewTask/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleNewTask/components/Body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleNewTask/components/TextFieldLabel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleNewTask/components/TextFieldLabel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/Background.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/Background.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/MidLevelBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/MidLevelBar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/ScheduleMenuIndividual.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/ScheduleMenuIndividual.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TopLevelBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleOverviewScreen/components/TopLevelBar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/Body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/DaysList.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/DaysList.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/TopLevelBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/ScheduleTimeScreen/components/TopLevelBar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/SignInScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/SignInScreen/components/Body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/Body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/TopLevelBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/TopLevelBar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/WeightContainer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessWeightManagementScreen/components/WeightContainer.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +81,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../Android/AndroidSDK" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CST235" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
@@ -308,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628063811894</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fitness screen created">
+      <created>1628208445890</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1628208445891</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -346,7 +338,8 @@
     <MESSAGE value="Sleep tracker module created" />
     <MESSAGE value="Sleep tracker analysis created" />
     <MESSAGE value="Sleep tracker stopwatch updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sleep tracker stopwatch updated" />
+    <MESSAGE value="Fitness screen created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fitness screen created" />
   </component>
   <component name="WindowStateProjectService">
     <state x="518" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1627019135604">
@@ -357,41 +350,45 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1628160325642" />
-    <state width="1164" height="160" key="GridCell.Tab.0.bottom" timestamp="1628206956879">
+    <state width="1164" height="160" key="GridCell.Tab.0.bottom" timestamp="1628214104486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1164" height="160" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1628206956879" />
-    <state width="1164" height="160" key="GridCell.Tab.0.center" timestamp="1628206956878">
+    <state width="1164" height="160" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1628214104486" />
+    <state width="1164" height="160" key="GridCell.Tab.0.center" timestamp="1628214104486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1164" height="160" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1628206956878" />
-    <state width="1164" height="160" key="GridCell.Tab.0.left" timestamp="1628206956878">
+    <state width="1164" height="160" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1628214104486" />
+    <state width="1164" height="160" key="GridCell.Tab.0.left" timestamp="1628214104486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1164" height="160" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1628206956878" />
-    <state width="1164" height="160" key="GridCell.Tab.0.right" timestamp="1628206956878">
+    <state width="1164" height="160" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1628214104486" />
+    <state width="1164" height="160" key="GridCell.Tab.0.right" timestamp="1628214104486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1164" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1628206956878" />
+    <state width="1164" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1628214104486" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1626937267824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626937267824" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1628063829475">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1628208450831">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1628063829475" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1628208450831" />
     <state x="100" y="100" width="1035" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1627465965310">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="100" y="100" width="1035" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1627465965310" />
+    <state x="423" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628213045950">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="423" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1628213045950" />
     <state x="426" y="187" key="run.anything.popup" timestamp="1627954314706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="426" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1627954314706" />
-    <state x="279" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1628036754460">
+    <state x="279" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1628214004037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="279" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628036754460" />
+    <state x="279" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628214004037" />
   </component>
 </project>

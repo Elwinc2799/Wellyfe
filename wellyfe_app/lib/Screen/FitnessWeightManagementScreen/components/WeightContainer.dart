@@ -12,7 +12,7 @@ class WeightContainer extends StatelessWidget {
 
     return Center(
       child: Container(
-        height: size.height * 0.4,
+        height: size.height * 0.37,
         width: size.width * 0.8,
         decoration: BoxDecoration(
             color: Color(0XFFF4F9FF),
