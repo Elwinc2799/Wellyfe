@@ -36,7 +36,7 @@ class CaloriesBurntContainer extends StatelessWidget {
           children: [
             Row(
               children: [
-                Image(image: AssetImage("assets/logo/burnt.png")),
+                Image(image: AssetImage("assets/logo/flame.png")),
                 SizedBox(width: size.width * 0.15),
                 Text(
                   "Today",

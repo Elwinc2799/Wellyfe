@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/FitnessIntakeOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/FitnessOverviewIndividual.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/RemainingCalories.dart';
@@ -27,7 +28,7 @@ class Body extends StatelessWidget {
               children: [
                 FitnessOverviewIndividual(
                   title: "Intake",
-                  image: "assets/logo/food.png",
+                  image: "assets/logo/appleFood.png",
                   firstData: "928",
                   firstUnit: "kcal",
                   firstPercentage: 0.4,
@@ -36,11 +37,17 @@ class Body extends StatelessWidget {
                   secondUnit: "fat g",
                   secondPercentage: 0.2,
                   secondColor: Colors.yellow.shade600,
-                  function: () {},
+                  function: () {
+                    Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return FitnessIntakeOverviewScreen();
+                        }
+                    ));
+                  },
                 ),
                 FitnessOverviewIndividual(
                   title: "Burnt",
-                  image: "assets/logo/burnt.png",
+                  image: "assets/logo/flame.png",
                   firstData: "1928",
                   firstUnit: "kcal",
                   firstPercentage: 0.6,
