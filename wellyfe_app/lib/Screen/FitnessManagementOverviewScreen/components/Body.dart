@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/FitnessFirstGoalsScreen/FitnessFirstGoalsScreen.dart';
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/FitnessIntakeOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/FitnessOverviewIndividual.dart';
@@ -67,28 +68,34 @@ class Body extends StatelessWidget {
               ],
             ),
             SizedBox(height: size.height * 0.075),
-            Center(
-              child: Container(
-                width: size.width * 0.5,
-                height: size.height * 0.05,
-                decoration: BoxDecoration(
-                  color: Color(0XFFF4F9FF),
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                  boxShadow: [
-                    BoxShadow(
-                        blurRadius: 5.0,
-                        offset: Offset(-3, -3),
-                        color: Colors.grey.withOpacity(0.1)
-                    ),
-                    BoxShadow(
-                        blurRadius: 5.0,
-                        offset: Offset(3, 3),
-                        color: Colors.black.withOpacity(.25)
-                    )
-                  ]
-                ),
-                child: GestureDetector(
-                  onTap: () {},
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return FitnessFirstGoalsScreen();
+                    }
+                ));
+              },
+              child: Center(
+                child: Container(
+                  width: size.width * 0.5,
+                  height: size.height * 0.05,
+                  decoration: BoxDecoration(
+                    color: Color(0XFFF4F9FF),
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    boxShadow: [
+                      BoxShadow(
+                          blurRadius: 5.0,
+                          offset: Offset(-3, -3),
+                          color: Colors.grey.withOpacity(0.1)
+                      ),
+                      BoxShadow(
+                          blurRadius: 5.0,
+                          offset: Offset(3, 3),
+                          color: Colors.black.withOpacity(.25)
+                      )
+                    ]
+                  ),
                   child: Center(
                     child: Text(
                       "Set Your Goals",
@@ -102,7 +109,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
