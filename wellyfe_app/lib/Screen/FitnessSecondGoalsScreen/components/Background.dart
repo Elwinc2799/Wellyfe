@@ -25,6 +25,76 @@ class Background extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+            bottom: size.height * 0.1,
+            left: size.width * 0.5 - (2 * size.width * 0.025),
+            child: Row(
+              children: [
+                Container(
+                  height: 15,
+                  width: 15,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0XFFF4F9FF),
+                      boxShadow: [
+                        BoxShadow(
+                            blurRadius: 5.0,
+                            offset: Offset(-3, -3),
+                            color: Colors.grey.withOpacity(0.1)
+                        ),
+                        BoxShadow(
+                            blurRadius: 5.0,
+                            offset: Offset(3, 3),
+                            color: Colors.black.withOpacity(.25)
+                        )
+                      ]
+                  ),
+                ),
+                SizedBox(width: size.width * 0.025),
+                Container(
+                  height: 15,
+                  width: 45,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      color: Color(0XFFF4F9FF),
+                      boxShadow: [
+                        BoxShadow(
+                            blurRadius: 5.0,
+                            offset: Offset(-3, -3),
+                            color: Colors.grey.withOpacity(0.1)
+                        ),
+                        BoxShadow(
+                            blurRadius: 5.0,
+                            offset: Offset(3, 3),
+                            color: Colors.black.withOpacity(.25)
+                        )
+                      ]
+                  ),
+                ),
+                SizedBox(width: size.width * 0.025),
+                Container(
+                  height: 15,
+                  width: 15,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0XFFF4F9FF),
+                      boxShadow: [
+                        BoxShadow(
+                            blurRadius: 5.0,
+                            offset: Offset(-3, -3),
+                            color: Colors.grey.withOpacity(0.1)
+                        ),
+                        BoxShadow(
+                            blurRadius: 5.0,
+                            offset: Offset(3, 3),
+                            color: Colors.black.withOpacity(.25)
+                        )
+                      ]
+                  ),
+                )
+              ],
+            ),
+          ),
           children,
         ],
       ),

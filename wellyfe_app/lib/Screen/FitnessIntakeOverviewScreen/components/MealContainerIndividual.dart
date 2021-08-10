@@ -37,12 +37,12 @@ class MealContainerIndividual extends StatelessWidget {
               BoxShadow(
                   blurRadius: 5.0,
                   offset: Offset(-3, -3),
-                  color: Colors.grey.withOpacity(0.1)
+                  color: Colors.grey.withOpacity(0.05)
               ),
               BoxShadow(
                   blurRadius: 5.0,
                   offset: Offset(3, 3),
-                  color: Colors.black.withOpacity(.25)
+                  color: Colors.black.withOpacity(0.1)
               )
             ]
         ),

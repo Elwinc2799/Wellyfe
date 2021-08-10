@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/FitnessBreakfastScreen/FitnessBreakfastScreen.dart';
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/MealContainerIndividual.dart';
 
 class MealContainer extends StatelessWidget {
@@ -17,7 +18,13 @@ class MealContainer extends StatelessWidget {
         MealContainerIndividual(
           meal: "Breakfast",
           calorie: "345",
-          function: () {},
+          function: () {
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return FitnessBreakfastScreen();
+                }
+            ));
+          },
           isLeft: true,
           isRight: false,
         ),

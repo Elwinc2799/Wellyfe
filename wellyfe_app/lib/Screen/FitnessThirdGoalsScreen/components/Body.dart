@@ -1,8 +1,50 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/FitnessThirdGoalsScreen/components/NextButton.dart';
+import 'package:wellyfe_app/Screen/FitnessThirdGoalsScreen/components/Background.dart';
+import 'package:wellyfe_app/Screen/FitnessThirdGoalsScreen/components/FoodContainerColumn.dart';
+import 'package:wellyfe_app/Screen/FitnessThirdGoalsScreen/components/TopLevelBar.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    Size size = MediaQuery.of(context).size;
+
+    return Background(
+      children: Padding(
+        padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TopLevelBar(),
+            SizedBox(height: size.height * 0.05),
+            Text(
+              "Lighten on the plate,\nshall we?",
+              style: TextStyle(
+                fontSize: 35,
+                fontFamily: "NunitoSans",
+                color: Color(0XFF394D70),
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            SizedBox(height: size.height * 0.01),
+            Text(
+              "Let us know of the food you don't eat.",
+              style: TextStyle(
+                fontSize: 25,
+                fontFamily: "NunitoSans",
+                color: Colors.black.withOpacity(0.3),
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            SizedBox(height: size.height * 0.05),
+            FoodContainerColumn(),
+            SizedBox(height: size.height * 0.025),
+            NextButton(),
+          ],
+        ),
+      )
+    );
   }
 }
+

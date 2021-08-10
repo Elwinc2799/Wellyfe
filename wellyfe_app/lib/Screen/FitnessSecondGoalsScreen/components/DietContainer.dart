@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/FitnessThirdGoalsScreen/FitnessThirdGoalsScreen.dart';
 
 class DietContainer extends StatelessWidget {
   const DietContainer({
@@ -16,7 +17,11 @@ class DietContainer extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return FitnessThirdGoalsScreen();
+            }
+        ));
       },
       child: Container(
         height: size.height * 0.19,
