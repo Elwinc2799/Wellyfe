@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
             TopLevelBar(),
             SizedBox(height: size.height * 0.05),
             Text(
-              "Tell us of your primary\nFitness Goal. ",
+              "Tell us of your primary\nfitness goal. ",
               style: TextStyle(
                 fontSize: 35,
                 fontFamily: "NunitoSans",
@@ -25,7 +25,17 @@ class Body extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.01),
+            Text(
+              "It should be achievable.",
+              style: TextStyle(
+                fontSize: 25,
+                fontFamily: "NunitoSans",
+                color: Colors.black.withOpacity(0.3),
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            SizedBox(height: size.height * 0.04),
             FitnessInputForm(),
             NextButton(),
           ],

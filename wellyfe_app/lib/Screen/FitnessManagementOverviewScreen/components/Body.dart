@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:wellyfe_app/Screen/FitnessFirstGoalsScreen/FitnessFirstGoalsScreen.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/FitnessIntakeOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/FitnessOverviewIndividual.dart';
+import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/GoalsButton.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/RemainingCalories.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/FitnessWeightManagementScreen/FitnessWeightManagementScreen.dart';
@@ -33,16 +34,15 @@ class Body extends StatelessWidget {
                   firstData: "928",
                   firstUnit: "kcal",
                   firstPercentage: 0.4,
-                  firstColor: Colors.teal,
+                  firstColor: Color(0XFF15e7c2),
                   secondData: "46.9",
                   secondUnit: "fat g",
                   secondPercentage: 0.2,
-                  secondColor: Colors.yellow.shade600,
+                  secondColor: Color(0XFF1D80F3),
                   function: () {
-                    Navigator.push(context, MaterialPageRoute(
-                        builder: (context) {
-                          return FitnessIntakeOverviewScreen();
-                        }
+                    Navigator.push(context, PageTransition(
+                      type: PageTransitionType.fade,
+                      child: FitnessIntakeOverviewScreen(),
                     ));
                   },
                 ),
@@ -52,64 +52,22 @@ class Body extends StatelessWidget {
                   firstData: "1928",
                   firstUnit: "kcal",
                   firstPercentage: 0.6,
-                  firstColor: Colors.orange.shade400,
+                  firstColor: Color(0XFFC9DFEE),
                   secondData: "5239",
                   secondUnit: "steps",
                   secondPercentage: 1,
-                  secondColor: Colors.greenAccent,
+                  secondColor: Color(0XFF68F8D6),
                   function: () {
-                    Navigator.push(context, MaterialPageRoute(
-                        builder: (context) {
-                          return FitnessWeightManagementScreen();
-                        }
+                    Navigator.push(context, PageTransition(
+                      type: PageTransitionType.fade,
+                      child: FitnessWeightManagementScreen(),
                     ));
                   },
                 ),
               ],
             ),
             SizedBox(height: size.height * 0.075),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return FitnessFirstGoalsScreen();
-                    }
-                ));
-              },
-              child: Center(
-                child: Container(
-                  width: size.width * 0.5,
-                  height: size.height * 0.05,
-                  decoration: BoxDecoration(
-                    color: Color(0XFFF4F9FF),
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(-3, -3),
-                          color: Colors.grey.withOpacity(0.1)
-                      ),
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(3, 3),
-                          color: Colors.black.withOpacity(.25)
-                      )
-                    ]
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Set Your Goals",
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontFamily: "NunitoSans",
-                        color: Colors.black.withOpacity(0.3),
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            GoalsButton(),
           ],
         ),
       ),

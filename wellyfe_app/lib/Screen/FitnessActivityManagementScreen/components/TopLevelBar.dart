@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/FitnessWeightManagementScreen/FitnessWeightManagementScreen.dart';
 
 class TopLevelBar extends StatelessWidget {
@@ -17,10 +18,9 @@ class TopLevelBar extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(
-                  builder: (context) {
-                    return FitnessWeightManagementScreen();
-                  }
+              Navigator.pushReplacement(context, PageTransition(
+                type: PageTransitionType.fade,
+                child: FitnessWeightManagementScreen(),
               ));
             },
             child: Text(

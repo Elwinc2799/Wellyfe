@@ -6,11 +6,9 @@ import 'package:wellyfe_app/Screen/SignInScreen/SignInScreen.dart';
 void main() {
   runApp(
     MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => SignInModel()),
-      ],
+      providers: [ChangeNotifierProvider(create: (_) => SignInModel())],
       child: MyApp(),
-    )
+    ),
   );
 }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerAnalysisScreen/SleepTrackerAnalysisScreen.dart';
 
 class MidLevelBar extends StatelessWidget {
@@ -22,10 +23,9 @@ class MidLevelBar extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return SleepTrackerAnalysisScreen();
-                }
+            Navigator.push(context, PageTransition(
+              type: PageTransitionType.fade,
+              child: SleepTrackerAnalysisScreen(),
             ));
           },
           child: Text(

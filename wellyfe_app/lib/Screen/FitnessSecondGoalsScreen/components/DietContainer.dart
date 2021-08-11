@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/FitnessThirdGoalsScreen/FitnessThirdGoalsScreen.dart';
 
 class DietContainer extends StatelessWidget {
@@ -17,10 +18,9 @@ class DietContainer extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(
-            builder: (context) {
-              return FitnessThirdGoalsScreen();
-            }
+        Navigator.push(context, PageTransition(
+          type: PageTransitionType.fade,
+          child: FitnessThirdGoalsScreen(),
         ));
       },
       child: Container(

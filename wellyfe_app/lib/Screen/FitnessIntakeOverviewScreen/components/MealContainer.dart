@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/FitnessBreakfastScreen/FitnessBreakfastScreen.dart';
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/MealContainerIndividual.dart';
 
@@ -19,10 +20,9 @@ class MealContainer extends StatelessWidget {
           meal: "Breakfast",
           calorie: "345",
           function: () {
-            Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return FitnessBreakfastScreen();
-                }
+            Navigator.push(context, PageTransition(
+              type: PageTransitionType.fade,
+              child: FitnessBreakfastScreen(),
             ));
           },
           isLeft: true,

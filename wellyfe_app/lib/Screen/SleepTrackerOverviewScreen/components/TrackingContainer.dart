@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/SleepTrackerScreen.dart';
@@ -81,10 +82,9 @@ class TrackingContainer extends StatelessWidget {
               bottom: size.height * 0.025,
               child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return SleepTrackerScreen();
-                      }
+                  Navigator.push(context, PageTransition(
+                    type: PageTransitionType.fade,
+                    child: SleepTrackerScreen(),
                   ));
                 },
                 child: Container(

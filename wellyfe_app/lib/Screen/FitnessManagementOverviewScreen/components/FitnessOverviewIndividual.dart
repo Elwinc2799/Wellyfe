@@ -122,7 +122,7 @@ class BarCategory extends StatelessWidget {
                 height: size.height * 0.075,
                 width: size.width * 0.0175,
                 decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.5),
+                  color: Colors.grey.withOpacity(0.15),
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                 ),
               ),

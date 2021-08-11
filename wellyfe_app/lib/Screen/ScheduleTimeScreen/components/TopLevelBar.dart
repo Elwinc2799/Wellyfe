@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Data/TaskData.dart';
 import 'package:wellyfe_app/Screen/ScheduleAnalysisScreen/ScheduleAnalysisScreen.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/ScheduleOverviewScreen.dart';
@@ -24,11 +25,10 @@ class TopLevelBar extends StatelessWidget {
             TaskData.updateTaskDataList("");
             TaskTimelineList.listChanged();
 
-            Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) {
-                return ScheduleOverviewScreen();
-              }
-          ));
+            Navigator.pushReplacement(context, PageTransition(
+              type: PageTransitionType.fade,
+              child: ScheduleOverviewScreen(),
+            ));
           },
         ),
         Text(
@@ -46,11 +46,10 @@ class TopLevelBar extends StatelessWidget {
             TaskData.updateTaskDataList("");
             TaskTimelineList.listChanged();
 
-            Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) {
-                return ScheduleAnalysisScreen();
-              }
-          ));
+            Navigator.pushReplacement(context, PageTransition(
+              type: PageTransitionType.fade,
+              child: ScheduleAnalysisScreen(),
+            ));
           },
         ),
       ],

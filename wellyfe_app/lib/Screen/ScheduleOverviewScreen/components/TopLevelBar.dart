@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Data/TaskData.dart';
 import 'package:wellyfe_app/Screen/ScheduleAnalysisScreen/ScheduleAnalysisScreen.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/TopLevelIcon.dart';
@@ -24,10 +25,9 @@ class TopLevelBar extends StatelessWidget {
             TaskData.updateTaskDataList("Mo");
             TaskTimelineList.listChanged();
 
-            Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) {
-                return ScheduleTimeScreen();
-              }
+            Navigator.pushReplacement(context, PageTransition(
+              type: PageTransitionType.fade,
+              child: ScheduleTimeScreen(),
             ));
           },
         ),
@@ -42,10 +42,10 @@ class TopLevelBar extends StatelessWidget {
         ),
         TopLevelIcon(
           asset: "assets/logo/chart.png",
-          function: () { Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) {
-                return ScheduleAnalysisScreen();
-              }
+          function: () {
+            Navigator.pushReplacement(context, PageTransition(
+              type: PageTransitionType.fade,
+              child: ScheduleAnalysisScreen(),
             ));
           },
         ),

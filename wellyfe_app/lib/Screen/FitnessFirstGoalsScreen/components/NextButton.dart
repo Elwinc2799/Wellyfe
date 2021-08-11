@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/FitnessSecondGoalsScreen/FitnessSecondGoalsScreen.dart';
 
 class NextButton extends StatelessWidget {
@@ -8,10 +9,9 @@ class NextButton extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(
-            builder: (context) {
-              return FitnessSecondGoalsScreen();
-            }
+        Navigator.push(context, PageTransition(
+          type: PageTransitionType.fade,
+          child: FitnessSecondGoalsScreen(),
         ));
       },
       child: Container(

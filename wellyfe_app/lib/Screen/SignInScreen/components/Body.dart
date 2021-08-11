@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/FitnessManagementOverviewScreen.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/OrDivider.dart';
@@ -69,10 +70,9 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.025),
             SignInButton(function: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return FitnessManagementOverviewScreen();
-                }
+              Navigator.push(context, PageTransition(
+                type: PageTransitionType.fade,
+                child: DiaryOverviewScreen(),
               ));
             }),
             SizedBox(height: size.height * 0.025),
@@ -102,12 +102,11 @@ class Body extends StatelessWidget {
             AlreadyHaveAnAccount(
               login: true,
               press: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) {
-                    return SignUpScreen();
-                  }
-                )
-              );}
+                Navigator.push(context, PageTransition(
+                  type: PageTransitionType.fade,
+                  child: SignUpScreen(),
+                ));
+              }
             ),
           ],
         ),
