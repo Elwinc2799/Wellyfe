@@ -24,7 +24,7 @@ class TopLevelBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "AUTO",
+                    "MY",
                     style: TextStyle(
                       height: 0.25,
                       fontSize: 15,
@@ -34,7 +34,7 @@ class TopLevelBar extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "SAVE",
+                    "DIARY",
                     style: TextStyle(
                       fontSize: 15,
                       fontFamily: "TitilliumWeb",
@@ -68,7 +68,9 @@ class TopLevelBar extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+            },
             child: Image(
               image: AssetImage("assets/logo/tick.png"),
             ),

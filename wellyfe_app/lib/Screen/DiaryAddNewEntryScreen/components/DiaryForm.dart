@@ -32,7 +32,7 @@ class _DiaryFormState extends State<DiaryForm> {
       height: size.height * 0.25,
       child: TextField(
         decoration: InputDecoration(
-          hintText: "Write about your day.",
+          hintText: "How was your day?",
           hintStyle: TextStyle(
             fontSize: 30,
             fontFamily: "TitilliumWeb",

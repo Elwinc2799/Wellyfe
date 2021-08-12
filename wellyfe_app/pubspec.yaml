@@ -42,6 +42,8 @@ dependencies:
   horizontal_picker: ^1.1.0
   page_transition: ^2.0.2
   carousel_slider: ^4.0.0
+  image_picker: ^0.8.3+2
+  modal_bottom_sheet: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +65,8 @@ flutter:
     - assets/json/liquid.json
     - assets/logo/
     - assets/pictures/
+    - assets/emoji/
+    - assets/weather/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -2,10 +2,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Screen/DiaryAddNewEntryScreen/DiaryAddNewEntryScreen.dart';
 import 'package:wellyfe_app/Screen/DiaryDayListScreen/DiaryDayListScreen.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/Background.dart';
-import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/AddEntryButton.dart';
+import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/DiaryButton.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/MonthContainer.dart';
+import 'package:wellyfe_app/Screen/DiaryProfileScreen/DiaryProfileScreen.dart';
 
 class Body extends StatelessWidget {
 
@@ -46,7 +48,7 @@ class Body extends StatelessWidget {
 
     return Background(
         children: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 150.0),
+          padding: const EdgeInsets.only(top: 150.0),
           child: Center(
             child: Column(
               children: [
@@ -89,7 +91,25 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: size.height * 0.05),
-                AddEntryButton(),
+                DiaryButton(
+                  function: () {
+                    Navigator.push(context, PageTransition(
+                      type: PageTransitionType.fade,
+                      child: DiaryAddNewEntryScreen(),
+                    ));
+                  },
+                  title: "Add New Diary",
+                ),
+                SizedBox(height: size.height * 0.025),
+                DiaryButton(
+                  function: () {
+                    Navigator.push(context, PageTransition(
+                      type: PageTransitionType.fade,
+                      child: DiaryProfileScreen(),
+                    ));
+                  },
+                  title: "View My Profile",
+                ),
               ],
             ),
           ),
