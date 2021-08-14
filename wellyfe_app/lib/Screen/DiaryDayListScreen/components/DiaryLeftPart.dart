@@ -34,7 +34,7 @@ class DiaryLeftPart extends StatelessWidget {
                       TextSpan(
                         text: dayNumber + "\n",
                         style: TextStyle(
-                          height: 0.25,
+                          height: 0.5,
                           fontSize: 60,
                           fontFamily: "TitilliumWeb",
                           color: Colors.grey.shade600,
@@ -45,7 +45,7 @@ class DiaryLeftPart extends StatelessWidget {
                         text: dayString,
                         style: TextStyle(
                           fontSize: 30,
-                          fontFamily: "TitilliumWeb",
+                          fontFamily: "Montserrat",
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w600,
                         ),

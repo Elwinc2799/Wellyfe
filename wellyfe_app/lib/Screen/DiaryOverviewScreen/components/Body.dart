@@ -56,7 +56,7 @@ class Body extends StatelessWidget {
                   DateFormat('y').format(DateTime.now()),
                   style: TextStyle(
                     fontSize: 30,
-                    fontFamily: "TitilliumWeb",
+                    fontFamily: "Montserrat",
                     color: Color(0XFF394D70),
                     fontWeight: FontWeight.w700,
                   ),

@@ -101,12 +101,12 @@ class MonthContainer extends StatelessWidget {
                         ],
                       ),
                       Text(
-                        datesFilled.toString() + " / " + getNumberOfDays(monthNumber),
+                        datesFilled.toString() + " : " + getNumberOfDays(monthNumber),
                         style: TextStyle(
                           fontSize: 20,
                           fontFamily: "TitilliumWeb",
                           color: Color(0XFF394D70),
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w800,
                         ),
                       )
                     ],

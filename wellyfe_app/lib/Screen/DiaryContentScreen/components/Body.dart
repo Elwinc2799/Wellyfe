@@ -34,7 +34,7 @@ class Body extends StatelessWidget {
                   "I'm good.",
                   style: TextStyle(
                     fontSize: 27.5,
-                    fontFamily: "TitilliumWeb",
+                    fontFamily: "Montserrat",
                     color: Colors.black.withOpacity(0.75),
                     fontWeight: FontWeight.w600,
                   ),

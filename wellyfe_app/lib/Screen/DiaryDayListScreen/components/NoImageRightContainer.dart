@@ -47,7 +47,7 @@ class NoImageRightContainer extends StatelessWidget {
                           textAlign: TextAlign.justify,
                           style: TextStyle(
                             fontSize: 25,
-                            fontFamily: "TitilliumWeb",
+                            fontFamily: "Montserrat",
                             color: Colors.grey.shade600,
                             fontWeight: FontWeight.w700,
                           ),

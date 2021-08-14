@@ -25,21 +25,22 @@ class TitleTimeMood extends StatelessWidget {
             title,
             style: TextStyle(
               fontSize: 40,
-              fontFamily: "TitilliumWeb",
+              fontFamily: "Montserrat",
               color: Color(0XFF525252),
               fontWeight: FontWeight.w600,
             ),
           ),
+          SizedBox(height: size.height * 0.01),
           Text(
             time,
             style: TextStyle(
               fontSize: 25,
-              fontFamily: "TitilliumWeb",
+              fontFamily: "Montserrat",
               color: Colors.grey.shade400,
               fontWeight: FontWeight.w600,
             ),
           ),
-          SizedBox(height: size.height * 0.01),
+          SizedBox(height: size.height * 0.015),
           Container(
             width: size.width * 0.15,
             child: Row(

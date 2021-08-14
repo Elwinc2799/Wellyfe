@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:wellyfe_app/Screen/DiaryAddNewEntryScreen/DiaryAddNewEntryScreen.dart';
 
 class DiaryButton extends StatefulWidget {
   @override
@@ -46,8 +44,8 @@ class _DiaryButtonState extends State<DiaryButton> {
           child: Text(
             widget.title,
             style: TextStyle(
-              fontSize: 25,
-              fontFamily: "TitilliumWeb",
+              fontSize: 22.5,
+              fontFamily: "Montserrat",
               color: Color(0XFF394D70),
               fontWeight: FontWeight.w600,
             ),

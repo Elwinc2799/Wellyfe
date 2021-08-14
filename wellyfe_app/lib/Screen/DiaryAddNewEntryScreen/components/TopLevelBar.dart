@@ -28,7 +28,7 @@ class TopLevelBar extends StatelessWidget {
                     style: TextStyle(
                       height: 0.25,
                       fontSize: 15,
-                      fontFamily: "TitilliumWeb",
+                      fontFamily: "Montserrat",
                       color: Colors.grey.shade600,
                       fontWeight: FontWeight.w600,
                     ),
@@ -37,7 +37,7 @@ class TopLevelBar extends StatelessWidget {
                     "DIARY",
                     style: TextStyle(
                       fontSize: 15,
-                      fontFamily: "TitilliumWeb",
+                      fontFamily: "Montserrat",
                       color: Colors.grey.shade600,
                       fontWeight: FontWeight.w900,
                     ),
@@ -61,7 +61,7 @@ class TopLevelBar extends StatelessWidget {
                 DateFormat('EEE, d MMM / y').format(DateTime.now()).toUpperCase(),
                 style: TextStyle(
                   fontSize: 25,
-                  fontFamily: "TitilliumWeb",
+                  fontFamily: "Montserrat",
                   color: Colors.grey.shade600,
                 ),
               ),

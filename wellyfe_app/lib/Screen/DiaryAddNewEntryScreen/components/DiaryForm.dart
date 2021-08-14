@@ -35,7 +35,7 @@ class _DiaryFormState extends State<DiaryForm> {
           hintText: "How was your day?",
           hintStyle: TextStyle(
             fontSize: 30,
-            fontFamily: "TitilliumWeb",
+            fontFamily: "Montserrat",
             color: Colors.grey.shade500,
             fontWeight: FontWeight.w400,
           ),
@@ -45,7 +45,7 @@ class _DiaryFormState extends State<DiaryForm> {
         textAlign: TextAlign.justify,
         style: TextStyle(
           fontSize: 30,
-          fontFamily: "TitilliumWeb",
+          fontFamily: "Montserrat",
           color: Colors.grey.shade500,
           fontWeight: FontWeight.w400,
         ),
@@ -65,7 +65,7 @@ class _DiaryFormState extends State<DiaryForm> {
           hintText: "Title",
           hintStyle: TextStyle(
             fontSize: 40,
-            fontFamily: "TitilliumWeb",
+            fontFamily: "Montserrat",
             color: Colors.grey.shade500,
             fontWeight: FontWeight.w600,
           ),
@@ -75,7 +75,7 @@ class _DiaryFormState extends State<DiaryForm> {
         textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 40,
-          fontFamily: "TitilliumWeb",
+          fontFamily: "Montserrat",
           color: Colors.grey.shade500,
           fontWeight: FontWeight.w600,
         ),
