@@ -6,18 +6,20 @@ class SpecialistRecommendationContainerIndividual extends StatelessWidget {
     required this.therapy,
     required this.name,
     required this.experience,
+    required this.function,
   }) : super(key: key);
 
   final String therapy;
   final String name;
   final int experience;
+  final VoidCallback function;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
     return GestureDetector(
-      onTap: () {},
+      onTap: function,
       child: Container(
         height: size.height * 0.125,
         width: size.width * 0.8,

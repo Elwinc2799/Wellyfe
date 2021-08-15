@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/SpecialistRecommendationContainerIndividual.dart';
+import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/TherapyCarePsychiatristScreen.dart';
 
 class SpecialistRecommendationContainer extends StatelessWidget {
   const SpecialistRecommendationContainer({
@@ -24,12 +26,21 @@ class SpecialistRecommendationContainer extends StatelessWidget {
                 therapy: "Behavioral",
                 name: "Dr. Sarah Anderson",
                 experience: 9,
+                function: () {
+                  Navigator.push(context, PageTransition(
+                    type: PageTransitionType.fade,
+                    child: TherapyCarePsychiatristScreen(),
+                  ));
+                },
               ),
               SizedBox(height: size.height * 0.025),
               SpecialistRecommendationContainerIndividual(
                 therapy: "Behavioral",
                 name: "Dr. Sarah Anderson",
                 experience: 9,
+                function: () {
+
+                },
               ),
             ],
           ),
