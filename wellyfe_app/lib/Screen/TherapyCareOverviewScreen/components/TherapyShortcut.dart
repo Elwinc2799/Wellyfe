@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Screen/TherapyCareDoctorListScreen/TherapyCareDoctorListScreen.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/TherapyShortcutIndividual.dart';
 
 class TherapyShortcut extends StatelessWidget {
@@ -30,7 +32,12 @@ class TherapyShortcut extends StatelessWidget {
                     TherapyShortcutIndividual(
                       therapy: therapyList[i],
                       length: therapyList[i].length,
-                      function: () {},
+                      function: () {
+                        Navigator.push(context, PageTransition(
+                          type: PageTransitionType.fade,
+                          child: TherapyCareDoctorListScreen(),
+                        ));
+                      },
                     ),
                     SizedBox(width: size.width * 0.05),
                   ],
