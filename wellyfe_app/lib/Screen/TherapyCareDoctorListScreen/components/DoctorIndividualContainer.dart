@@ -24,7 +24,7 @@ class DoctorIndividualContainer extends StatelessWidget {
         height: size.height * 0.125,
         width: size.width * 0.8,
         decoration: BoxDecoration(
-            color: Color(0XFFEBECF0),
+            color: Color(0XFFE5EBF2),
             borderRadius: BorderRadius.circular(20.0),
             boxShadow: [
               BoxShadow(
@@ -48,7 +48,7 @@ class DoctorIndividualContainer extends StatelessWidget {
                 width: 85,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0XFFEBECF0),
+                    color: Color(0XFFE5EBF2),
                     boxShadow: [
                       BoxShadow(
                           blurRadius: 5.0,

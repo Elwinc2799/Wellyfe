@@ -23,7 +23,7 @@ class ScheduleMenuIndividual extends StatelessWidget {
       width: size.width * 0.4,
       height: size.height * 0.115,
       decoration: BoxDecoration(
-        color: Color(0XFFE4EDFF),
+        color: Color(0XFFE5EBF2),
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
         boxShadow: [
           BoxShadow(

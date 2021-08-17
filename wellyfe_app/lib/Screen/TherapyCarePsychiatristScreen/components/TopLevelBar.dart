@@ -28,7 +28,7 @@ class TopLevelBar extends StatelessWidget {
               height: 60,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Color(0XFFEBECF0),
+                  color: Color(0XFFE7F0F9),
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 5.0,

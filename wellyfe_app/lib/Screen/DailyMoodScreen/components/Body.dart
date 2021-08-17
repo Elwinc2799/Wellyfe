@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -39,7 +41,10 @@ class _BodyState extends State<Body> {
                 builder: (BuildContext context, double list, Widget? children) {
                   return GestureDetector(
                     onDoubleTap: () {
-                      Navigator.pop(context);
+                      Navigator.pushReplacement(context, PageTransition(
+                        type: PageTransitionType.fade,
+                        child: HomeScreen(),
+                      ));
                     },
                     child: Container(
                       height: size.height * 0.7,

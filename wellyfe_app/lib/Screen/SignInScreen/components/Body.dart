@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
-import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/Background.dart';
@@ -11,9 +11,44 @@ import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInForm.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SocialMediaIcon.dart';
 import 'package:wellyfe_app/Screen/SignUpScreen/SignUpScreen.dart';
-import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/TherapyCareOverviewScreen.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  bool _isFirstOpen = false;
+  String lastOpenKey = "lastOpen";
+
+  void isMoodRecorded() async {
+    final SharedPreferences prefs = await _prefs;
+
+    setState(() {
+      _isFirstOpen = (prefs.getString(lastOpenKey) ?? DateTime.now().day.toString())
+          != DateTime.now().day.toString();
+    });
+
+    if (_isFirstOpen) {
+      prefs.setString(lastOpenKey, DateTime.now().day.toString());
+      Navigator.push(context, PageTransition(
+        type: PageTransitionType.fade,
+        child: DailyMoodScreen(),
+      ));
+    } else {
+      Navigator.push(context, PageTransition(
+        type: PageTransitionType.fade,
+        child: HomeScreen(),
+      ));
+    }
+  }
+
+  @override
+  void initState() async {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -28,10 +63,10 @@ class Body extends StatelessWidget {
             Text(
               "Wellyfe,",
               style: TextStyle(
-                fontSize: 25,
-                fontFamily: "NunitoSans",
-                fontWeight: FontWeight.w700,
-                color: Colors.black.withOpacity(.5)
+                  fontSize: 25,
+                  fontFamily: "NunitoSans",
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black.withOpacity(.5)
               ),
             ),
             SizedBox(height: size.height * 0.005),
@@ -48,10 +83,10 @@ class Body extends StatelessWidget {
             Text(
               "Sign In",
               style: TextStyle(
-                fontSize: 40,
-                fontFamily: "NunitoSans",
-                fontWeight: FontWeight.bold,
-                color: Colors.black.withOpacity(.5)
+                  fontSize: 40,
+                  fontFamily: "NunitoSans",
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black.withOpacity(.5)
               ),
             ),
             SizedBox(height: size.height * 0.05),
@@ -72,12 +107,9 @@ class Body extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.025),
-            SignInButton(function: () {
-              Navigator.push(context, PageTransition(
-                type: PageTransitionType.fade,
-                child: HomeScreen(),
-              ));
-            }),
+            SignInButton(
+              function: isMoodRecorded
+            ),
             SizedBox(height: size.height * 0.025),
             OrDivider(),
             SizedBox(height: size.height * 0.001),
@@ -103,13 +135,13 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.025),
             AlreadyHaveAnAccount(
-              login: true,
-              press: () {
-                Navigator.push(context, PageTransition(
-                  type: PageTransitionType.fade,
-                  child: SignUpScreen(),
-                ));
-              }
+                login: true,
+                press: () {
+                  Navigator.push(context, PageTransition(
+                    type: PageTransitionType.fade,
+                    child: SignUpScreen(),
+                  ));
+                }
             ),
           ],
         ),
@@ -117,4 +149,5 @@ class Body extends StatelessWidget {
     );
   }
 }
+
 

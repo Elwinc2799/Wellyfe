@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:wellyfe_app/Screen/FitnessBreakfastScreen/FitnessBreakfastScreen.dart';
+import 'package:wellyfe_app/Screen/FitnessMealsScreen/FitnessBreakfastScreen.dart';
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/MealContainerIndividual.dart';
 
 class MealContainer extends StatelessWidget {
@@ -22,7 +22,7 @@ class MealContainer extends StatelessWidget {
           function: () {
             Navigator.push(context, PageTransition(
               type: PageTransitionType.fade,
-              child: FitnessBreakfastScreen(),
+              child: FitnessMealsScreen(),
             ));
           },
           isLeft: true,

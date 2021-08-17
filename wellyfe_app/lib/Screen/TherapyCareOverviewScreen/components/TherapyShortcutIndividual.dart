@@ -24,7 +24,7 @@ class TherapyShortcutIndividual extends StatelessWidget {
         width: size.width * 0.225,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
-            color: Color(0XFFEBECF0),
+            color: Color(0XFFE5EBF2),
             boxShadow: [
               BoxShadow(
                   blurRadius: 5.0,

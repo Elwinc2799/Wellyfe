@@ -141,4 +141,12 @@ class TaskData {
     else
       return timeConversion(time - 12) + " PM";
   }
+
+  // static bool listGotHighPriority(List<TaskData> list) {
+  //   final found = list.where((element) => element.taskPriority == 3);
+  //
+  //   if (found.isNotEmpty)
+  //     return true;
+  //   return false;
+  // }
 }

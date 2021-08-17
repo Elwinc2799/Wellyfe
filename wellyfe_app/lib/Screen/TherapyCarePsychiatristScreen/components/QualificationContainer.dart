@@ -17,7 +17,7 @@ class QualificationContainer extends StatelessWidget {
       width: 150,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
-          color: Color(0XFFEBECF0),
+          color: Color(0XFFE7F0F9),
           boxShadow: [
             BoxShadow(
                 blurRadius: 5.0,

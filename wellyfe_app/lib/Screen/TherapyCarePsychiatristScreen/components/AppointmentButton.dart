@@ -16,7 +16,7 @@ class AppointmentButton extends StatelessWidget {
         width: size.width * 0.55,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.0),
-            color: Color(0XFFEBECF0),
+            color: Color(0XFFE7F0F9),
             boxShadow: [
               BoxShadow(
                   blurRadius: 5.0,

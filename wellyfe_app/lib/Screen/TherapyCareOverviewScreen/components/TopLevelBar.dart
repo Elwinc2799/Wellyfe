@@ -20,34 +20,6 @@ class TopLevelBar extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Container(
-                width: 60,
-                height: 60,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0XFFEBECF0),
-                    boxShadow: [
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(-3, -3),
-                          color: Colors.white
-                      ),
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(3, 3),
-                          color: Colors.black.withOpacity(.25)
-                      )
-                    ]
-                ),
-                child: Center(
-                    child: Image(image: AssetImage("assets/logo/menu.png"))
-                )
-            )
-        )
       ],
     );
   }

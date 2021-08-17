@@ -56,7 +56,6 @@ class _DaysListState extends State<DaysList> {
                     child: DayIndividual(
                       dayWord: DateFormat('EEEE').format(days[i]).substring(0, 2),
                       dayNumber: days[i].day,
-                      // TODO ADD PRIORITY INDICATOR
                     ),
                     style: NeumorphicRadioStyle(
                       selectedColor: Colors.teal[50],

@@ -19,38 +19,52 @@ class _DayIndividualState extends State<DayIndividual> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(seconds: 1),
+      curve: Curves.fastOutSlowIn,
       height: size.height * 0.085,
       width: size.width * 0.1,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Stack(
         children: [
-          Text(
-            widget.dayWord,
-            style: TextStyle(
-              fontSize: 20,
-              fontFamily: "NunitoSans",
-              fontWeight: FontWeight.w800,
-              color: Color(0XFF344460).withOpacity(0.5),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  widget.dayWord,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: "NunitoSans",
+                    fontWeight: FontWeight.w800,
+                    color: Color(0XFF344460).withOpacity(0.5),
+                  ),
+                ),
+                Text(
+                  widget.dayNumber.toString(),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: "NunitoSans",
+                    fontWeight: FontWeight.w800,
+                    color: Color(0XFF344460).withOpacity(0.5),
+                  ),
+                ),
+              ],
             ),
           ),
-          Text(
-            widget.dayNumber.toString(),
-            style: TextStyle(
-              fontSize: 20,
-              fontFamily: "NunitoSans",
-              fontWeight: FontWeight.w800,
-              color: Color(0XFF344460).withOpacity(0.5),
-            ),
-          ),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          //   child: Divider(
-          //     thickness: 3,
-          //     color: Colors.red ,
+          // widget.isHighPriority
+          //  ? Positioned(
+          //   top: 5,
+          //   right: 10,
+          //   child: Container(
+          //     height: 10,
+          //     width: 10,
+          //     decoration: BoxDecoration(
+          //         color: Color(0xFFD11149),
+          //         shape: BoxShape.circle
+          //     ),
           //   ),
           // )
+          // : Container(),
         ],
       ),
     );
