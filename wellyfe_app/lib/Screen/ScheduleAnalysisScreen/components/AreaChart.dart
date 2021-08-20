@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:wellyfe_app/Core/Data/TaskData.dart';
+import 'package:wellyfe_app/Core/Model/Task.dart';
 
 class AreaChart extends StatelessWidget {
   @override
@@ -45,21 +45,21 @@ class AreaChart extends StatelessWidget {
             )
           ),
           series: <ChartSeries>[
-            SplineAreaSeries<TaskData, String>(
+            SplineAreaSeries<Task, String>(
               splineType: SplineType.cardinal,
               cardinalSplineTension: 1,
               color: Color(0XFF668ED4).withOpacity(0.5),
-              dataSource: TaskData.taskDataList,
-              xValueMapper: (TaskData taskData, _) => DateFormat('EEEE').format(taskData.dateTime).substring(0, 3),
-              yValueMapper: (TaskData taskData, _) => taskData.switchDateOccurrences(TaskData.taskDataList) + taskData.switchDateOccurrences(TaskData.taskDataList) * 0.25,
+              dataSource: Task.taskDataList,
+              xValueMapper: (Task taskData, _) => DateFormat('EEEE').format(taskData.dueDate).substring(0, 3),
+              yValueMapper: (Task taskData, _) => taskData.switchDateOccurrences(Task.taskDataList) + taskData.switchDateOccurrences(Task.taskDataList) * 0.25,
             ),
-            SplineAreaSeries<TaskData, String>(
+            SplineAreaSeries<Task, String>(
               splineType: SplineType.cardinal,
               cardinalSplineTension: 1,
               color: Color(0XFF668ED4),
-              dataSource: TaskData.taskDataList,
-              xValueMapper: (TaskData taskData, _) => DateFormat('EEEE').format(taskData.dateTime).substring(0, 3),
-              yValueMapper: (TaskData taskData, _) => taskData.switchDateOccurrences(TaskData.taskDataList),
+              dataSource: Task.taskDataList,
+              xValueMapper: (Task taskData, _) => DateFormat('EEEE').format(taskData.dueDate).substring(0, 3),
+              yValueMapper: (Task taskData, _) => taskData.switchDateOccurrences(Task.taskDataList),
             ),
           ],
         ),

@@ -3,7 +3,6 @@ import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.
 import 'package:wellyfe_app/Screen/SignInScreen/components/OrDivider.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SocialMediaIcon.dart';
 import 'package:wellyfe_app/Screen/SignUpScreen/components/Background.dart';
-import 'package:wellyfe_app/Screen/SignUpScreen/components/SignUpButton.dart';
 import 'package:wellyfe_app/Screen/SignUpScreen/components/SignUpForm.dart';
 
 class Body extends StatelessWidget {
@@ -39,8 +38,6 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.05),
             SignUpForm(),
-            SizedBox(height: size.height * 0.05),
-            SignUpButton(function: () {}),
             SizedBox(height: size.height * 0.025),
             OrDivider(),
             SizedBox(height: size.height * 0.005),

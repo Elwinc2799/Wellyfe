@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
+import 'package:wellyfe_app/Screen/ForgotPasswordScreen/ForgotPasswordScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/OrDivider.dart';
-import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInForm.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SocialMediaIcon.dart';
 import 'package:wellyfe_app/Screen/SignUpScreen/SignUpScreen.dart';
@@ -18,37 +16,6 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
-  bool _isFirstOpen = false;
-  String lastOpenKey = "lastOpen";
-
-  void isMoodRecorded() async {
-    final SharedPreferences prefs = await _prefs;
-
-    setState(() {
-      _isFirstOpen = (prefs.getString(lastOpenKey) ?? DateTime.now().day.toString())
-          != DateTime.now().day.toString();
-    });
-
-    if (_isFirstOpen) {
-      prefs.setString(lastOpenKey, DateTime.now().day.toString());
-      Navigator.push(context, PageTransition(
-        type: PageTransitionType.fade,
-        child: DailyMoodScreen(),
-      ));
-    } else {
-      Navigator.push(context, PageTransition(
-        type: PageTransitionType.fade,
-        child: HomeScreen(),
-      ));
-    }
-  }
-
-  @override
-  void initState() async {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -63,10 +30,10 @@ class _BodyState extends State<Body> {
             Text(
               "Wellyfe,",
               style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: "NunitoSans",
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black.withOpacity(.5)
+                fontSize: 25,
+                fontFamily: "NunitoSans",
+                fontWeight: FontWeight.w700,
+                color: Colors.black.withOpacity(.5)
               ),
             ),
             SizedBox(height: size.height * 0.005),
@@ -94,7 +61,12 @@ class _BodyState extends State<Body> {
             SizedBox(height: size.height * 0.025),
             Center(
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, PageTransition(
+                    type: PageTransitionType.fade,
+                    child: ForgotPasswordScreen(),
+                  ));
+                },
                 child: Text(
                   "Forgot Password ?",
                   style: TextStyle(
@@ -107,27 +79,23 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(height: size.height * 0.025),
-            SignInButton(
-              function: isMoodRecorded
-            ),
-            SizedBox(height: size.height * 0.025),
             OrDivider(),
             SizedBox(height: size.height * 0.001),
             Padding(
-              padding: const EdgeInsets.fromLTRB(100.0, 0, 100.0, 0),
+              padding: const EdgeInsets.fromLTRB(150.0, 0, 150.0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SocialMediaIcon(
-                    function: () {},
+                    function: () {
+
+                    },
                     asset: "assets/logo/facebook.png",
                   ),
                   SocialMediaIcon(
-                    function: () {},
-                    asset: "assets/logo/apple.png",
-                  ),
-                  SocialMediaIcon(
-                    function: () {},
+                    function: () {
+
+                    },
                     asset: "assets/logo/google.png",
                   ),
                 ],

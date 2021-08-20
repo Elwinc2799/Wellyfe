@@ -13,20 +13,24 @@ class ActivityRecommendationsMenu extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       child: Container(
         height: size.height * 0.2,
-        child: Row(
-          children: [
-            for (var i = 0; i < RecommendedActivity.recommendedList.length; i++)
-              Row(
-                children: [
-                  ActivityRecommendationsIndividual(
-                    activity: RecommendedActivity.recommendedList[i].activity,
-                    icon: RecommendedActivity.recommendedList[i].icon,
-                    duration: RecommendedActivity.recommendedList[i].duration,
-                  ),
-                  SizedBox(width: size.width * 0.025),
-                ],
-              ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: Row(
+            children:
+              List.generate(RecommendedActivity.recommendedList.length, (i) {
+                return Row(
+                  children: [
+                    ActivityRecommendationsIndividual(
+                      activity: RecommendedActivity.recommendedList[i].activity,
+                      icon: RecommendedActivity.recommendedList[i].icon,
+                      duration: RecommendedActivity.recommendedList[i].duration,
+                    ),
+                    SizedBox(width: size.width * 0.025),
+                  ],
+                );
+              })
+
+          ),
         ),
       ),
     );

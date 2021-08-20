@@ -1,5 +1,6 @@
+import 'package:day_night_time_picker/lib/constants.dart';
+import 'package:day_night_time_picker/day_night_time_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerScreen/components/TitleTime.dart';
 
@@ -12,6 +13,20 @@ class _SleepWakeTimeState extends State<SleepWakeTime> {
   //TODO GET DATA FROM DATABASE
   ValueNotifier<String> sleepTime = ValueNotifier("10:00 PM");
   ValueNotifier<String> wakeTime = ValueNotifier("6:00 AM");
+  TimeOfDay _sleepTime = TimeOfDay(hour: 22, minute: 00);
+  TimeOfDay _awakeTime = TimeOfDay(hour: 6, minute: 00);
+
+  void onSleepTimeChanged(TimeOfDay newTime) {
+    setState(() {
+      _sleepTime = newTime;
+    });
+  }
+
+  void onAwakeTimeChanged(TimeOfDay newTime) {
+    setState(() {
+      _awakeTime = newTime;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,23 +35,25 @@ class _SleepWakeTimeState extends State<SleepWakeTime> {
       children: [
         GestureDetector(
           onTap: () async {
-            TimeOfDay? _selectedTime;
+            Navigator.of(context).push(
+              showPicker(
+                context: context,
+                value: _sleepTime,
+                onChange: onSleepTimeChanged,
+                minuteInterval: MinuteInterval.FIVE,
+                iosStylePicker: true,
+                disableHour: false,
+                disableMinute: false,
+                minMinute: 0,
+                maxMinute: 56,
+                onChangeDateTime: (DateTime dateTime) {
+                  DateTime tempDate = DateFormat("hh:mm").parse(
+                      dateTime.hour.toString() + ":" + dateTime.minute.toString());
 
-            TimeOfDay? timePicked = await showRoundedTimePicker(
-              context: context,
-              initialTime: TimeOfDay.now(),
+                  sleepTime.value = DateFormat("h:mm a").format(tempDate);
+                },
+              ),
             );
-
-            if (timePicked != null)
-              setState(() {
-                _selectedTime = timePicked;
-              });
-
-            DateTime tempDate = DateFormat("hh:mm").parse(
-                _selectedTime!.hour.toString() +
-                    ":" + _selectedTime!.minute.toString());
-
-            sleepTime.value = DateFormat("h:mm a").format(tempDate);
           },
           child: ValueListenableBuilder(
             valueListenable: sleepTime,
@@ -50,23 +67,25 @@ class _SleepWakeTimeState extends State<SleepWakeTime> {
         ),
         GestureDetector(
           onTap: () async {
-            TimeOfDay? _selectedTime;
+            Navigator.of(context).push(
+              showPicker(
+                context: context,
+                value: _awakeTime,
+                onChange: onAwakeTimeChanged,
+                minuteInterval: MinuteInterval.FIVE,
+                iosStylePicker: true,
+                disableHour: false,
+                disableMinute: false,
+                minMinute: 0,
+                maxMinute: 56,
+                onChangeDateTime: (DateTime dateTime) {
+                  DateTime tempDate = DateFormat("hh:mm").parse(
+                      dateTime.hour.toString() + ":" + dateTime.minute.toString());
 
-            TimeOfDay? timePicked = await showRoundedTimePicker(
-              context: context,
-              initialTime: TimeOfDay.now(),
+                  sleepTime.value = DateFormat("h:mm a").format(tempDate);
+                },
+              ),
             );
-
-            if (timePicked != null)
-              setState(() {
-                _selectedTime = timePicked;
-              });
-
-            DateTime tempDate = DateFormat("hh:mm").parse(
-                _selectedTime!.hour.toString() +
-                    ":" + _selectedTime!.minute.toString());
-
-            wakeTime.value = DateFormat("h:mm a").format(tempDate);
           },
           child: ValueListenableBuilder(
             valueListenable: wakeTime,

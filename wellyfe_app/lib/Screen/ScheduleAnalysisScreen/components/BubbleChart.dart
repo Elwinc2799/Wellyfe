@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:wellyfe_app/Core/Data/TaskData.dart';
+import 'package:wellyfe_app/Core/Model/Task.dart';
 
 class BubbleChart extends StatelessWidget {
   @override
@@ -47,12 +47,12 @@ class BubbleChart extends StatelessWidget {
             )
           ),
           series: <ChartSeries>[
-            BubbleSeries<TaskData, String>(
-              dataSource: TaskData.taskDataList,
-              sizeValueMapper: (TaskData taskData, _) => taskData.switchOccurrences(TaskData.taskDataList),
-              pointColorMapper: (TaskData taskData, _) => taskData.findColor(),
-              xValueMapper: (TaskData taskData, _) => DateFormat('EEEE').format(taskData.dateTime).substring(0, 3),
-              yValueMapper: (TaskData taskData, _) => taskData.taskPriority,
+            BubbleSeries<Task, String>(
+              dataSource: Task.taskDataList,
+              sizeValueMapper: (Task taskData, _) => taskData.switchOccurrences(Task.taskDataList),
+              pointColorMapper: (Task taskData, _) => taskData.findColor(),
+              xValueMapper: (Task taskData, _) => DateFormat('EEEE').format(taskData.dueDate).substring(0, 3),
+              yValueMapper: (Task taskData, _) => taskData.taskPriority,
               minimumRadius: 5,
               maximumRadius: 7,
             )

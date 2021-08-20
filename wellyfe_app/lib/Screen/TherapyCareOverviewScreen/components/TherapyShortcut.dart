@@ -25,24 +25,23 @@ class TherapyShortcut extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 30.0),
           child: Row(
-            children: [
-              for (var i = 0; i < therapyList.length; i++)
-                Row(
-                  children: [
-                    TherapyShortcutIndividual(
-                      therapy: therapyList[i],
-                      length: therapyList[i].length,
-                      function: () {
-                        Navigator.push(context, PageTransition(
-                          type: PageTransitionType.fade,
-                          child: TherapyCareDoctorListScreen(),
-                        ));
-                      },
-                    ),
-                    SizedBox(width: size.width * 0.05),
-                  ],
-                )
-            ],
+            children: List.generate(therapyList.length, (i) {
+              return Row(
+                children: [
+                  TherapyShortcutIndividual(
+                    therapy: therapyList[i],
+                    length: therapyList[i].length,
+                    function: () {
+                      Navigator.push(context, PageTransition(
+                        type: PageTransitionType.fade,
+                        child: TherapyCareDoctorListScreen(),
+                      ));
+                    },
+                  ),
+                  SizedBox(width: size.width * 0.05),
+                ],
+              );
+            }),
           ),
         ),
       ),

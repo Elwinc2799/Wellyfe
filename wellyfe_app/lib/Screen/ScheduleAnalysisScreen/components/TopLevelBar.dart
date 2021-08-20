@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:wellyfe_app/Core/Data/TaskData.dart';
+import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/ScheduleOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/TopLevelIcon.dart';
 import 'package:intl/intl.dart';
@@ -22,7 +22,7 @@ class TopLevelBar extends StatelessWidget {
         TopLevelIcon(
           asset: "assets/logo/calendar.png",
           function: () {
-            TaskData.updateTaskDataList("Mo");
+            Task.updateTaskDataList("Mo");
             TaskTimelineList.listChanged();
 
             Navigator.pushReplacement(context, PageTransition(

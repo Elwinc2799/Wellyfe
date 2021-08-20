@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
+import 'package:wellyfe_app/Screen/SignUpScreen/components/SignUpButton.dart';
 import 'package:wellyfe_app/constants.dart';
 
 class SignUpForm extends StatefulWidget {
@@ -13,6 +16,34 @@ class _SignUpFormState extends State<SignUpForm> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
+
+  Future<void> signUpUserWithEmail(String email, String password, String confirmPassword) async {
+    bool userCreated = true;
+
+    if (password == confirmPassword) {
+      try {
+        UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: email,
+          password: password,
+        );
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'weak-password') {
+          showNotification("The password is too weak.");
+        } else if (e.code == 'email-already-in-use') {
+          showNotification("The email is already in use.");
+        }
+
+        userCreated = false;
+      }
+
+      if (userCreated) {
+        Navigator.pop(context);
+        showNotification("Your account has been created successfully.\nPlease sign in.");
+      }
+    } else {
+      showNotification("Your password does not match.\nPlease try again.");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +61,25 @@ class _SignUpFormState extends State<SignUpForm> {
           SizedBox(height: size.height * 0.025),
           TextFieldLabel(label: "Confirm Password"),
           buildConfirmPasswordFormField(),
+          SizedBox(height: size.height * 0.05),
+          SignUpButton(
+            function: () {
+              signUpUserWithEmail(_emailController.text, _passwordController.text, _confirmPasswordController.text);
+            }
+          ),
         ],
       ),
+    );
+  }
+
+  ToastFuture showNotification(String content) {
+    return showToast(
+      content,
+      context: context,
+      animation: StyledToastAnimation.fade,
+      reverseAnimation: StyledToastAnimation.fade,
+      duration: Duration(seconds: 3),
+      position: StyledToastPosition.center,
     );
   }
 

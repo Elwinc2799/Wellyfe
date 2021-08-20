@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">601943563754-8ubbol2dt561nvtc13ol5u3pmu3c0ght.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">601943563754</string>
+    <string name="google_api_key" translatable="false">AIzaSyDAa_fEKZAw-SiBohy-ptj5MAw3xUaLnvc</string>
+    <string name="google_app_id" translatable="false">1:601943563754:android:8fc2645524a08cf7116693</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDAa_fEKZAw-SiBohy-ptj5MAw3xUaLnvc</string>
+    <string name="google_storage_bucket" translatable="false">wellyfe-d650c.appspot.com</string>
+    <string name="project_id" translatable="false">wellyfe-d650c</string>
+</resources>

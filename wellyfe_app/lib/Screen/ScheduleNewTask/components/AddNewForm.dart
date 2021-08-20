@@ -174,12 +174,12 @@ class _AddNewFormState extends State<AddNewForm> {
                 textStyleDayOnCalendar: TextStyle(
                   fontSize: 30,
                   fontFamily: "Nunito",
-                  color: Color(0XFFB1BDD3),
+                  color: Colors.black45,
                 ),
                 textStyleDayOnCalendarSelected: TextStyle(
                   fontSize: 30,
                   fontFamily: "Nunito",
-                  color: Colors.black.withOpacity(0.5),
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
                 textStyleMonthYearHeader: TextStyle(
@@ -209,7 +209,7 @@ class _AddNewFormState extends State<AddNewForm> {
                 textStyleButtonPositive:
                 TextStyle(fontSize: 28, color: Color(0XFFB1BDD3), fontWeight: FontWeight.bold),
                 textStyleButtonNegative: TextStyle(fontSize: 28, color: Color(0XFFB1BDD3).withOpacity(0.5)),
-                decorationDateSelected: BoxDecoration(color: Colors.pink[100], shape: BoxShape.circle),
+                decorationDateSelected: BoxDecoration(color: Color(0XFF5DAA96), borderRadius: BorderRadius.circular(30.0)),
                 backgroundPicker: Color(0XFFE4EDFF),
                 backgroundActionBar: Color(0XFFE4EDFF),
                 backgroundHeaderMonth: Color(0XFFE4EDFF),
@@ -337,7 +337,7 @@ class _AddNewFormState extends State<AddNewForm> {
 
   BoxDecoration buildNeumorphicTextField() {
     return BoxDecoration(
-      color: Color(0XFFE4EDFF),
+      color: Color(0XFFE5EBF2),
       borderRadius: BorderRadius.all(Radius.circular(20.0)),
       boxShadow: [
         BoxShadow(

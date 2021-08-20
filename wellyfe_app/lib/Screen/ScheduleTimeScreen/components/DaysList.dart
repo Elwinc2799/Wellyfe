@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:intl/intl.dart';
-import 'package:wellyfe_app/Core/Data/TaskData.dart';
+import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/DayIndividual.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/TaskTimelineList.dart';
 
@@ -48,7 +48,7 @@ class _DaysListState extends State<DaysList> {
                     onChanged: (dynamic value) {
                       setState(() {
                         groupValue = value;
-                        TaskData.updateTaskDataList(value);
+                        Task.updateTaskDataList(value);
                         TaskTimelineList.listChanged();
                       });
                     },
