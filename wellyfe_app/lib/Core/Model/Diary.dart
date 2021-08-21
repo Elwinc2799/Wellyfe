@@ -1,4 +1,5 @@
 class Diary {
+  final String diaryID;
   final DateTime dateTime;
   final String mood;
   final String weather;
@@ -8,12 +9,16 @@ class Diary {
   bool favourite;
 
   Diary(
-    this.dateTime,
-    this.mood,
-    this.weather,
+    this.diaryID,
     this.title,
     this.content,
+    this.mood,
+    this.weather,
     this.picture,
     this.favourite,
+    this.dateTime,
   );
+
+  static List<Diary> diaryDataList = [];
+  static String newImageUrl = "";
 }

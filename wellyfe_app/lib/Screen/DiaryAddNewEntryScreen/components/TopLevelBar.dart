@@ -4,7 +4,10 @@ import 'package:intl/intl.dart';
 class TopLevelBar extends StatelessWidget {
   const TopLevelBar({
     Key? key,
+    required this.function,
   }) : super(key: key);
+
+  final VoidCallback function;
 
   @override
   Widget build(BuildContext context) {
@@ -67,9 +70,7 @@ class TopLevelBar extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
+            onTap: function,
             child: Image(
               image: AssetImage("assets/logo/tick.png"),
             ),

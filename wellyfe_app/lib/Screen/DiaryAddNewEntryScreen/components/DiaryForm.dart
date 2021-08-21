@@ -18,7 +18,7 @@ class _DiaryFormState extends State<DiaryForm> {
         children: [
           buildTitleContainer(),
           EmojiRow(),
-          buildContentContainer()
+          GestureDetector(child: buildContentContainer())
         ],
       ),
     );

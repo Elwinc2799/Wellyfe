@@ -1,7 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
+import 'package:wellyfe_app/Core/Model/Task.dart';
+import 'package:wellyfe_app/Screen/ScheduleNewTask/components/AddTaskButton.dart';
 import 'package:wellyfe_app/Screen/ScheduleNewTask/components/TextFieldLabel.dart';
 
 class AddNewForm extends StatefulWidget {
@@ -13,6 +17,47 @@ class _AddNewFormState extends State<AddNewForm> {
 
   final _taskTitleController = TextEditingController();
   TextEditingController _taskDateController = TextEditingController();
+  var firebaseUser =  FirebaseAuth.instance.currentUser;
+  final firestoreInstance = FirebaseFirestore.instance;
+
+  Future<void> addNewTask(String title, String priority, DateTime date, int startTime, int endTime) async {
+    int taskPriorityInt = taskPriority(priority);
+
+    DocumentReference documentReference = await firestoreInstance
+        .collection("tasks")
+        .doc(firebaseUser!.uid)
+        .collection("task")
+        .add({
+      "taskName": title,
+      "taskPriority": taskPriorityInt,
+      "taskCategory": "Pending",
+      "dueDate": date,
+      "startTime": startTime,
+      "endTime": endTime,
+      "isDone": false,
+    });
+
+    Task.taskDataList.add(
+      Task(
+        documentReference.id,
+        _taskTitleController.text,
+        taskPriority(priorityValue),
+        "Pending",
+        DateTime.parse(_taskDateController.text),
+        int.parse(startTimeValue.substring(0, 1)),
+        int.parse(endTimeValue.substring(0, 1)),
+        false,
+      )
+    );
+  }
+
+  int taskPriority(String priority) {
+    if (priority == "Low")
+      return 1;
+    else if (priority == "Medium")
+      return 2;
+    return 3;
+  }
 
   DateTime selectedDate = DateTime.now();
   String priorityValue = "Low";
@@ -55,7 +100,19 @@ class _AddNewFormState extends State<AddNewForm> {
                 ],
               )
             ],
-          )
+          ),
+          SizedBox(height: size.height * 0.075),
+          AddTaskButton(
+            function: () {
+              addNewTask(
+                _taskTitleController.text,
+                priorityValue,
+                DateTime.parse(_taskDateController.text),
+                int.parse(startTimeValue.substring(0, 1)),
+                int.parse(endTimeValue.substring(0, 1))
+              );
+            },
+          ),
         ],
       ),
     );

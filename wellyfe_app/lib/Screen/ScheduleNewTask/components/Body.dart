@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Screen/ScheduleNewTask/components/AddNewForm.dart';
-import 'package:wellyfe_app/Screen/ScheduleNewTask/components/AddTaskButton.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/Background.dart';
 
 class Body extends StatelessWidget {
@@ -36,10 +35,6 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.05),
             AddNewForm(),
-            SizedBox(height: size.height * 0.075),
-            AddTaskButton(
-              function: () {},
-            ),
           ],
         ),
       ),

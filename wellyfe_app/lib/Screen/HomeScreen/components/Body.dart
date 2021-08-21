@@ -25,10 +25,11 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     super.initState();
-    getAllTaskScheduleData();
   }
 
   Future<void> getAllTaskScheduleData() async {
+    Task.taskDataList = [];
+
     fireStoreInstance
         .collection("tasks")
         .doc(firebaseUser!.uid)
@@ -52,6 +53,13 @@ class _BodyState extends State<Body> {
             )
         );
       });
+
+      Task.taskDataList.sort((a, b) => a.dueDate.compareTo(b.dueDate));
+
+      Navigator.push(context, PageTransition(
+        type: PageTransitionType.fade,
+        child: ScheduleOverviewScreen(),
+      ));
     });
   }
 
@@ -73,11 +81,9 @@ class _BodyState extends State<Body> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         LeftContainer(
-                          function: () {
-                            Navigator.push(context, PageTransition(
-                              type: PageTransitionType.fade,
-                              child: ScheduleOverviewScreen(),
-                            ));
+                          function: () async {
+                            getAllTaskScheduleData();
+
                           },
                           title: "Schedule",
                         ),

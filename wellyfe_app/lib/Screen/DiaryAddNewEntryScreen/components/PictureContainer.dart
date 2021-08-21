@@ -1,8 +1,11 @@
 import 'dart:io';
-
+import 'package:image_cropper/image_cropper.dart';
+import 'package:path/path.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:wellyfe_app/Core/Model/Diary.dart';
 
 class PictureContainer extends StatefulWidget {
   @override
@@ -12,20 +15,53 @@ class PictureContainer extends StatefulWidget {
 class _PictureContainerState extends State<PictureContainer> {
 
   ValueNotifier<File?> image = ValueNotifier(null);
+  UploadTask? uploadTask;
   final ImagePicker _picker = ImagePicker();
 
   Future pickImage() async {
     try {
-      final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+      final XFile? _pickedFile = await _picker.pickImage(source: ImageSource.gallery);
 
-      if (image == null)
+      if (_pickedFile == null)
         return;
 
-      this.image.value = File(image.path);
+      File? croppedImage = await ImageCropper.cropImage(
+        sourcePath: _pickedFile.path,
+        aspectRatio: CropAspectRatio(
+          ratioX: 1, ratioY: 1,
+        ),
+        compressQuality: 100,
+        maxWidth: 700,
+        maxHeight: 700,
+        compressFormat: ImageCompressFormat.jpg,
+        androidUiSettings: AndroidUiSettings(
+          toolbarColor: Colors.transparent,
+          toolbarTitle: "Image Cropper",
+          statusBarColor: Colors.transparent,
+          backgroundColor: Colors.white
+        )
+      );
+
+      setState(() {
+        image.value = File(croppedImage!.path);
+      });
+
+      uploadFileToFirebase();
     } on PlatformException {
 
     }
   }
+
+  Future uploadFileToFirebase() async {
+    final imageFileName= basename(image.value!.path);
+    var imageFile = FirebaseStorage.instance.ref().child("images").child(imageFileName);
+    UploadTask uploadTask = imageFile.putFile(image.value!);
+    TaskSnapshot taskSnapshot = await uploadTask;
+
+    String url = await taskSnapshot.ref.getDownloadURL();
+    Diary.newImageUrl = url;
+  }
+
 
   @override
   Widget build(BuildContext context) {
