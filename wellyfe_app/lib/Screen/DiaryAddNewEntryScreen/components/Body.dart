@@ -97,6 +97,19 @@ class _BodyState extends State<Body> {
         "image": Diary.newImageUrl,
     });
 
+    Diary.diaryDataList.add(
+        Diary(
+          documentReference.id,
+          title,
+          content,
+          mood,
+          weather,
+          Diary.newImageUrl,
+          favourite,
+          DateTime.now(),
+        )
+    );
+
     Diary.newImageUrl = "";
   }
 

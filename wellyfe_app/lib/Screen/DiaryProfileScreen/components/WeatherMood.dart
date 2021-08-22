@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Core/Model/Diary.dart';
 
 class WeatherMood extends StatefulWidget {
   @override
@@ -11,6 +12,9 @@ class _WeatherMoodState extends State<WeatherMood> {
 
   @override
   Widget build(BuildContext context) {
+    var weatherMap = Diary.getWeatherOccurrence();
+    var moodMap = Diary.getMoodOccurrence();
+
     Size size = MediaQuery.of(context).size;
 
     return AnimatedContainer(
@@ -44,21 +48,24 @@ class _WeatherMoodState extends State<WeatherMood> {
             Container(
               width: size.width * 0.8 - 50,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  DataBarIcon(
-                    data: 7,
-                    total: 10,
-                    icon: "sunny",
-                  ),
-                  SizedBox(width: size.width * 0.015),
-                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: buildWeatherMoodList(isWeather ? weatherMap : moodMap),
               ),
             )
           ],
         ),
       ),
     );
+  }
+
+  List<Widget> buildWeatherMoodList(Map<dynamic, dynamic> weatherMap) {
+    return List.generate(weatherMap.keys.length, (index) {
+      return DataBarIcon(
+        data: weatherMap.values.elementAt(index),
+        total: 10,
+        icon: weatherMap.keys.elementAt(index),
+      );
+    });
   }
 
   Container buildWeatherMoodSwitch() {

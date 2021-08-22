@@ -20,8 +20,8 @@ class ImageRightContainer extends StatelessWidget {
           topRight: Radius.circular(10.0),
           bottomRight: Radius.circular(10.0),
         ),
-        child: Image(
-          image: AssetImage(image),
+        child: Image.network(
+          image,
           fit: BoxFit.cover,
         ),
       ),

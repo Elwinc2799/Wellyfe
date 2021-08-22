@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Screen/DiaryContentScreen/DiaryContentScreen.dart';
 import 'package:wellyfe_app/Screen/DiaryDayListScreen/components/DiaryLeftPart.dart';
 import 'package:wellyfe_app/Screen/DiaryDayListScreen/components/ImageRightContainer.dart';
@@ -15,6 +16,8 @@ class DiaryContainer extends StatelessWidget {
     required this.containImage,
     required this.content,
     required this.image,
+    required this.title,
+    required this.id,
   }) : super(key: key);
 
   final String dayNumber;
@@ -24,6 +27,8 @@ class DiaryContainer extends StatelessWidget {
   final bool containImage;
   final String content;
   final String image;
+  final String title;
+  final String id;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +38,9 @@ class DiaryContainer extends StatelessWidget {
       onTap: () {
         Navigator.push(context, PageTransition(
           type: PageTransitionType.fade,
-          child: DiaryContentScreen(),
+          child: DiaryContentScreen(
+            diary: Diary.getSpecificDiary(id),
+          ),
         ));
       },
       child: Container(
@@ -65,10 +72,10 @@ class DiaryContainer extends StatelessWidget {
                 ),
             containImage
                 ? ImageRightContainer(
-                    image: "assets/pictures/testing.png",
+                    image: image,
                   )
                 : NoImageRightContainer(
-                    content: "My diary",
+                    content: title,
                   ),
           ],
         ),

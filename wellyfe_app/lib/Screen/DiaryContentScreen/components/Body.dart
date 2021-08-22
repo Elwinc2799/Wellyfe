@@ -1,11 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Screen/DiaryContentScreen/components/PictureContainer.dart';
 import 'package:wellyfe_app/Screen/DiaryContentScreen/components/TitleMoodTime.dart';
 import 'package:wellyfe_app/Screen/DiaryContentScreen/components/Background.dart';
 
 class Body extends StatelessWidget {
+  const Body({
+    Key? key,
+    required this.diary
+  }) : super(key: key);
+
+  final Diary diary;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -15,15 +23,17 @@ class Body extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         child: Column(
           children: [
-            PictureContainer(
-              image: "assets/pictures/testing.png",
-            ),
+            diary.picture != ""
+            ? PictureContainer(
+              image: diary.picture,
+            )
+            : SizedBox(height: size.height * 0.3),
             SizedBox(height: size.height * 0.03),
             TitleTimeMood(
-              title: "Hey",
-              time: DateFormat('EEE, MMM d / y').format(DateTime.now()).toUpperCase(),
-              mood: "happy",
-              weather: "sunny",
+              title: diary.title,
+              time: DateFormat('EEE, MMM d / y').format(diary.dateTime).toUpperCase(),
+              mood: diary.mood,
+              weather: diary.weather,
             ),
             SizedBox(height: size.height * 0.05),
             Center(
@@ -31,7 +41,7 @@ class Body extends StatelessWidget {
                 width: size.width * 0.8,
                 height: size.height * 0.25,
                 child: Text(
-                  "I'm good.",
+                  diary.content,
                   style: TextStyle(
                     fontSize: 27.5,
                     fontFamily: "Montserrat",

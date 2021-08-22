@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/components/Background.dart';
@@ -63,6 +64,43 @@ class _BodyState extends State<Body> {
     });
   }
 
+  Future<void> getAllDiaryData() async {
+    Diary.diaryDataList = [];
+
+    fireStoreInstance
+        .collection("diaries")
+        .doc(firebaseUser!.uid)
+        .collection("diary")
+        .get()
+        .then((value) {
+      value.docs.forEach((result) {
+
+        Timestamp timestamp = result.data()["date"];
+
+        Diary.diaryDataList.add(
+          Diary(
+            result.id,
+            result.data()["title"],
+            result.data()["content"],
+            result.data()["mood"],
+            result.data()["weather"],
+            result.data()["image"],
+            result.data()["favourite"],
+            timestamp.toDate(),
+          )
+        );
+
+      });
+
+      Diary.diaryDataList.sort((a, b) => a.dateTime.compareTo(b.dateTime));
+
+      Navigator.push(context, PageTransition(
+        type: PageTransitionType.fade,
+        child: DiaryOverviewScreen(),
+      ));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -83,7 +121,6 @@ class _BodyState extends State<Body> {
                         LeftContainer(
                           function: () async {
                             getAllTaskScheduleData();
-
                           },
                           title: "Schedule",
                         ),
@@ -115,11 +152,8 @@ class _BodyState extends State<Body> {
                         ),
                         RightMiddleContainer(),
                         RightOuterContainer(
-                          function: () {
-                            Navigator.push(context, PageTransition(
-                              type: PageTransitionType.fade,
-                              child: DiaryOverviewScreen(),
-                            ));
+                          function: () async {
+                            getAllDiaryData();
                           },
                           title: "Diary",
                         ),

@@ -15,8 +15,8 @@ class PictureContainer extends StatelessWidget {
     return Container(
       height: size.height * 0.5,
       width: size.width,
-      child: Image(
-        image: AssetImage(image),
+      child: Image.network(
+        image,
         fit: BoxFit.cover,
       ),
     );

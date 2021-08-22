@@ -92,6 +92,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "darq",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/darq-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "day_night_time_picker",
       "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/day_night_time_picker-1.0.3+1",
       "packageUri": "lib/",
@@ -518,7 +524,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-08-21T03:54:26.921860Z",
+  "generated": "2021-08-21T23:47:31.572518Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

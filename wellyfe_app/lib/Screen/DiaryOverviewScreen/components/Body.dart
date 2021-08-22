@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Screen/DiaryAddNewEntryScreen/DiaryAddNewEntryScreen.dart';
 import 'package:wellyfe_app/Screen/DiaryDayListScreen/DiaryDayListScreen.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/Background.dart';
@@ -71,11 +72,13 @@ class Body extends StatelessWidget {
                           child: MonthContainer(
                             monthNumber: i,
                             monthString: getMonth(i),
-                            datesFilled: 6,
+                            datesFilled: Diary.getDaysWithDiary(Diary.getMonthlyDiary(i)),
                             function: () {
                               Navigator.push(context, PageTransition(
                                 type: PageTransitionType.fade,
-                                child: DiaryDayListScreen(),
+                                child: DiaryDayListScreen(
+                                  diaryList: Diary.getMonthlyDiary(i),
+                                ),
                               ));
                             },
                           ),
