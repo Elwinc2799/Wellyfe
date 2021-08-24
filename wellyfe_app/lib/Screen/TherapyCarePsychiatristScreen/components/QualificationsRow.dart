@@ -4,7 +4,14 @@ import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/Qual
 class QualificationsRow extends StatelessWidget {
   const QualificationsRow({
     Key? key,
+    required this.patients,
+    required this.yearsExp,
+    required this.ratings,
   }) : super(key: key);
+
+  final int patients;
+  final int yearsExp;
+  final double ratings;
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +24,15 @@ class QualificationsRow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           QualificationContainer(
-            data: "648",
+            data: patients.toString(),
             qualification: "Patients",
           ),
           QualificationContainer(
-            data: "9",
+            data: yearsExp.toString(),
             qualification: "Years Exp",
           ),
           QualificationContainer(
-            data: "4.9",
+            data: ratings.toString(),
             qualification: "Ratings",
           ),
         ],

@@ -92,7 +92,7 @@ class StatsContainerIndividualLower extends StatelessWidget {
               ),
             ),
             Text(
-              "time per day",
+              "time of yesterday",
               style: TextStyle(
                 fontSize: 17.5,
                 fontFamily: "Nunito",

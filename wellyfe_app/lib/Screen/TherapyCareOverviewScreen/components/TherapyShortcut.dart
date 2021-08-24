@@ -34,7 +34,9 @@ class TherapyShortcut extends StatelessWidget {
                     function: () {
                       Navigator.push(context, PageTransition(
                         type: PageTransitionType.fade,
-                        child: TherapyCareDoctorListScreen(),
+                        child: TherapyCareDoctorListScreen(
+                          specialisation: therapyList[i],
+                        ),
                       ));
                     },
                   ),

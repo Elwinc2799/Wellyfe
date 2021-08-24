@@ -97,7 +97,7 @@ class TopContainer extends StatelessWidget {
                 ),
                 child: Center(
                   child: Container(
-                    height: size.height * 0.1,
+                    height: 250,
                     child: Image(
                       image: AssetImage("assets/logo/diary.png"),
                       fit: BoxFit.cover,

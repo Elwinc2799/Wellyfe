@@ -114,7 +114,7 @@ class AppointmentContainer extends StatelessWidget {
                           ),
                           SizedBox(width: size.width * 0.025),
                           IconTime(
-                            width: 0.175,
+                            width: 0.195,
                             icon: CupertinoIcons.clock,
                             time: time,
                           )

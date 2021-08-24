@@ -14,7 +14,7 @@ class TopLevelBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          therapy,
+          therapy + " Therapy",
           style: TextStyle(
             fontSize: 30,
             fontFamily: "NunitoSans",

@@ -39,13 +39,12 @@ class TherapyShortcutIndividual extends StatelessWidget {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image(image: AssetImage("assets/logo/$therapy.png")),
-                SizedBox(height: 10),
                 Text(
                   therapy + " Therapy",
                   textAlign: TextAlign.center,

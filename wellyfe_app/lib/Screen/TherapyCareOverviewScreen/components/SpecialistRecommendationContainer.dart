@@ -29,7 +29,9 @@ class SpecialistRecommendationContainer extends StatelessWidget {
                 function: () {
                   Navigator.push(context, PageTransition(
                     type: PageTransitionType.fade,
-                    child: TherapyCarePsychiatristScreen(),
+                    child: TherapyCarePsychiatristScreen(
+                      doctorID: ""
+                    ),
                   ));
                 },
               ),

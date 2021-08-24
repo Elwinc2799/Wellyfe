@@ -44,7 +44,7 @@ class NoImageRightContainer extends StatelessWidget {
                       child: Center(
                         child: Text(
                           content,
-                          textAlign: TextAlign.justify,
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Montserrat",
