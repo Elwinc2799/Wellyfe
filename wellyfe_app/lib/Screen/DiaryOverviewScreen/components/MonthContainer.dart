@@ -14,11 +14,11 @@ class MonthContainer extends StatelessWidget {
   final int datesFilled;
   final VoidCallback function;
 
-  String getNumberOfDays(int month) {
+  int getNumberOfDays(int month) {
     DateTime now = DateTime.now();
     int lastDay = DateTime(now.year, monthNumber + 1, 0).day;
 
-    return lastDay.toString();
+    return lastDay;
   }
 
   @override
@@ -91,7 +91,7 @@ class MonthContainer extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            width: size.width * 0.25 * datesFilled / 31,
+                            width: size.width * 0.25 * datesFilled / getNumberOfDays(monthNumber),
                             height: size.height * 0.0075,
                             decoration: BoxDecoration(
                               color: Color(0XFF44BBA4),
@@ -101,7 +101,7 @@ class MonthContainer extends StatelessWidget {
                         ],
                       ),
                       Text(
-                        datesFilled.toString() + " : " + getNumberOfDays(monthNumber),
+                        datesFilled.toString() + " : " + getNumberOfDays(monthNumber).toString(),
                         style: TextStyle(
                           fontSize: 20,
                           fontFamily: "TitilliumWeb",

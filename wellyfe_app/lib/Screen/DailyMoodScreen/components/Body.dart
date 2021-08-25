@@ -1,5 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
 
 class Body extends StatefulWidget {
@@ -9,6 +12,27 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   ValueNotifier<double> _value = ValueNotifier(2.0);
+  var firebaseUser =  FirebaseAuth.instance.currentUser;
+  final firestoreInstance = FirebaseFirestore.instance;
+
+  Future<void> addNewMood(String mood) async {
+    DocumentReference documentReference = await firestoreInstance
+      .collection("moods")
+      .doc(firebaseUser!.uid)
+      .collection("mood")
+      .add({
+        "mood": mood,
+        "date": DateTime.now(),
+      });
+
+    Mood.moodDataList.add(
+      Mood(
+        documentReference.id,
+        mood,
+        DateTime.now(),
+      )
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +65,7 @@ class _BodyState extends State<Body> {
                 builder: (BuildContext context, double list, Widget? children) {
                   return GestureDetector(
                     onDoubleTap: () {
+                      addNewMood(emoji[_value.value.toInt() - 1]);
                       Navigator.pushReplacement(context, PageTransition(
                         type: PageTransitionType.fade,
                         child: HomeScreen(),

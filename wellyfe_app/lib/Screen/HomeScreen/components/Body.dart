@@ -174,7 +174,7 @@ class _BodyState extends State<Body> {
 
     return Background(
         children: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 250.0),
+          padding: const EdgeInsets.fromLTRB(30.0, 250.0, 30.0, 0),
           child: Column(
             children: [
               Row(
