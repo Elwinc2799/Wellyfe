@@ -5,9 +5,12 @@ import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Model/Appointment.dart';
 import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
+import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
+import 'package:wellyfe_app/Screen/HomeMoodScreen/HomeMoodScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/components/Background.dart';
+import 'package:wellyfe_app/Screen/HomeScreen/components/HorizontalContainer.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/components/LeftContainer.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/components/RightMiddleContainer.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/components/RightOuterContainer.dart';
@@ -168,6 +171,36 @@ class _BodyState extends State<Body> {
     );
   }
 
+  Future<void> getAllMoodData() async {
+    Mood.moodDataList = [];
+
+    fireStoreInstance
+        .collection("moods")
+        .doc(firebaseUser!.uid)
+        .collection("mood")
+        .get()
+        .then((value) {
+      value.docs.forEach((result) {
+        Timestamp timestamp = result.data()["date"];
+
+        Mood.moodDataList.add(
+          Mood(
+            result.id,
+            result.data()["mood"],
+            timestamp.toDate(),
+          )
+        );
+      });
+
+      Mood.moodDataList.sort((a, b) => a.date.compareTo(b.date));
+
+      Navigator.push(context, PageTransition(
+        type: PageTransitionType.fade,
+        child: HomeMoodScreen(),
+      ));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -226,6 +259,13 @@ class _BodyState extends State<Body> {
                     ),
                   )
                 ],
+              ),
+              SizedBox(height: size.height * 0.025),
+              HorizontalContainer(
+                title: "Mood Diary",
+                function: () async {
+                  getAllMoodData();
+                },
               )
             ],
           ),
@@ -233,6 +273,7 @@ class _BodyState extends State<Body> {
     );
   }
 }
+
 
 
 

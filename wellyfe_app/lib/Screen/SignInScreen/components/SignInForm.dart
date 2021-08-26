@@ -1,13 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
-import 'package:wellyfe_app/Screen/HomeMoodScreen/HomeMoodScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
@@ -22,11 +19,6 @@ class _SignInFormState extends State<SignInForm> {
 
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-
-  final pages = [
-    HomeScreen(),
-    HomeMoodScreen(),
-  ];
 
   Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   bool _isFirstOpen = false;
@@ -52,9 +44,8 @@ class _SignInFormState extends State<SignInForm> {
       authenticated = false;
     }
 
-    if (authenticated) {
+    if (authenticated)
       isMoodRecorded();
-    }
   }
 
   void isMoodRecorded() async {
@@ -79,9 +70,7 @@ class _SignInFormState extends State<SignInForm> {
     } else {
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,
-        child: Builder(
-          builder: (context) => LiquidSwipe(pages: pages),
-        )
+        child: HomeScreen(),
       ));
     }
   }

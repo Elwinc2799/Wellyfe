@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerAnalysisScreen/components/AwakeAsleepContainer.dart';
-import 'package:wellyfe_app/Screen/SleepTrackerAnalysisScreen/components/FatigueLevelBarChart.dart';
+import 'package:wellyfe_app/Screen/SleepTrackerAnalysisScreen/components/SleepLevelBarChart.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerAnalysisScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/Background.dart';
 
@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
           children: [
             TopLevelBar(),
             SizedBox(height: size.height * 0.05),
-            FatigueLevelBarChart(),
+            SleepLevelBarChart(),
             SizedBox(height: size.height * 0.05),
             AwakeAsleepContainer(),
           ],

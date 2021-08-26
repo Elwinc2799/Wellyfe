@@ -19,13 +19,13 @@ class TrackingContainer extends StatelessWidget {
         width: size.width - 80,
         height: size.height * 0.225,
         decoration: BoxDecoration(
-          color: Color(0XFFE1E2EB),
+          color: Color(0XFFF4F9FF),
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           boxShadow: [
             BoxShadow(
                 blurRadius: 5.0,
                 offset: Offset(-3, -3),
-                color: Colors.white.withOpacity(0.75)
+                color: Colors.grey.withOpacity(0.1)
             ),
             BoxShadow(
                 blurRadius: 5.0,

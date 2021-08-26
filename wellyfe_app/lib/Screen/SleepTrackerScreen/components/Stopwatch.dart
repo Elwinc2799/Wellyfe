@@ -56,8 +56,10 @@ class _StopwatchState extends State<Stopwatch> {
           onTap: () {
             isRunning.value = !isRunning.value;
 
-            if (!isRunning.value)
+            if (!isRunning.value) {
               _stopWatchTimer.onExecute.add(StopWatchExecute.stop);
+
+            }
             else
               _stopWatchTimer.onExecute.add(StopWatchExecute.start);
           },

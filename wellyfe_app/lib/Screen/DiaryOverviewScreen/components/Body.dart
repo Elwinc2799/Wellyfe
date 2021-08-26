@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Screen/DiaryAddNewEntryScreen/DiaryAddNewEntryScreen.dart';
@@ -9,6 +10,7 @@ import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/Background.dar
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/DiaryButton.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/MonthContainer.dart';
 import 'package:wellyfe_app/Screen/DiaryProfileScreen/DiaryProfileScreen.dart';
+import 'package:wellyfe_app/Screen/DiaryWordCloudScreen/DiaryWordCloudScreen.dart';
 
 class Body extends StatelessWidget {
 
@@ -45,6 +47,11 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final pages = [
+      DiaryProfileScreen(),
+      DiaryWordCloudScreen(),
+    ];
+
     Size size = MediaQuery.of(context).size;
 
     return Background(
@@ -108,7 +115,9 @@ class Body extends StatelessWidget {
                   function: () {
                     Navigator.push(context, PageTransition(
                       type: PageTransitionType.fade,
-                      child: DiaryProfileScreen(),
+                      child: Builder(
+                        builder: (context) => LiquidSwipe(pages: pages)
+                      ),
                     ));
                   },
                   title: "View My Profile",

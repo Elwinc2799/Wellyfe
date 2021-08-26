@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/ForgotPasswordScreen/ForgotPasswordScreen.dart';
-import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/OrDivider.dart';

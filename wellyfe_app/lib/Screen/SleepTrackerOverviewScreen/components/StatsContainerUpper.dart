@@ -25,8 +25,8 @@ class StatsContainerUpper extends StatelessWidget {
           SizedBox(width: size.width * 0.05),
           StatsContainerIndividualUpper(
             isOnTheLeft: false,
-            title: "Fatigue",
-            category: "of today",
+            title: "Quality",
+            category: "of sleep",
             data: "20.57%",
             percentage: 0.2057,
           ),
@@ -60,7 +60,7 @@ class StatsContainerIndividualUpper extends StatelessWidget {
       height: size.height * 0.2,
       width: size.width * 0.375,
       decoration: BoxDecoration(
-          color: Color(0XFFE1E2EB),
+          color: Color(0XFFF4F9FF),
           borderRadius: BorderRadius.only(
             topLeft: isOnTheLeft ? Radius.circular(5.0) : Radius.circular(50.0),
             topRight: isOnTheLeft ? Radius.circular(50.0) : Radius.circular(5.0),
@@ -71,7 +71,7 @@ class StatsContainerIndividualUpper extends StatelessWidget {
             BoxShadow(
                 blurRadius: 5.0,
                 offset: Offset(-3, -3),
-                color: Colors.white.withOpacity(0.75)
+                color: Colors.grey.withOpacity(0.1)
             ),
             BoxShadow(
                 blurRadius: 5.0,

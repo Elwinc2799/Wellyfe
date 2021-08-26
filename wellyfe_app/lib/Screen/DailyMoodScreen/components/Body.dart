@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
 
 class Body extends StatefulWidget {
@@ -16,7 +15,7 @@ class _BodyState extends State<Body> {
   final firestoreInstance = FirebaseFirestore.instance;
 
   Future<void> addNewMood(String mood) async {
-    DocumentReference documentReference = await firestoreInstance
+    await firestoreInstance
       .collection("moods")
       .doc(firebaseUser!.uid)
       .collection("mood")
@@ -24,14 +23,6 @@ class _BodyState extends State<Body> {
         "mood": mood,
         "date": DateTime.now(),
       });
-
-    Mood.moodDataList.add(
-      Mood(
-        documentReference.id,
-        mood,
-        DateTime.now(),
-      )
-    );
   }
 
   @override
