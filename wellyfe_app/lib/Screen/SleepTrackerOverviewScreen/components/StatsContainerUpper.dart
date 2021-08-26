@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:wellyfe_app/Core/Model/Sleep.dart';
 
 class StatsContainerUpper extends StatelessWidget {
   const StatsContainerUpper({
@@ -10,6 +11,26 @@ class StatsContainerUpper extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
+    String getMinuteString(double decimalValue) {
+      return '${(decimalValue * 60).toInt()}'.padLeft(2, '0');
+    }
+
+    String getHourString(int flooredValue) {
+      return '${flooredValue % 24}'.padLeft(2, '0');
+    }
+
+    String getTimeStringFromDouble(double value) {
+      if (value < 0)
+        return '-';
+
+      int flooredValue = value.floor();
+      double decimalValue = value - flooredValue;
+      String hourValue = getHourString(flooredValue);
+      String minuteString = getMinuteString(decimalValue);
+
+      return '${hourValue}h ${minuteString}m';
+    }
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
@@ -19,8 +40,8 @@ class StatsContainerUpper extends StatelessWidget {
             isOnTheLeft: true,
             title: "Average",
             category: "sleep per day",
-            data: "7h 50m",
-            percentage: 0.87,
+            data: getTimeStringFromDouble(Sleep.averageSleep),
+            percentage: Sleep.averageSleep / 24,
           ),
           SizedBox(width: size.width * 0.05),
           StatsContainerIndividualUpper(

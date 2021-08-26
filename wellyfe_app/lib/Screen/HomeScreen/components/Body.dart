@@ -6,6 +6,7 @@ import 'package:wellyfe_app/Core/Model/Appointment.dart';
 import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
 import 'package:wellyfe_app/Core/Model/Mood.dart';
+import 'package:wellyfe_app/Core/Model/Sleep.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/HomeMoodScreen/HomeMoodScreen.dart';
@@ -201,6 +202,40 @@ class _BodyState extends State<Body> {
     });
   }
 
+  Future<void> getAllSleepData() async {
+    Sleep.sleepDataList = [];
+    double total = 0;
+
+    fireStoreInstance
+        .collection("sleeps")
+        .doc(firebaseUser!.uid)
+        .collection("sleep")
+        .get()
+        .then((value) {
+      value.docs.forEach((result) {
+
+        Timestamp timestamp = result.data()["date"];
+
+        Sleep.sleepDataList.add(
+            Sleep(
+              result.data()["asleepTime"],
+              result.data()["awakeTime"],
+              timestamp.toDate(),
+            )
+        );
+
+        total += result.data()["asleepTime"];
+      });
+
+      Sleep.averageSleep = total / Sleep.sleepDataList.length;
+
+      Navigator.push(context, PageTransition(
+        type: PageTransitionType.fade,
+        child: SleepTrackerOverviewScreen(),
+      ));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -225,11 +260,8 @@ class _BodyState extends State<Body> {
                           title: "Schedule",
                         ),
                         LeftContainer(
-                          function: () {
-                            Navigator.push(context, PageTransition(
-                              type: PageTransitionType.fade,
-                              child: SleepTrackerOverviewScreen(),
-                            ));
+                          function: () async {
+                            getAllSleepData();
                           },
                           title: "Sleep Tracker",
                         ),

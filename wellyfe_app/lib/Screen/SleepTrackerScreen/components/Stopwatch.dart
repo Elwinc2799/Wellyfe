@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
@@ -11,11 +13,34 @@ class _StopwatchState extends State<Stopwatch> {
 
   @override
   Widget build(BuildContext context) {
+    var firebaseUser =  FirebaseAuth.instance.currentUser;
+    final firestoreInstance = FirebaseFirestore.instance;
+
     Size size = MediaQuery.of(context).size;
     ValueNotifier<bool> isRunning = ValueNotifier(true);
+    var sleepTime;
 
-    final StopWatchTimer _stopWatchTimer = StopWatchTimer();
+    final StopWatchTimer _stopWatchTimer = StopWatchTimer(
+      onChange: (value) {
+        sleepTime = StopWatchTimer.getDisplayTime(value);
+      }
+    );
     _stopWatchTimer.onExecute.add(StopWatchExecute.start);
+
+    Future<void> addNewSleepData(String hour, String minute) async {
+      double asleepTime = double.parse(hour) + (double.parse(minute) / 60);
+
+      await firestoreInstance
+        .collection("sleeps")
+        .doc(firebaseUser!.uid)
+        .collection("sleep")
+        .add({
+          "asleepTime": asleepTime,
+          "awakeTime": 24 - asleepTime,
+          "date": DateTime.now(),
+        });
+
+    }
 
     return Column(
       children: [
@@ -58,7 +83,7 @@ class _StopwatchState extends State<Stopwatch> {
 
             if (!isRunning.value) {
               _stopWatchTimer.onExecute.add(StopWatchExecute.stop);
-
+              addNewSleepData(sleepTime.toString().substring(0, 2), sleepTime.toString().substring(3, 5));
             }
             else
               _stopWatchTimer.onExecute.add(StopWatchExecute.start);

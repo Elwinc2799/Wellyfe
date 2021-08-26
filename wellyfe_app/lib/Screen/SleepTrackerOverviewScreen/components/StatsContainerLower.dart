@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Core/Model/Sleep.dart';
 
 class StatsContainerLower extends StatelessWidget {
   const StatsContainerLower({
@@ -9,6 +10,28 @@ class StatsContainerLower extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    Sleep yesterday = Sleep.getPreviousSleepData();
+
+    String getMinuteString(double decimalValue) {
+      return '${(decimalValue * 60).toInt()}'.padLeft(2, '0');
+    }
+
+    String getHourString(int flooredValue) {
+      return '${flooredValue % 24}'.padLeft(2, '0');
+    }
+
+    String getTimeStringFromDouble(double value) {
+      if (value < 0)
+        return '-';
+
+      int flooredValue = value.floor();
+      double decimalValue = value - flooredValue;
+      String hourValue = getHourString(flooredValue);
+      String minuteString = getMinuteString(decimalValue);
+
+      return '${hourValue}h ${minuteString}m';
+    }
+
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -18,15 +41,15 @@ class StatsContainerLower extends StatelessWidget {
           StatsContainerIndividualLower(
             isOnTheLeft: true,
             title: "Awake",
-            data: "16h 20m",
-            percentage: (24 - 7.67) / 24,
+            data: getTimeStringFromDouble(yesterday.awakeDuration),
+            percentage: yesterday.awakeDuration / 24,
           ),
           SizedBox(width: size.width * 0.05),
           StatsContainerIndividualLower(
             isOnTheLeft: false,
             title: "Asleep",
-            data: "7h 40m",
-            percentage: 7.67 / 24,
+            data: getTimeStringFromDouble(yesterday.sleepDuration),
+            percentage: yesterday.sleepDuration / 24,
           ),
         ],
       ),
