@@ -13,6 +13,7 @@ class Mood {
   );
 
   static List<Mood> moodDataList = [];
+  static String moodOfToday = "";
 
   static Color getMoodColor(String mood) {
     if (mood == "awesome")

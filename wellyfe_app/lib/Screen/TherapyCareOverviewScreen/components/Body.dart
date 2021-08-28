@@ -4,6 +4,7 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:intl/intl.dart';
 import 'package:wellyfe_app/Core/Model/Appointment.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
+import 'package:wellyfe_app/Core/Model/UserProfile.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/AppointmentContainer.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/SpecialistRecommendationContainer.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/TherapyShortcut.dart';
@@ -26,7 +27,7 @@ class Body extends StatelessWidget {
             TopLevelBar(),
             SizedBox(height: size.height * 0.025),
             Text(
-              "Hello, Gigi!",
+              "Hello, " + UserProfile.userDetails.name + "!",
               style: TextStyle(
                 fontSize: 25,
                 fontFamily: "NunitoSans",

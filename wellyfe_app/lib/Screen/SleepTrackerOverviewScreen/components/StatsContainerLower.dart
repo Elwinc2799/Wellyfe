@@ -21,7 +21,7 @@ class StatsContainerLower extends StatelessWidget {
     }
 
     String getTimeStringFromDouble(double value) {
-      if (value < 0)
+      if (value == 0)
         return '-';
 
       int flooredValue = value.floor();

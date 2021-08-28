@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:wellyfe_app/Core/Model/Sleep.dart';
+import 'package:wellyfe_app/Core/Model/UserProfile.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/MidLevelBar.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/StatsContainerLower.dart';
@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TopLevelBar(
-              name: "Gigi",
+              name: UserProfile.userDetails.name,
             ),
             SizedBox(height: size.height * 0.01),
             Text(

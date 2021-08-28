@@ -8,6 +8,7 @@ import 'package:wellyfe_app/Core/Model/Doctor.dart';
 import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Core/Model/Sleep.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
+import 'package:wellyfe_app/Core/Model/UserProfile.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/HomeMoodScreen/HomeMoodScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/components/Background.dart';
@@ -18,6 +19,7 @@ import 'package:wellyfe_app/Screen/HomeScreen/components/RightOuterContainer.dar
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/ScheduleOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/SleepTrackerOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/TherapyCareOverviewScreen.dart';
+import 'package:wellyfe_app/Screen/UserProfileScreen/UserProfileScreen.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -32,6 +34,7 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     super.initState();
+    getAllUserData();
   }
 
   Future<void> getAllTaskScheduleData() async {
@@ -172,6 +175,19 @@ class _BodyState extends State<Body> {
     );
   }
 
+  Future<void> getAllUserData() async {
+    await fireStoreInstance
+      .collection("users")
+      .doc(firebaseUser!.uid)
+      .get()
+      .then((value) {
+        UserProfile.userDetails.imageUrl = value.data()!["imageUrl"];
+        UserProfile.userDetails.userEmail = firebaseUser!.email.toString();
+        UserProfile.userDetails.personality = value.data()!["personality"];
+        UserProfile.userDetails.name = value.data()!["name"];
+      });
+  }
+
   Future<void> getAllMoodData() async {
     Mood.moodDataList = [];
 
@@ -207,21 +223,20 @@ class _BodyState extends State<Body> {
     double total = 0;
 
     fireStoreInstance
-        .collection("sleeps")
-        .doc(firebaseUser!.uid)
-        .collection("sleep")
-        .get()
-        .then((value) {
+      .collection("sleeps")
+      .doc(firebaseUser!.uid)
+      .collection("sleep")
+      .get()
+      .then((value) {
       value.docs.forEach((result) {
-
         Timestamp timestamp = result.data()["date"];
 
         Sleep.sleepDataList.add(
-            Sleep(
-              result.data()["asleepTime"],
-              result.data()["awakeTime"],
-              timestamp.toDate(),
-            )
+          Sleep(
+            result.data()["asleepTime"],
+            result.data()["awakeTime"],
+            timestamp.toDate(),
+          )
         );
 
         total += result.data()["asleepTime"];
@@ -242,9 +257,20 @@ class _BodyState extends State<Body> {
 
     return Background(
         children: Padding(
-          padding: const EdgeInsets.fromLTRB(30.0, 250.0, 30.0, 0),
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              HorizontalContainer(
+                title: "User",
+                function: () {
+                  Navigator.push(context, PageTransition(
+                    type: PageTransitionType.fade,
+                    child: UserProfileScreen(),
+                  ));
+                },
+              ),
+              SizedBox(height: size.height * 0.025),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -298,7 +324,7 @@ class _BodyState extends State<Body> {
                 function: () async {
                   getAllMoodData();
                 },
-              )
+              ),
             ],
           ),
         )

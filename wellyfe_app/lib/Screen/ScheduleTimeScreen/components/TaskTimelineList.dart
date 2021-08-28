@@ -42,7 +42,10 @@ class _TaskTimelineListState extends State<TaskTimelineList> {
             : Container(
                 child: Column(
                   children: [
-                    Image(image: AssetImage("assets/pictures/empty.png")),
+                    Container(
+                      height: size.height * 0.35,
+                      child: Image(image: AssetImage("assets/pictures/empty.png"))
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 50.0),
                       child: Text(

@@ -128,9 +128,10 @@ class _BodyState extends State<Body> {
                   buildEmojiModalBottomSheet(context, size);
                 },
                 child: AnimatedContainer(
+                  height: 50,
+                  width: 50,
                   duration: const Duration(seconds: 1),
                   curve: Curves.fastOutSlowIn,
-                  height: 50,
                   decoration: BoxDecoration(shape: BoxShape.circle),
                   child: Image(image: AssetImage("assets/logo/${emoji.value}.png")),
                 )
@@ -143,6 +144,7 @@ class _BodyState extends State<Body> {
                 },
                 child: AnimatedContainer(
                   height: 50,
+                  width: 50,
                   curve: Curves.fastOutSlowIn,
                   duration: const Duration(seconds: 1),
                   child: favourite
@@ -155,9 +157,10 @@ class _BodyState extends State<Body> {
                 buildWeatherModalBottomSheet(context, size);
               },
               child: AnimatedContainer(
+                  height: 50,
+                  width: 50,
                   duration: const Duration(seconds: 1),
                   curve: Curves.fastOutSlowIn,
-                  height: 50,
                   decoration: BoxDecoration(shape: BoxShape.circle),
                   child: Image(image: AssetImage("assets/logo/${weather.value}.png"))
               ),

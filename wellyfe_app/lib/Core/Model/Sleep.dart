@@ -16,7 +16,8 @@ class Sleep {
 
   static Sleep getPreviousSleepData() {
     return sleepDataList.firstWhere(
-      (element) => convert(element.dateRecorded.toString()) == convert(DateTime.now().subtract(Duration(days:1)).toString())
+      (element) => convert(element.dateRecorded.toString()) == convert(DateTime.now().subtract(Duration(days:1)).toString()),
+        orElse: () => Sleep(0, 0, DateTime.now().subtract(Duration(days: 1)))
     );
   }
 

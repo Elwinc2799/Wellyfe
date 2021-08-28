@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
 
 class Body extends StatefulWidget {
@@ -23,6 +24,8 @@ class _BodyState extends State<Body> {
         "mood": mood,
         "date": DateTime.now(),
       });
+
+    Mood.moodOfToday = mood;
   }
 
   @override
