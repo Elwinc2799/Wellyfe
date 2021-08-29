@@ -33,7 +33,7 @@ class Background extends StatelessWidget {
                 child: image.value == null
                   ? Image.network(
                     source == ""
-                    ? backupImage : source,
+                        ? backupImage : source,
                     fit: BoxFit.cover,
                   )
                   : Image.file(

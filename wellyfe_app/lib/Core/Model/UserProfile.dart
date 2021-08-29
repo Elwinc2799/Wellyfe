@@ -11,5 +11,5 @@ class UserProfile {
     this.name,
   );
 
-  static UserProfile userDetails = UserProfile("", "", "", "");
+  static UserProfile userDetails = UserProfile("", "", "", " ");
 }
