@@ -112,6 +112,27 @@ class _BodyState extends State<Body> {
     });
   }
 
+  Future<void> getAllFitnessData() async {
+
+    fireStoreInstance
+      .collection("fitnesses")
+      .doc(firebaseUser!.uid)
+      .collection("fitness")
+      .get()
+      .then((value) {
+      value.docs.forEach((result) {
+
+       if (result.exists)
+         print(true);
+       else
+         print(false);
+
+      });
+
+
+    });
+  }
+
   Future<void> getAllAppointmentData() async {
     Appointment.appointmentDataList = [];
 

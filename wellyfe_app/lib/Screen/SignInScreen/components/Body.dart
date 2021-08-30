@@ -49,10 +49,10 @@ class _BodyState extends State<Body> {
             Text(
               "Sign In",
               style: TextStyle(
-                  fontSize: 40,
-                  fontFamily: "NunitoSans",
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black.withOpacity(.5)
+                fontSize: 40,
+                fontFamily: "NunitoSans",
+                fontWeight: FontWeight.bold,
+                color: Colors.black.withOpacity(.5)
               ),
             ),
             SizedBox(height: size.height * 0.05),
