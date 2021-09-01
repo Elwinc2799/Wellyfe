@@ -19,37 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4f8c179-52db-4ac6-8c47-a8973b22a28b" name="Default Changelist" comment="Firebase updated 6">
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Core/Model/DietPlan.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Core/Model/Fitness.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Core/Model/Questionnaire.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Core/Model/Steps.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/AgreeablePersonalityScreen/AgreeablePersonalityScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/AgreeablePersonalityScreen/components/Body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/AgreeablePersonalityScreen/components/QuestionnaireButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/AgreeablePersonalityScreen/components/SelectionButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/ConscientiousPersonalityScreen/ConscientiousPersonalityScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/ConscientiousPersonalityScreen/components/Body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/ConscientiousPersonalityScreen/components/QuestionnaireButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/ConscientiousPersonalityScreen/components/SelectionButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/ExtroversionPersonalityScreen/ExtroversionPersonalityScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/ExtroversionPersonalityScreen/components/Body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/ExtroversionPersonalityScreen/components/QuestionnaireButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/ExtroversionPersonalityScreen/components/SelectionButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/NeuroticismPersonalityScreen/NeuroticismPersonalityScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/NeuroticismPersonalityScreen/components/Body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/NeuroticismPersonalityScreen/components/QuestionnaireButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/NeuroticismPersonalityScreen/components/SelectionButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/OpenPersonalityScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/Body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/QuestionnaireButton.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/SelectionButton.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Eric.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Eric.xml" afterDir="false" />
+    <list default="true" id="e4f8c179-52db-4ac6-8c47-a8973b22a28b" name="Default Changelist" comment="Firebase updated 7">
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalQuestionnaireScreen/PersonalQuestionnaireScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalQuestionnaireScreen/components/Background.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/PersonalQuestionnaireScreen/components/Body.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/debug_android_application.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/flutter_assets.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/kernel_snapshot.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.dart_tool/flutter_build/1e44a2ef1d641a24c771698965687e67/kernel_snapshot.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/android/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
@@ -66,8 +46,8 @@
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/HomeScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/HomeScreen/components/Body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/SignInScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/SignInScreen/components/Body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessFirstGoalsScreen/components/Body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessFirstGoalsScreen/components/Body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessFirstGoalsScreen/components/FitnessInputForm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/FitnessFirstGoalsScreen/components/FitnessInputForm.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wellyfe_app/lib/Screen/SignInScreen/components/SignInForm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/wellyfe_app/lib/Screen/SignInScreen/components/SignInForm.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -460,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630220686363</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Firebase updated 7">
+      <created>1630364479646</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1630364479646</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -476,7 +463,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UI Update" />
     <MESSAGE value="UI Update 2" />
     <MESSAGE value="Add task update" />
     <MESSAGE value="Text Controller added" />
@@ -501,7 +487,8 @@
     <MESSAGE value="Firebase updated 4" />
     <MESSAGE value="Firebase updated 5" />
     <MESSAGE value="Firebase updated 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Firebase updated 6" />
+    <MESSAGE value="Firebase updated 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Firebase updated 7" />
   </component>
   <component name="WindowStateProjectService">
     <state x="67" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629675085812">
@@ -520,22 +507,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="428" y="159" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1629158327243" />
-    <state width="1164" height="163" key="GridCell.Tab.0.bottom" timestamp="1630304336978">
+    <state width="1164" height="163" key="GridCell.Tab.0.bottom" timestamp="1630500660103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1164" height="163" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630304336978" />
-    <state width="1164" height="163" key="GridCell.Tab.0.center" timestamp="1630304336978">
+    <state width="1164" height="163" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630500660103" />
+    <state width="1164" height="163" key="GridCell.Tab.0.center" timestamp="1630500660103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1164" height="163" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1630304336978" />
-    <state width="1164" height="163" key="GridCell.Tab.0.left" timestamp="1630304336978">
+    <state width="1164" height="163" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1630500660103" />
+    <state width="1164" height="163" key="GridCell.Tab.0.left" timestamp="1630500660102">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1164" height="163" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1630304336978" />
-    <state width="1164" height="163" key="GridCell.Tab.0.right" timestamp="1630304336978">
+    <state width="1164" height="163" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1630500660102" />
+    <state width="1164" height="163" key="GridCell.Tab.0.right" timestamp="1630500660103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1164" height="163" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1630304336978" />
+    <state width="1164" height="163" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1630500660103" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1626937267824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -544,10 +531,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="542" height="447" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1628665826041" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1630220717270">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1630364506599">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1630220717270" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1630364506599" />
     <state x="100" y="100" width="1035" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1628660384658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

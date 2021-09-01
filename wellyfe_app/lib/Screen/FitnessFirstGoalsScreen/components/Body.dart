@@ -37,7 +37,6 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.04),
             FitnessInputForm(),
-            NextButton(),
           ],
         ),
       ),
