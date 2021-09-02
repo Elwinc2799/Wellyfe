@@ -33,13 +33,13 @@ class _FoodContainerIndividualState extends State<FoodContainerIndividual> {
         height: widget.size,
         width: widget.size,
         decoration: BoxDecoration(
-          color: Color(0XFFE7F0F9),
+          color: selected ? Color(0XFFE7F0F9) : Color(0XFFF4F9FF),
           borderRadius: BorderRadius.all(Radius.circular(widget.radius)),
           boxShadow: [
             BoxShadow(
                 blurRadius: 5.0,
                 offset:selected ? Offset(3, 3) : Offset(-3, -3),
-                color: Colors.white
+                color: selected ? Colors.white : Colors.grey.withOpacity(0.1)
             ),
             BoxShadow(
                 blurRadius: 5.0,

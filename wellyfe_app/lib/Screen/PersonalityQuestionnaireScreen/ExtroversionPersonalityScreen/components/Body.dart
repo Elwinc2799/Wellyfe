@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Model/Questionnaire.dart';
 import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/ExtroversionPersonalityScreen/components/QuestionnaireButton.dart';
 import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/ExtroversionPersonalityScreen/components/SelectionButton.dart';
+import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/NeuroticismPersonalityScreen/NeuroticismPersonalityScreen.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -65,6 +67,10 @@ class _BodyState extends State<Body> {
                     QuestionnaireButton(
                       title: "Next",
                       function: () {
+                        Navigator.push(context, PageTransition(
+                            type: PageTransitionType.fade,
+                            child: NeuroticismPersonalityScreen()
+                        ));
                       },
                     )
                   ],

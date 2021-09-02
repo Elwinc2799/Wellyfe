@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:wellyfe_app/Screen/FitnessSecondGoalsScreen/FitnessSecondGoalsScreen.dart';
 
 class NextButton extends StatelessWidget {
+
+  final VoidCallback function;
+
+  const NextButton({Key? key, required this.function}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
     return GestureDetector(
-      onTap: () {
-        Navigator.push(context, PageTransition(
-          type: PageTransitionType.fade,
-          child: FitnessSecondGoalsScreen(),
-        ));
-      },
+      onTap: function,
       child: Container(
         width: size.height * 0.125,
         height: size.width * 0.1,

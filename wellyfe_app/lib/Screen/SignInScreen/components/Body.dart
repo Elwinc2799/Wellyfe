@@ -77,7 +77,7 @@ class _BodyState extends State<Body> {
                 ),
               ),
             ),
-            SizedBox(height: size.height * 0.025),
+            SizedBox(height: size.height * 0.02),
             OrDivider(),
             SizedBox(height: size.height * 0.001),
             Padding(
@@ -100,7 +100,7 @@ class _BodyState extends State<Body> {
                 ],
               ),
             ),
-            SizedBox(height: size.height * 0.025),
+            SizedBox(height: size.height * 0.02),
             AlreadyHaveAnAccount(
                 login: true,
                 press: () {

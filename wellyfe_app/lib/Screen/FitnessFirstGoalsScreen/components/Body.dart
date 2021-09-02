@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Screen/FitnessFirstGoalsScreen/components/FitnessInputForm.dart';
-import 'package:wellyfe_app/Screen/FitnessFirstGoalsScreen/components/NextButton.dart';
 import 'package:wellyfe_app/Screen/FitnessFirstGoalsScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/FitnessFirstGoalsScreen/components/Background.dart';
 

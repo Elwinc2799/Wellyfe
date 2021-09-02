@@ -64,7 +64,12 @@ class _BodyState extends State<Body> {
                     ),
                     QuestionnaireButton(
                       title: "Done",
-                      function: () {},
+                      function: () {
+                        // Navigator.pushReplacement(context, PageTransition(
+                        //   type: PageTransitionType.fade,
+                        //   child: (),
+                        // ));
+                      },
                     )
                   ],
                 ),

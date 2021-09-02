@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:wellyfe_app/Core/Model/Questionnaire.dart';
+import 'package:wellyfe_app/Core/Model/RadioModel.dart';
+import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/RadioItem.dart';
 
 class SelectionButton extends StatefulWidget {
   const SelectionButton({Key? key, required this.question}) : super(key: key);
@@ -12,57 +14,44 @@ class SelectionButton extends StatefulWidget {
 }
 
 class _SelectionButtonState extends State<SelectionButton> {
-  String groupValue = "";
-  List<String> category = [
-    "Highly Disagree", "Disagree", "Neutral", "Agree", "Highly Agree"
+  List<RadioModel> sampleData = [
+    RadioModel("Highly Disagree", false),
+    RadioModel("Disagree", false),
+    RadioModel("Neutral", false),
+    RadioModel("Agree", false),
+    RadioModel("Highly Agree", false),
   ];
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Row(
-      children:
-        List.generate(category.length, (index) {
-          return Row(
-            children: [
-              NeumorphicRadio(
-                value: category[index],
-                groupValue: groupValue,
-                onChanged: (dynamic value) {
-                  setState(() {
-                    groupValue = value;
-                  });
-                  Questionnaire.neuroticismListAns[widget.question] = index + 1;
-                },
-                style: NeumorphicRadioStyle(
-                  selectedColor: Color(0XFFDBE6E8),
-                  selectedDepth: -5,
-                  unselectedColor: Color(0XFFDBE6E8),
-                  unselectedDepth: 10,
+    return Container(
+      width: size.width,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 8.0),
+        child: Row(
+          children:
+          List.generate(sampleData.length, (index) {
+            return Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      sampleData.forEach((element) => element.isSelected = false);
+                      sampleData[index].isSelected = true;
+                    });
+
+                    Questionnaire.neuroticismListAns[widget.question] = index + 1;
+                  },
+                  child: new RadioItem(sampleData[index]),
                 ),
-                child: Container(
-                  height: size.height * 0.075,
-                  width: size.width * 0.15,
-                  child: Center(
-                    child: Text(
-                      category[index],
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontFamily: "NunitoSans",
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black.withOpacity(.5)
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(width: size.width * 0.025),
-            ],
-          );
-        })
-      ,
+                SizedBox(width: size.width * 0.025),
+              ],
+            );
+          }),
+        ),
+      ),
     );
   }
 }

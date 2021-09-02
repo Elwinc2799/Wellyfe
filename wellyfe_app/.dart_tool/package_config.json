@@ -230,6 +230,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_svg",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/flutter_svg-0.21.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///C:/Flutter/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -244,6 +250,12 @@
     {
       "name": "glassmorphism",
       "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/glassmorphism-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "height_slider",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/height_slider-1.4.0-nullsafety+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -350,6 +362,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "path_drawing",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path_drawing-0.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_parsing",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path_parsing-0.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path_provider_linux",
       "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path_provider_linux-2.0.2",
       "packageUri": "lib/",
@@ -370,6 +394,12 @@
     {
       "name": "pedantic",
       "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/pedantic-1.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/petitparser-4.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -542,13 +572,19 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "xml",
+      "rootUri": "file:///C:/Users/Eric/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/xml-5.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "wellyfe_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-08-25T07:01:30.993713Z",
+  "generated": "2021-09-02T11:49:12.345493Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

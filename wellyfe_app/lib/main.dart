@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Wellyfe',
       home: SignInScreen(),
+      initialRoute: '/',
     );
   }
 }

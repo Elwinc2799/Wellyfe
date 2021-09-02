@@ -71,8 +71,8 @@ class _SignInFormState extends State<SignInForm> {
     } else {
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,
-        child: PersonalQuestionnaireScreen(),
-        // child: HomeScreen(),
+        // child: PersonalQuestionnaireScreen()
+        child: HomeScreen(),
       ));
     }
   }
@@ -95,7 +95,7 @@ class _SignInFormState extends State<SignInForm> {
           SizedBox(height: size.height * 0.025),
           TextFieldLabel(label: "Password"),
           buildPasswordFormField(),
-          SizedBox(height: size.height * 0.025),
+          SizedBox(height: size.height * 0.05),
           SignInButton(
             function: () {
               signInUserWithEmail(_emailController.text, _passwordController.text);
