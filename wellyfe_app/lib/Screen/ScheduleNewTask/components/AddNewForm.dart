@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
+import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Screen/ScheduleNewTask/components/AddTaskButton.dart';
 import 'package:wellyfe_app/Screen/ScheduleNewTask/components/TextFieldLabel.dart';
@@ -28,26 +29,39 @@ class _AddNewFormState extends State<AddNewForm> {
         .doc(firebaseUser!.uid)
         .collection("task")
         .add({
-      "taskName": title,
-      "taskPriority": taskPriorityInt,
-      "taskCategory": "Pending",
-      "dueDate": date,
-      "startTime": startTime,
-      "endTime": endTime,
-      "isDone": false,
-    });
+        "taskName": title,
+        "taskPriority": taskPriorityInt,
+        "taskCategory": "Pending",
+        "dueDate": date,
+        "startTime": startTime,
+        "endTime": endTime,
+        "isDone": false,
+      });
 
     Task.taskDataList.add(
-      Task(
-        documentReference.id,
-        _taskTitleController.text,
-        taskPriority(priorityValue),
-        "Pending",
-        DateTime.parse(_taskDateController.text),
-        int.parse(startTimeValue.substring(0, 1)),
-        int.parse(endTimeValue.substring(0, 1)),
-        false,
-      )
+        Task(
+          documentReference.id,
+          _taskTitleController.text,
+          taskPriority(priorityValue),
+          "Pending",
+          DateTime.parse(_taskDateController.text),
+          int.parse(startTimeValue.substring(0, 1)),
+          int.parse(endTimeValue.substring(0, 1)),
+          false,
+        )
+    );
+
+    showNotification("New task added.");
+  }
+
+  ToastFuture showNotification(String content) {
+    return showToast(
+      content,
+      context: context,
+      animation: StyledToastAnimation.fade,
+      reverseAnimation: StyledToastAnimation.fade,
+      duration: Duration(seconds: 3),
+      position: StyledToastPosition.center,
     );
   }
 

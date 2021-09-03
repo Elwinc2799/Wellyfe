@@ -7,6 +7,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    
     return Background(
       children: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 100.0),

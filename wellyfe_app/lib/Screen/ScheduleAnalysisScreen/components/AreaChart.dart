@@ -6,6 +6,7 @@ import 'package:wellyfe_app/Core/Model/Task.dart';
 class AreaChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List<Task> weeklyTaskList = Task.getWeeklyTaskList();
     Size size = MediaQuery.of(context).size;
 
     return Padding(
@@ -30,7 +31,7 @@ class AreaChart extends StatelessWidget {
             )
           ),
           primaryYAxis: NumericAxis(
-            interval: 1, //TODO CHANGE INTERVAL TO SUM / 4
+            interval: 1,
             majorGridLines: MajorGridLines(
               width: 0,
             ),
@@ -49,9 +50,9 @@ class AreaChart extends StatelessWidget {
               splineType: SplineType.cardinal,
               cardinalSplineTension: 1,
               color: Color(0XFF668ED4).withOpacity(0.5),
-              dataSource: Task.taskDataList,
+              dataSource: weeklyTaskList,
               xValueMapper: (Task taskData, _) => DateFormat('EEEE').format(taskData.dueDate).substring(0, 3),
-              yValueMapper: (Task taskData, _) => taskData.switchDateOccurrences(Task.taskDataList) + taskData.switchDateOccurrences(Task.taskDataList) * 0.25,
+              yValueMapper: (Task taskData, _) => taskData.switchDateOccurrences(weeklyTaskList) + taskData.switchDateOccurrences(weeklyTaskList) * 0.25,
             ),
             SplineAreaSeries<Task, String>(
               splineType: SplineType.cardinal,
@@ -59,7 +60,7 @@ class AreaChart extends StatelessWidget {
               color: Color(0XFF668ED4),
               dataSource: Task.taskDataList,
               xValueMapper: (Task taskData, _) => DateFormat('EEEE').format(taskData.dueDate).substring(0, 3),
-              yValueMapper: (Task taskData, _) => taskData.switchDateOccurrences(Task.taskDataList),
+              yValueMapper: (Task taskData, _) => taskData.switchDateOccurrences(weeklyTaskList),
             ),
           ],
         ),

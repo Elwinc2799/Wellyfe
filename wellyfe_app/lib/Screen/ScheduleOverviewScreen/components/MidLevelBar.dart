@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/ScheduleNewTask/ScheduleNewTask.dart';
 
-class MidLevelBar extends StatelessWidget {
-  const MidLevelBar({
-    Key? key,
-  }) : super(key: key);
 
+class MidLevelBar extends StatefulWidget {
+  @override
+  _MidLevelBarState createState() => _MidLevelBarState();
+}
+
+class _MidLevelBarState extends State<MidLevelBar> {
   @override
   Widget build(BuildContext context) {
     return Row(

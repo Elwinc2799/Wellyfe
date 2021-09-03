@@ -109,7 +109,7 @@ class Task{
   static List<Task> getWeeklyTaskList() {
     DateTime now = DateTime.now();
     DateTime initialDay = now.subtract(Duration(days: now.weekday));
-    DateTime displaceDay = now.add(Duration(days: DateTime.daysPerWeek - now.weekday));
+    DateTime displaceDay = now.add(Duration(days: DateTime.daysPerWeek - now.weekday + 1));
     DateTime firstDayOfWeek = new DateTime(
         initialDay.year,
         initialDay.month,
@@ -158,5 +158,7 @@ class Task{
     else
       return timeConversion(time - 12) + " PM";
   }
+
+
 
 }

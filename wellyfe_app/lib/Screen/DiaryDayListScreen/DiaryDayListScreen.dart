@@ -6,15 +6,18 @@ class DiaryDayListScreen extends StatelessWidget {
   const DiaryDayListScreen({
     Key? key,
     required this.diaryList,
+    required this.month,
   }) : super(key: key);
 
   final List<Diary> diaryList;
+  final String month;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Body(
         diaryList: diaryList,
+        month: month,
       ),
     );
   }

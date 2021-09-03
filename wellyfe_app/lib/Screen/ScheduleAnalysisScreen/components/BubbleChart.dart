@@ -8,6 +8,8 @@ class BubbleChart extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
+    List<Task> weeklyTaskList = Task.getWeeklyTaskList();
+
     return Padding(
       padding: const EdgeInsets.only(top: 5.0),
       child: Container(
@@ -48,8 +50,8 @@ class BubbleChart extends StatelessWidget {
           ),
           series: <ChartSeries>[
             BubbleSeries<Task, String>(
-              dataSource: Task.taskDataList,
-              sizeValueMapper: (Task taskData, _) => taskData.switchOccurrences(Task.taskDataList),
+              dataSource: weeklyTaskList,
+              sizeValueMapper: (Task taskData, _) => taskData.switchOccurrences(weeklyTaskList),
               pointColorMapper: (Task taskData, _) => taskData.findColor(),
               xValueMapper: (Task taskData, _) => DateFormat('EEEE').format(taskData.dueDate).substring(0, 3),
               yValueMapper: (Task taskData, _) => taskData.taskPriority,

@@ -9,9 +9,11 @@ class Body extends StatelessWidget {
   const Body({
     Key? key,
     required this.diaryList,
+    required this.month,
   }) : super(key: key);
 
   final List<Diary> diaryList;
+  final String month;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 100.0, horizontal: 30.0),
         child: Column(
           children: [
-            TopLevelBar(),
+            TopLevelBar(month: month),
             SizedBox(height: size.height * 0.05),
             Container(
               height: size.height * 0.7,

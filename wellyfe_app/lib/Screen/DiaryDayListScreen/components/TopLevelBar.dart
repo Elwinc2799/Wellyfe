@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class TopLevelBar extends StatelessWidget {
   const TopLevelBar({
     Key? key,
+    required this.month,
   }) : super(key: key);
+
+  final String month;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class TopLevelBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "August / 2021",
+            month + " / 2021",
             style: TextStyle(
               fontSize: 30,
               fontFamily: "Montserrat",

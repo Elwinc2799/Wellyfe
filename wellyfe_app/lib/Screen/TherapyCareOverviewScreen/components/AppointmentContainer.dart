@@ -108,7 +108,7 @@ class AppointmentContainer extends StatelessWidget {
                       Row(
                         children: [
                           IconTime(
-                            width: 0.21,
+                            width: 0.25,
                             icon: CupertinoIcons.calendar,
                             time: date,
                           ),

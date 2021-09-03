@@ -22,7 +22,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
     if (password == confirmPassword) {
       try {
-        UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: email,
           password: password,
         );

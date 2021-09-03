@@ -28,7 +28,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
                 buildWeightGoalContainer(size),
                 SizedBox(height: size.height * 0.025),
                 buildDaysGoalContainer(size),
-                SizedBox(height: size.height * 0.025),
+                SizedBox(height: size.height * 0.035),
                 NextButton(
                   function: () {
                     Navigator.push(context, PageTransition(
