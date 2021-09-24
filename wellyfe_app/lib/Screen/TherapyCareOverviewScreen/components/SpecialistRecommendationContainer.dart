@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
+
 import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Core/Model/Doctor.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/SpecialistRecommendationContainerIndividual.dart';
 import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/TherapyCarePsychiatristScreen.dart';
 
@@ -13,40 +16,83 @@ class SpecialistRecommendationContainer extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: size.height * 0.2,
-      width: size.width * 0.95,
-      child: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SpecialistRecommendationContainerIndividual(
-                therapy: "Behavioral",
-                name: "Dr. Sarah Anderson",
-                experience: 9,
-                function: () {
-                  Navigator.push(context, PageTransition(
-                    type: PageTransitionType.fade,
-                    child: TherapyCarePsychiatristScreen(
-                      doctorID: ""
+      width: size.width,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Container(
+            height: size.height * 0.25,
+            width: size.width * 0.85,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20.0),
+                bottomLeft: Radius.circular(20.0),
+              ),
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0XFFB7BDF3).withOpacity(0.75),
+                    Color(0XFFB7BDF3).withOpacity(0.2),
+                  ],
+                  stops: [
+                    0.1,
+                    1,
+                  ]
+              ),
+            ),
+            child: Stack(
+              children: [
+                Positioned(
+                  top: 120,
+                  left: -20,
+                  child: Transform.rotate(
+                    angle: 270 * pi / 180,
+                    child: Text(
+                      "Top Doctors",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontFamily: "NunitoSans",
+                        color: Color(0XFF394D70),
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
-                  ));
-                },
-              ),
-              SizedBox(height: size.height * 0.025),
-              SpecialistRecommendationContainerIndividual(
-                therapy: "Behavioral",
-                name: "Dr. Sarah Anderson",
-                experience: 9,
-                function: () {
-
-                },
-              ),
-            ],
+                  ),
+                ),
+                Positioned(
+                  left: 100,
+                  top: 27.5,
+                  child: Container(
+                    width: size.width * 0.7,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      physics: BouncingScrollPhysics(),
+                        child: Center(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: List.generate(Doctor.doctorDataList.length, (index) {
+                              return SpecialistRecommendationContainerIndividual(
+                                doctor: Doctor.doctorDataList[index],
+                                function: () {
+                                  Navigator.push(context, PageTransition(
+                                    type: PageTransitionType.fade,
+                                    child: TherapyCarePsychiatristScreen(
+                                      doctorID: Doctor.doctorDataList[index].doctorID,
+                                    ),
+                                  ));
+                                },
+                              );
+                            }),
+                          ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

@@ -1,115 +1,84 @@
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Core/Model/Doctor.dart';
 
 class SpecialistRecommendationContainerIndividual extends StatelessWidget {
   const SpecialistRecommendationContainerIndividual({
     Key? key,
-    required this.therapy,
-    required this.name,
-    required this.experience,
+    required this.doctor,
     required this.function,
   }) : super(key: key);
 
-  final String therapy;
-  final String name;
-  final int experience;
+  final Doctor doctor;
   final VoidCallback function;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    bool newRow = (doctor.specialisedTherapy == "Child");
 
-    return GestureDetector(
-      onTap: function,
-      child: Container(
-        height: size.height * 0.125,
-        width: size.width * 0.8,
-        decoration: BoxDecoration(
-            color: Color(0XFFE5EBF2),
+    return Padding(
+      padding: const EdgeInsets.only(right: 50.0, top: 17.5),
+      child: GestureDetector(
+        onTap: function,
+        child: Container(
+          height: size.height * 0.175,
+          width: size.width * 0.5,
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.0),
-            boxShadow: [
-              BoxShadow(
-                  blurRadius: 5.0,
-                  offset: Offset(-3, -3),
-                  color: Colors.white.withOpacity(0.75)
-              ),
-              BoxShadow(
-                  blurRadius: 5.0,
-                  offset: Offset(3, 3),
-                  color: Colors.black.withOpacity(.25)
-              )
-            ]
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 30.0),
-          child: Row(
-            children: [
-              Container(
-                height: 85,
-                width: 85,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0XFFE5EBF2),
-                    boxShadow: [
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(-3, -3),
-                          color: Colors.white
-                      ),
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(3, 3),
-                          color: Colors.black.withOpacity(.25)
-                      )
-                    ]
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Center(
-                    child: Text(
-                      name.substring(4, 5),
-                      style: TextStyle(
-                        fontSize: 40,
-                        fontFamily: "NunitoSans",
-                        color: Color(0XFF394D70),
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                  )
-                ),
-              ),
-              SizedBox(width: size.width * 0.05),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    therapy,
-                    style: TextStyle(
-                      fontSize: 22.5,
-                      fontFamily: "NunitoSans",
-                      color: Colors.grey.shade500,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  Text(
-                    name,
-                    style: TextStyle(
-                      fontSize: 27.5,
-                      fontFamily: "NunitoSans",
-                      color: Color(0XFF394D70),
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  Text(
-                    experience.toString() + " years",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: "NunitoSans",
-                      color: Colors.grey.shade500,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xFFFFFFFF).withOpacity(0.3),
+                  Color(0xFFFFFFFF).withOpacity(0.2),
                 ],
+                stops: [
+                  0.1,
+                  1,
+                ]
+            ),
+          ),
+          child: Stack(
+            children: [
+              Positioned(
+                right: -200,
+                top: 10,
+                child: Container(
+                    width: size.width * 0.75,
+                    child: Image(image: AssetImage("assets/pictures/doctor1.png"))
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20.0, 20.0, 0, 20.0),
+                child: Container(
+                  height: size.height * 0.2,
+                  width: newRow ? size.width * 0.175 : size.width * 0.225,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Dr. " + doctor.name,
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 22.5,
+                          fontFamily: "NunitoSans",
+                          color: Color(0XFF394D70),
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Text(
+                        doctor.specialisedTherapy + " Therapy",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: "NunitoSans",
+                          color: Color(0XFF394D70),
+                          fontWeight: FontWeight.w700,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
             ],
           ),

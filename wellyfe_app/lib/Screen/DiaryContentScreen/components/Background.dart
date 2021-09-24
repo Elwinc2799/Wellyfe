@@ -26,39 +26,6 @@ class Background extends StatelessWidget {
             ),
           ),
           children,
-          Positioned(
-            bottom: size.height * 0.05,
-            right: size.width * 0.05,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0XFFF4F9FF),
-                      boxShadow: [
-                        BoxShadow(
-                            blurRadius: 5.0,
-                            offset: Offset(-3, -3),
-                            color: Colors.grey.withOpacity(0.1)
-                        ),
-                        BoxShadow(
-                            blurRadius: 5.0,
-                            offset: Offset(3, 3),
-                            color: Colors.black.withOpacity(.25)
-                        )
-                      ]
-                  ),
-                  child: Icon(
-                    Icons.arrow_back_ios_rounded,
-                    color: Color(0XFF394D70),
-                  )
-              ),
-            ),
-          ),
         ],
       ),
     );

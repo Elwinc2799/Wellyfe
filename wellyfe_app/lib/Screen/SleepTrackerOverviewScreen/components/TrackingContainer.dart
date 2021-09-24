@@ -16,7 +16,7 @@ class TrackingContainer extends StatelessWidget {
 
     return Center(
       child: Container(
-        width: size.width - 80,
+        width: size.width * 0.8,
         height: size.height * 0.225,
         decoration: BoxDecoration(
           color: Color(0XFFF4F9FF),
@@ -50,7 +50,7 @@ class TrackingContainer extends StatelessWidget {
               size: size,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 40.0),
+              padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

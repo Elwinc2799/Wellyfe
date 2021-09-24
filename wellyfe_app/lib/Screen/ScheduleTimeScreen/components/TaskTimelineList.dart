@@ -27,12 +27,7 @@ class _TaskTimelineListState extends State<TaskTimelineList> {
                   return Column(
                     children: [
                       TaskTimeline(
-                        title: TaskTimelineList.taskDataList.value[i].taskName,
-                        status: TaskTimelineList.taskDataList.value[i].taskCategory,
-                        priority: TaskTimelineList.taskDataList.value[i].priorityConversion(),
-                        startTime: TaskTimelineList.taskDataList.value[i].timeUtilityFunction(TaskTimelineList.taskDataList.value[i].startTime),
-                        endTime: TaskTimelineList.taskDataList.value[i].timeUtilityFunction(TaskTimelineList.taskDataList.value[i].endTime),
-                        color: TaskTimelineList.taskDataList.value[i].findColor(),
+                        task: TaskTimelineList.taskDataList.value[i],
                       ),
                       SizedBox(height: size.height * 0.03),
                     ],

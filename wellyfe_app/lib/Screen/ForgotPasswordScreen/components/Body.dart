@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:wellyfe_app/Screen/ForgotPasswordScreen/components/Background.dart';
 import 'package:wellyfe_app/constants.dart';
@@ -71,12 +70,14 @@ class _BodyState extends State<Body> {
               SizedBox(height: size.height * 0.05),
               buildEmailFormField(size),
               SizedBox(height: size.height * 0.05),
-              Container(
-                width: size.width * 0.50,
-                child: NeumorphicButton(
-                  onPressed: () {
-                    resetPassword();
-                  },
+              GestureDetector(
+                onTap: () => resetPassword(),
+                child: Container(
+                  width: size.width * 0.50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: Color(0XFFA4A8D1),
+                  ),
                   child: Center(
                     child: Text(
                       "Reset Password",
@@ -87,12 +88,6 @@ class _BodyState extends State<Body> {
                         color: Colors.white,
                       ),
                     ),
-                  ),
-                  style: NeumorphicStyle(
-                    shape: NeumorphicShape.concave,
-                    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(100)),
-                    color: Color(0XFFA4A8D1),
-                    depth: 20,
                   ),
                 ),
               ),
@@ -119,7 +114,7 @@ class _BodyState extends State<Body> {
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           prefixIcon: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child: NeumorphicIcon(Icons.person, size: 40),
+            child: Icon(Icons.person, size: 40),
           ),
         ),
         style: TextStyle(

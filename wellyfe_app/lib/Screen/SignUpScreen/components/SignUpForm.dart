@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/Screen/SignUpScreen/components/SignUpButton.dart';
@@ -95,10 +94,6 @@ class _SignUpFormState extends State<SignUpForm> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          prefixIcon: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: NeumorphicIcon(Icons.scatter_plot_sharp, size: 40)
-          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
@@ -124,10 +119,6 @@ class _SignUpFormState extends State<SignUpForm> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          prefixIcon: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: NeumorphicIcon(Icons.scatter_plot_sharp, size: 40)
-          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
@@ -153,10 +144,6 @@ class _SignUpFormState extends State<SignUpForm> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          prefixIcon: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: NeumorphicIcon(Icons.person, size: 40),
-          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",

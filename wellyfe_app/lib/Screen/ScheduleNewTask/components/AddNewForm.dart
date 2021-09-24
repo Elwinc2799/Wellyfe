@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
@@ -326,7 +325,7 @@ class _AddNewFormState extends State<AddNewForm> {
             contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             prefixIcon: Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
-              child: NeumorphicIcon(Icons.access_time_outlined, size: 40),
+              child: Icon(Icons.access_time_outlined, size: 40),
             ),
           ),
           style: TextStyle(
@@ -392,7 +391,7 @@ class _AddNewFormState extends State<AddNewForm> {
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           prefixIcon: Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
-            child: NeumorphicIcon(Icons.bubble_chart, size: 40),
+            child: Icon(Icons.bubble_chart, size: 40),
           ),
         ),
         style: TextStyle(

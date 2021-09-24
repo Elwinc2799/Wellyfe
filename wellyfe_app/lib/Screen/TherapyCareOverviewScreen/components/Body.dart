@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:intl/intl.dart';
 import 'package:wellyfe_app/Core/Model/Appointment.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
-import 'package:wellyfe_app/Core/Model/UserProfile.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/AppointmentContainer.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/SpecialistRecommendationContainer.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/TherapyShortcut.dart';
@@ -19,25 +17,15 @@ class Body extends StatelessWidget {
     Doctor appointmentDoctor = Doctor.getDoctor(nextAppointment.doctorID);
 
     return Background(
-      children: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TopLevelBar(),
-            SizedBox(height: size.height * 0.025),
-            Text(
-              "Hello, " + UserProfile.userDetails.name + "!",
-              style: TextStyle(
-                fontSize: 25,
-                fontFamily: "NunitoSans",
-                color: Colors.grey.shade500,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            SizedBox(height: size.height * 0.01),
-            Text(
-              "Find your doctor",
+      children: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TopLevelBar(),
+          SizedBox(height: size.height * 0.01),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Text(
+              "Find your desired doctor.",
               style: TextStyle(
                 fontSize: 35,
                 fontFamily: "NunitoSans",
@@ -45,9 +33,12 @@ class Body extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            TherapyShortcut(),
-            SizedBox(height: size.height * 0.01),
-            Row(
+          ),
+          TherapyShortcut(),
+          SizedBox(height: size.height * 0.02),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
@@ -61,28 +52,18 @@ class Body extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: size.height * 0.025),
-            AppointmentContainer(
-              therapy: appointmentDoctor.specialisedTherapy + " Therapy",
-              name: "Dr. " + appointmentDoctor.name,
-              date: DateFormat('d MMMM').format(nextAppointment.appointmentDate),
-              time: nextAppointment.appointmentTime,
-            ),
-            SizedBox(height: size.height * 0.03),
-            Text(
-              "Specialist Recommendations",
-              style: TextStyle(
-                fontSize: 30,
-                fontFamily: "NunitoSans",
-                color: Color(0XFF394D70),
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            SizedBox(height: size.height * 0.025),
-            SpecialistRecommendationContainer()
-          ],
-        ),
-      )
+          ),
+          SizedBox(height: size.height * 0.025),
+          AppointmentContainer(
+            therapy: appointmentDoctor.specialisedTherapy + " Therapy",
+            name: "Dr. " + appointmentDoctor.name,
+            date: DateFormat('d MMMM').format(nextAppointment.appointmentDate),
+            time: nextAppointment.appointmentTime,
+          ),
+          SizedBox(height: size.height * 0.075),
+          SpecialistRecommendationContainer(),
+        ],
+      ),
     );
   }
 }

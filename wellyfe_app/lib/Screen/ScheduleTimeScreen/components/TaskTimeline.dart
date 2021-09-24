@@ -1,29 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/PriorityTitleStatus.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/Timeline.dart';
 
 class TaskTimeline extends StatelessWidget {
   const TaskTimeline({
     Key? key,
-    required this.title,
-    required this.status,
-    required this.priority,
-    required this.startTime,
-    required this.endTime,
-    required this.color,
+    required this.task,
   }) : super(key: key);
 
-  final String title;
-  final String status;
-  final String priority;
-  final String startTime;
-  final String endTime;
-  final Color color;
+  final Task task;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    Color color = task.findColor();
 
     return Container(
       height: size.height * 0.125,
@@ -31,8 +23,8 @@ class TaskTimeline extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Timeline(
-            startTime: startTime,
-            endTime: endTime,
+            startTime: task.timeUtilityFunction(task.startTime),
+            endTime: task.timeUtilityFunction(task.endTime),
           ),
           SizedBox(width: size.width * 0.1),
           GlassmorphicContainer(
@@ -76,10 +68,10 @@ class TaskTimeline extends StatelessWidget {
                   ),
                 ),
                 PriorityTitleStatus(
-                  priority: priority,
-                  title: title,
-                  status: status,
-                  color: color,
+                  priority: task.priorityConversion(),
+                  title: task.taskName,
+                  status: task.taskCategory,
+                  color: task.findColor(),
                 ),
               ],
             ),

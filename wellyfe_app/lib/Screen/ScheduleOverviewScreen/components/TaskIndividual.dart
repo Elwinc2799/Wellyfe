@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:roundcheckbox/roundcheckbox.dart';
 
 class TaskIndividual extends StatefulWidget {
   @override
@@ -26,18 +26,11 @@ class _TaskIndividualState extends State<TaskIndividual> {
         children: [
           Row(
             children: [
-              NeumorphicCheckbox(
-                value: widget.isDone,
-                onChanged: (dynamic) {
-                  // setState(() {
-                  //   isChecked = !isChecked;
-                  // });
-                },
-                style: NeumorphicCheckboxStyle(
-                  boxShape: NeumorphicBoxShape.circle(),
-                  unselectedDepth: -20,
-                  selectedColor: Color(0XFF9371FF),
-                ),
+              RoundCheckBox(
+                isChecked: widget.isDone,
+                uncheckedColor: Color(0XFF76787A).withOpacity(0.25),
+                border: Border.all(color: Colors.transparent),
+                onTap: (selected) {},
               ),
               SizedBox(width: size.width * 0.05),
               Container(

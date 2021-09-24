@@ -52,10 +52,6 @@ class Body extends StatelessWidget {
                   ),
                   SocialMediaIcon(
                     function: () {},
-                    asset: "assets/logo/apple.png",
-                  ),
-                  SocialMediaIcon(
-                    function: () {},
                     asset: "assets/logo/google.png",
                   ),
                 ],

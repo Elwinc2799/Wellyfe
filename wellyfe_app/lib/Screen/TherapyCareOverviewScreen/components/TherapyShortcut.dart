@@ -16,34 +16,37 @@ class TherapyShortcut extends StatelessWidget {
 
     Size size = MediaQuery.of(context).size;
 
-    return Container(
-      height: size.height * 0.2,
-      width: size.width * 0.8675,
-      child: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 30.0),
-          child: Row(
-            children: List.generate(therapyList.length, (i) {
-              return Row(
-                children: [
-                  TherapyShortcutIndividual(
-                    therapy: therapyList[i],
-                    length: therapyList[i].length,
-                    function: () {
-                      Navigator.push(context, PageTransition(
-                        type: PageTransitionType.fade,
-                        child: TherapyCareDoctorListScreen(
-                          specialisation: therapyList[i],
-                        ),
-                      ));
-                    },
-                  ),
-                  SizedBox(width: size.width * 0.05),
-                ],
-              );
-            }),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+      child: Container(
+        height: size.height * 0.2,
+        width: size.width * 0.8675,
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 30.0),
+            child: Row(
+              children: List.generate(therapyList.length, (i) {
+                return Row(
+                  children: [
+                    TherapyShortcutIndividual(
+                      therapy: therapyList[i],
+                      length: therapyList[i].length,
+                      function: () {
+                        Navigator.push(context, PageTransition(
+                          type: PageTransitionType.fade,
+                          child: TherapyCareDoctorListScreen(
+                            specialisation: therapyList[i],
+                          ),
+                        ));
+                      },
+                    ),
+                    SizedBox(width: size.width * 0.05),
+                  ],
+                );
+              }),
+            ),
           ),
         ),
       ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/ForgotPasswordScreen/ForgotPasswordScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/AlreadyHaveAnAccount.dart';
@@ -29,7 +28,7 @@ class _BodyState extends State<Body> {
             Text(
               "Wellyfe,",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 30,
                 fontFamily: "NunitoSans",
                 fontWeight: FontWeight.w700,
                 color: Colors.black.withOpacity(.5)

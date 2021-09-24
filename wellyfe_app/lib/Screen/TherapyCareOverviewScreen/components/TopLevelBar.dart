@@ -8,19 +8,22 @@ class TopLevelBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          DateFormat('EEEE, d MMM').format(DateTime.now()),
-          style: TextStyle(
-            fontSize: 30,
-            fontFamily: "NunitoSans",
-            color: Color(0XFF394D70),
-            fontWeight: FontWeight.w700,
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            DateFormat('EEEE, d MMM').format(DateTime.now()),
+            style: TextStyle(
+              fontSize: 30,
+              fontFamily: "NunitoSans",
+              color: Color(0XFF394D70),
+              fontWeight: FontWeight.w700,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

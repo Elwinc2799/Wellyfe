@@ -1,12 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
-import 'package:wellyfe_app/Screen/PersonalQuestionnaireScreen/PersonalQuestionnaireScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/constants.dart';
@@ -95,7 +93,7 @@ class _SignInFormState extends State<SignInForm> {
           SizedBox(height: size.height * 0.025),
           TextFieldLabel(label: "Password"),
           buildPasswordFormField(),
-          SizedBox(height: size.height * 0.05),
+          SizedBox(height: size.height * 0.025),
           SignInButton(
             function: () {
               signInUserWithEmail(_emailController.text, _passwordController.text);
@@ -129,10 +127,6 @@ class _SignInFormState extends State<SignInForm> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          prefixIcon: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: NeumorphicIcon(Icons.scatter_plot_sharp, size: 40)
-          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
@@ -158,10 +152,6 @@ class _SignInFormState extends State<SignInForm> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          prefixIcon: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: NeumorphicIcon(Icons.person, size: 40),
-          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",

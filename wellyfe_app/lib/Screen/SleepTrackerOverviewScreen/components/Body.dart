@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:wellyfe_app/Core/Model/Sleep.dart';
 import 'package:wellyfe_app/Core/Model/UserProfile.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/Background.dart';
+import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/GoalsContainer.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/MidLevelBar.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/StatsContainerLower.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/components/StatsContainerUpper.dart';
@@ -43,7 +45,24 @@ class Body extends StatelessWidget {
                 ),
               ),
               SizedBox(height: size.height * 0.025),
-              TrackingContainer(),
+              Container(
+                width: size.width,
+                height: size.height * 0.23,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: BouncingScrollPhysics(),
+                  child: Padding(
+                    padding: const EdgeInsets.all(5),
+                    child: Row(
+                      children: [
+                        TrackingContainer(),
+                        SizedBox(width: 20),
+                        GoalsContainer(),
+                      ],
+                    ),
+                  ),
+                )
+              ),
               SizedBox(height: size.height * 0.035),
               MidLevelBar(),
               SizedBox(height: size.height * 0.025),

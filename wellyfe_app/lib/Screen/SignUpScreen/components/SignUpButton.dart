@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class SignUpButton extends StatelessWidget {
   const SignUpButton({
@@ -14,10 +13,15 @@ class SignUpButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Center(
-      child: Container(
-        width: size.width * 0.50,
-        child: NeumorphicButton(
-          onPressed: function,
+      child: GestureDetector(
+        onTap: function,
+        child: Container(
+          height: size.height * 0.04,
+          width: size.width * 0.50,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(100),
+            color: Color(0XFFFF27B0),
+          ),
           child: Center(
             child: Text(
               "Sign Up",
@@ -28,12 +32,6 @@ class SignUpButton extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-          ),
-          style: NeumorphicStyle(
-            shape: NeumorphicShape.concave,
-            boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(100)),
-            color: Color(0XFFFF27B0),
-            depth: 20,
           ),
         ),
       ),

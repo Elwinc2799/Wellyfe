@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class AddTaskButton extends StatelessWidget {
   const AddTaskButton({
@@ -14,10 +13,14 @@ class AddTaskButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Center(
-      child: Container(
-        width: size.width * 0.50,
-        child: NeumorphicButton(
-          onPressed: function,
+      child: GestureDetector(
+        onTap: function,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(100),
+            color: Color(0XFF83A4D4).withOpacity(0.5),
+          ),
+          width: size.width * 0.50,
           child: Center(
             child: Text(
               "Add Task",
@@ -28,12 +31,6 @@ class AddTaskButton extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-          ),
-          style: NeumorphicStyle(
-            shape: NeumorphicShape.concave,
-            boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(100)),
-            color: Color(0XFF83A4D4).withOpacity(0.5),
-            depth: 20,
           ),
         ),
       ),

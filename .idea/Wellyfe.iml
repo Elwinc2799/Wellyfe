@@ -6,6 +6,9 @@
       <excludeFolder url="file://$MODULE_DIR$/wellyfe_app/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/wellyfe_app/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/wellyfe_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/wellyfe_app/lib/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/wellyfe_app/lib/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/wellyfe_app/lib/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

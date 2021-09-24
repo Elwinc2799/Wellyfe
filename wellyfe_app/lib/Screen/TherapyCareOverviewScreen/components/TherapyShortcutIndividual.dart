@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 
 class TherapyShortcutIndividual extends StatelessWidget {
   const TherapyShortcutIndividual({
@@ -21,43 +22,72 @@ class TherapyShortcutIndividual extends StatelessWidget {
       onTap: function,
       child: Container(
         height: size.height * 0.2,
-        width: size.width * 0.225,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15.0),
-            color: Color(0XFFE5EBF2),
-            boxShadow: [
-              BoxShadow(
-                  blurRadius: 5.0,
-                  offset: Offset(-3, -3),
-                  color: Colors.white
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            GlassmorphicContainer(
+              height: size.height * 0.115,
+              width: size.width * 0.225,
+              borderRadius: 20,
+              blur: 20,
+              alignment: Alignment.bottomCenter,
+              border: 2,
+              linearGradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFFffffff).withOpacity(0.1),
+                    Color(0xFFFFFFFF).withOpacity(0.05),
+                  ],
+                  stops: [
+                    0.1,
+                    1,
+                  ]),
+              borderGradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xFFffffff).withOpacity(0.5),
+                  Color((0xFFFFFFFF)).withOpacity(0.5),
+                ],
               ),
-              BoxShadow(
-                  blurRadius: 5.0,
-                  offset: Offset(3, 3),
-                  color: Colors.grey.withOpacity(.25)
-              )
-            ]
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image(image: AssetImage("assets/logo/$therapy.png")),
-                Text(
-                  therapy + " Therapy",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontFamily: "NunitoSans",
-                    color: Colors.grey.shade500,
-                    fontWeight: FontWeight.w700,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        therapy + " Therapy",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: "NunitoSans",
+                          color: Color(0XFF394D70),
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
+            Positioned(
+              top: 0,
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white.withOpacity(0.5)
+                ),
+              ),
+            ),
+            Positioned(
+              top: -5,
+              child: Image(image: AssetImage("assets/logo/$therapy.png")),
+            )
+          ],
         ),
       ),
     );

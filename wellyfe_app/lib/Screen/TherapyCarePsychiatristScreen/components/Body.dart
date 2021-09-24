@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
 import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/AppointmentButton.dart';
 import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/QualificationsRow.dart';
@@ -44,18 +45,31 @@ class Body extends StatelessWidget {
                   ),
                   Positioned(
                     top: size.height * 0.3,
-                    child: Container(
+                    child: GlassmorphicContainer(
                       height: size.height * 0.85,
                       width: size.width,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100.0),
-                        color: Color(0XFFE7F0F9),
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 5.0,
-                            color: Colors.black.withOpacity(.25)
-                          )
-                        ]
+                      borderRadius: 100,
+                      blur: 20,
+                      alignment: Alignment.bottomCenter,
+                      border: 2,
+                      linearGradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color(0xFFFFFFFF).withOpacity(0.1),
+                            Color(0xFFFFFFFF).withOpacity(0.05),
+                          ],
+                          stops: [
+                            0.1,
+                            1,
+                          ]),
+                      borderGradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color(0xFFFFFFFF).withOpacity(0.5),
+                          Color((0xFFFFFFFF)).withOpacity(0.5),
+                        ],
                       ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 15.0),
@@ -68,7 +82,7 @@ class Body extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 30,
                                 fontFamily: "NunitoSans",
-                                color: Color(0XFF394D70),
+                                color: Colors.grey.shade200,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
@@ -77,7 +91,7 @@ class Body extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: "NunitoSans",
-                                color: Colors.grey.shade500,
+                                color: Colors.grey.shade700,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
@@ -86,7 +100,7 @@ class Body extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: "NunitoSans",
-                                color: Colors.grey.shade500,
+                                color: Colors.grey.shade700,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),

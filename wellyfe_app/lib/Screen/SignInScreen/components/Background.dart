@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class Background extends StatelessWidget {
   const Background({
@@ -19,27 +18,27 @@ class Background extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Positioned(
-            top: size.height * 0.01,
-            right: -size.width * 0.2,
-            child: Stack(
-              children: [
-                NeumorphicIcon(
-                  Icons.wb_cloudy_sharp,
-                  size: size.width * 0.6,
-                  style: NeumorphicStyle(
-                    surfaceIntensity: 0.5,
-                    shape: NeumorphicShape.convex,
-                    depth: 20,
-                    border: NeumorphicBorder(
-                      color: Colors.grey[300],
-                      width: 0.8,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          // Positioned(
+          //   top: size.height * 0.01,
+          //   right: -size.width * 0.2,
+          //   child: Stack(
+          //     children: [
+          //       NeumorphicIcon(
+          //         Icons.wb_cloudy_sharp,
+          //         size: size.width * 0.6,
+          //         style: NeumorphicStyle(
+          //           surfaceIntensity: 0.5,
+          //           shape: NeumorphicShape.convex,
+          //           depth: 20,
+          //           border: NeumorphicBorder(
+          //             color: Colors.grey[300],
+          //             width: 0.8,
+          //           ),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
           children,
         ],
       ),

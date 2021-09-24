@@ -81,27 +81,12 @@ class Task{
   }
 
   static List<Task> updateTaskDataList(String date) {
-    DateTime now = DateTime.now();
-    DateTime initialDay = now.subtract(Duration(days: now.weekday));
-    DateTime displaceDay = now.add(Duration(days: DateTime.daysPerWeek - now.weekday));
-    DateTime firstDayOfWeek = new DateTime(
-      initialDay.year,
-      initialDay.month,
-      initialDay.day
-    );
-    DateTime lastDayOfWeek = new DateTime(
-      displaceDay.year,
-      displaceDay.month,
-      displaceDay.day,
-    );
-
     newTaskDataList = [];
 
-    for (var i = 0; i < taskDataList.length; i++) {
-      if (DateFormat('EEEE').format(taskDataList[i].dueDate).substring(0, 2) == date)
-        if (taskDataList[i].dueDate.isAfter(firstDayOfWeek) && taskDataList[i].dueDate.isBefore(lastDayOfWeek))
-          newTaskDataList.add(taskDataList[i]);
-    }
+    taskDataList.forEach((element) {
+      if (DateFormat('EEEE').format(element.dueDate).substring(0, 2) == date)
+        newTaskDataList.add(element);
+    });
 
     return newTaskDataList;
   }

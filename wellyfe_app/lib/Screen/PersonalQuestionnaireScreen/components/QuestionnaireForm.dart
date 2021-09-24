@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:wellyfe_app/Screen/PersonalQuestionnaireScreen/components/NextButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/constants.dart';
@@ -51,7 +50,7 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           prefixIcon: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child: NeumorphicIcon(Icons.person, size: 40),
+            child: Icon(Icons.person, size: 40),
           ),
         ),
         style: TextStyle(
@@ -79,7 +78,7 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           prefixIcon: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child: NeumorphicIcon(Icons.bubble_chart_rounded, size: 40),
+            child: Icon(Icons.bubble_chart_rounded, size: 40),
           ),
         ),
         style: TextStyle(

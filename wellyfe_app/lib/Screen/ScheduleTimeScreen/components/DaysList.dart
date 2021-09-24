@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:intl/intl.dart';
+import 'package:wellyfe_app/Core/Model/RadioModel.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
-import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/DayIndividual.dart';
+import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/RadioItem.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/TaskTimelineList.dart';
 
 
@@ -27,9 +27,15 @@ class _DaysListState extends State<DaysList> {
   }
 
   final List<DateTime> days = getDaysInBetween();
+  List<RadioModel> sampleData = [];
 
   @override
   Widget build(BuildContext context) {
+
+    List.generate(days.length, (index) => {
+      sampleData.add(RadioModel(DateFormat('EEEE').format(days[index]).substring(0, 2), false))
+    });
+
     Size size = MediaQuery.of(context).size;
 
     return Row(
@@ -39,35 +45,48 @@ class _DaysListState extends State<DaysList> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
-            children: [
-              for (var i = 0; i < days.length; i++)
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 11),
-                  child: NeumorphicRadio(
-                    value: DateFormat('EEEE').format(days[i]).substring(0, 2),
-                    onChanged: (dynamic value) {
-                      setState(() {
-                        groupValue = value;
-                        Task.updateTaskDataList(value);
-                        TaskTimelineList.listChanged();
-                      });
-                    },
-                    groupValue: groupValue,
-                    child: DayIndividual(
-                      dayWord: DateFormat('EEEE').format(days[i]).substring(0, 2),
-                      dayNumber: days[i].day,
-                    ),
-                    style: NeumorphicRadioStyle(
-                      selectedColor: Colors.teal[50],
-                      unselectedColor: Colors.white.withOpacity(0.5),
-                      shape: NeumorphicShape.convex,
-                      selectedDepth: 0,
-                      unselectedDepth: 20,
-                      lightSource: LightSource.top,
-                    ),
+            children: List.generate(days.length, (index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      sampleData.forEach((element) => element.isSelected = false);
+                      sampleData[index].isSelected = true;
+                      Task.updateTaskDataList(sampleData[index].buttonText);
+                      TaskTimelineList.listChanged();
+                    });
+                  },
+                  child: RadioItem(
+                    text: sampleData[index].buttonText,
+                    isSelected: sampleData[index].isSelected,
                   ),
                 ),
-            ],
+                // child: NeumorphicRadio(
+                //   value: DateFormat('EEEE').format(days[index]).substring(0, 2),
+                //   onChanged: (dynamic value) {
+                //     setState(() {
+                //       groupValue = value;
+                //       Task.updateTaskDataList(value);
+                //       TaskTimelineList.listChanged();
+                //     });
+                //   },
+                //   groupValue: groupValue,
+                //   child: DayIndividual(
+                //     dayWord: DateFormat('EEEE').format(days[index]).substring(0, 2),
+                //     dayNumber: days[index].day,
+                //   ),
+                //   style: NeumorphicRadioStyle(
+                //     selectedColor: Colors.teal[50],
+                //     unselectedColor: Colors.white.withOpacity(0.5),
+                //     shape: NeumorphicShape.convex,
+                //     selectedDepth: 0,
+                //     unselectedDepth: 20,
+                //     lightSource: LightSource.top,
+                //   ),
+                // ),
+              );
+            })
           ),
         )
       ],
