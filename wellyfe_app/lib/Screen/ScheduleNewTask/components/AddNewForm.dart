@@ -323,10 +323,6 @@ class _AddNewFormState extends State<AddNewForm> {
             enabledBorder: outlineBorder(),
             focusedBorder: outlineBorder(),
             contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            prefixIcon: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: Icon(Icons.access_time_outlined, size: 40),
-            ),
           ),
           style: TextStyle(
             fontFamily: "NunitoSans",
@@ -389,10 +385,6 @@ class _AddNewFormState extends State<AddNewForm> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          prefixIcon: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            child: Icon(Icons.bubble_chart, size: 40),
-          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",

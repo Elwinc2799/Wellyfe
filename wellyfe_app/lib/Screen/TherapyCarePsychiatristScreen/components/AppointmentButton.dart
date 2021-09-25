@@ -13,10 +13,10 @@ class AppointmentButton extends StatelessWidget {
       onTap: () {},
       child: Container(
         height: size.height * 0.05,
-        width: size.width * 0.55,
+        width: size.width * 0.5,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.0),
-            color: Color(0XFFE7F0F9),
+            color: Color(0XFF72CCD4),
             boxShadow: [
               BoxShadow(
                   blurRadius: 5.0,
@@ -36,7 +36,7 @@ class AppointmentButton extends StatelessWidget {
             style: TextStyle(
               fontSize: 22.5,
               fontFamily: "NunitoSans",
-              color: Color(0XFF394D70),
+              color: Colors.white,
               fontWeight: FontWeight.w700,
             ),
           ),

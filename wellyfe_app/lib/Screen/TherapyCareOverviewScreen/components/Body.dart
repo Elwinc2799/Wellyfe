@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:wellyfe_app/Core/Model/Appointment.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/AppointmentContainer.dart';
+import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/AppointmentHeader.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/SpecialistRecommendationContainer.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/TherapyShortcut.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/TopLevelBar.dart';
@@ -36,23 +37,7 @@ class Body extends StatelessWidget {
           ),
           TherapyShortcut(),
           SizedBox(height: size.height * 0.02),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Next Appointment",
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontFamily: "NunitoSans",
-                    color: Color(0XFF394D70),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          AppointmentHeader(),
           SizedBox(height: size.height * 0.025),
           AppointmentContainer(
             therapy: appointmentDoctor.specialisedTherapy + " Therapy",
@@ -67,6 +52,7 @@ class Body extends StatelessWidget {
     );
   }
 }
+
 
 
 

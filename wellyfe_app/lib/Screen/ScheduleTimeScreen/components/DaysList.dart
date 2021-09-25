@@ -27,13 +27,16 @@ class _DaysListState extends State<DaysList> {
   }
 
   final List<DateTime> days = getDaysInBetween();
-  List<RadioModel> sampleData = [];
+  List<RadioModel> daysList = [];
 
   @override
   Widget build(BuildContext context) {
 
     List.generate(days.length, (index) => {
-      sampleData.add(RadioModel(DateFormat('EEEE').format(days[index]).substring(0, 2), false))
+      if (index == 0)
+        daysList.add(RadioModel(DateFormat('EEEE').format(days[index]).substring(0, 2), true))
+      else
+        daysList.add(RadioModel(DateFormat('EEEE').format(days[index]).substring(0, 2), false))
     });
 
     Size size = MediaQuery.of(context).size;
@@ -51,15 +54,15 @@ class _DaysListState extends State<DaysList> {
                 child: GestureDetector(
                   onTap: () {
                     setState(() {
-                      sampleData.forEach((element) => element.isSelected = false);
-                      sampleData[index].isSelected = true;
-                      Task.updateTaskDataList(sampleData[index].buttonText);
+                      daysList.forEach((element) => element.isSelected = false);
+                      daysList[index].isSelected = true;
+                      Task.updateTaskDataList(daysList[index].buttonText);
                       TaskTimelineList.listChanged();
                     });
                   },
                   child: RadioItem(
-                    text: sampleData[index].buttonText,
-                    isSelected: sampleData[index].isSelected,
+                    text: daysList[index].buttonText,
+                    isSelected: daysList[index].isSelected,
                   ),
                 ),
                 // child: NeumorphicRadio(

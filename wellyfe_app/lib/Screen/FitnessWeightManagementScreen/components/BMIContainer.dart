@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BMIContainer extends StatelessWidget {
@@ -41,48 +42,137 @@ class BMIContainer extends StatelessWidget {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
-          child: Column(
+          padding: const EdgeInsets.all(15.0),
+          child: Row(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image(image: AssetImage("assets/logo/health.png")),
-                  Text(
-                    "Body Mass Index, BMI",
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontFamily: "NunitoSans",
-                      color: Colors.black.withOpacity(0.3),
-                      fontWeight: FontWeight.w700,
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(height: size.height * 0.01),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "21.1",
-                    style: TextStyle(
-                      fontSize: 32.5,
-                      fontFamily: "NunitoSans",
-                      color: Color(0XFF394D70),
-                      fontWeight: FontWeight.w700,
-                    ),
+              Container(
+                width: size.width * 0.45,
+                height: size.height * 0.1,
+                decoration: BoxDecoration(
+                  color: Color(0XFFE3F2FF),
+                  borderRadius: BorderRadius.circular(20.0)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                              style: DefaultTextStyle.of(context).style,
+                              children: [
+                                TextSpan(
+                                  text: "Current",
+                                  style: TextStyle(
+                                    fontSize: 17.5,
+                                    fontFamily: "NunitoSans",
+                                    color: Color(0XFF394D70),
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: "\nBMI",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: "NunitoSans",
+                                    color: Color(0XFF394D70),
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "17.5",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontFamily: "NunitoSans",
+                                  color: Color(0XFF394D70),
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Text(
+                                getBMICategory(17.5),
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontFamily: "NunitoSans",
+                                  color: Color(0XFF394D70),
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                  Text(
-                    getBMICategory(21.1),
-                    style: TextStyle(
-                      fontSize: 32.5,
-                      fontFamily: "NunitoSans",
-                      color: Colors.black.withOpacity(0.3),
-                      fontWeight: FontWeight.w700,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        style: DefaultTextStyle.of(context).style,
+                        children: [
+                          TextSpan(
+                            text: "Target",
+                            style: TextStyle(
+                              fontSize: 17.5,
+                              fontFamily: "NunitoSans",
+                              color: Color(0XFF394D70),
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          TextSpan(
+                            text: "\nBMI",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: "NunitoSans",
+                              color: Color(0XFF394D70),
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  )
-                ],
-              )
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "21",
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontFamily: "NunitoSans",
+                              color: Color(0XFF394D70),
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          Text(
+                            getBMICategory(21),
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontFamily: "NunitoSans",
+                              color: Color(0XFF394D70),
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

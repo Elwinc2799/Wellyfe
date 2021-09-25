@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/constants.dart';
 
 class SocialMediaIcon extends StatelessWidget {
   const SocialMediaIcon({
@@ -12,15 +13,32 @@ class SocialMediaIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
-    return GestureDetector(
-      onTap: function,
-      child: Container(
-        height: size.height * 0.1,
-        width: size.width * 0.1,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      child: GestureDetector(
+        onTap: function,
         child: Container(
-          child: Image(image: AssetImage(asset)),
+          height: 65,
+          width: 65,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20.0),
+            color: backgroundColor,
+              boxShadow: [
+                BoxShadow(
+                    blurRadius: 5.0,
+                    offset: Offset(-3, -3),
+                    color: Colors.white
+                ),
+                BoxShadow(
+                    blurRadius: 5.0,
+                    offset: Offset(3, 3),
+                    color: Colors.black.withOpacity(.25)
+                )
+              ]
+          ),
+          child: Container(
+            child: Image(image: AssetImage(asset)),
+          ),
         ),
       ),
     );

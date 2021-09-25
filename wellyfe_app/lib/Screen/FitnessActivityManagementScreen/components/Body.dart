@@ -37,7 +37,7 @@ class Body extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(height: size.height * 0.025),
+                  SizedBox(height: size.height * 0.01),
                   ActivityRecommendationsMenu(),
                 ],
               ),

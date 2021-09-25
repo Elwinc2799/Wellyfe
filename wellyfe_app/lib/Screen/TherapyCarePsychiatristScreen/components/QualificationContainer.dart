@@ -5,10 +5,12 @@ class QualificationContainer extends StatelessWidget {
     Key? key,
     required this.data,
     required this.qualification,
+    required this.color,
   }) : super(key: key);
 
   final String data;
   final String qualification;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class QualificationContainer extends StatelessWidget {
       width: 150,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
-          color: Color(0XFFE7F0F9),
+          color: color,
           boxShadow: [
             BoxShadow(
                 blurRadius: 5.0,
@@ -39,7 +41,7 @@ class QualificationContainer extends StatelessWidget {
             style: TextStyle(
               fontSize: 25,
               fontFamily: "NunitoSans",
-              color: Color(0XFF394D70),
+              color: Colors.white,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -48,7 +50,7 @@ class QualificationContainer extends StatelessWidget {
             style: TextStyle(
               fontSize: 20,
               fontFamily: "NunitoSans",
-              color: Color(0XFF394D70),
+              color: Colors.white,
               fontWeight: FontWeight.w700,
             ),
           )

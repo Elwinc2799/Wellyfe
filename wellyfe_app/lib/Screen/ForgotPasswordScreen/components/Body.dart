@@ -73,6 +73,7 @@ class _BodyState extends State<Body> {
               GestureDetector(
                 onTap: () => resetPassword(),
                 child: Container(
+                  height: size.height * 0.04,
                   width: size.width * 0.50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
@@ -112,10 +113,6 @@ class _BodyState extends State<Body> {
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          prefixIcon: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Icon(Icons.person, size: 40),
-          ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",

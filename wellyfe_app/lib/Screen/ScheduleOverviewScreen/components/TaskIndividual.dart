@@ -28,8 +28,12 @@ class _TaskIndividualState extends State<TaskIndividual> {
             children: [
               RoundCheckBox(
                 isChecked: widget.isDone,
-                uncheckedColor: Color(0XFF76787A).withOpacity(0.25),
-                border: Border.all(color: Colors.transparent),
+                uncheckedColor: Color(0XFFE5EBF2),
+                checkedColor:  Colors.deepPurpleAccent,
+                uncheckedWidget: Icon(
+                  Icons.done,
+                  color: Colors.deepPurpleAccent,
+                ),
                 onTap: (selected) {},
               ),
               SizedBox(width: size.width * 0.05),

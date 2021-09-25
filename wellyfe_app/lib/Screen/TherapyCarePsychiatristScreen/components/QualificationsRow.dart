@@ -26,14 +26,17 @@ class QualificationsRow extends StatelessWidget {
           QualificationContainer(
             data: patients.toString(),
             qualification: "Patients",
+            color: Color(0XFF7494EA),
           ),
           QualificationContainer(
             data: yearsExp.toString(),
             qualification: "Years Exp",
+            color: Color(0XFF7494EA),
           ),
           QualificationContainer(
             data: ratings.toString(),
             qualification: "Ratings",
+            color: Color(0XFF7494EA),
           ),
         ],
       ),

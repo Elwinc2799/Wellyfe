@@ -15,7 +15,6 @@ class RecommendedActivity {
     RecommendedActivity("Football", "assets/logo/football.png", "50 min"),
     RecommendedActivity("Basketball", "assets/logo/basketball.png", "50 min"),
     RecommendedActivity("Badminton", "assets/logo/badminton.png", "50 min"),
-    RecommendedActivity("Volleyball", "assets/logo/volleyball.png", "50 min"),
     RecommendedActivity("Tennis", "assets/logo/tennis.png", "50 min"),
   ];
 }

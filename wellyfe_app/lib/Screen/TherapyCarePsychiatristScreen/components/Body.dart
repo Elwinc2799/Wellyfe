@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
-import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/AppointmentButton.dart';
-import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/QualificationsRow.dart';
+import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/DoctorLowContainer.dart';
+import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/DoctorProfileInfo.dart';
 import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/Background.dart';
 
@@ -24,11 +23,11 @@ class Body extends StatelessWidget {
         children: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 10.0),
+              padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0.0),
               child: TopLevelBar(),
             ),
             Container(
-              height: size.height * 0.831,
+              height: size.height * 0.85,
               width: size.width,
               child: Stack(
                 alignment: Alignment.center,
@@ -39,128 +38,17 @@ class Body extends StatelessWidget {
                       height: size.height * 0.35,
                       width: size.width * 0.75,
                       child: Image(
-                        image: AssetImage("assets/pictures/${doctor.gender}.png"),
+                        image: AssetImage("assets/pictures/doctor1.png"),
                       ),
                     ),
                   ),
-                  Positioned(
-                    top: size.height * 0.3,
-                    child: GlassmorphicContainer(
-                      height: size.height * 0.85,
-                      width: size.width,
-                      borderRadius: 100,
-                      blur: 20,
-                      alignment: Alignment.bottomCenter,
-                      border: 2,
-                      linearGradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            Color(0xFFFFFFFF).withOpacity(0.1),
-                            Color(0xFFFFFFFF).withOpacity(0.05),
-                          ],
-                          stops: [
-                            0.1,
-                            1,
-                          ]),
-                      borderGradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Color(0xFFFFFFFF).withOpacity(0.5),
-                          Color((0xFFFFFFFF)).withOpacity(0.5),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 15.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Dr. " + doctor.name,
-                              style: TextStyle(
-                                fontSize: 30,
-                                fontFamily: "NunitoSans",
-                                color: Colors.grey.shade200,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            Text(
-                              "Specialist in ${doctor.specialisedTherapy.toLowerCase()} counselling",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: "NunitoSans",
-                                color: Colors.grey.shade700,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            Text(
-                              doctor.graduateUniversity,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: "NunitoSans",
-                                color: Colors.grey.shade700,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 75.0, vertical: 15.0),
-                              child: Divider(
-                                thickness: 1,
-                              ),
-                            ),
-                            Container(
-                              height: size.height * 0.4,
-                              child: SingleChildScrollView(
-                                physics: BouncingScrollPhysics(),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      "About",
-                                      style: TextStyle(
-                                        fontSize: 25,
-                                        fontFamily: "NunitoSans",
-                                        color: Color(0XFF394D70),
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                    Container(
-                                      height: size.height * 0.15,
-                                      width: size.width * 0.85,
-                                      child: SingleChildScrollView(
-                                        physics: BouncingScrollPhysics(),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(vertical: 10.0),
-                                          child: Text(
-                                            doctor.biography,
-                                            textAlign: TextAlign.justify,
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              fontFamily: "NunitoSans",
-                                              color: Color(0XFF394D70),
-                                              fontWeight: FontWeight.w700,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(height: size.height * 0.005),
-                                    QualificationsRow(
-                                      patients: doctor.patientsHelped,
-                                      yearsExp: doctor.yearsExperience,
-                                      ratings: doctor.ratings,
-                                    ),
-                                    SizedBox(height: size.height * 0.03),
-                                    AppointmentButton()
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                  DoctorLowContainer(
+                    doctor: doctor,
+                  ),
+                  DoctorProfileInfo(
+                    name: doctor.name,
+                    specialist: doctor.specialisedTherapy.toLowerCase(),
+                    university: doctor.graduateUniversity,
                   ),
                 ],
               ),
@@ -170,6 +58,8 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
