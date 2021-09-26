@@ -120,6 +120,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3+1"
+  dimension:
+    dependency: transitive
+    description:
+      name: dimension
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.6"
   equatable:
     dependency: transitive
     description:
@@ -223,6 +230,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_class_parser:
+    dependency: transitive
+    description:
+      name: flutter_class_parser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.4"
   flutter_local_notifications:
     dependency: "direct main"
     description:
@@ -399,6 +413,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
+  morphable_shape:
+    dependency: "direct main"
+    description:
+      name: morphable_shape
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.5.1"
   nested:
     dependency: transitive
     description:

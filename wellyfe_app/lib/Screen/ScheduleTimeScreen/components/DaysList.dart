@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:wellyfe_app/Core/Model/RadioModel.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
-import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/RadioItem.dart';
+import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/DaysRadioItem.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/TaskTimelineList.dart';
 
 
@@ -60,7 +60,7 @@ class _DaysListState extends State<DaysList> {
                       TaskTimelineList.listChanged();
                     });
                   },
-                  child: RadioItem(
+                  child: DaysRadioItem(
                     text: daysList[index].buttonText,
                     isSelected: daysList[index].isSelected,
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/CategoryData.dart';
 
 class CalContainer extends StatelessWidget {
   const CalContainer({
@@ -8,7 +9,9 @@ class CalContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery
+        .of(context)
+        .size;
 
     return Positioned(
       top: 50,
@@ -19,9 +22,9 @@ class CalContainer extends StatelessWidget {
           Text(
             "Ketogenic Diet",
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 27.5,
               fontFamily: "NunitoSans",
-              color: Colors.black.withOpacity(0.3),
+              color: Color(0XFF394D70),
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -32,7 +35,7 @@ class CalContainer extends StatelessWidget {
               Text(
                 "1500" + " kcal",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "NunitoSans",
                   color: Colors.black.withOpacity(0.3),
                   fontWeight: FontWeight.w700,
@@ -54,48 +57,6 @@ class CalContainer extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-}
-
-class CategoryData extends StatelessWidget {
-  const CategoryData({
-    Key? key,
-    required this.category,
-    required this.data,
-  }) : super(key: key);
-
-  final String category;
-  final String data;
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(height: size.height * 0.01),
-        Text(
-          category,
-          style: TextStyle(
-            fontSize: 20,
-            fontFamily: "NunitoSans",
-            color: Colors.black.withOpacity(0.3),
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        Text(
-          data + " g",
-          style: TextStyle(
-            fontSize: 25,
-            fontFamily: "NunitoSans",
-            color: Colors.black.withOpacity(0.3),
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ],
     );
   }
 }

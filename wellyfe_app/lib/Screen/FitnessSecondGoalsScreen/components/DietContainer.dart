@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Screen/FitnessSecondGoalsScreen/components/DietContainerList.dart';
-import 'package:wellyfe_app/Screen/FitnessThirdGoalsScreen/FitnessThirdGoalsScreen.dart';
 
 class DietContainer extends StatelessWidget {
 
