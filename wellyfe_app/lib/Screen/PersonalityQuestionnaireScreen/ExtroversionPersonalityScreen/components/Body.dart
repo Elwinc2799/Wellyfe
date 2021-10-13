@@ -19,14 +19,14 @@ class _BodyState extends State<Body> {
       height: size.height,
       width: size.width,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 100.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 75.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "Extroversion Personality",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 25,
                 fontFamily: "NunitoSans",
                 fontWeight: FontWeight.bold,
                 color: Colors.black.withOpacity(.5)
@@ -37,7 +37,7 @@ class _BodyState extends State<Body> {
               height: size.height * 0.7,
               child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
-                padding: EdgeInsets.only(bottom: 40.0),
+                padding: EdgeInsets.only(bottom: 20.0),
                 child: Column(
                   children: [
                     Column(
@@ -49,7 +49,7 @@ class _BodyState extends State<Body> {
                             Text(
                               (index + 1).toString() + ". " + Questionnaire.extroversionList[index],
                               style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 17.5,
                                   fontFamily: "NunitoSans",
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black.withOpacity(.5)

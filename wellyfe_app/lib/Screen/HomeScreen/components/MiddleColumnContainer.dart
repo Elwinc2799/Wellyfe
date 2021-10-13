@@ -14,7 +14,7 @@ class MiddleColumnContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 100.0),
+      padding: const EdgeInsets.only(left: 20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,8 +25,8 @@ class MiddleColumnContainer extends StatelessWidget {
               FirebaseData.getAllAppointmentData(context);
             },
             child: Container(
-              height: 100,
-              width: 100,
+              height: 75,
+              width: 75,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
                   color: Color(0XFFF2F3F7),
@@ -51,8 +51,8 @@ class MiddleColumnContainer extends StatelessWidget {
               FirebaseData.getAllDiaryData(context);
             },
             child: Container(
-              height: 150,
-              width: 150,
+              height: 112.5,
+              width: 112.5,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
                   color: Color(0XFFF2F3F7),
@@ -80,8 +80,8 @@ class MiddleColumnContainer extends StatelessWidget {
               ));
             },
             child: Container(
-              height: 125,
-              width: 125,
+              height: 100.0,
+              width: 100.0,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
                   color: Color(0XFFF2F3F7),

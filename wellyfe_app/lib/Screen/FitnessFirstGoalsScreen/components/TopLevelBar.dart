@@ -13,7 +13,7 @@ class TopLevelBar extends StatelessWidget {
         Text(
           "L I F E S T Y L E",
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 22.5,
             fontFamily: "NunitoSans",
             color: Color(0XFF394D70),
             fontWeight: FontWeight.w700,

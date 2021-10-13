@@ -26,7 +26,7 @@ class IngredientsContainerIndividual extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 30),
+                    padding: const EdgeInsets.only(right: 20),
                     child: Container(
                         height: 50,
                         width: 50,
@@ -45,7 +45,7 @@ class IngredientsContainerIndividual extends StatelessWidget {
                   Text(
                     ingredients,
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontFamily: "NunitoSans",
                       color: Color(0XFF394D70),
                       fontWeight: FontWeight.w800,
@@ -56,7 +56,7 @@ class IngredientsContainerIndividual extends StatelessWidget {
               Text(
                 "$grams gram",
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 20,
                   fontFamily: "NunitoSans",
                   color: Color(0XFF394D70),
                   fontWeight: FontWeight.w800,

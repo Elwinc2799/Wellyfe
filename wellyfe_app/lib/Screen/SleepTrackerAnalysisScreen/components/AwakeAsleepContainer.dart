@@ -15,7 +15,7 @@ class AwakeAsleepContainer extends StatelessWidget {
     return Center(
       child: Container(
           width: size.width * 0.9,
-          height: size.height * 0.335,
+          height: size.height * 0.3,
           decoration: BoxDecoration(
               color: Color(0XFFF4F9FF),
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
@@ -37,7 +37,7 @@ class AwakeAsleepContainer extends StatelessWidget {
             children: [
               SizedBox(height: size.height * 0.0125),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                padding: const EdgeInsets.only(left: 20.0, right: 15.0, top: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -49,15 +49,16 @@ class AwakeAsleepContainer extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: "Nunito",
                             color: Color(0XFF394D70),
-                            fontSize: 35,
+                            fontSize: 25,
                             fontWeight: FontWeight.w900,
                           ),
                         ),
+                        SizedBox(height: 3),
                         Text(
                           'Time of awake and asleep',
                           style: TextStyle(
                             color: Color(0XFF394D70).withOpacity(0.5),
-                            fontSize: 20,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                             fontFamily: "NunitoSans",
                           ),
@@ -66,7 +67,7 @@ class AwakeAsleepContainer extends StatelessWidget {
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Column(
                         children: [
                           LegendIndividual(
@@ -85,7 +86,7 @@ class AwakeAsleepContainer extends StatelessWidget {
               ),
               SizedBox(height: size.height * 0.02),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 35.0),
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Stack(
                   children: [
                     AwakeLineChart(),

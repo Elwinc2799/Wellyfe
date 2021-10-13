@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
             TopLevelBar(),
             SizedBox(height: size.height * 0.05),
             SleepLevelBarChart(),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.04),
             AwakeAsleepContainer(),
           ],
         ),

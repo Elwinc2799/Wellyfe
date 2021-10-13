@@ -26,7 +26,7 @@ class Body extends StatelessWidget {
       onWillPop: _onWillPop,
       child: Background(
         children: Padding(
-          padding: const EdgeInsets.fromLTRB(40, 70, 40, 0),
+          padding: const EdgeInsets.fromLTRB(40, 70, 30, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,11 +34,11 @@ class Body extends StatelessWidget {
               TopLevelBar(
                 name: UserProfile.userDetails.name,
               ),
-              SizedBox(height: size.height * 0.01),
+              SizedBox(height: size.height * 0.02),
               Text(
                 DateFormat('EEEE, d MMM y').format(DateTime.now()),
                 style: TextStyle(
-                  fontSize: 22.5,
+                  fontSize: 20,
                   fontFamily: "Nunito",
                   fontWeight: FontWeight.w900,
                   color: Color(0XFF585867),
@@ -63,7 +63,7 @@ class Body extends StatelessWidget {
                   ),
                 )
               ),
-              SizedBox(height: size.height * 0.035),
+              SizedBox(height: size.height * 0.025),
               MidLevelBar(),
               SizedBox(height: size.height * 0.025),
               Column(

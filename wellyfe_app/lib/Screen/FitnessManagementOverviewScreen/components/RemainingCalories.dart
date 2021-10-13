@@ -19,7 +19,7 @@ class RemainingCalories extends StatelessWidget {
             Text(
               "Remaining",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 20,
                 fontFamily: "NunitoSans",
                 color: Colors.black.withOpacity(0.3),
                 fontWeight: FontWeight.w700,
@@ -28,7 +28,7 @@ class RemainingCalories extends StatelessWidget {
             Text(
               "1,279 kcal",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 27.5,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,

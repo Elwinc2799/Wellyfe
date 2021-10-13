@@ -80,7 +80,7 @@ class _BodyState extends State<Body> {
             OrDivider(),
             SizedBox(height: size.height * 0.001),
             Padding(
-              padding: const EdgeInsets.fromLTRB(150.0, 0, 150.0, 0),
+              padding: const EdgeInsets.fromLTRB(100.0, 0, 100.0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

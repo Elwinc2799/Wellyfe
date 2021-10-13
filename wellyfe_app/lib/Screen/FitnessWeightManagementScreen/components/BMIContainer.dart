@@ -27,7 +27,7 @@ class BMIContainer extends StatelessWidget {
         width: size.width * 0.8,
         decoration: BoxDecoration(
             color: Color(0XFFF4F9FF),
-            borderRadius: BorderRadius.all(Radius.circular(30.0)),
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
             boxShadow: [
               BoxShadow(
                   blurRadius: 5.0,
@@ -42,7 +42,7 @@ class BMIContainer extends StatelessWidget {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(12.0),
           child: Row(
             children: [
               Container(
@@ -67,7 +67,7 @@ class BMIContainer extends StatelessWidget {
                                 TextSpan(
                                   text: "Current",
                                   style: TextStyle(
-                                    fontSize: 17.5,
+                                    fontSize: 15,
                                     fontFamily: "NunitoSans",
                                     color: Color(0XFF394D70),
                                     fontWeight: FontWeight.w700,
@@ -76,7 +76,7 @@ class BMIContainer extends StatelessWidget {
                                 TextSpan(
                                   text: "\nBMI",
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 17.5,
                                     fontFamily: "NunitoSans",
                                     color: Color(0XFF394D70),
                                     fontWeight: FontWeight.w700,
@@ -91,7 +91,7 @@ class BMIContainer extends StatelessWidget {
                               Text(
                                 "17.5",
                                 style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 17.5,
                                   fontFamily: "NunitoSans",
                                   color: Color(0XFF394D70),
                                   fontWeight: FontWeight.w700,
@@ -100,7 +100,7 @@ class BMIContainer extends StatelessWidget {
                               Text(
                                 getBMICategory(17.5),
                                 style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 15,
                                   fontFamily: "NunitoSans",
                                   color: Color(0XFF394D70),
                                   fontWeight: FontWeight.w700,
@@ -115,7 +115,7 @@ class BMIContainer extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+                padding: const EdgeInsets.only(left: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -126,7 +126,7 @@ class BMIContainer extends StatelessWidget {
                           TextSpan(
                             text: "Target",
                             style: TextStyle(
-                              fontSize: 17.5,
+                              fontSize: 15,
                               fontFamily: "NunitoSans",
                               color: Color(0XFF394D70),
                               fontWeight: FontWeight.w700,
@@ -135,7 +135,7 @@ class BMIContainer extends StatelessWidget {
                           TextSpan(
                             text: "\nBMI",
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 17.5,
                               fontFamily: "NunitoSans",
                               color: Color(0XFF394D70),
                               fontWeight: FontWeight.w700,
@@ -152,7 +152,7 @@ class BMIContainer extends StatelessWidget {
                           Text(
                             "21",
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 17.5,
                               fontFamily: "NunitoSans",
                               color: Color(0XFF394D70),
                               fontWeight: FontWeight.w700,
@@ -161,7 +161,7 @@ class BMIContainer extends StatelessWidget {
                           Text(
                             getBMICategory(21),
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 15,
                               fontFamily: "NunitoSans",
                               color: Color(0XFF394D70),
                               fontWeight: FontWeight.w700,

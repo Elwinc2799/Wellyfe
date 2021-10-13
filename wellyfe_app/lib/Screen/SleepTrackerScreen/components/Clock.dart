@@ -7,8 +7,8 @@ class Clock extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 300,
-          width: 300,
+          height: 250,
+          width: 250,
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
@@ -24,7 +24,7 @@ class Clock extends StatelessWidget {
                   DateFormat('hh:mm a').format(DateTime.now()),
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 60,
+                      fontSize: 45,
                       fontFamily: "Nunito",
                       fontWeight: FontWeight.w400,
                       color: Colors.white

@@ -13,7 +13,7 @@ class UpperColumnContainer extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 75.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,8 +28,8 @@ class UpperColumnContainer extends StatelessWidget {
                     FirebaseData.getAllSleepData(context);
                   },
                   child: Container(
-                    height: 100,
-                    width: 100,
+                    height: 75,
+                    width: 75,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20.0),
                         color: Color(0XFFF2F3F7),
@@ -56,8 +56,8 @@ class UpperColumnContainer extends StatelessWidget {
                 FirebaseData.getAllTaskScheduleData(context);
               },
               child: Container(
-                height: 150,
-                width: 150,
+                height: 112.5,
+                width: 112.5,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
                     color: Color(0XFFF2F3F7),
@@ -85,8 +85,8 @@ class UpperColumnContainer extends StatelessWidget {
                 ));
               },
               child: Container(
-                height: 100,
-                width: 100,
+                height: 75,
+                width: 75,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
                     color: Color(0XFFF2F3F7),
@@ -105,7 +105,7 @@ class UpperColumnContainer extends StatelessWidget {
                 ),
                 child: ImageHolder(image: "assets/pictures/user.png"),
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
     
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 100.0),
+        padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 75.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
             Text(
               "Tell us of your primary\nfitness goal. ",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 27.5,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
@@ -29,13 +29,13 @@ class Body extends StatelessWidget {
             Text(
               "It should be achievable.",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 20,
                 fontFamily: "NunitoSans",
                 color: Colors.black.withOpacity(0.3),
                 fontWeight: FontWeight.w700,
               ),
             ),
-            SizedBox(height: size.height * 0.04),
+            SizedBox(height: size.height * 0.02),
             FitnessInputForm(),
           ],
         ),

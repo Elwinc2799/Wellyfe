@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
             Text(
               "Please wait.\nWe'll be right back!",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 27.5,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,

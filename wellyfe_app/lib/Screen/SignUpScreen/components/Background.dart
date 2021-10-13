@@ -19,11 +19,12 @@ class Background extends StatelessWidget {
         children: [
           Positioned(
             top: size.height * 0.1,
-            right: -size.height * 0.1,
+            right: -size.height * 0.05,
             child: Container(
               child: Image(
                 image: AssetImage("assets/pictures/Plant.png"),
-                width: size.width * 0.6,
+                width: size.width * 0.5,
+                height: size.height * 0.3,
               ),
             )
           ),

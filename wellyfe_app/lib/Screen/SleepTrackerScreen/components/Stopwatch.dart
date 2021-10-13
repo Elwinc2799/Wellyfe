@@ -49,7 +49,7 @@ class _StopwatchState extends State<Stopwatch> {
             color: Colors.white.withOpacity(0.5),
             fontWeight: FontWeight.w800,
             fontFamily: "Nunito",
-            fontSize: 25,
+            fontSize: 20,
           ),
         ),
         StreamBuilder<int>(
@@ -70,12 +70,12 @@ class _StopwatchState extends State<Stopwatch> {
                 color: Colors.white,
                 fontWeight: FontWeight.w800,
                 fontFamily: "Nunito",
-                fontSize: 25,
+                fontSize: 20,
               ),
             );
           }
         ),
-        SizedBox(height: size.height * 0.05),
+        SizedBox(height: size.height * 0.03),
         GestureDetector(
           onTap: () {
             isRunning.value = !isRunning.value;
@@ -108,7 +108,7 @@ class _StopwatchState extends State<Stopwatch> {
                         color: Colors.white.withOpacity(0.5),
                         fontWeight: FontWeight.w800,
                         fontFamily: "Nunito",
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     );
                   },

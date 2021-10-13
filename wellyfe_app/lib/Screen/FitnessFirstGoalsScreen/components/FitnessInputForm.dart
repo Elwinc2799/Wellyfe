@@ -28,7 +28,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
                 buildWeightGoalContainer(size),
                 SizedBox(height: size.height * 0.025),
                 buildDaysGoalContainer(size),
-                SizedBox(height: size.height * 0.035),
+                SizedBox(height: size.height * 0.025),
                 NextButton(
                   function: () {
                     Navigator.push(context, PageTransition(
@@ -48,7 +48,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
   Container buildWeightGoalContainer(Size size) {
     return Container(
       width: size.height * 0.5,
-      height: size.width * 0.375,
+      height: size.width * 0.455,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
         color: Color(0XFFF4F9FF),
@@ -66,25 +66,27 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
         ]
       ),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+        padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Weight Goals",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 20,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
               ),
             ),
+            SizedBox(height: size.height * 0.005),
             ValueListenableBuilder<String>(
               valueListenable: weightGoals,
               builder: (BuildContext context, String data, Widget? children) {
                 return Text(
                   weightGoals.value,
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 20,
                     fontFamily: "NunitoSans",
                     color: Color(0XFF394D70),
                     fontWeight: FontWeight.w700,
@@ -93,7 +95,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
               },
             ),
             Container(
-              height: 120,
+              height: 112,
               child: HorizontalPicker(
                 minValue: 45,
                 maxValue: 90,
@@ -117,7 +119,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
   Container buildDaysGoalContainer(Size size) {
     return Container(
       width: size.height * 0.5,
-      height: size.width * 0.375,
+      height: size.width * 0.455,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           color: Color(0XFFF4F9FF),
@@ -135,25 +137,26 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
           ]
       ),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+        padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
         child: Column(
           children: [
             Text(
               "Days to achieve",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 20,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
               ),
             ),
+            SizedBox(height: size.height * 0.005),
             ValueListenableBuilder<String>(
               valueListenable: dayGoals,
               builder: (BuildContext context, String data, Widget? children) {
                 return Text(
                   dayGoals.value,
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 20,
                     fontFamily: "NunitoSans",
                     color: Color(0XFF394D70),
                     fontWeight: FontWeight.w700,
@@ -162,7 +165,8 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
               },
             ),
             Container(
-              height: 120,
+              height: 112,
+              alignment: Alignment.center,
               child: HorizontalPicker(
                 minValue: 1,
                 maxValue: 90,

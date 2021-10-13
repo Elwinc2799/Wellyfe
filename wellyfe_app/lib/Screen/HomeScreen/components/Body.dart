@@ -23,7 +23,7 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Background(
         children: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          padding: const EdgeInsets.fromLTRB(50.0, 5.0, 20.0, 5.0),
           // child: Column(
           //   mainAxisAlignment: MainAxisAlignment.center,
           //   children: [

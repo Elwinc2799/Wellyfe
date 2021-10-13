@@ -60,6 +60,7 @@ class _SleepWakeTimeState extends State<SleepWakeTime> {
             builder: (BuildContext context, String list, Widget? children) {
               return TitleTime(
                 title: "In The\nBed At",
+
                 time: sleepTime.value,
               );
             },

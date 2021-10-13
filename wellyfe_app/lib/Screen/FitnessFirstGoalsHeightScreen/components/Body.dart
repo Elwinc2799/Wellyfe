@@ -22,7 +22,7 @@ class _BodyState extends State<Body> {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 100.0),
+        padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 75.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -31,18 +31,18 @@ class _BodyState extends State<Body> {
             Text(
               "Tell us of your current\nfitness details. ",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 27.5,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
               ),
             ),
-            SizedBox(height: size.height * 0.035),
+            SizedBox(height: size.height * 0.03),
             buildCurrentWeightContainer(size),
             SizedBox(height: size.height * 0.02),
             Center(
               child: Container(
-                height: size.height * 0.3,
+                height: size.height * 0.295,
                 child: HeightSlider(
                   height: height,
                   onChange: (val) => setState(() => height = val),
@@ -74,7 +74,7 @@ class _BodyState extends State<Body> {
   Container buildCurrentWeightContainer(Size size) {
     return Container(
       width: size.height * 0.5,
-      height: size.width * 0.375,
+      height: size.width * 0.455,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           color: Color(0XFFF4F9FF),
@@ -92,25 +92,26 @@ class _BodyState extends State<Body> {
           ]
       ),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+        padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
         child: Column(
           children: [
             Text(
               "Current Weight",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 20,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
               ),
             ),
+            SizedBox(height: size.height * 0.005),
             ValueListenableBuilder<String>(
               valueListenable: currentWeight,
               builder: (BuildContext context, String data, Widget? children) {
                 return Text(
                   currentWeight.value,
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 20,
                     fontFamily: "NunitoSans",
                     color: Color(0XFF394D70),
                     fontWeight: FontWeight.w700,
@@ -119,7 +120,7 @@ class _BodyState extends State<Body> {
               },
             ),
             Container(
-              height: 120,
+              height: 112,
               child: HorizontalPicker(
                 minValue: 45,
                 maxValue: 90,

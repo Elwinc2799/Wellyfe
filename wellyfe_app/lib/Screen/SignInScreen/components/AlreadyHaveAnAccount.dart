@@ -18,7 +18,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
         Text(
           login ? "Don't have an account? " : "Already Have An Account? ",
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 17.5,
             fontFamily: "NunitoSans",
             fontWeight: FontWeight.bold,
             color: Colors.grey[400],
@@ -29,7 +29,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
           child: Text(
             login ? "Sign Up!" : "Sign In!",
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 17.5,
               fontFamily: "NunitoSans",
               fontWeight: FontWeight.bold,
               color: Colors.grey[600],

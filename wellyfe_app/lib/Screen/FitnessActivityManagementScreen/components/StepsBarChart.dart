@@ -21,7 +21,7 @@ class _StepsBarChartState extends State<StepsBarChart> {
         width: size.width * 0.8,
         decoration: BoxDecoration(
             color: Color(0XFFF4F9FF),
-            borderRadius: BorderRadius.all(Radius.circular(40.0)),
+            borderRadius: BorderRadius.all(Radius.circular(25.0)),
             boxShadow: [
               BoxShadow(
                   blurRadius: 5.0,
@@ -36,7 +36,7 @@ class _StepsBarChartState extends State<StepsBarChart> {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 15.0, bottom: 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -46,25 +46,25 @@ class _StepsBarChartState extends State<StepsBarChart> {
                 'Steps',
                 style: TextStyle(
                     color: Color(0XFF394D70),
-                    fontSize: 30,
+                    fontSize: 22.5,
                     fontFamily: "NunitoSans",
                     fontWeight: FontWeight.bold
                 ),
               ),
-              SizedBox(height: size.height * 0.0025),
+              SizedBox(height: size.height * 0.002),
               Text(
                 'Weekly',
                 style: TextStyle(
                   color: Color(0XFF394D70).withOpacity(0.5),
-                  fontSize: 20,
+                  fontSize: 17.5,
                   fontWeight: FontWeight.bold,
                   fontFamily: "NunitoSans",
                 ),
               ),
-              SizedBox(height: size.height * 0.025),
+              SizedBox(height: size.height * 0.015),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0),
                   child: BarChart(
                     mainBarData(),
                   ),
@@ -83,7 +83,7 @@ class _StepsBarChartState extends State<StepsBarChart> {
       double y, {
         bool isTouched = false,
         Color barColor = Colors.white,
-        double width = 22.5,
+        double width = 15,
         List<int> showTooltips = const [],
       }) {
     return BarChartGroupData(
@@ -162,14 +162,14 @@ class _StepsBarChartState extends State<StepsBarChart> {
                 TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 12.5,
                 ),
                 children: <TextSpan>[
                   TextSpan(
                     text: (rod.y - 1).toString(),
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 16,
+                      fontSize: 12.5,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -196,9 +196,9 @@ class _StepsBarChartState extends State<StepsBarChart> {
           const TextStyle(
               color: Color(0XFF394D70),
               fontWeight: FontWeight.bold,
-              fontSize: 20
+              fontSize: 15
           ),
-          margin: 16,
+          margin: 10,
           getTitles: (double value) {
             switch (value.toInt()) {
               case 0:

@@ -26,7 +26,7 @@ class _GoalsButtonState extends State<GoalsButton> {
           height: size.height * 0.05,
           decoration: BoxDecoration(
               color: Color(0XFFF4F9FF),
-              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
               boxShadow: [
                 BoxShadow(
                     blurRadius: 5.0,
@@ -44,7 +44,7 @@ class _GoalsButtonState extends State<GoalsButton> {
             child: Text(
               "Set Your Goals",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 17.5,
                 fontFamily: "NunitoSans",
                 color: Colors.black.withOpacity(0.3),
                 fontWeight: FontWeight.w700,

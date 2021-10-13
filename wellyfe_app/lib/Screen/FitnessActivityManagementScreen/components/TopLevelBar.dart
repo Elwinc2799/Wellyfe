@@ -13,7 +13,7 @@ class TopLevelBar extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: Row(
         children: [
           GestureDetector(
@@ -26,7 +26,7 @@ class TopLevelBar extends StatelessWidget {
             child: Text(
               "Health Status",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 22.5,
                 fontFamily: "NunitoSans",
                 color: Colors.grey.withOpacity(0.5),
                 fontWeight: FontWeight.w700,
@@ -35,8 +35,8 @@ class TopLevelBar extends StatelessWidget {
           ),
           SizedBox(width: size.width * 0.05),
           Container(
-            height: 10,
-            width: 10,
+            height: 7.5,
+            width: 7.5,
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Color(0XFF394D70)
@@ -47,21 +47,21 @@ class TopLevelBar extends StatelessWidget {
             child: Text(
               "Activity",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 22.5,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
               ),
             ),
           ),
-          SizedBox(width: size.width * 0.125),
+          SizedBox(width: size.width * 0.075),
           GestureDetector(
               onTap: () {
                 Navigator.pop(context);
               },
               child: Container(
-                  width: 60,
-                  height: 60,
+                  width: 50,
+                  height: 50,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0XFFF4F9FF),

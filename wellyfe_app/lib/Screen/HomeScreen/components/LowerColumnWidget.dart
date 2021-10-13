@@ -20,8 +20,8 @@ class LowerColumnWidget extends StatelessWidget {
             FirebaseData.getAllMoodData(context);
           },
           child: Container(
-            height: 100,
-            width: 100,
+            height: 75,
+            width: 75,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 color: Color(0XFFF2F3F7),

@@ -15,7 +15,7 @@ class CaloriesBurntContainer extends StatelessWidget {
       width: size.width * 0.45,
       decoration: BoxDecoration(
           color: Color(0XFFF4F9FF),
-          borderRadius: BorderRadius.all(Radius.circular(40.0)),
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
           boxShadow: [
             BoxShadow(
                 blurRadius: 5.0,
@@ -30,18 +30,18 @@ class CaloriesBurntContainer extends StatelessWidget {
           ]
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                Image(image: AssetImage("assets/logo/flame.png")),
-                SizedBox(width: size.width * 0.15),
+                Image(image: AssetImage("assets/logo/flame.png"), height: size.height * 0.06, width: size.width * 0.06),
+                SizedBox(width: size.width * 0.05),
                 Text(
                   "Today",
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 20,
                     fontFamily: "NunitoSans",
                     color: Colors.black.withOpacity(0.3),
                     fontWeight: FontWeight.w700,
@@ -49,11 +49,11 @@ class CaloriesBurntContainer extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.015),
             Text(
               "Calories Burnt",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 20,
                 fontFamily: "NunitoSans",
                 color: Colors.black.withOpacity(0.3),
                 fontWeight: FontWeight.w700,
@@ -65,7 +65,7 @@ class CaloriesBurntContainer extends StatelessWidget {
                     TextSpan(
                       text: "1492",
                       style: TextStyle(
-                        fontSize: 35,
+                        fontSize: 22.5,
                         fontFamily: "NunitoSans",
                         color: Color(0XFF394D70),
                         fontWeight: FontWeight.w700,
@@ -74,7 +74,7 @@ class CaloriesBurntContainer extends StatelessWidget {
                     TextSpan(
                       text: "  kcal",
                       style: TextStyle(
-                        fontSize: 22.5,
+                        fontSize: 17.5,
                         fontFamily: "NunitoSans",
                         color: Colors.black.withOpacity(0.3),
                         fontWeight: FontWeight.w700,

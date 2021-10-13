@@ -31,11 +31,11 @@ class _AwakeLineChartState extends State<AwakeLineChart> {
         leftTitles: SideTitles(showTitles: false),
         bottomTitles: SideTitles(
           showTitles: true,
-          margin: 30,
+          margin: 10,
           getTextStyles: (value) => TextStyle(
               color: Color(0XFF394D70).withOpacity(0.35),
               fontWeight: FontWeight.bold,
-              fontSize: 17
+              fontSize: 10
           ),
           getTitles: (value) {
             switch (value.toInt()) {
@@ -68,6 +68,7 @@ class _AwakeLineChartState extends State<AwakeLineChart> {
           },
         ),
       ),
+
       lineBarsData: linesBarData(),
     );
   }
@@ -92,7 +93,7 @@ class _AwakeLineChartState extends State<AwakeLineChart> {
       dotData: FlDotData(show: false),
       belowBarData: BarAreaData(show: false),
       colors: [Colors.red],
-      barWidth: 4,
+      barWidth: 3,
     );
 
     final asleepLineChartBarData = LineChartBarData(
@@ -114,7 +115,7 @@ class _AwakeLineChartState extends State<AwakeLineChart> {
       dotData: FlDotData(show: false),
       belowBarData: BarAreaData(show: false),
       colors: [Color(0XFF1EA9E4)],
-      barWidth: 4,
+      barWidth: 3,
     );
 
     return [

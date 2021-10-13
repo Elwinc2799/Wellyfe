@@ -14,10 +14,10 @@ class RadioItem extends StatelessWidget {
     return AnimatedContainer(
       duration: const Duration(seconds: 1),
       curve: Curves.fastOutSlowIn,
-      height: _item.isSelected ? 95 : size.height * 0.075,
-      width: _item.isSelected ? 95 : 90,
+      height: _item.isSelected ? size.height * 0.075 : size.height * 0.075,
+      width: _item.isSelected ? size.width * 0.15 : size.width * 0.15,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(15.0),
           color:  backgroundColor,
           boxShadow: [
             BoxShadow(
@@ -37,7 +37,7 @@ class RadioItem extends StatelessWidget {
           _item.buttonText,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: 12.5,
             fontFamily: "NunitoSans",
             fontWeight: FontWeight.bold,
             color: Colors.black.withOpacity(.5)

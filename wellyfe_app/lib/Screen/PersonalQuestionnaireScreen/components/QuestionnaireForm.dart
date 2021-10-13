@@ -23,10 +23,10 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
         children: [
           TextFieldLabel(label: "Name"),
           buildNameFormField(),
-          SizedBox(height: size.height * 0.025),
+          SizedBox(height: size.height * 0.035),
           TextFieldLabel(label: "Age"),
           buildAgeFormField(),
-          SizedBox(height: size.height * 0.025),
+          SizedBox(height: size.height * 0.035),
           TextFieldLabel(label: "Gender"),
           buildGenderFormField(),
           SizedBox(height: size.height * 0.075),
@@ -39,23 +39,24 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
   Container buildNameFormField() {
     return Container(
       width: MediaQuery.of(context).size.width * 0.85,
+      height: MediaQuery.of(context).size.height * 0.075,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Enter your name",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
           contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           prefixIcon: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Icon(Icons.person, size: 40),
+            child: Icon(Icons.person, size: 30),
           ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 17.5,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
@@ -66,24 +67,25 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
 
   Container buildAgeFormField() {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.5,
+      width: MediaQuery.of(context).size.width * 0.55,
+      height: MediaQuery.of(context).size.height * 0.075,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Enter your age",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           prefixIcon: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Icon(Icons.bubble_chart_rounded, size: 40),
+            child: Icon(Icons.bubble_chart_rounded, size: 30),
           ),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 17.5,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
@@ -94,21 +96,21 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
 
   Container buildGenderFormField() {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.275,
-      height: MediaQuery.of(context).size.width * 0.11,
+      width: MediaQuery.of(context).size.width * 0.3,
+      height: MediaQuery.of(context).size.height * 0.075,
       decoration: buildNeumorphicTextField(),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: DropdownButton<String>(
           underline: Container(
-            height: 2,
+            height: 0.75,
             color: Colors.transparent,
           ),
           value: _genderValue,
           icon: Icon(Icons.arrow_drop_down_rounded),
           style: TextStyle(
             fontFamily: "NunitoSans",
-            fontSize: 20,
+            fontSize: 17.5,
             fontWeight: FontWeight.w700,
             color: Colors.black.withOpacity(.5),
           ),
@@ -151,7 +153,7 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(28),
       borderSide: BorderSide(color: backgroundColor),
-      gapPadding: 10,
+      gapPadding: 7.5,
     );
   }
 }

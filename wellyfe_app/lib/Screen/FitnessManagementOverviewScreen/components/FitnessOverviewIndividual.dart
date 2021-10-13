@@ -39,7 +39,7 @@ class FitnessOverviewIndividual extends StatelessWidget {
         width: size.width * 0.4,
         decoration: BoxDecoration(
             color: Color(0XFFF4F9FF),
-            borderRadius: BorderRadius.all(Radius.circular(40.0)),
+            borderRadius: BorderRadius.all(Radius.circular(25.0)),
             boxShadow: [
               BoxShadow(
                   blurRadius: 5.0,
@@ -54,7 +54,7 @@ class FitnessOverviewIndividual extends StatelessWidget {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 15.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -64,13 +64,13 @@ class FitnessOverviewIndividual extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 22.5,
                       fontFamily: "NunitoSans",
                       color: Colors.grey.shade500,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  Image(image: AssetImage(image))
+                  Image(image: AssetImage(image),height: size.height * 0.06, width: size.width * 0.06)
                 ],
               ),
               BarCategory(
@@ -129,7 +129,7 @@ class BarCategory extends StatelessWidget {
               Positioned(
                 bottom: 0,
                 child: Container(
-                  height: 80 * percentage,
+                  height: 60 * percentage,
                   width: size.width * 0.0175,
                   decoration: BoxDecoration(
                     color: color,
@@ -146,7 +146,7 @@ class BarCategory extends StatelessWidget {
               Text(
                 data,
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 22.5,
                   fontFamily: "NunitoSans",
                   color: Colors.grey.shade500,
                   fontWeight: FontWeight.w700,
@@ -155,7 +155,7 @@ class BarCategory extends StatelessWidget {
               Text(
                 unit,
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 17.5,
                   fontFamily: "NunitoSans",
                   color: Colors.grey.shade500.withOpacity(0.5),
                   fontWeight: FontWeight.w700,

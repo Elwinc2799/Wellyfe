@@ -42,7 +42,7 @@ class ScheduleMenuIndividual extends StatelessWidget {
           Positioned(
               top: size.height * (0.125 / 3.75),
               left: size.width * (0.4 / 12.5),
-              child: Image(image: AssetImage(asset))
+              child: Image(image: AssetImage(asset),width: 30, height: 30)
           ),
           Positioned(
             top: size.height * (0.125 / 4.5),

@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0, 100.0, 20.0, 0),
+        padding: const EdgeInsets.fromLTRB(30.0, 80.0, 20.0, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
             Text(
               "Always Caring. Always Here.",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 17.5,
                 fontFamily: "NunitoSans",
                 fontWeight: FontWeight.w400,
                 color: Colors.black.withOpacity(.5)
@@ -30,19 +30,19 @@ class Body extends StatelessWidget {
             Text(
               "Sign Up",
               style: TextStyle(
-                fontSize: 40,
+                fontSize: 30,
                 fontFamily: "NunitoSans",
                 fontWeight: FontWeight.bold,
                 color: Colors.black.withOpacity(.5)
               ),
             ),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.04),
             SignUpForm(),
-            SizedBox(height: size.height * 0.025),
+            SizedBox(height: size.height * 0.02),
             OrDivider(),
-            SizedBox(height: size.height * 0.005),
+            SizedBox(height: size.height * 0.0125),
             Padding(
-              padding: const EdgeInsets.fromLTRB(100.0, 0, 100.0, 0),
+              padding: const EdgeInsets.fromLTRB(75.0, 0, 75.0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

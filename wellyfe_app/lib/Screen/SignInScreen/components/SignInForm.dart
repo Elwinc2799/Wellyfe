@@ -5,6 +5,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
+import 'package:wellyfe_app/Screen/PersonalQuestionnaireScreen/PersonalQuestionnaireScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/constants.dart';
@@ -61,15 +62,20 @@ class _SignInFormState extends State<SignInForm> {
     });
 
     if (_isFirstOpen) {
-      prefs.setString(lastOpenKey, DateTime.now().day.toString());
+      prefs.setString(lastOpenKey, DateTime
+          .now()
+          .day
+          .toString());
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,
-        child: DailyMoodScreen(),
+       // child: DailyMoodScreen(),
+        child: HomeScreen(),
       ));
-    } else {
+    }
+     else {
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,
-        // child: PersonalQuestionnaireScreen()
+         //child: PersonalQuestionnaireScreen(),
         child: HomeScreen(),
       ));
     }

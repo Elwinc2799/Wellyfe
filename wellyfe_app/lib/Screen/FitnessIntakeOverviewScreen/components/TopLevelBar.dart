@@ -13,7 +13,7 @@ class TopLevelBar extends StatelessWidget {
         Text(
           "Calorie Plan",
           style: TextStyle(
-            fontSize: 35,
+            fontSize: 25,
             fontFamily: "NunitoSans",
             color: Color(0XFF394D70),
             fontWeight: FontWeight.w700,
@@ -24,8 +24,8 @@ class TopLevelBar extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Container(
-            width: 60,
-            height: 60,
+            width: 45,
+            height: 45,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Color(0XFFF4F9FF),

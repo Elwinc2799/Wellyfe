@@ -18,8 +18,8 @@ class SocialMediaIcon extends StatelessWidget {
       child: GestureDetector(
         onTap: function,
         child: Container(
-          height: 65,
-          width: 65,
+          height: 50,
+          width: 50,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.0),
             color: backgroundColor,
@@ -37,7 +37,7 @@ class SocialMediaIcon extends StatelessWidget {
               ]
           ),
           child: Container(
-            child: Image(image: AssetImage(asset)),
+            child: Image(image: AssetImage(asset), width: 30, height: 30),
           ),
         ),
       ),

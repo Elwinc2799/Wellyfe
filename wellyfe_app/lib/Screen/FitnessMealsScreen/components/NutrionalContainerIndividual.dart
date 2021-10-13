@@ -35,7 +35,7 @@ class NutritionalContainerIndividual extends StatelessWidget {
           Text(
             category,
             style: TextStyle(
-                fontSize: 20,
+                fontSize: 15,
                 fontFamily: "NunitoSans",
                 color: Colors.black.withOpacity(0.5),
                 fontWeight: FontWeight.w800
@@ -44,7 +44,7 @@ class NutritionalContainerIndividual extends StatelessWidget {
           Text(
             nutritional,
             style: TextStyle(
-                fontSize: 22.5,
+                fontSize: 17.5,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w800

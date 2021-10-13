@@ -96,8 +96,8 @@ class _BodyState extends State<Body> {
             ),
             buildLeftSideBar(),
             Positioned(
-              top: 200,
-              left: 150,
+              top: 150,
+              left: 90,
               child: Container(
                 width: size.width * 0.775,
                 height: size.height * 0.8,
@@ -109,7 +109,7 @@ class _BodyState extends State<Body> {
                     Text(
                       "Meals today",
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 22.5,
                         fontFamily: "NunitoSans",
                         color: Color(0XFF394D70),
                         fontWeight: FontWeight.w700,
@@ -131,8 +131,8 @@ class _BodyState extends State<Body> {
 
   Positioned buildLeftSideBar() {
     return Positioned(
-      left: -240,
-      bottom: 500,
+      left: -175,
+      bottom: 350,
       child: Transform.rotate(
         angle: pi / 2 + pi,
         child: Row(

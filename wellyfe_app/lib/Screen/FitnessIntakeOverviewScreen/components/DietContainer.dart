@@ -16,20 +16,20 @@ class DietContainer extends StatelessWidget {
             Text(
               "Ketogenic Diet",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 22,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
               ),
             ),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.04),
             Row(
               children: [
-                Image(image: AssetImage("assets/logo/flame.png")),
+                Image(image: AssetImage("assets/logo/flame.png"), height: size.height * 0.06, width: size.width * 0.06),
                 Text(
                   "1500" + " kcal",
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 22.5,
                     fontFamily: "NunitoSans",
                     color: Colors.black.withOpacity(0.3),
                     fontWeight: FontWeight.w700,
@@ -54,8 +54,8 @@ class DietContainer extends StatelessWidget {
         Transform.rotate(
           angle: pi,
           child: Container(
-            height: 300,
-            width: 250,
+            height: 200,
+            width: 160,
             child: Image(
               image: AssetImage("assets/pictures/breakfast.png"),
               fit: BoxFit.cover,

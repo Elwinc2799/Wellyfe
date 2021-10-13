@@ -35,7 +35,7 @@ class _GoalsContainerState extends State<GoalsContainer> {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +47,7 @@ class _GoalsContainerState extends State<GoalsContainer> {
                     Text(
                       "Sleep Duration Goal\n50 hours",
                       style: TextStyle(
-                        fontSize: 27.5,
+                        fontSize: 19,
                         fontFamily: "Nunito",
                         fontWeight: FontWeight.w900,
                         color: Color(0XFF394D70),
@@ -60,7 +60,7 @@ class _GoalsContainerState extends State<GoalsContainer> {
                       child: Text(
                         "Set Goals",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 17.5,
                           fontFamily: "Nunito",
                           fontWeight: FontWeight.w900,
                           color: Color(0XFF5783C3),
@@ -72,7 +72,7 @@ class _GoalsContainerState extends State<GoalsContainer> {
                 Text(
                   "It is advisable to sleep at least 7 to 9 hours per day.",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 17.5,
                     fontFamily: "Nunito",
                     fontWeight: FontWeight.w900,
                     color: Color(0XFF394D70),
@@ -97,7 +97,7 @@ class _GoalsContainerState extends State<GoalsContainer> {
                 Text(
                   "Set Goals",
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 19,
                     fontFamily: "Nunito",
                     fontWeight: FontWeight.w900,
                     color: Colors.black45,

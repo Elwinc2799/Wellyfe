@@ -25,7 +25,7 @@ class _MealsRadioItemState extends State<MealsRadioItem> {
       duration: const Duration(milliseconds: 300),
       curve: Curves.fastOutSlowIn,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(15.0),
         color: widget.item.isSelected ? Colors.blueAccent : Colors.transparent,
       ),
       child: Center(
@@ -35,7 +35,7 @@ class _MealsRadioItemState extends State<MealsRadioItem> {
               fontWeight: FontWeight.w700,
               fontFamily: "NunitoSans",
               color: widget.item.isSelected ? Colors.white : Color(0XFF394D70),
-              fontSize: 30
+              fontSize: 17.5
           ),
         ),
       ),

@@ -19,7 +19,7 @@ class TopLevelBar extends StatelessWidget {
               style: TextStyle(
                 fontFamily: "Nunito",
                 color: Color(0XFF394D70),
-                fontSize: 35,
+                fontSize: 27.5,
                 fontWeight: FontWeight.w600,
               ),
               children: [
@@ -28,7 +28,7 @@ class TopLevelBar extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: "Nunito",
                     color: Color(0XFF394D70),
-                    fontSize: 35,
+                    fontSize: 27.5,
                     fontWeight: FontWeight.w900,
                   ),
                 )

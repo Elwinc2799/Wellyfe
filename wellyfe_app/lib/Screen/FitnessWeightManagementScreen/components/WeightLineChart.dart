@@ -26,7 +26,7 @@ class _WeightLineChartState extends State<WeightLineChart> {
           getTextStyles: (value) => TextStyle(
             color: Color(0XFF68737D),
               fontWeight: FontWeight.bold,
-              fontSize: 20
+              fontSize: 17.5
           ),
           getTitles: (value) {
             switch (value.toInt()) {
@@ -82,7 +82,7 @@ class _WeightLineChartState extends State<WeightLineChart> {
           ],
           isCurved: true,
           colors: [Colors.indigo],
-          barWidth: 5,
+          barWidth: 4,
           isStrokeCapRound: true,
           dotData: FlDotData(show: false),
           belowBarData: BarAreaData(show: false),

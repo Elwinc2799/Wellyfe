@@ -14,7 +14,7 @@ class TopLevelBar extends StatelessWidget {
         Text(
           DateFormat('EEEE, d MMMM').format(DateTime.now()),
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 22.5,
             fontFamily: "NunitoSans",
             color: Color(0XFF394D70),
             fontWeight: FontWeight.w700,
@@ -40,8 +40,8 @@ class TopLevelIcon extends StatelessWidget {
     return GestureDetector(
       onTap: function,
       child: Container(
-        height: 70,
-        width: 70,
+        height: 50,
+        width: 50,
         decoration: BoxDecoration(
           color: Color(0XFFF4F9FF),
           borderRadius: BorderRadius.all(Radius.circular(40.0)),

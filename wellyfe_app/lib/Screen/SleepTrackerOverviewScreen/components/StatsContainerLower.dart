@@ -34,7 +34,7 @@ class StatsContainerLower extends StatelessWidget {
 
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -76,7 +76,7 @@ class StatsContainerIndividualLower extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: size.height * 0.2,
+      height: size.height * 0.185,
       width: size.width * 0.375,
       decoration: BoxDecoration(
           color: Color(0XFFF4F9FF),
@@ -100,7 +100,7 @@ class StatsContainerIndividualLower extends StatelessWidget {
           ]
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 35.0, horizontal: 30.0),
+        padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,7 +108,7 @@ class StatsContainerIndividualLower extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                fontSize: 22.5,
+                fontSize: 17.5,
                 fontFamily: "Nunito",
                 fontWeight: FontWeight.w900,
                 color: Color(0XFF394D70),
@@ -117,23 +117,23 @@ class StatsContainerIndividualLower extends StatelessWidget {
             Text(
               "time of yesterday",
               style: TextStyle(
-                fontSize: 17.5,
+                fontSize: 12.5,
                 fontFamily: "Nunito",
                 fontWeight: FontWeight.w900,
                 color: Color(0XFF394D70),
               ),
             ),
-            SizedBox(height: size.height * 0.01),
+            SizedBox(height: size.height * 0.005),
             Text(
               data,
               style: TextStyle(
-                fontSize: 40,
+                fontSize: 20,
                 fontFamily: "Nunito",
                 fontWeight: FontWeight.w900,
                 color: Color(0XFF394D70),
               ),
             ),
-            SizedBox(height: size.height * 0.01),
+            SizedBox(height: size.height * 0.015),
             Stack(
               children: [
                 Container(

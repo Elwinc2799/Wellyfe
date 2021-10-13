@@ -25,7 +25,7 @@ class MealsContainer extends StatelessWidget {
         child: Row(
           children: List.generate(3, (index) =>
               Padding(
-                padding: const EdgeInsets.only(right: 20.0),
+                padding: const EdgeInsets.only(right: 15.0),
                 child: GestureDetector(
                   onTap: () => Navigator.push(context, PageTransition(
                     type: PageTransitionType.fade,
@@ -36,7 +36,7 @@ class MealsContainer extends StatelessWidget {
                     width: size.width * 0.25,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
-                            Radius.circular(30.0)
+                            Radius.circular(20.0)
                         ),
                         boxShadow: [
                           BoxShadow(

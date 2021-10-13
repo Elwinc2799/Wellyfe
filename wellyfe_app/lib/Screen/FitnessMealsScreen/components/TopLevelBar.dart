@@ -11,14 +11,14 @@ class TopLevelBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 30.0),
+      padding: const EdgeInsets.only(bottom: 20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             mealType,
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 25,
               fontFamily: "NunitoSans",
               color: Color(0XFF394D70),
               fontWeight: FontWeight.w700,
@@ -29,8 +29,8 @@ class TopLevelBar extends StatelessWidget {
               Navigator.pop(context);
             },
             child: Container(
-                width: 50,
-                height: 50,
+                width: 40,
+                height: 40,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color(0XFFF4F9FF),

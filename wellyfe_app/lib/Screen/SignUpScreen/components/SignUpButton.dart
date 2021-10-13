@@ -16,7 +16,7 @@ class SignUpButton extends StatelessWidget {
       child: GestureDetector(
         onTap: function,
         child: Container(
-          height: size.height * 0.04,
+          height: size.height * 0.045,
           width: size.width * 0.50,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100),
@@ -27,7 +27,7 @@ class SignUpButton extends StatelessWidget {
               "Sign Up",
               style: TextStyle(
                 fontFamily: "NunitoSans",
-                fontSize: 20,
+                fontSize: 17.5,
                 fontWeight: FontWeight.w700,
                 color: Colors.white,
               ),

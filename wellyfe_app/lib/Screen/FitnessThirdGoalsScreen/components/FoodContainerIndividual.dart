@@ -52,7 +52,7 @@ class _FoodContainerIndividualState extends State<FoodContainerIndividual> {
           child: Text(
             widget.food,
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 20,
               fontFamily: "NunitoSans",
               color: selected ? Color(0XFF394D70) : Colors.black.withOpacity(0.3),
               fontWeight: FontWeight.w700,

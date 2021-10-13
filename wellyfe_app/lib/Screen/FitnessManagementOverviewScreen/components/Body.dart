@@ -46,6 +46,7 @@ class Body extends StatelessWidget {
                     ));
                   },
                 ),
+                SizedBox(width: 20),
                 FitnessOverviewIndividual(
                   title: "Burnt",
                   image: "assets/logo/flame.png",

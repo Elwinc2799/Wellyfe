@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
             Text(
               "Let's get started!",
               style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "NunitoSans",
                   fontWeight: FontWeight.bold,
                   color: Colors.black.withOpacity(.5)
@@ -27,7 +27,7 @@ class Body extends StatelessWidget {
             Text(
               "We like to get to know you better.",
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 20,
                   fontFamily: "NunitoSans",
                   fontWeight: FontWeight.bold,
                   color: Colors.black.withOpacity(.5)

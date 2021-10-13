@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
 
     return Background(
         children: Padding(
-          padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0),
+          padding: const EdgeInsets.fromLTRB(20.0, 75.0, 20.0, 0),
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Column(
@@ -22,11 +22,11 @@ class Body extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 TopLevelBar(),
-                SizedBox(height: size.height * 0.05),
+                SizedBox(height: size.height * 0.04),
                 WeightContainer(),
                 SizedBox(height: size.height * 0.025),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Row(
                     children: [
                       CaloriesBurntContainer(),

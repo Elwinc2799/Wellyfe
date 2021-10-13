@@ -12,7 +12,7 @@ class ImageHolder extends StatelessWidget {
     return  Transform.rotate(
       angle: 45 * pi / 180,
       child: Center(
-        child: Image(image: AssetImage(image),),
+        child: Image(image: AssetImage(image), height: 90, width: 80),
       ),
     );
   }

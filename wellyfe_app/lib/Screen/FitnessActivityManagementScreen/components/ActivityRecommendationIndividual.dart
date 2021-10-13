@@ -38,18 +38,20 @@ class ActivityRecommendationsIndividual extends StatelessWidget {
       child: Stack(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(30.0)),
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
             child: Image(
               image: AssetImage("assets/pictures/${activity.toLowerCase()}.jpg"),
               fit: BoxFit.cover,
               width: size.width * 0.25,
+              height: size.height * 0.2,
             ),
           ),
           Container(
             width: size.width * 0.25,
+            height: size.height * 0.2,
             decoration: BoxDecoration(
               color: Colors.black.withOpacity(0.15),
-              borderRadius: BorderRadius.all(Radius.circular(30.0)),
+              borderRadius: BorderRadius.all(Radius.circular(20.0)),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -58,7 +60,7 @@ class ActivityRecommendationsIndividual extends StatelessWidget {
                   activity,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 22.5,
+                    fontSize: 17.5,
                     fontFamily: "NunitoSans",
                     color: Colors.white,
                     fontWeight: FontWeight.w700,

@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0),
+        padding: const EdgeInsets.fromLTRB(25.0, 75.0, 25.0, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
             Text(
               "Lighten on the plate,\nshall we?",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 27.5,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
             Text(
               "Let us know of the food you don't eat.",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 20,
                 fontFamily: "NunitoSans",
                 color: Colors.black.withOpacity(0.3),
                 fontWeight: FontWeight.w700,

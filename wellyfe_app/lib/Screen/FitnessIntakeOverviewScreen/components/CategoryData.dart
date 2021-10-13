@@ -22,7 +22,7 @@ class CategoryData extends StatelessWidget {
         Text(
           category,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 17.5,
             fontFamily: "NunitoSans",
             color: Colors.black.withOpacity(0.3),
             fontWeight: FontWeight.w700,
@@ -31,7 +31,7 @@ class CategoryData extends StatelessWidget {
         Text(
           data + " g",
           style: TextStyle(
-            fontSize: 22.5,
+            fontSize: 20,
             fontFamily: "NunitoSans",
             color: Colors.black.withOpacity(0.3),
             fontWeight: FontWeight.w700,

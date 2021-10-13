@@ -21,7 +21,7 @@ class TitleTime extends StatelessWidget {
             color: Colors.white.withOpacity(0.5),
             fontWeight: FontWeight.w800,
             fontFamily: "Nunito",
-            fontSize: 25,
+            fontSize: 20,
           ),
         ),
         Text(
@@ -31,7 +31,7 @@ class TitleTime extends StatelessWidget {
             color: Colors.white,
             fontWeight: FontWeight.w800,
             fontFamily: "Nunito",
-            fontSize: 25,
+            fontSize: 20,
           ),
         ),
       ],

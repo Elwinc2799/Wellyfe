@@ -17,9 +17,9 @@ class Body extends StatelessWidget {
       children: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.only(top: 100.0),
+          padding: const EdgeInsets.only(top: 75.0),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -32,7 +32,7 @@ class Body extends StatelessWidget {
                     "Avocado Egg with Slices of Apples and Cucumber",
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      fontSize: 27.5,
+                      fontSize: 20,
                       fontFamily: "NunitoSans",
                       color: Color(0XFF394D70),
                       fontWeight: FontWeight.w800,
@@ -48,7 +48,7 @@ class Body extends StatelessWidget {
                     "Ingredients",
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontFamily: "NunitoSans",
                       color: Color(0XFF394D70),
                       fontWeight: FontWeight.w800,

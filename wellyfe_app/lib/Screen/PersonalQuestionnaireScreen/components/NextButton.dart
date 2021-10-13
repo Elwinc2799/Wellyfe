@@ -19,7 +19,7 @@ class NextButton extends StatelessWidget {
         height: size.height * 0.05,
         width: size.width * 0.25,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20.0),
+            borderRadius: BorderRadius.circular(15.0),
             color: backgroundColor,
             boxShadow: [
               BoxShadow(
@@ -38,7 +38,7 @@ class NextButton extends StatelessWidget {
           child: Text(
             "Next",
             style: TextStyle(
-                fontSize: 22.5,
+                fontSize: 17.5,
                 fontFamily: "NunitoSans",
                 fontWeight: FontWeight.bold,
                 color: Colors.black.withOpacity(.5)

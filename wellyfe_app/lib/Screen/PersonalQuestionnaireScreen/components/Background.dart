@@ -18,9 +18,9 @@ class Background extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            top: size.height / 2,
-            right: -150,
-            child: Image(image: AssetImage("assets/pictures/questionB.png")),
+            top: size.height / 4,
+            right: -120,
+            child: Image(image: AssetImage("assets/pictures/questionB.png"), height: size.height, width: size.width),
           ),
           children,
         ],

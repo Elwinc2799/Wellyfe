@@ -50,14 +50,14 @@ class TrackingContainer extends StatelessWidget {
               size: size,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 20.0),
+              padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Good sleep is a reachable dream.",
                     style: TextStyle(
-                      fontSize: 27.5,
+                      fontSize: 19,
                       fontFamily: "Nunito",
                       fontWeight: FontWeight.w900,
                       color: Color(0XFF394D70),
@@ -67,7 +67,7 @@ class TrackingContainer extends StatelessWidget {
                   Text(
                     "Sleep Time: " + "10:00" + " PM - " + "6:00" + " AM",
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 15,
                       fontFamily: "Nunito",
                       fontWeight: FontWeight.w900,
                       color: Color(0XFF394D70).withOpacity(0.5),
@@ -98,7 +98,7 @@ class TrackingContainer extends StatelessWidget {
                     child: Text(
                       "Start Tracking",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 17.5,
                         fontFamily: "Nunito",
                         fontWeight: FontWeight.w900,
                         color: Colors.white,

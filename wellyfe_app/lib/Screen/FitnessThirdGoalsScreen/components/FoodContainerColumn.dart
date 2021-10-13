@@ -18,18 +18,18 @@ class FoodContainerColumn extends StatelessWidget {
           children: [
             FoodContainerIndividual(
               food: "",
-              size: 75,
-              radius: 20,
+              size: 50,
+              radius: 15,
             ),
             FoodContainerIndividual(
               food: "Peanut",
-              size: 150,
-              radius: 30,
+              size: 120,
+              radius: 25,
             ),
             FoodContainerIndividual(
               food: "Bean",
-              size: 130,
-              radius: 30,
+              size: 105,
+              radius: 25,
             ),
           ],
         ),
@@ -39,18 +39,18 @@ class FoodContainerColumn extends StatelessWidget {
           children: [
             FoodContainerIndividual(
               food: "Seafood",
-              size: 150,
-              radius: 30,
+              size: 120,
+              radius: 25,
             ),
             FoodContainerIndividual(
               food: "Lactose",
-              size: 130,
-              radius: 30,
+              size: 105,
+              radius: 25,
             ),
             FoodContainerIndividual(
               food: "Pork",
-              size: 100,
-              radius: 30,
+              size: 75,
+              radius: 20,
             ),
           ],
         ),
@@ -61,18 +61,18 @@ class FoodContainerColumn extends StatelessWidget {
           children: [
             FoodContainerIndividual(
               food: "Beef",
-              size: 130,
-              radius: 30,
+              size: 105,
+              radius: 25,
             ),
             FoodContainerIndividual(
               food: "",
-              size: 75,
-              radius: 20,
+              size: 50,
+              radius: 15,
             ),
             FoodContainerIndividual(
               food: "Soybeans",
-              size: 150,
-              radius: 30,
+              size: 120,
+              radius: 25,
             ),
           ],
         )

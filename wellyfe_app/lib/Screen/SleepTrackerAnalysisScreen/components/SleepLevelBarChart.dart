@@ -12,63 +12,63 @@ class _SleepLevelBarChartState extends State<SleepLevelBarChart> {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.5,
-      child: Container(
-        decoration: BoxDecoration(
-            color: Color(0XFFF4F9FF),
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            boxShadow: [
-              BoxShadow(
-                  blurRadius: 5.0,
-                  offset: Offset(-3, -3),
-                  color: Colors.grey.withOpacity(0.1)
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width * 0.9,
+      height: size.height * 0.3,
+      decoration: BoxDecoration(
+          color: Color(0XFFF4F9FF),
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          boxShadow: [
+            BoxShadow(
+                blurRadius: 5.0,
+                offset: Offset(-3, -3),
+                color: Colors.grey.withOpacity(0.1)
+            ),
+            BoxShadow(
+                blurRadius: 5.0,
+                offset: Offset(3, 3),
+                color: Colors.black.withOpacity(.25)
+            )
+          ]
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Text(
+              'Sleep',
+              style: TextStyle(
+                color: Color(0XFF394D70),
+                fontSize: 25,
+                fontFamily: "NunitoSans",
+                fontWeight: FontWeight.bold
               ),
-              BoxShadow(
-                  blurRadius: 5.0,
-                  offset: Offset(3, 3),
-                  color: Colors.black.withOpacity(.25)
-              )
-            ]
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Text(
-                'Sleep',
-                style: TextStyle(
-                  color: Color(0XFF394D70),
-                  fontSize: 35,
-                  fontFamily: "NunitoSans",
-                  fontWeight: FontWeight.bold
+            ),
+            SizedBox(height: 3),
+            Text(
+              'Weekly Quality',
+              style: TextStyle(
+                color: Color(0XFF394D70).withOpacity(0.5),
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                fontFamily: "NunitoSans",
+              ),
+            ),
+            SizedBox(height: 12),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: BarChart(
+                  mainBarData(),
                 ),
               ),
-              SizedBox(height: 4),
-              Text(
-                'Weekly Quality',
-                style: TextStyle(
-                  color: Color(0XFF394D70).withOpacity(0.5),
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "NunitoSans",
-                ),
-              ),
-              SizedBox(height: 38),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: BarChart(
-                    mainBarData(),
-                  ),
-                ),
-              ),
-              SizedBox(height: 12),
-            ],
-          ),
+            ),
+            SizedBox(height: 2),
+          ],
         ),
       ),
     );
@@ -79,7 +79,7 @@ class _SleepLevelBarChartState extends State<SleepLevelBarChart> {
       double y, {
         bool isTouched = false,
         Color barColor = Colors.white,
-        double width = 22,
+        double width = 15,
         List<int> showTooltips = const [],
       }) {
     return BarChartGroupData(
@@ -158,7 +158,7 @@ class _SleepLevelBarChartState extends State<SleepLevelBarChart> {
                 TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 15,
                 ),
                 children: <TextSpan>[
                   TextSpan(
@@ -192,7 +192,7 @@ class _SleepLevelBarChartState extends State<SleepLevelBarChart> {
           const TextStyle(
             color: Color(0XFF394D70),
             fontWeight: FontWeight.bold,
-            fontSize: 20
+            fontSize: 17.5
           ),
           margin: 16,
           getTitles: (double value) {

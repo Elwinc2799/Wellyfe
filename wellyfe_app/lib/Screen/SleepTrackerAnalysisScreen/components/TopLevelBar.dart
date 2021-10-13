@@ -15,7 +15,7 @@ class TopLevelBar extends StatelessWidget {
           style: TextStyle(
             fontFamily: "Nunito",
             color: Color(0XFF394D70),
-            fontSize: 25,
+            fontSize: 20,
             fontWeight: FontWeight.w900,
           ),
         ),
@@ -24,8 +24,8 @@ class TopLevelBar extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Container(
-            width: 60,
-            height: 60,
+            width: 45,
+            height: 45,
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Color(0XFFF4F9FF),
@@ -45,7 +45,7 @@ class TopLevelBar extends StatelessWidget {
             child: Center(
               child: Icon(
                 Icons.arrow_back_ios_rounded,
-                size: 30,
+                size: 25,
                 color: Color(0XFF394D70),
               ),
             ),

@@ -31,32 +31,33 @@ class StepsLowerContainer extends StatelessWidget {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
+          padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 5.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Row(
                     children: [
                       Text(
                         "Steps",
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           fontFamily: "NunitoSans",
                           color: Colors.black.withOpacity(0.3),
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                       SizedBox(width: size.width * 0.025),
-                      Image(image: AssetImage("assets/logo/steps.png")),
+                      Image(image: AssetImage("assets/logo/steps.png"), height: size.height * 0.07, width: size.width * 0.07),
                     ],
                   ),
+                  SizedBox(width: size.width * 0.25),
                   Text(
-                    DateFormat('EEEE, d MMMM').format(DateTime.now()),
+                    DateFormat('E, d MMM').format(DateTime.now()),
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontFamily: "NunitoSans",
                       color: Color(0XFF394D70),
                       fontWeight: FontWeight.w700,
@@ -64,14 +65,13 @@ class StepsLowerContainer extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: size.height * 0.01),
               RichText(
                 text: TextSpan(
                     children: [
                       TextSpan(
                         text: "4219",
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 30,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w700,
@@ -80,7 +80,7 @@ class StepsLowerContainer extends StatelessWidget {
                       TextSpan(
                         text: "  steps",
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           fontFamily: "NunitoSans",
                           color: Colors.black.withOpacity(0.3),
                           fontWeight: FontWeight.w700,

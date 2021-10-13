@@ -54,13 +54,13 @@ class _SignUpFormState extends State<SignUpForm> {
         children: [
           TextFieldLabel(label: "Email"),
           buildEmailFormField(),
-          SizedBox(height: size.height * 0.025),
+          SizedBox(height: size.height * 0.03),
           TextFieldLabel(label: "Password"),
           buildPasswordFormField(),
-          SizedBox(height: size.height * 0.025),
+          SizedBox(height: size.height * 0.03),
           TextFieldLabel(label: "Confirm Password"),
           buildConfirmPasswordFormField(),
-          SizedBox(height: size.height * 0.05),
+          SizedBox(height: size.height * 0.045),
           SignUpButton(
             function: () {
               signUpUserWithEmail(_emailController.text, _passwordController.text, _confirmPasswordController.text);
@@ -85,19 +85,20 @@ class _SignUpFormState extends State<SignUpForm> {
   Container buildPasswordFormField() {
     return Container(
       width: MediaQuery.of(context).size.width * 0.85,
+      height: MediaQuery.of(context).size.width * 0.135,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Enter your password",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 17.5,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
@@ -110,19 +111,20 @@ class _SignUpFormState extends State<SignUpForm> {
   Container buildConfirmPasswordFormField() {
     return Container(
       width: MediaQuery.of(context).size.width * 0.85,
+      height: MediaQuery.of(context).size.width * 0.135,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Confirm your password",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 17.5,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
@@ -135,19 +137,20 @@ class _SignUpFormState extends State<SignUpForm> {
   Container buildEmailFormField() {
     return Container(
       width: MediaQuery.of(context).size.width * 0.85,
+      height: MediaQuery.of(context).size.width * 0.135,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Enter your email",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 17.5,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
