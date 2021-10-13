@@ -37,7 +37,7 @@ class SocialMediaIcon extends StatelessWidget {
               ]
           ),
           child: Container(
-            child: Image(image: AssetImage(asset), width: 30, height: 30),
+            child: Image(image: AssetImage(asset)),
           ),
         ),
       ),
