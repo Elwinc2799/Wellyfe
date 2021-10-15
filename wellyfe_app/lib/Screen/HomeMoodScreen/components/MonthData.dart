@@ -30,38 +30,40 @@ class MonthData extends StatelessWidget {
               month,
               textAlign: TextAlign.right,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 17.5,
                 fontFamily: "Montserrat",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
               ),
             ),
           ),
-          SizedBox(width: size.width * 0.05),
+          SizedBox(width: size.width * 0.075),
           Column(
             children: [
               for (var i = 0; i < moodList.length; i += 10)
                 Column(
                   children: [
+                    SizedBox(height: size.height * 0.01),
                     Container(
                       width: size.width * 0.5,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
+
                           for (var j = i; j < i + 10 && j < moodList.length; j++)
                             Row(
                               children: [
                                 Tooltip(
                                   message: "Mood: " + formatString(moodList[j].mood)
                                       + "\nDate: " + DateFormat('EEEE, d MMM').format(moodList[j].date),
-                                  height: 50,
+                                  height: 40,
                                   textStyle: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 12.5,
                                     color: Colors.white
                                   ),
                                   child: Container(
-                                    height: 20,
-                                    width: 20,
+                                    height: 15,
+                                    width: 15,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: Mood.getMoodColor(moodList[j].mood),

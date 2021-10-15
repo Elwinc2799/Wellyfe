@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
       onWillPop: _onWillPop,
       child: Background(
         children: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 100),
+          padding: const EdgeInsets.symmetric(vertical: 75),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
                 Text(
                   DateFormat('y').format(DateTime.now()),
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 25,
                     fontFamily: "Montserrat",
                     color: Color(0XFF394D70),
                     fontWeight: FontWeight.w700,
