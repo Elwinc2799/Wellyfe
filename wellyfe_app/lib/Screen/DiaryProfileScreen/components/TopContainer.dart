@@ -13,18 +13,18 @@ class TopContainer extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: size.height * 0.25,
+      height: size.height * 0.3,
       width: size.width * 0.8,
       child: Stack(
         children: [
           Positioned(
             bottom: 0,
             child: Container(
-              height: size.height * 0.2,
+              height: size.height * 0.225,
               width: size.width * 0.8,
               decoration: BoxDecoration(
                 color: Color(0XFFE5EBF2),
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 boxShadow: [
                   BoxShadow(
                       blurRadius: 5.0,
@@ -45,7 +45,7 @@ class TopContainer extends StatelessWidget {
                       Text(
                         "My Diary",
                         style: TextStyle(
-                          fontSize: 35,
+                          fontSize: 25,
                           fontFamily: "Montserrat",
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w700,
@@ -55,7 +55,7 @@ class TopContainer extends StatelessWidget {
                       Text(
                         "A Secret That None Knows",
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 17.5,
                           fontFamily: "Montserrat",
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w500,
@@ -68,11 +68,11 @@ class TopContainer extends StatelessWidget {
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 150),
+              padding: const EdgeInsets.only(bottom: 130),
               child: GlassmorphicContainer(
-                height: 100,
-                width: 100,
-                borderRadius: 20,
+                height: 75,
+                width: 75,
+                borderRadius: 10,
                 blur: 20,
                 alignment: Alignment.bottomCenter,
                 border: 2,

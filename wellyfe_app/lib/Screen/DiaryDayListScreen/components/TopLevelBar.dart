@@ -18,7 +18,7 @@ class TopLevelBar extends StatelessWidget {
           Text(
             month + " / 2021",
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 22.5,
               fontFamily: "Montserrat",
               color: Color(0XFF394D70),
               fontWeight: FontWeight.w600,
@@ -29,8 +29,8 @@ class TopLevelBar extends StatelessWidget {
                 Navigator.pop(context);
               },
               child: Container(
-                  width: 60,
-                  height: 60,
+                  width: 40,
+                  height: 40,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0XFFF4F9FF),
@@ -48,7 +48,7 @@ class TopLevelBar extends StatelessWidget {
                       ]
                   ),
                   child: Center(
-                      child: Image(image: AssetImage("assets/logo/menu.png"))
+                      child: Image(image: AssetImage("assets/logo/menu.png"), width: 18, height: 18,)
                   )
               )
           )

@@ -51,7 +51,7 @@ class MealsContainer extends StatelessWidget {
                           Radius.circular(30.0)
                       ),
                       child: Image(
-                          image: AssetImage("assets/pictures/${category.toLowerCase()}1.jpg")
+                          image: AssetImage("assets/pictures/${category.toLowerCase()}1.jpg"), fit: BoxFit.fitHeight,
                       ),
                     ),
                   ),

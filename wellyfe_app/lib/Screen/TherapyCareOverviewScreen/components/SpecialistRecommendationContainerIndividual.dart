@@ -17,12 +17,12 @@ class SpecialistRecommendationContainerIndividual extends StatelessWidget {
     bool newRow = (doctor.specialisedTherapy == "Child");
 
     return Padding(
-      padding: const EdgeInsets.only(right: 50.0, top: 17.5),
+      padding: const EdgeInsets.only(right: 35.0, top: 20),
       child: GestureDetector(
         onTap: function,
         child: Container(
-          height: size.height * 0.175,
-          width: size.width * 0.5,
+          height: size.height * 0.18,
+          width: size.width * 0.55,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.0),
             gradient: LinearGradient(
@@ -41,11 +41,11 @@ class SpecialistRecommendationContainerIndividual extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                right: -200,
+                right: -145,
                 top: 10,
                 child: Container(
-                    width: size.width * 0.75,
-                    child: Image(image: AssetImage("assets/pictures/doctor1.png"))
+                    width: size.width * 0.8,
+                    child: Image(image: AssetImage("assets/pictures/doctor1.png"), width: 225, height: 225,)
                 ),
               ),
               Padding(
@@ -60,7 +60,7 @@ class SpecialistRecommendationContainerIndividual extends StatelessWidget {
                         "Dr. " + doctor.name,
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                          fontSize: 22.5,
+                          fontSize: 17.5,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w700,
@@ -70,7 +70,7 @@ class SpecialistRecommendationContainerIndividual extends StatelessWidget {
                         doctor.specialisedTherapy + " Therapy",
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 12.5,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w700,

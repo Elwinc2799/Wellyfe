@@ -20,8 +20,8 @@ class GraphContainer extends StatelessWidget {
     return Center(
       child: GlassmorphicContainer(
         width: size.width * 0.85,
-        height: size.height * 0.34,
-        borderRadius: 25,
+        height: size.height * 0.35,
+        borderRadius: 17,
         border: 2.5,
         blur: 0,
         linearGradient: LinearGradient(
@@ -45,7 +45,7 @@ class GraphContainer extends StatelessWidget {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

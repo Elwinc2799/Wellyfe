@@ -133,11 +133,11 @@ class _AddNewFormState extends State<AddNewForm> {
 
   Container buildStartTimeForm() {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.275,
+      width: MediaQuery.of(context).size.width * 0.3,
       height: MediaQuery.of(context).size.width * 0.11,
       decoration: buildNeumorphicTextField(),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: DropdownButton<String>(
           underline: Container(
             height: 2,
@@ -147,7 +147,7 @@ class _AddNewFormState extends State<AddNewForm> {
           icon: Icon(Icons.arrow_drop_down_rounded),
           style: TextStyle(
             fontFamily: "NunitoSans",
-            fontSize: 20,
+            fontSize: 15,
             fontWeight: FontWeight.w700,
             color: Colors.black.withOpacity(.5),
           ),
@@ -170,11 +170,11 @@ class _AddNewFormState extends State<AddNewForm> {
 
   Container buildEndTimeForm() {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.275,
+      width: MediaQuery.of(context).size.width * 0.3,
       height: MediaQuery.of(context).size.width * 0.11,
       decoration: buildNeumorphicTextField(),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: DropdownButton<String>(
           underline: Container(
             height: 2,
@@ -184,7 +184,7 @@ class _AddNewFormState extends State<AddNewForm> {
           icon: Icon(Icons.arrow_drop_down_rounded),
           style: TextStyle(
             fontFamily: "NunitoSans",
-            fontSize: 20,
+            fontSize: 15,
             fontWeight: FontWeight.w700,
             color: Colors.black.withOpacity(.5),
           ),
@@ -209,7 +209,7 @@ class _AddNewFormState extends State<AddNewForm> {
     return GestureDetector(
       // onTap: _selectDate(context),
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.45,
+        width: MediaQuery.of(context).size.width * 0.55,
         height: MediaQuery.of(context).size.width * 0.11,
         decoration: buildNeumorphicTextField(),
         child: TextFormField(
@@ -221,60 +221,60 @@ class _AddNewFormState extends State<AddNewForm> {
               theme: ThemeData(primaryColor: Color(0XFFE4EDFF)),
               styleDatePicker: MaterialRoundedDatePickerStyle(
                 textStyleDayButton: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "Nunito",
                   color: Color(0XFFB1BDD3),
                 ),
                 textStyleYearButton: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "Nunito",
                   color: Color(0XFFB1BDD3),
                 ),
                 textStyleDayHeader: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "Nunito",
                   color: Color(0XFFB1BDD3),
                 ),
                 textStyleCurrentDayOnCalendar: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "Nunito",
                   color: Color(0XFFB1BDD3),
                   fontWeight: FontWeight.bold,
                 ),
                 textStyleDayOnCalendar: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "Nunito",
                   color: Colors.black45,
                 ),
                 textStyleDayOnCalendarSelected: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "Nunito",
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
                 textStyleMonthYearHeader: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "Nunito",
                   color: Colors.black.withOpacity(0.5),
                   fontWeight: FontWeight.bold,
                 ),
                 textStyleDayOnCalendarDisabled: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontFamily: "Nunito",
                   color: Color(0XFFB1BDD3).withOpacity(0.5),
                   fontWeight: FontWeight.bold,
                 ),
                 paddingDatePicker: EdgeInsets.all(0),
-                paddingMonthHeader: EdgeInsets.all(32),
-                paddingActionBar: EdgeInsets.all(16),
-                paddingDateYearHeader: EdgeInsets.all(32),
-                sizeArrow: 50,
+                paddingMonthHeader: EdgeInsets.all(28),
+                paddingActionBar: EdgeInsets.all(13),
+                paddingDateYearHeader: EdgeInsets.all(28),
+                sizeArrow: 40,
                 colorArrowNext: Color(0XFFB1BDD3),
                 colorArrowPrevious: Color(0XFFB1BDD3),
-                marginLeftArrowPrevious: 16,
-                marginTopArrowPrevious: 16,
-                marginTopArrowNext: 16,
-                marginRightArrowNext: 32,
+                marginLeftArrowPrevious: 13,
+                marginTopArrowPrevious: 13,
+                marginTopArrowNext: 13,
+                marginRightArrowNext: 28,
                 textStyleButtonAction: TextStyle(fontSize: 28, color: Color(0XFFB1BDD3)),
                 textStyleButtonPositive:
                 TextStyle(fontSize: 28, color: Color(0XFFB1BDD3), fontWeight: FontWeight.bold),
@@ -285,9 +285,9 @@ class _AddNewFormState extends State<AddNewForm> {
                 backgroundHeaderMonth: Color(0XFFE4EDFF),
               ),
               styleYearPicker: MaterialRoundedYearPickerStyle(
-                textStyleYear: TextStyle(fontSize: 40, color: Colors.white),
+                textStyleYear: TextStyle(fontSize: 35, color: Colors.white),
                 textStyleYearSelected:
-                TextStyle(fontSize: 56, color: Colors.white, fontWeight: FontWeight.bold),
+                TextStyle(fontSize: 45, color: Colors.white, fontWeight: FontWeight.bold),
                 heightYearRow: 100,
                 backgroundPicker: Colors.deepPurple[400],
               ),
@@ -318,15 +318,15 @@ class _AddNewFormState extends State<AddNewForm> {
           },
           decoration: InputDecoration(
             hintText: "Enter the date",
-            hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+            hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 15, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
             floatingLabelBehavior: FloatingLabelBehavior.always,
             enabledBorder: outlineBorder(),
             focusedBorder: outlineBorder(),
-            contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           ),
           style: TextStyle(
             fontFamily: "NunitoSans",
-            fontSize: 20,
+            fontSize: 15,
             fontWeight: FontWeight.w700,
             color: Colors.black.withOpacity(.5),
           ),
@@ -338,11 +338,11 @@ class _AddNewFormState extends State<AddNewForm> {
 
   Container buildPriorityForm() {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.275,
+      width: MediaQuery.of(context).size.width * 0.32,
       height: MediaQuery.of(context).size.width * 0.11,
       decoration: buildNeumorphicTextField(),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: DropdownButton<String>(
           underline: Container(
             height: 2,
@@ -352,7 +352,7 @@ class _AddNewFormState extends State<AddNewForm> {
           icon: Icon(Icons.arrow_drop_down_rounded),
           style: TextStyle(
             fontFamily: "NunitoSans",
-            fontSize: 20,
+            fontSize: 15,
             fontWeight: FontWeight.w700,
             color: Colors.black.withOpacity(.5),
           ),
@@ -375,20 +375,21 @@ class _AddNewFormState extends State<AddNewForm> {
 
   Container buildTitleForm() {
     return Container(
+      height: MediaQuery.of(context).size.width * 0.11,
       width: MediaQuery.of(context).size.width * 0.85,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Enter the title",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 15, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 15,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
@@ -400,7 +401,7 @@ class _AddNewFormState extends State<AddNewForm> {
   BoxDecoration buildNeumorphicTextField() {
     return BoxDecoration(
       color: Color(0XFFE5EBF2),
-      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+      borderRadius: BorderRadius.all(Radius.circular(15.0)),
       boxShadow: [
         BoxShadow(
           blurRadius: 5.0,

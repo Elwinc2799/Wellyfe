@@ -8,14 +8,14 @@ class AppointmentHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+      padding: const EdgeInsets.symmetric(horizontal: 17.5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             "Next Appointment",
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 22,
               fontFamily: "NunitoSans",
               color: Color(0XFF394D70),
               fontWeight: FontWeight.w700,
@@ -26,7 +26,7 @@ class AppointmentHeader extends StatelessWidget {
             child: Text(
               "See More",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 15,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,

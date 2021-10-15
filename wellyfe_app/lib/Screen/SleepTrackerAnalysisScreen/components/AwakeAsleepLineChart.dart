@@ -32,7 +32,7 @@ class _AwakeLineChartState extends State<AwakeLineChart> {
         bottomTitles: SideTitles(
           showTitles: true,
           margin: 10,
-          getTextStyles: (value) => TextStyle(
+          getTextStyles: (build, value) => TextStyle(
               color: Color(0XFF394D70).withOpacity(0.35),
               fontWeight: FontWeight.bold,
               fontSize: 10

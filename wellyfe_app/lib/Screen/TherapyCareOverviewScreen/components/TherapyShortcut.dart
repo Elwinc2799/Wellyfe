@@ -17,15 +17,15 @@ class TherapyShortcut extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+      padding: const EdgeInsets.symmetric(horizontal: 17.5),
       child: Container(
         height: size.height * 0.2,
-        width: size.width * 0.8675,
+        width: size.width * 0.87,
         child: SingleChildScrollView(
           physics: BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 25.0),
             child: Row(
               children: List.generate(therapyList.length, (i) {
                 return Row(

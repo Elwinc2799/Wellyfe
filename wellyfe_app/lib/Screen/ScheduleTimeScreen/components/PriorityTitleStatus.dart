@@ -19,7 +19,7 @@ class PriorityTitleStatus extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
-      padding: const EdgeInsets.fromLTRB(25.0, 17.5, 0, 17.5),
+      padding: const EdgeInsets.fromLTRB(22.5, 15, 0, 15),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,7 @@ class PriorityTitleStatus extends StatelessWidget {
               child: Text(
                 priority.toUpperCase() + " PRIORITY",
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 12.5,
                   fontFamily: "NunitoSans",
                   fontWeight: FontWeight.w900,
                   color: color,
@@ -46,7 +46,7 @@ class PriorityTitleStatus extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 20,
               fontFamily: "NunitoSans",
               fontWeight: FontWeight.w700,
               color: Color(0XFF344460),
@@ -55,7 +55,7 @@ class PriorityTitleStatus extends StatelessWidget {
           Text(
             status,
             style: TextStyle(
-              fontSize: 18.5,
+              fontSize: 13.5,
               fontFamily: "NunitoSans",
               fontWeight: FontWeight.w700,
               color: Color(0XFF344460).withOpacity(0.5),

@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Screen/PersonalQuestionnaireScreen/PersonalQuestionnaireScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/Screen/SignUpScreen/components/SignUpButton.dart';
 import 'package:wellyfe_app/constants.dart';
@@ -36,8 +38,25 @@ class _SignUpFormState extends State<SignUpForm> {
       }
 
       if (userCreated) {
-        Navigator.pop(context);
-        showNotification("Your account has been created successfully.\nPlease sign in.");
+        showNotification("Your account has been created successfully.");
+        try {
+          await FirebaseAuth.instance.signInWithEmailAndPassword(
+            email: email,
+            password: password,
+          );
+        } on FirebaseAuthException catch (e) {
+          if (e.code == 'user-not-found') {
+            showNotification("User does not exist.\nPlease try again.");
+          } else if (e.code == 'wrong-password') {
+            showNotification("Wrong password.\nPlease try again.");
+          } else if (e.code == 'invalid-email') {
+            showNotification("Please enter a valid email.");
+          }
+        }
+        Navigator.push(context, PageTransition(
+          type: PageTransitionType.fade,
+          child: PersonalQuestionnaireScreen()
+        ));
       }
     } else {
       showNotification("Your password does not match.\nPlease try again.");
@@ -77,7 +96,7 @@ class _SignUpFormState extends State<SignUpForm> {
       context: context,
       animation: StyledToastAnimation.fade,
       reverseAnimation: StyledToastAnimation.fade,
-      duration: Duration(seconds: 3),
+      duration: Duration(seconds: 2),
       position: StyledToastPosition.center,
     );
   }

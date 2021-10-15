@@ -16,8 +16,8 @@ class SignInButton extends StatelessWidget {
       child: GestureDetector(
         onTap: function,
         child: Container(
-          height: size.height * 0.04,
-          width: size.width * 0.35,
+          height: size.height * 0.045,
+          width: size.width * 0.5,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100),
             color: Color(0XFFFF27B0),
@@ -27,7 +27,7 @@ class SignInButton extends StatelessWidget {
             "Sign In",
             style: TextStyle(
               fontFamily: "NunitoSans",
-              fontSize: 20,
+              fontSize: 17.5,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),

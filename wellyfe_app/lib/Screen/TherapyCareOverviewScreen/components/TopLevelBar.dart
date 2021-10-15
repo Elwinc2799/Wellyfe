@@ -9,14 +9,14 @@ class TopLevelBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0),
+      padding: const EdgeInsets.fromLTRB(17.5, 75.0, 17.5, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             DateFormat('EEEE, d MMM').format(DateTime.now()),
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 23,
               fontFamily: "NunitoSans",
               color: Color(0XFF394D70),
               fontWeight: FontWeight.w700,

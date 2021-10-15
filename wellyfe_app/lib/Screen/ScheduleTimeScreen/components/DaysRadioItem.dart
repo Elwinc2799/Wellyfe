@@ -22,14 +22,14 @@ class DaysRadioItem extends StatelessWidget {
           AnimatedContainer(
             duration: const Duration(seconds: 1),
             curve: Curves.fastOutSlowIn,
-            height: size.height * 0.075,
-            width: size.width * 0.1,
+            height: size.height * 0.065,
+            width: size.width * 0.095,
             child: Center(
               child: Text(
                 text,
                 style: TextStyle(
                   color: isSelected ? Colors.white : Color(0XFF344460),
-                  fontSize: 22.5,
+                  fontSize: 15,
                   fontFamily: "NunitoSans",
                   fontWeight: FontWeight.w700,
                 )
@@ -37,7 +37,7 @@ class DaysRadioItem extends StatelessWidget {
             ),
             decoration: BoxDecoration(
               color: isSelected ? Colors.blueAccent : Colors.white.withOpacity(0.3),
-              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              borderRadius: BorderRadius.all(Radius.circular(12.5)),
             ),
           ),
         ],

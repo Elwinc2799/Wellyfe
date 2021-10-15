@@ -22,7 +22,7 @@ class DoctorLowContainer extends StatelessWidget {
         width: size.width,
         decoration: BoxDecoration(
             color: Color(0XFFFBFDFF),
-            borderRadius: BorderRadius.circular(40.0)
+            borderRadius: BorderRadius.circular(20.0)
         ),
         child: Padding(
           padding: const EdgeInsets.only(top: 50.0),
@@ -31,7 +31,7 @@ class DoctorLowContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 75.0, vertical: 15.0),
+                padding: const EdgeInsets.symmetric(horizontal: 75.0, vertical: 5),
                 child: Divider(
                   thickness: 1,
                 ),
@@ -45,7 +45,7 @@ class DoctorLowContainer extends StatelessWidget {
                       Text(
                         "About",
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w700,
@@ -57,12 +57,12 @@ class DoctorLowContainer extends StatelessWidget {
                         child: SingleChildScrollView(
                           physics: BouncingScrollPhysics(),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 10.0),
+                            padding: const EdgeInsets.symmetric(vertical: 7.5),
                             child: Text(
                               doctor.biography,
                               textAlign: TextAlign.justify,
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontFamily: "NunitoSans",
                                 color: Color(0XFF394D70),
                                 fontWeight: FontWeight.w700,

@@ -24,7 +24,7 @@ class TitleTimeMood extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              fontSize: 40,
+              fontSize: 25,
               fontFamily: "Montserrat",
               color: Color(0XFF525252),
               fontWeight: FontWeight.w600,
@@ -34,7 +34,7 @@ class TitleTimeMood extends StatelessWidget {
           Text(
             time,
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 17.5,
               fontFamily: "Montserrat",
               color: Colors.grey.shade400,
               fontWeight: FontWeight.w600,
@@ -46,8 +46,8 @@ class TitleTimeMood extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Image(image: AssetImage("assets/logo/$mood.png")),
-                Image(image: AssetImage("assets/weather/$weather.png"))
+                Image(image: AssetImage("assets/logo/$mood.png"), width: 20, height: 20,),
+                Image(image: AssetImage("assets/weather/$weather.png"), width: 20, height: 20,)
               ],
             ),
           )

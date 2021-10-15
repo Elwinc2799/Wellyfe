@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.only(top: 100),
+        padding: const EdgeInsets.only(top: 70),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,7 +33,7 @@ class Body extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: "Nunito",
                         color: Color(0XFF394D70),
-                        fontSize: 30,
+                        fontSize: 22,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -42,7 +42,7 @@ class Body extends StatelessWidget {
                   DaysList(),
                   SizedBox(height: size.height * 0.03),
                   MidLevelDivider(),
-                  SizedBox(height: size.height * 0.03),
+                  SizedBox(height: size.height * 0.005),
                   Container(
                     height: size.height * 0.475,
                     child: Padding(

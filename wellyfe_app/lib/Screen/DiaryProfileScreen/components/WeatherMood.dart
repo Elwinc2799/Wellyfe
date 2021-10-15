@@ -20,11 +20,11 @@ class _WeatherMoodState extends State<WeatherMood> {
     return AnimatedContainer(
       duration: const Duration(seconds: 1),
       curve: Curves.fastOutSlowIn,
-      height: size.height * 0.215,
+      height: size.height * 0.23,
       width: size.width * 0.8,
       decoration: BoxDecoration(
           color: Color(0XFFE5EBF2),
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
           boxShadow: [
             BoxShadow(
                 blurRadius: 5.0,
@@ -72,7 +72,7 @@ class _WeatherMoodState extends State<WeatherMood> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width * 0.3,
+      width: size.width * 0.35,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -85,7 +85,7 @@ class _WeatherMoodState extends State<WeatherMood> {
             child: Text(
               "Weather",
               style: TextStyle(
-                fontSize: 21,
+                fontSize: 17,
                 fontFamily: "TitilliumWeb",
                 color: isWeather ? Colors.grey.shade600 : Colors.grey.shade400,
                 fontWeight: FontWeight.w700,
@@ -106,7 +106,7 @@ class _WeatherMoodState extends State<WeatherMood> {
             child: Text(
               "Mood",
               style: TextStyle(
-                fontSize: 21,
+                fontSize: 17,
                 fontFamily: "TitilliumWeb",
                 color: isWeather ? Colors.grey.shade400 : Colors.grey.shade600,
                 fontWeight: FontWeight.w700,
@@ -144,7 +144,7 @@ class DataBarIcon extends StatelessWidget {
           Text(
             data.toString(),
             style: TextStyle(
-              fontSize: 21,
+              fontSize: 16,
               fontFamily: "TitilliumWeb",
               color: Colors.grey.shade600,
               fontWeight: FontWeight.w700,
@@ -159,7 +159,7 @@ class DataBarIcon extends StatelessWidget {
             ),
           ),
           SizedBox(height: size.height * 0.01),
-          Image(image: AssetImage("assets/logo/$icon.png"))
+          Image(image: AssetImage("assets/logo/$icon.png"), width: 20, height: 20,)
         ],
       ),
     );

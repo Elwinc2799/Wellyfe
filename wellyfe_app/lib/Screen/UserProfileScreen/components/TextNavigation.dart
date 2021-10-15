@@ -26,7 +26,7 @@ class TextNavigation extends StatelessWidget {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 15,
               fontFamily: "NunitoSans",
               color: Colors.white,
               fontWeight: FontWeight.w700,
@@ -35,7 +35,7 @@ class TextNavigation extends StatelessWidget {
         ),
         Container(
           height: size.height * 0.0375,
-          width: size.width * 0.3,
+          width: size.width * 0.325,
           decoration: BoxDecoration(
               border: Border.all(
                   color: Colors.white,
@@ -50,7 +50,7 @@ class TextNavigation extends StatelessWidget {
                 navigationTitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 17.5,
+                  fontSize: 12.5,
                   fontFamily: "NunitoSans",
                   color: Colors.white,
                   fontWeight: FontWeight.w700,

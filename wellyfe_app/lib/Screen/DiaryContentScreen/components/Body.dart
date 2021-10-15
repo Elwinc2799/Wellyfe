@@ -42,8 +42,9 @@ class Body extends StatelessWidget {
                 height: size.height * 0.25,
                 child: Text(
                   diary.content,
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
-                    fontSize: 27.5,
+                    fontSize: 17.5,
                     fontFamily: "Montserrat",
                     color: Colors.black.withOpacity(0.75),
                     fontWeight: FontWeight.w600,

@@ -22,17 +22,18 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 100.0),
+        padding: const EdgeInsets.symmetric(horizontal: 17.5, vertical: 75.0),
         child: Column(
           children: [
             TopLevelBar(therapy: specialisation),
             SizedBox(height: size.height * 0.1),
             Container(
               height: size.height * 0.6,
-              width: size.width * 0.85,
+              width: size.width * 0.9,
               child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: List.generate(doctorList.length, (index) {
                     return Column(
                       children: [

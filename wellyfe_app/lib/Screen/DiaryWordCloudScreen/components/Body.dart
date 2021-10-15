@@ -35,7 +35,7 @@ class Body extends StatelessWidget {
               Text(
                 "Word Cloud of Your Diary",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 22.5,
                   fontFamily: "Montserrat",
                   color: Color(0XFF394D70),
                   fontWeight: FontWeight.w700,

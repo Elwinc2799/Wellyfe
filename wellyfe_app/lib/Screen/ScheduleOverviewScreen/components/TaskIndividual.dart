@@ -33,8 +33,10 @@ class _TaskIndividualState extends State<TaskIndividual> {
                 uncheckedWidget: Icon(
                   Icons.done,
                   color: Colors.deepPurpleAccent,
+                  size: 20,
                 ),
                 onTap: (selected) {},
+                size: 30,
               ),
               SizedBox(width: size.width * 0.05),
               Container(
@@ -45,7 +47,7 @@ class _TaskIndividualState extends State<TaskIndividual> {
                     Text(
                       widget.task,
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 17.5,
                         fontFamily: "NunitoSans",
                         fontWeight: FontWeight.w600,
                         color: widget.isDone ? Colors.grey[400] : Color(0XFF344460),
@@ -58,7 +60,7 @@ class _TaskIndividualState extends State<TaskIndividual> {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(80.0, 0, 50.0, 0),
+            padding: const EdgeInsets.fromLTRB(50.0, 0, 50.0, 0),
             child: Divider(
               thickness: 1.5,
             ),

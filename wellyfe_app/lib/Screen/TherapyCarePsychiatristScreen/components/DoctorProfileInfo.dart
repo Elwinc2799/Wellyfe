@@ -19,11 +19,11 @@ class DoctorProfileInfo extends StatelessWidget {
     return Positioned(
         top: size.height * 0.3,
         child: Container(
-          height: size.height * 0.125,
+          height: size.height * 0.12,
           width: size.width * 0.8,
           decoration: BoxDecoration(
             color: Color(0XFF70A5D7),
-            borderRadius: BorderRadius.circular(50.0),
+            borderRadius: BorderRadius.circular(40.0),
             boxShadow: [
               BoxShadow(
                 offset: Offset(0, 3),
@@ -39,7 +39,7 @@ class DoctorProfileInfo extends StatelessWidget {
               Text(
                 "Dr. $name",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 23,
                   fontFamily: "NunitoSans",
                   color: Colors.white,
                   fontWeight: FontWeight.w700,
@@ -48,7 +48,7 @@ class DoctorProfileInfo extends StatelessWidget {
               Text(
                 "Specialist in $specialist counselling",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 15,
                   fontFamily: "NunitoSans",
                   color: Colors.white,
                   fontWeight: FontWeight.w700,
@@ -57,7 +57,7 @@ class DoctorProfileInfo extends StatelessWidget {
               Text(
                 university,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 15,
                   fontFamily: "NunitoSans",
                   color: Colors.white,
                   fontWeight: FontWeight.w700,

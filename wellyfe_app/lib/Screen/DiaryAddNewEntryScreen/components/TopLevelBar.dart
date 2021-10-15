@@ -29,7 +29,7 @@ class TopLevelBar extends StatelessWidget {
                     "MY",
                     style: TextStyle(
                       height: 0.25,
-                      fontSize: 15,
+                      fontSize: 12.5,
                       fontFamily: "Montserrat",
                       color: Colors.grey.shade600,
                       fontWeight: FontWeight.w600,
@@ -38,7 +38,7 @@ class TopLevelBar extends StatelessWidget {
                   Text(
                     "DIARY",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 12.5,
                       fontFamily: "Montserrat",
                       color: Colors.grey.shade600,
                       fontWeight: FontWeight.w900,
@@ -50,7 +50,7 @@ class TopLevelBar extends StatelessWidget {
           ),
           Container(
             height: size.height * 0.04,
-            width: size.width * 0.7,
+            width: size.width * 0.65,
             decoration: BoxDecoration(
               border: Border.all(
                   color: Colors.grey.shade400,
@@ -62,7 +62,7 @@ class TopLevelBar extends StatelessWidget {
               child: Text(
                 DateFormat('EEE, d MMM / y').format(DateTime.now()).toUpperCase(),
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 17.5,
                   fontFamily: "Montserrat",
                   color: Colors.grey.shade600,
                 ),
@@ -72,7 +72,7 @@ class TopLevelBar extends StatelessWidget {
           GestureDetector(
             onTap: function,
             child: Image(
-              image: AssetImage("assets/logo/tick.png"),
+              image: AssetImage("assets/logo/tick.png"), width: 20, height: 20,
             ),
           )
         ],

@@ -23,7 +23,7 @@ class _WeightLineChartState extends State<WeightLineChart> {
       titlesData: FlTitlesData(
         bottomTitles: SideTitles(
           showTitles: true,
-          getTextStyles: (value) => TextStyle(
+          getTextStyles: (build, value) => TextStyle(
             color: Color(0XFF68737D),
               fontWeight: FontWeight.bold,
               fontSize: 17.5

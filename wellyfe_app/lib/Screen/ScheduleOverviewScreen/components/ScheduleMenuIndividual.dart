@@ -20,10 +20,10 @@ class ScheduleMenuIndividual extends StatelessWidget {
 
     return Container(
       width: size.width * 0.4,
-      height: size.height * 0.115,
+      height: size.height * 0.1,
       decoration: BoxDecoration(
         color: Color(0XFFE5EBF2),
-        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        borderRadius: BorderRadius.all(Radius.circular(15.0)),
         boxShadow: [
           BoxShadow(
             blurRadius: 5.0,
@@ -37,23 +37,22 @@ class ScheduleMenuIndividual extends StatelessWidget {
           )
         ]
       ),
-      child: Stack(
-        children: [
-          Positioned(
-              top: size.height * (0.125 / 3.75),
-              left: size.width * (0.4 / 12.5),
-              child: Image(image: AssetImage(asset),width: 30, height: 30)
-          ),
-          Positioned(
-            top: size.height * (0.125 / 4.5),
-            left: size.width * (0.4 / 7) * 2.5,
-            child: Column(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(asset, height: 32.5, width: 32.5,),
+            SizedBox(width: size.width * 0.035,),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   total.toString(),
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 23,
                     fontFamily: "NunitoSans",
                     fontWeight: FontWeight.w700,
                     color: Color(0XFF394D70),
@@ -62,16 +61,16 @@ class ScheduleMenuIndividual extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                     fontFamily: "NunitoSans",
                     fontWeight: FontWeight.w700,
                     color: Color(0XFF394D70),
                   ),
                 )
               ],
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

@@ -44,8 +44,8 @@ class DiaryContainer extends StatelessWidget {
         ));
       },
       child: Container(
-        height: size.height * 0.25,
-        width: size.width * 0.85,
+        height: size.height * 0.20,
+        width: size.width * 0.80,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(10.0)),

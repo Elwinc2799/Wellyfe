@@ -17,7 +17,7 @@ class _MidLevelBarState extends State<MidLevelBar> {
         Text(
           "Tasks",
           style: TextStyle(
-            fontSize: 25,
+            fontSize: 20,
             fontFamily: "NunitoSans",
             fontWeight: FontWeight.w800,
             color: Color(0XFF394D70),
@@ -33,7 +33,7 @@ class _MidLevelBarState extends State<MidLevelBar> {
           child: Text(
             "Add new task",
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 17.5,
               fontFamily: "NunitoSans",
               fontWeight: FontWeight.w800,
               color: Color(0XFF9C7EFD),

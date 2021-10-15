@@ -80,13 +80,16 @@ class _PictureContainerState extends State<PictureContainer> {
               ? Center(
                 child: GestureDetector(
                   onTap: pickImage,
-                  child: Container(
-                      height: 150,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.grey
-                      ),
-                      child: Image(image: AssetImage("assets/logo/plus.png"),)
+                  child: SizedBox(
+                    height: 90,
+                    width: 90,
+                    child: Container(
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.grey
+                        ),
+                        child: Image(image: AssetImage("assets/logo/plus.png"),)
+                    ),
                   ),
                 ),
               )

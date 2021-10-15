@@ -15,7 +15,7 @@ class GraphTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20.0),
+      padding: const EdgeInsets.only(left: 17.5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -24,7 +24,7 @@ class GraphTitle extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 22,
                   fontFamily: "NunitoSans",
                   fontWeight: FontWeight.w800,
                   color: Color(0XFFB8C6DE),
@@ -35,7 +35,7 @@ class GraphTitle extends StatelessWidget {
                 child: Text(
                   "Task per day",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 14.5,
                     fontFamily: "NunitoSans",
                     fontWeight: FontWeight.w800,
                     color: Color(0XFF344460).withOpacity(0.5),
@@ -47,6 +47,7 @@ class GraphTitle extends StatelessWidget {
           isBubble
           ? Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               LegendIndividual(
                 priority: "Low",

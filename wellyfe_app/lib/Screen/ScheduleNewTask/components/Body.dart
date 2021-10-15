@@ -9,33 +9,36 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0, 150.0, 20.0, 0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Your schedule matter to us.",
-              style: TextStyle(
-                fontSize: 25,
-                fontFamily: "NunitoSans",
-                fontWeight: FontWeight.w400,
-                color: Color(0XFF394D70)
+        padding: const EdgeInsets.fromLTRB(25.0, 100.0, 10.0, 0),
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Your schedule matter to us.",
+                style: TextStyle(
+                  fontSize: 21,
+                  fontFamily: "NunitoSans",
+                  fontWeight: FontWeight.w400,
+                  color: Color(0XFF394D70)
+                ),
               ),
-            ),
-            SizedBox(height: size.height * 0.005),
-            Text(
-              "Add New Task",
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: "NunitoSans",
-                fontWeight: FontWeight.bold,
-                color: Color(0XFF394D70),
+              SizedBox(height: size.height * 0.005),
+              Text(
+                "Add New Task",
+                style: TextStyle(
+                  fontSize: 31,
+                  fontFamily: "NunitoSans",
+                  fontWeight: FontWeight.bold,
+                  color: Color(0XFF394D70),
+                ),
               ),
-            ),
-            SizedBox(height: size.height * 0.05),
-            AddNewForm(),
-          ],
+              SizedBox(height: size.height * 0.05),
+              AddNewForm(),
+            ],
+          ),
         ),
       ),
     );

@@ -89,7 +89,7 @@ class _BodyState extends State<Body> {
           Center(
             child: GlassmorphicContainer(
               height: size.height * 0.325,
-              width: size.width * 0.8,
+              width: size.width * 0.875,
               borderRadius: 20,
               blur: 10,
               alignment: Alignment.bottomCenter,
@@ -115,7 +115,7 @@ class _BodyState extends State<Body> {
                 ],
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -125,7 +125,7 @@ class _BodyState extends State<Body> {
                         Text(
                           UserProfile.userDetails.name,
                           style: TextStyle(
-                            fontSize: 40,
+                            fontSize: 30,
                             fontFamily: "NunitoSans",
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
@@ -136,7 +136,7 @@ class _BodyState extends State<Body> {
                             pickImage();
                           },
                           child: Image(
-                            image: AssetImage("assets/logo/edit.png"),
+                            image: AssetImage("assets/logo/edit.png"), width: 25, height: 25,
                           ),
                         )
                       ],
@@ -145,7 +145,7 @@ class _BodyState extends State<Body> {
                     Text(
                       UserProfile.userDetails.userEmail,
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 17.5,
                         fontFamily: "NunitoSans",
                         color: Colors.white,
                         fontWeight: FontWeight.w700,

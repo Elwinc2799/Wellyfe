@@ -70,19 +70,19 @@ class Body extends StatelessWidget {
                   Text(
                     DateFormat('y').format(DateTime.now()),
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 20,
                       fontFamily: "Montserrat",
                       color: Color(0XFF394D70),
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(height: size.height * 0.1),
+                  SizedBox(height: size.height * 0.075),
                   CarouselSlider(
                     items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) {
                       return Builder(
                         builder: (BuildContext context) {
                           return Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 10.0),
+                            padding: const EdgeInsets.symmetric(vertical: 10),
                             child: MonthContainer(
                               monthNumber: i,
                               monthString: getMonth(i),
@@ -104,7 +104,7 @@ class Body extends StatelessWidget {
                     options: CarouselOptions(
                       initialPage: DateTime.now().month - 1,
                       height: size.height * 0.45,
-                      enableInfiniteScroll: false,
+                      enableInfiniteScroll: true,
                       viewportFraction: 0.75,
                     ),
                   ),

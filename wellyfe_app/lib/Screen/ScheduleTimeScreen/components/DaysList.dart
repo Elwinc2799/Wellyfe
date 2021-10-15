@@ -42,6 +42,7 @@ class _DaysListState extends State<DaysList> {
     Size size = MediaQuery.of(context).size;
 
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
           height: size.height * 0.085,
@@ -50,7 +51,7 @@ class _DaysListState extends State<DaysList> {
             shrinkWrap: true,
             children: List.generate(days.length, (index) {
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 7.5),
                 child: GestureDetector(
                   onTap: () {
                     setState(() {

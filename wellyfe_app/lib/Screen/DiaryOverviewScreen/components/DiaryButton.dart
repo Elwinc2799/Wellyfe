@@ -44,7 +44,7 @@ class _DiaryButtonState extends State<DiaryButton> {
           child: Text(
             widget.title,
             style: TextStyle(
-              fontSize: 22.5,
+              fontSize: 16,
               fontFamily: "Montserrat",
               color: Color(0XFF394D70),
               fontWeight: FontWeight.w600,

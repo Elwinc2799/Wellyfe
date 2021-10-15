@@ -15,10 +15,10 @@ class QualificationContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 90,
-      width: 150,
+      height: 65,
+      width: 105,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(10.0),
           color: color,
           boxShadow: [
             BoxShadow(
@@ -39,7 +39,7 @@ class QualificationContainer extends StatelessWidget {
           Text(
             data,
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 17.5,
               fontFamily: "NunitoSans",
               color: Colors.white,
               fontWeight: FontWeight.w700,
@@ -48,7 +48,7 @@ class QualificationContainer extends StatelessWidget {
           Text(
             qualification,
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 15,
               fontFamily: "NunitoSans",
               color: Colors.white,
               fontWeight: FontWeight.w700,

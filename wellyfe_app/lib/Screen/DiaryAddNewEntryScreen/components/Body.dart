@@ -37,46 +37,49 @@ class _BodyState extends State<Body> {
 
     return Background(
         children: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 75.0),
-          child: Column(
-            children: [
-              TopLevelBar(
-                function: () {
-                  addNewDiary(
-                    _titleController.text,
-                    _contentController.text,
-                    emoji.value,
-                    weather.value,
-                    favourite,
-                  );
-                  Navigator.pop(context);
-                },
-              ),
-              SizedBox(height: size.height * 0.03),
-              Container(
-                height: size.height * 0.775,
-                child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  child: Column(
-                    children: [
-                      PictureContainer(),
-                      SizedBox(height: size.height * 0.03),
-                      Center(
-                          child: Form(
-                            child: Column(
-                              children: [
-                                buildTitleContainer(),
-                                buildEmojiContainer(),
-                                buildContentContainer(),
-                              ],
+          padding: const EdgeInsets.symmetric(vertical: 65.0),
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                TopLevelBar(
+                  function: () {
+                    addNewDiary(
+                      _titleController.text,
+                      _contentController.text,
+                      emoji.value,
+                      weather.value,
+                      favourite,
+                    );
+                    Navigator.pop(context);
+                  },
+                ),
+                SizedBox(height: size.height * 0.03),
+                Container(
+                  height: size.height * 0.76,
+                  child: SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    child: Column(
+                      children: [
+                        PictureContainer(),
+                        SizedBox(height: size.height * 0.03),
+                        Center(
+                            child: Form(
+                              child: Column(
+                                children: [
+                                  buildTitleContainer(),
+                                  buildEmojiContainer(),
+                                  buildContentContainer(),
+                                ],
+                              ),
                             ),
-                          ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         )
     );
@@ -133,7 +136,7 @@ class _BodyState extends State<Body> {
                   duration: const Duration(seconds: 1),
                   curve: Curves.fastOutSlowIn,
                   decoration: BoxDecoration(shape: BoxShape.circle),
-                  child: Image(image: AssetImage("assets/logo/${emoji.value}.png")),
+                  child: Image(image: AssetImage("assets/logo/${emoji.value}.png"), width: 15, height: 15,),
                 )
             ),
             GestureDetector(
@@ -162,7 +165,7 @@ class _BodyState extends State<Body> {
                   duration: const Duration(seconds: 1),
                   curve: Curves.fastOutSlowIn,
                   decoration: BoxDecoration(shape: BoxShape.circle),
-                  child: Image(image: AssetImage("assets/logo/${weather.value}.png"))
+                  child: Image(image: AssetImage("assets/logo/${weather.value}.png"), width: 15, height: 15,)
               ),
             )
           ],
@@ -184,7 +187,7 @@ class _BodyState extends State<Body> {
         decoration: InputDecoration(
           hintText: "How was your day?",
           hintStyle: TextStyle(
-            fontSize: 30,
+            fontSize: 20,
             fontFamily: "Montserrat",
             color: Colors.grey.shade500,
             fontWeight: FontWeight.w400,
@@ -194,7 +197,7 @@ class _BodyState extends State<Body> {
         ),
         textAlign: TextAlign.justify,
         style: TextStyle(
-          fontSize: 30,
+          fontSize: 20,
           fontFamily: "Montserrat",
           color: Colors.grey.shade500,
           fontWeight: FontWeight.w400,
@@ -214,7 +217,7 @@ class _BodyState extends State<Body> {
         decoration: InputDecoration(
           hintText: "Title",
           hintStyle: TextStyle(
-            fontSize: 40,
+            fontSize: 27.5,
             fontFamily: "Montserrat",
             color: Colors.grey.shade500,
             fontWeight: FontWeight.w600,
@@ -224,7 +227,7 @@ class _BodyState extends State<Body> {
         ),
         textAlign: TextAlign.center,
         style: TextStyle(
-          fontSize: 40,
+          fontSize: 27.5,
           fontFamily: "Montserrat",
           color: Colors.grey.shade500,
           fontWeight: FontWeight.w600,
@@ -240,7 +243,7 @@ class _BodyState extends State<Body> {
       builder: (context) => Container(
         height: size.height * 0.2,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100.0, vertical: 30.0),
+          padding: const EdgeInsets.symmetric(horizontal: 100.0, vertical: 15.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -257,7 +260,7 @@ class _BodyState extends State<Body> {
                                   emoji.value = emojiList[j];
                                 });
                               },
-                              child: Image(image: AssetImage("assets/emoji/${emojiList[j]}.png"))
+                              child: Image(image: AssetImage("assets/emoji/${emojiList[j]}.png"), width: 25, height: 25,)
                           ),
                       ],
                     ),
@@ -294,7 +297,7 @@ class _BodyState extends State<Body> {
                                   weather.value = weatherList[j];
                                 });
                               },
-                              child: Image(image: AssetImage("assets/weather/${weatherList[j]}.png"))
+                              child: Image(image: AssetImage("assets/weather/${weatherList[j]}.png"), width: 25, height: 25,)
                           ),
                       ],
                     ),

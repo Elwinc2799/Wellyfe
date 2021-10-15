@@ -18,7 +18,7 @@ class TaskTimeline extends StatelessWidget {
     Color color = task.findColor();
 
     return Container(
-      height: size.height * 0.125,
+      height: size.height * 0.12,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -26,12 +26,12 @@ class TaskTimeline extends StatelessWidget {
             startTime: task.timeUtilityFunction(task.startTime),
             endTime: task.timeUtilityFunction(task.endTime),
           ),
-          SizedBox(width: size.width * 0.1),
+          SizedBox(width: size.width * 0.055),
           GlassmorphicContainer(
             height: size.height * 0.125,
-            width: size.width * 0.65,
+            width: size.width * 0.675,
             border: 2.5,
-            borderRadius: 15,
+            borderRadius: 10,
             blur: 2,
             linearGradient: LinearGradient(
               begin: Alignment.topLeft,
@@ -62,8 +62,8 @@ class TaskTimeline extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: color,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20.0),
-                      bottomLeft: Radius.circular(20.0),
+                      topLeft: Radius.circular(10.0),
+                      bottomLeft: Radius.circular(10.0),
                     ),
                   ),
                 ),

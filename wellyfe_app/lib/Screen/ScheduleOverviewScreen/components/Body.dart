@@ -21,15 +21,15 @@ class Body extends StatelessWidget {
       onWillPop: _onWillPop,
       child: Background(
         children: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 100),
+          padding: const EdgeInsets.symmetric(vertical: 70),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TopLevelBar(),
-              SizedBox(height: size.height * 0.075),
+              SizedBox(height: size.height * 0.065),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Column(
                   children: [
                     ScheduleMenu(),

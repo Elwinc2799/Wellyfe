@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
         children: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0.0),
+              padding: const EdgeInsets.fromLTRB(17.5, 75.0, 17.5, 0.0),
               child: TopLevelBar(),
             ),
             Container(
@@ -34,12 +34,10 @@ class Body extends StatelessWidget {
                 children: [
                   Positioned(
                     top: 0,
-                    child: Container(
+                    child: Image(
+                      image: AssetImage("assets/pictures/doctor1.png"),
                       height: size.height * 0.35,
-                      width: size.width * 0.75,
-                      child: Image(
-                        image: AssetImage("assets/pictures/doctor1.png"),
-                      ),
+                      width: size.width * 0.85,
                     ),
                   ),
                   DoctorLowContainer(

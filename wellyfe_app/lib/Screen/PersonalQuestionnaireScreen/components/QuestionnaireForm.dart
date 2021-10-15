@@ -18,21 +18,21 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
     Size size = MediaQuery.of(context).size;
 
     return Form(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextFieldLabel(label: "Name"),
-          buildNameFormField(),
-          SizedBox(height: size.height * 0.035),
-          TextFieldLabel(label: "Age"),
-          buildAgeFormField(),
-          SizedBox(height: size.height * 0.035),
-          TextFieldLabel(label: "Gender"),
-          buildGenderFormField(),
-          SizedBox(height: size.height * 0.075),
-          NextButton()
-        ],
-      ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextFieldLabel(label: "Name"),
+            buildNameFormField(),
+            SizedBox(height: size.height * 0.035),
+            TextFieldLabel(label: "Age"),
+            buildAgeFormField(),
+            SizedBox(height: size.height * 0.035),
+            TextFieldLabel(label: "Gender"),
+            buildGenderFormField(),
+            SizedBox(height: size.height * 0.075),
+            NextButton()
+          ],
+        ),
     );
   }
 

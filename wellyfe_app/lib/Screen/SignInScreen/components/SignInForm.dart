@@ -5,7 +5,6 @@ import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
-import 'package:wellyfe_app/Screen/PersonalQuestionnaireScreen/PersonalQuestionnaireScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/constants.dart';
@@ -62,20 +61,15 @@ class _SignInFormState extends State<SignInForm> {
     });
 
     if (_isFirstOpen) {
-      prefs.setString(lastOpenKey, DateTime
-          .now()
-          .day
-          .toString());
+      prefs.setString(lastOpenKey, DateTime.now().day.toString());
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,
-       // child: DailyMoodScreen(),
-        child: HomeScreen(),
+        child: DailyMoodScreen(),
       ));
-    }
-     else {
+    } else {
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,
-         //child: PersonalQuestionnaireScreen(),
+        // child: PersonalQuestionnaireScreen()
         child: HomeScreen(),
       ));
     }
@@ -99,10 +93,12 @@ class _SignInFormState extends State<SignInForm> {
           SizedBox(height: size.height * 0.025),
           TextFieldLabel(label: "Password"),
           buildPasswordFormField(),
-          SizedBox(height: size.height * 0.025),
+          SizedBox(height: size.height * 0.035),
           SignInButton(
             function: () {
               signInUserWithEmail(_emailController.text, _passwordController.text);
+              _emailController.clear();
+              _passwordController.clear();
             }
           ),
         ],
@@ -124,19 +120,20 @@ class _SignInFormState extends State<SignInForm> {
   Container buildPasswordFormField() {
     return Container(
       width: MediaQuery.of(context).size.width * 0.85,
+      height: MediaQuery.of(context).size.width * 0.135,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Enter your password",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 17.5,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),
@@ -149,19 +146,20 @@ class _SignInFormState extends State<SignInForm> {
   Container buildEmailFormField() {
     return Container(
       width: MediaQuery.of(context).size.width * 0.85,
+      height: MediaQuery.of(context).size.width * 0.135,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Enter your email",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 17.5,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),

@@ -29,7 +29,7 @@ class TopLevelBar extends StatelessWidget {
         Text(
           DateFormat('EEEE, d MMM').format(date),
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 20,
             fontFamily: "NunitoSans",
             color: Color(0XFF394D70),
             fontWeight: FontWeight.w700,

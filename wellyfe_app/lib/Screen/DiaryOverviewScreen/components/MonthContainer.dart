@@ -30,11 +30,11 @@ class MonthContainer extends StatelessWidget {
         GestureDetector(
           onTap: function,
           child: Container(
-            height: size.height * 0.45,
+            height: size.height * 0.41,
             width: size.width * 0.6,
             decoration: BoxDecoration(
                 color: Color(0XFFE5EBF2),
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 boxShadow: [
                   BoxShadow(
                       blurRadius: 5.0,
@@ -49,7 +49,7 @@ class MonthContainer extends StatelessWidget {
                 ]
             ),
             child: Padding(
-              padding: const EdgeInsets.all(40.0),
+              padding: const EdgeInsets.all(30.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,7 +60,7 @@ class MonthContainer extends StatelessWidget {
                       Text(
                         monthNumber.toString(),
                         style: TextStyle(
-                          fontSize: 60,
+                          fontSize: 40,
                           fontFamily: "TitilliumWeb",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w500,
@@ -69,7 +69,7 @@ class MonthContainer extends StatelessWidget {
                       Text(
                         monthString,
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 30,
                           fontFamily: "TitilliumWeb",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w500,
@@ -103,7 +103,7 @@ class MonthContainer extends StatelessWidget {
                       Text(
                         datesFilled.toString() + " : " + getNumberOfDays(monthNumber).toString(),
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 17,
                           fontFamily: "TitilliumWeb",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w800,
@@ -123,7 +123,7 @@ class MonthContainer extends StatelessWidget {
             onTap: () {},
             child: Icon(
               Icons.more_horiz,
-              size: 50,
+              size: 40,
               color: Colors.grey.shade500,
             ),
           ),

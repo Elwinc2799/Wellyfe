@@ -22,11 +22,11 @@ class AppointmentContainer extends StatelessWidget {
 
     return Center(
       child: Container(
-        width: size.width * 0.9,
+        width: size.width * 0.915,
         height: size.height * 0.125,
         decoration: BoxDecoration(
             color: Color(0XFFE5EBF2),
-            borderRadius: BorderRadius.circular(20.0),
+            borderRadius: BorderRadius.circular(10.0),
             boxShadow: [
               BoxShadow(
                   blurRadius: 5.0,
@@ -41,14 +41,14 @@ class AppointmentContainer extends StatelessWidget {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 5.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
           child: Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  height: 85,
-                  width: 85,
+                  height: 60,
+                  width: 60,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0XFFE5EBF2),
@@ -71,7 +71,7 @@ class AppointmentContainer extends StatelessWidget {
                       child: Text(
                         name.substring(4, 5),
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 30,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w900,
@@ -90,7 +90,7 @@ class AppointmentContainer extends StatelessWidget {
                       Text(
                         therapy,
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 18,
                           fontFamily: "NunitoSans",
                           color: Colors.grey.shade500,
                           fontWeight: FontWeight.w700,
@@ -99,7 +99,7 @@ class AppointmentContainer extends StatelessWidget {
                       Text(
                         name,
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 22.5,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w700,
@@ -112,7 +112,7 @@ class AppointmentContainer extends StatelessWidget {
                             icon: CupertinoIcons.calendar,
                             time: date,
                           ),
-                          SizedBox(width: size.width * 0.025),
+                          SizedBox(width: size.width * 0.03),
                           IconTime(
                             width: 0.195,
                             icon: CupertinoIcons.clock,

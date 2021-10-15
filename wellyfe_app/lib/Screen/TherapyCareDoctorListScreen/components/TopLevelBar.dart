@@ -16,7 +16,7 @@ class TopLevelBar extends StatelessWidget {
         Text(
           therapy + " Therapy",
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 23,
             fontFamily: "NunitoSans",
             color: Color(0XFF394D70),
             fontWeight: FontWeight.w700,
@@ -27,8 +27,8 @@ class TopLevelBar extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Container(
-              width: 60,
-              height: 60,
+              width: 40,
+              height: 40,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Color(0XFFEBECF0),
@@ -49,7 +49,7 @@ class TopLevelBar extends StatelessWidget {
                   child: Icon(
                     Icons.arrow_back_ios_rounded,
                     color: Color(0XFF394D70),
-                    size: 30,
+                    size: 20,
                   )
               )
           ),

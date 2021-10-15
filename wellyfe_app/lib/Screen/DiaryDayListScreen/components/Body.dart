@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 100.0, horizontal: 30.0),
+        padding: const EdgeInsets.symmetric(vertical: 75.0, horizontal: 15.0),
         child: Column(
           children: [
             TopLevelBar(month: month),
@@ -48,7 +48,7 @@ class Body extends StatelessWidget {
                               title: diaryList[i].title,
                               id: diaryList[i].diaryID,
                             ),
-                            SizedBox(height: size.height * 0.03),
+                            SizedBox(height: size.height * 0.015),
                           ],
                         );
                       }),
@@ -59,12 +59,12 @@ class Body extends StatelessWidget {
                         SizedBox(height: size.height * 0.1),
                         Image(image: AssetImage("assets/pictures/emptyDiary.png")),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                           child: Text(
                             "You haven't add any diary for this month",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 30,
+                              fontSize: 21,
                               fontFamily: "Montserrat",
                               color: Color(0XFF394D70),
                               fontWeight: FontWeight.w600,

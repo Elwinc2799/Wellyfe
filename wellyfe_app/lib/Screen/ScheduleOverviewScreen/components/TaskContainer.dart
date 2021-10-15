@@ -12,10 +12,10 @@ class TaskContainer extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return GlassmorphicContainer(
-      height: size.height * 0.315,
+      height: size.height * 0.375,
       width: size.width * 0.9,
       border: 2.5,
-      borderRadius: 30,
+      borderRadius: 15,
       blur: 20,
       linearGradient: LinearGradient(
         begin: Alignment.topLeft,

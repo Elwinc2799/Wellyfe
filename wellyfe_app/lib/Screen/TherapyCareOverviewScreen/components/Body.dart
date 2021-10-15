@@ -24,11 +24,11 @@ class Body extends StatelessWidget {
           TopLevelBar(),
           SizedBox(height: size.height * 0.01),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 17.5),
             child: Text(
               "Find your desired doctor.",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 25,
                 fontFamily: "NunitoSans",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,
@@ -36,7 +36,7 @@ class Body extends StatelessWidget {
             ),
           ),
           TherapyShortcut(),
-          SizedBox(height: size.height * 0.02),
+          SizedBox(height: size.height * 0.015),
           AppointmentHeader(),
           SizedBox(height: size.height * 0.025),
           AppointmentContainer(
@@ -45,7 +45,7 @@ class Body extends StatelessWidget {
             date: DateFormat('d MMMM').format(nextAppointment.appointmentDate),
             time: nextAppointment.appointmentTime,
           ),
-          SizedBox(height: size.height * 0.075),
+          SizedBox(height: size.height * 0.065),
           SpecialistRecommendationContainer(),
         ],
       ),

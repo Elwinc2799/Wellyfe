@@ -38,7 +38,7 @@ class Body extends StatelessWidget {
                 SizedBox(height: size.height * 0.05),
                 Container(
                   height: size.height * 0.5,
-                  width: size.width * 0.8,
+                  width: size.width,
                   child: SingleChildScrollView(
                     physics: BouncingScrollPhysics(),
                     child: Column(

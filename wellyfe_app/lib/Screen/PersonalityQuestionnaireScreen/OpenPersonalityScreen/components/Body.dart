@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Model/Questionnaire.dart';
+import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
 import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/QuestionnaireButton.dart';
 import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/SelectionButton.dart';
 
@@ -65,10 +67,14 @@ class _BodyState extends State<Body> {
                     QuestionnaireButton(
                       title: "Done",
                       function: () {
-                        // Navigator.pushReplacement(context, PageTransition(
-                        //   type: PageTransitionType.fade,
-                        //   child: (),
-                        // ));
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              child: DailyMoodScreen(),
+                            ),
+                            ModalRoute.withName('/')
+                        );
                       },
                     )
                   ],

@@ -11,15 +11,15 @@ class Body extends StatelessWidget {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 100.0, horizontal: 30.0),
+        padding: const EdgeInsets.symmetric(vertical: 80.0, horizontal: 30.0),
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: size.height * 0.05),
+              SizedBox(height: size.height * 0.02),
               TopContainer(),
-              SizedBox(height: size.height * 0.05),
+              SizedBox(height: size.height * 0.04),
               DiariesFavourites(),
-              SizedBox(height: size.height * 0.05),
+              SizedBox(height: size.height * 0.04),
               WeatherMood(),
             ],
           ),

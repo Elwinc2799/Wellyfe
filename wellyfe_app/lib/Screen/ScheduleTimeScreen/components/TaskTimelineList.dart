@@ -38,16 +38,16 @@ class _TaskTimelineListState extends State<TaskTimelineList> {
                 child: Column(
                   children: [
                     Container(
-                      height: size.height * 0.35,
+                      height: size.height * 0.37,
                       child: Image(image: AssetImage("assets/pictures/empty.png"))
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       child: Text(
                         "You don't have any schedule on that day.",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 22,
                           fontFamily: "NunitoSans",
                           fontWeight: FontWeight.w700,
                           color: Color(0XFF344460),

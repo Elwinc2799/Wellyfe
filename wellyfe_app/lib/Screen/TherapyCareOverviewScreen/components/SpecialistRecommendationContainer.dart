@@ -21,12 +21,12 @@ class SpecialistRecommendationContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Container(
-            height: size.height * 0.25,
-            width: size.width * 0.85,
+            height: size.height * 0.275,
+            width: size.width * 0.875,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20.0),
-                bottomLeft: Radius.circular(20.0),
+                topLeft: Radius.circular(10.0),
+                bottomLeft: Radius.circular(10.0),
               ),
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -44,14 +44,14 @@ class SpecialistRecommendationContainer extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  top: 120,
-                  left: -20,
+                  top: 100,
+                  left: -25,
                   child: Transform.rotate(
                     angle: 270 * pi / 180,
                     child: Text(
                       "Top Doctors",
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 20,
                         fontFamily: "NunitoSans",
                         color: Color(0XFF394D70),
                         fontWeight: FontWeight.w700,
@@ -60,10 +60,10 @@ class SpecialistRecommendationContainer extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 100,
-                  top: 27.5,
+                  left: 60,
+                  top: 20,
                   child: Container(
-                    width: size.width * 0.7,
+                    width: size.width * 0.8,
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       physics: BouncingScrollPhysics(),

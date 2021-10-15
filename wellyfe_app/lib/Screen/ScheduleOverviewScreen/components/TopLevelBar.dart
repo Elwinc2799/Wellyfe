@@ -24,7 +24,6 @@ class TopLevelBar extends StatelessWidget {
           function: () {
             Task.updateTaskDataList("Mo");
             TaskTimelineList.listChanged();
-
             Navigator.pushReplacement(context, PageTransition(
               type: PageTransitionType.fade,
               child: ScheduleTimeScreen(),
@@ -34,7 +33,7 @@ class TopLevelBar extends StatelessWidget {
         Text(
           DateFormat('EEEE, d MMM').format(date),
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 20,
             fontFamily: "NunitoSans",
             color: Color(0XFF394D70),
             fontWeight: FontWeight.w700,

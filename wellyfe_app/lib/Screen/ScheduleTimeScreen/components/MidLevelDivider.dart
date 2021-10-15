@@ -17,12 +17,12 @@ class MidLevelDivider extends StatelessWidget {
           ),
           Center(
             child: Container(
-              height: 30,
-              width: 30,
+              height: 23,
+              width: 23,
               child: Center(
                   child: Icon(
                     Icons.keyboard_arrow_down_rounded,
-                    size: 30,
+                    size: 20,
                     color: Colors.grey,
                   )
               ),

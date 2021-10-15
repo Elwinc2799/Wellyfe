@@ -12,7 +12,7 @@ class AreaChart extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 5.0),
       child: Container(
-        height: size.height * 0.225,
+        height: size.height * 0.24,
         width: size.width * 0.8,
         child: SfCartesianChart(
           plotAreaBorderWidth: 0,
@@ -21,7 +21,7 @@ class AreaChart extends StatelessWidget {
               width: 0,
             ),
             labelStyle: TextStyle(
-              fontSize: 17.5,
+              fontSize: 12.5,
               fontFamily: "NunitoSans",
               fontWeight: FontWeight.w800,
               color: Color(0XFF344460).withOpacity(0.7),
@@ -36,7 +36,7 @@ class AreaChart extends StatelessWidget {
               width: 0,
             ),
             labelStyle: TextStyle(
-              fontSize: 17.5,
+              fontSize: 12.5,
               fontFamily: "NunitoSans",
               fontWeight: FontWeight.w800,
               color: Color(0XFF344460).withOpacity(0.7),

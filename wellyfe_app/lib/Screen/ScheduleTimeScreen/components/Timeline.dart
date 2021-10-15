@@ -21,7 +21,7 @@ class Timeline extends StatelessWidget {
           Text(
             startTime,
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 17.5,
               fontFamily: "NunitoSans",
               fontWeight: FontWeight.w800,
               color: Color(0XFF344460).withOpacity(0.5),
@@ -30,7 +30,7 @@ class Timeline extends StatelessWidget {
           Text(
             endTime,
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 17.5,
               fontFamily: "NunitoSans",
               fontWeight: FontWeight.w800,
               color: Color(0XFF344460).withOpacity(0.5),

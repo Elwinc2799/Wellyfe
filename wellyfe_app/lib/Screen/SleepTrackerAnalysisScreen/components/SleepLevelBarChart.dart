@@ -188,7 +188,7 @@ class _SleepLevelBarChartState extends State<SleepLevelBarChart> {
         show: true,
         bottomTitles: SideTitles(
           showTitles: true,
-          getTextStyles: (value) =>
+          getTextStyles: (build, value) =>
           const TextStyle(
             color: Color(0XFF394D70),
             fontWeight: FontWeight.bold,

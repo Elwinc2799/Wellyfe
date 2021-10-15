@@ -15,10 +15,10 @@ class LegendIndividual extends StatelessWidget {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(7.5),
           child: Container(
-            height: 10,
-            width: 10,
+            height: 7,
+            width: 7,
             decoration: new BoxDecoration(
               color: color,
               shape: BoxShape.circle,
@@ -28,7 +28,7 @@ class LegendIndividual extends StatelessWidget {
         Text(
           priority,
           style: TextStyle(
-            fontSize: 17.5,
+            fontSize: 12.5,
             fontFamily: "NunitoSans",
             fontWeight: FontWeight.w800,
             color: Color(0XFF344460).withOpacity(0.7),

@@ -17,13 +17,12 @@ class TopLevelIcon extends StatelessWidget {
     return GestureDetector(
       onTap: function,
       child: Container(
-        height: size.height * 0.055,
-        width: size.width * 0.1,
-        child: Container(
-            child: Image(image: AssetImage(asset),fit: BoxFit.cover)),
+        height: size.height * 0.05,
+        width: size.height * 0.05,
+        child: Image(image: AssetImage(asset), width: 5, height: 5),
         decoration: BoxDecoration(
           color: Color(0XFFE5EBF2),
-          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
           boxShadow: [
             BoxShadow(
               blurRadius: 5.0,

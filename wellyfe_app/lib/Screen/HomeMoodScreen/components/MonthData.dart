@@ -25,7 +25,7 @@ class MonthData extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: size.width * 0.2,
+            width: size.width * 0.25,
             child: Text(
               month,
               textAlign: TextAlign.right,
@@ -45,7 +45,7 @@ class MonthData extends StatelessWidget {
                   children: [
                     SizedBox(height: size.height * 0.01),
                     Container(
-                      width: size.width * 0.5,
+                      width: size.width * 0.525,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [

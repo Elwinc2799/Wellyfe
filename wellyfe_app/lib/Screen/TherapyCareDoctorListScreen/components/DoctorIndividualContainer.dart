@@ -21,11 +21,11 @@ class DoctorIndividualContainer extends StatelessWidget {
     return GestureDetector(
       onTap: function,
       child: Container(
-        height: size.height * 0.125,
-        width: size.width * 0.8,
+        height: size.height * 0.12,
+        width: size.width * 0.85,
         decoration: BoxDecoration(
             color: Color(0XFFE5EBF2),
-            borderRadius: BorderRadius.circular(20.0),
+            borderRadius: BorderRadius.circular(10.0),
             boxShadow: [
               BoxShadow(
                   blurRadius: 5.0,
@@ -40,12 +40,12 @@ class DoctorIndividualContainer extends StatelessWidget {
             ]
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 30.0),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25.0),
           child: Row(
             children: [
               Container(
-                height: 85,
-                width: 85,
+                height: 60,
+                width: 60,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color(0XFFE5EBF2),
@@ -63,12 +63,12 @@ class DoctorIndividualContainer extends StatelessWidget {
                     ]
                 ),
                 child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                     child: Center(
                       child: Text(
                         name.substring(4, 5),
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 30,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w900,
@@ -85,7 +85,7 @@ class DoctorIndividualContainer extends StatelessWidget {
                   Text(
                     therapy,
                     style: TextStyle(
-                      fontSize: 22.5,
+                      fontSize: 17.5,
                       fontFamily: "NunitoSans",
                       color: Colors.grey.shade500,
                       fontWeight: FontWeight.w700,
@@ -94,7 +94,7 @@ class DoctorIndividualContainer extends StatelessWidget {
                   Text(
                     name,
                     style: TextStyle(
-                      fontSize: 27.5,
+                      fontSize: 22.5,
                       fontFamily: "NunitoSans",
                       color: Color(0XFF394D70),
                       fontWeight: FontWeight.w700,
@@ -103,7 +103,7 @@ class DoctorIndividualContainer extends StatelessWidget {
                   Text(
                     experience.toString() + " years",
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 15,
                       fontFamily: "NunitoSans",
                       color: Colors.grey.shade500,
                       fontWeight: FontWeight.w700,

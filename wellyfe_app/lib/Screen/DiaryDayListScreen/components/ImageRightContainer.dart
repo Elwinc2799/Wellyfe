@@ -14,7 +14,7 @@ class ImageRightContainer extends StatelessWidget {
 
     return Container(
       height: size.height * 0.25,
-      width: size.width * 0.64,
+      width: size.width * 0.59,
       child: ClipRRect(
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(10.0),

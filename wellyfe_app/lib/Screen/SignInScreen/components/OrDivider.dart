@@ -7,7 +7,7 @@ class OrDivider extends StatelessWidget {
 
     return Center(
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: size.height * 0.015),
+        margin: EdgeInsets.symmetric(vertical: size.height * 0.02),
         width: size.width * 0.8,
         child: Row(
           children: [
@@ -33,7 +33,7 @@ class OrDivider extends StatelessWidget {
   Expanded buildDivider() {
     return Expanded(
       child: Divider(
-        color: Colors.grey[700],
+        color: Colors.grey[400],
         height: 1.5,
       ),
     );

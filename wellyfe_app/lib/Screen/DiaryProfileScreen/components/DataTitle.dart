@@ -20,7 +20,7 @@ class DataTitle extends StatelessWidget {
         Text(
           data,
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 23,
             fontFamily: "Montserrat",
             color: Colors.black54,
             fontWeight: FontWeight.w700,
@@ -30,7 +30,7 @@ class DataTitle extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 13,
             fontFamily: "Montserrat",
             color: Colors.black45,
             fontWeight: FontWeight.w600,

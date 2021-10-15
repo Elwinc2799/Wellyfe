@@ -21,14 +21,14 @@ class TherapyShortcutIndividual extends StatelessWidget {
     return GestureDetector(
       onTap: function,
       child: Container(
-        height: size.height * 0.2,
+        height: size.height * 0.3,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
             GlassmorphicContainer(
-              height: size.height * 0.115,
-              width: size.width * 0.225,
-              borderRadius: 20,
+              height: size.height * 0.110,
+              width: size.width * 0.23,
+              borderRadius: 10,
               blur: 20,
               alignment: Alignment.bottomCenter,
               border: 2,
@@ -52,7 +52,7 @@ class TherapyShortcutIndividual extends StatelessWidget {
                 ],
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +61,7 @@ class TherapyShortcutIndividual extends StatelessWidget {
                         therapy + " Therapy",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 13.5,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w700,
@@ -75,8 +75,8 @@ class TherapyShortcutIndividual extends StatelessWidget {
             Positioned(
               top: 0,
               child: Container(
-                height: 50,
-                width: 50,
+                height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.white.withOpacity(0.5)
@@ -84,8 +84,8 @@ class TherapyShortcutIndividual extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: -5,
-              child: Image(image: AssetImage("assets/logo/$therapy.png")),
+              top: -10,
+              child: Image(image: AssetImage("assets/logo/$therapy.png"), width: 60, height: 60),
             )
           ],
         ),

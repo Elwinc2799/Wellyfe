@@ -45,54 +45,56 @@ class _BodyState extends State<Body> {
 
     return Background(
         children: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(height: size.height * 0.5),
-              Text(
-                "Forgot your password?",
-                style: TextStyle(
-                    fontSize: 40,
-                    fontFamily: "NunitoSans",
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black.withOpacity(.5)
-                ),
-              ),
-              Text(
-                "Reset it with your email!",
-                style: TextStyle(
-                    fontSize: 27.5,
-                    fontFamily: "NunitoSans",
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black.withOpacity(.5)
-                ),
-              ),
-              SizedBox(height: size.height * 0.05),
-              buildEmailFormField(size),
-              SizedBox(height: size.height * 0.05),
-              GestureDetector(
-                onTap: () => resetPassword(),
-                child: Container(
-                  height: size.height * 0.04,
-                  width: size.width * 0.50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: Color(0XFFA4A8D1),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: size.height * 0.5),
+                Text(
+                  "Forgot your password?",
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontFamily: "NunitoSans",
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black.withOpacity(.5)
                   ),
-                  child: Center(
-                    child: Text(
-                      "Reset Password",
-                      style: TextStyle(
-                        fontFamily: "NunitoSans",
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
+                ),
+                Text(
+                  "Reset it with your email!",
+                  style: TextStyle(
+                      fontSize: 17.5,
+                      fontFamily: "NunitoSans",
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black.withOpacity(.5)
+                  ),
+                ),
+                SizedBox(height: size.height * 0.05),
+                buildEmailFormField(size),
+                SizedBox(height: size.height * 0.05),
+                GestureDetector(
+                  onTap: () => resetPassword(),
+                  child: Container(
+                    height: size.height * 0.045,
+                    width: size.width * 0.5,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: Color(0XFFA4A8D1),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Reset Password",
+                        style: TextStyle(
+                          fontFamily: "NunitoSans",
+                          fontSize: 17.5,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         )
     );
@@ -101,22 +103,20 @@ class _BodyState extends State<Body> {
   Container buildEmailFormField(Size size) {
     return Container(
       width: size.width * 0.85,
+      height: MediaQuery.of(context).size.width * 0.135,
       decoration: buildNeumorphicTextField(),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: "Enter your email",
-          hintStyle: TextStyle(fontFamily: "NunitoSans",
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              color: Colors.black.withOpacity(.5)),
+          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabledBorder: outlineBorder(),
           focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
         style: TextStyle(
           fontFamily: "NunitoSans",
-          fontSize: 20,
+          fontSize: 17.5,
           fontWeight: FontWeight.w700,
           color: Colors.black.withOpacity(.5),
         ),

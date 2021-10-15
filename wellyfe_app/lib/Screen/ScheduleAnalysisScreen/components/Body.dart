@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
       children: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 100),
+          padding: const EdgeInsets.symmetric(vertical: 70),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: "Nunito",
                           color: Color(0XFF394D70),
-                          fontSize: 30,
+                          fontSize: 22,
                           fontWeight: FontWeight.w900,
                         ),
                       ),

@@ -23,7 +23,7 @@ class DiaryLeftPart extends StatelessWidget {
       width: size.width * 0.2,
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 90.0, 0, 50),
+          padding: const EdgeInsets.fromLTRB(0, 45.0, 0, 25),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -35,7 +35,7 @@ class DiaryLeftPart extends StatelessWidget {
                         text: dayNumber + "\n",
                         style: TextStyle(
                           height: 0.5,
-                          fontSize: 60,
+                          fontSize: 30,
                           fontFamily: "TitilliumWeb",
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w900,
@@ -44,7 +44,7 @@ class DiaryLeftPart extends StatelessWidget {
                       TextSpan(
                         text: dayString,
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 15,
                           fontFamily: "Montserrat",
                           color: Colors.grey.shade600,
                           fontWeight: FontWeight.w600,
@@ -54,12 +54,12 @@ class DiaryLeftPart extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Image(image: AssetImage("assets/logo/$mood.png")),
-                    Image(image: AssetImage("assets/logo/$weather.png")),
+                    Image(image: AssetImage("assets/logo/$mood.png"), width: 15, height: 15),
+                    Image(image: AssetImage("assets/logo/$weather.png"), width: 15, height: 15),
                   ],
                 ),
               )
