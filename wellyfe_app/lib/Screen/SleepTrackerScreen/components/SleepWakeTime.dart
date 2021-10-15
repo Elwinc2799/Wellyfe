@@ -83,7 +83,7 @@ class _SleepWakeTimeState extends State<SleepWakeTime> {
                   DateTime tempDate = DateFormat("hh:mm").parse(
                       dateTime.hour.toString() + ":" + dateTime.minute.toString());
 
-                  sleepTime.value = DateFormat("h:mm a").format(tempDate);
+                  wakeTime.value = DateFormat("h:mm a").format(tempDate);
                 },
               ),
             );
