@@ -60,7 +60,7 @@ class SpecialistRecommendationContainerIndividual extends StatelessWidget {
                         "Dr. " + doctor.name,
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                          fontSize: 17.5,
+                          fontSize: 17,
                           fontFamily: "NunitoSans",
                           color: Color(0XFF394D70),
                           fontWeight: FontWeight.w700,

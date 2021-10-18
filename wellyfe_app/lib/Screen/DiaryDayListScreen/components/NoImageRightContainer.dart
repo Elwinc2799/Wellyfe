@@ -39,14 +39,12 @@ class NoImageRightContainer extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: Container(
-                      height: size.height * 0.06,
-                      width: size.width * 0.25,
                       child: Center(
                         child: Text(
                           content,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 15,
                             fontFamily: "Montserrat",
                             color: Colors.grey.shade600,
                             fontWeight: FontWeight.w700,
