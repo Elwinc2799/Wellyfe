@@ -22,7 +22,7 @@ class _BodyState extends State<Body> {
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 75.0),
+        padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 70.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -74,7 +74,7 @@ class _BodyState extends State<Body> {
   Container buildCurrentWeightContainer(Size size) {
     return Container(
       width: size.height * 0.5,
-      height: size.width * 0.455,
+      height: size.width * 0.4575,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           color: Color(0XFFF4F9FF),
@@ -120,7 +120,7 @@ class _BodyState extends State<Body> {
               },
             ),
             Container(
-              height: 112,
+              height: 110,
               child: HorizontalPicker(
                 minValue: 45,
                 maxValue: 90,

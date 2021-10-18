@@ -17,9 +17,9 @@ class Body extends StatelessWidget {
             children: [
               SizedBox(height: size.height * 0.02),
               TopContainer(),
-              SizedBox(height: size.height * 0.04),
+              SizedBox(height: size.height * 0.03),
               DiariesFavourites(),
-              SizedBox(height: size.height * 0.04),
+              SizedBox(height: size.height * 0.03),
               WeatherMood(),
             ],
           ),

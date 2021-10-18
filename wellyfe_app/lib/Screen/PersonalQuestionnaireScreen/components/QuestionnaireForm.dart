@@ -100,7 +100,7 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
       height: MediaQuery.of(context).size.height * 0.075,
       decoration: buildNeumorphicTextField(),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsets.only(left: 20, top: 20, bottom: 20),
         child: DropdownButton<String>(
           underline: Container(
             height: 0.75,

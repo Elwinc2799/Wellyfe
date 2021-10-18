@@ -30,7 +30,7 @@ class MonthData extends StatelessWidget {
               month,
               textAlign: TextAlign.right,
               style: TextStyle(
-                fontSize: 17.5,
+                fontSize: 15,
                 fontFamily: "Montserrat",
                 color: Color(0XFF394D70),
                 fontWeight: FontWeight.w700,

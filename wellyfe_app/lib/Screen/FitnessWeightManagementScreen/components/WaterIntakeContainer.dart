@@ -29,7 +29,7 @@ class WaterIntakeContainer extends StatelessWidget {
           ]
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+        padding: const EdgeInsets.only(top: 20.0, bottom: 20.0, left: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

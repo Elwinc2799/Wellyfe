@@ -52,7 +52,7 @@ class TopLevelBar extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: size.width * 0.075),
+          SizedBox(width: size.width * 0.05),
           GestureDetector(
               onTap: () {
                 Navigator.pop(context);
