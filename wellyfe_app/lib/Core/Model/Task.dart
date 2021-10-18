@@ -22,12 +22,6 @@ class Task{
     this.isDone,
   );
 
-  static List<Task> taskDataList = [
-
-  ];
-
-  static List<Task> newTaskDataList = updateTaskDataList("Mo");
-
   Color findColor() {
     switch(this.taskPriority) {
       case 1:
@@ -46,11 +40,6 @@ class Task{
       return 0;
 
     var foundElements = list.where((e) => (e.taskPriority == element && e.dueDate == dateTime));
-    return foundElements.length;
-  }
-
-  static int countTaskStatus(String element) {
-    var foundElements = taskDataList.where((e) => (e.taskCategory == element));
     return foundElements.length;
   }
 
@@ -80,42 +69,6 @@ class Task{
     return countDateOnlyOccurrences(list, date);
   }
 
-  static List<Task> updateTaskDataList(String date) {
-    newTaskDataList = [];
-
-    taskDataList.forEach((element) {
-      if (DateFormat('EEEE').format(element.dueDate).substring(0, 2) == date)
-        newTaskDataList.add(element);
-    });
-
-    return newTaskDataList;
-  }
-
-  static List<Task> getWeeklyTaskList() {
-    DateTime now = DateTime.now();
-    DateTime initialDay = now.subtract(Duration(days: now.weekday));
-    DateTime displaceDay = now.add(Duration(days: DateTime.daysPerWeek - now.weekday + 1));
-    DateTime firstDayOfWeek = new DateTime(
-        initialDay.year,
-        initialDay.month,
-        initialDay.day
-    );
-    DateTime lastDayOfWeek = new DateTime(
-      displaceDay.year,
-      displaceDay.month,
-      displaceDay.day,
-    );
-
-    newTaskDataList = [];
-
-    for (var i = 0; i < taskDataList.length; i++) {
-      if (taskDataList[i].dueDate.isAfter(firstDayOfWeek) && taskDataList[i].dueDate.isBefore(lastDayOfWeek))
-        newTaskDataList.add(taskDataList[i]);
-    }
-
-    return newTaskDataList;
-  }
-
   String timeConversion(int hour) {
     if (hour < 10)
       return "0" + hour.toString();
@@ -143,7 +96,4 @@ class Task{
     else
       return timeConversion(time - 12) + " PM";
   }
-
-
-
 }

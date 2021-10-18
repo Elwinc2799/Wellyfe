@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:wellyfe_app/Screen/FitnessMealsScreen/components/IngredientsContainer.dart';
-import 'package:wellyfe_app/Screen/FitnessMealsScreen/components/IngredientsContainerIndividual.dart';
 import 'package:wellyfe_app/Screen/FitnessMealsScreen/components/MealPicture.dart';
 import 'package:wellyfe_app/Screen/FitnessMealsScreen/components/NutritionalContainer.dart';
 import 'package:wellyfe_app/Screen/FitnessMealsScreen/components/TopLevelBar.dart';

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
+import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 
 class BubbleChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    List<Task> weeklyTaskList = Task.getWeeklyTaskList();
+    List<Task> weeklyTaskList = Provider.of<TaskProvider>(context).taskList;
 
     return Padding(
       padding: const EdgeInsets.only(top: 5.0),

@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Core/Services/FirebaseData.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/components/Background.dart';
@@ -16,7 +17,7 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     super.initState();
-    FirebaseData.getAllUserData();
+    // FirebaseData.getAllUserData();
   }
 
   @override

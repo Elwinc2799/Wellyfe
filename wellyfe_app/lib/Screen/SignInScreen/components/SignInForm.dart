@@ -5,6 +5,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
+import 'package:wellyfe_app/Screen/PersonalQuestionnaireScreen/PersonalQuestionnaireScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/constants.dart';
@@ -22,6 +23,7 @@ class _SignInFormState extends State<SignInForm> {
   Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   bool _isFirstOpen = false;
   String lastOpenKey = "lastOpen";
+  bool obscure = true;
 
   Future<void> signInUserWithEmail(String email, String password) async {
     bool authenticated = true;
@@ -43,8 +45,11 @@ class _SignInFormState extends State<SignInForm> {
       authenticated = false;
     }
 
-    if (authenticated)
+    if (authenticated) {
       isMoodRecorded();
+      _emailController.clear();
+      _passwordController.clear();
+    }
   }
 
   void isMoodRecorded() async {
@@ -69,7 +74,6 @@ class _SignInFormState extends State<SignInForm> {
     } else {
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,
-        // child: PersonalQuestionnaireScreen()
         child: HomeScreen(),
       ));
     }
@@ -95,11 +99,7 @@ class _SignInFormState extends State<SignInForm> {
           buildPasswordFormField(),
           SizedBox(height: size.height * 0.035),
           SignInButton(
-            function: () {
-              signInUserWithEmail(_emailController.text, _passwordController.text);
-              _emailController.clear();
-              _passwordController.clear();
-            }
+            function: () => signInUserWithEmail(_emailController.text, _passwordController.text)
           ),
         ],
       ),
@@ -117,29 +117,46 @@ class _SignInFormState extends State<SignInForm> {
     );
   }
 
-  Container buildPasswordFormField() {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.85,
-      height: MediaQuery.of(context).size.width * 0.135,
-      decoration: buildNeumorphicTextField(),
-      child: TextFormField(
-        decoration: InputDecoration(
-          hintText: "Enter your password",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
-          floatingLabelBehavior: FloatingLabelBehavior.always,
-          enabledBorder: outlineBorder(),
-          focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+  Stack buildPasswordFormField() {
+    return Stack(
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width * 0.85,
+          height: MediaQuery.of(context).size.width * 0.135,
+          decoration: buildNeumorphicTextField(),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "Enter your password",
+              hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              enabledBorder: outlineBorder(),
+              focusedBorder: outlineBorder(),
+              contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            ),
+            style: TextStyle(
+              fontFamily: "NunitoSans",
+              fontSize: 17.5,
+              fontWeight: FontWeight.w700,
+              color: Colors.black.withOpacity(.5),
+            ),
+            obscureText: obscure,
+            controller: _passwordController,
+          ),
         ),
-        style: TextStyle(
-          fontFamily: "NunitoSans",
-          fontSize: 17.5,
-          fontWeight: FontWeight.w700,
-          color: Colors.black.withOpacity(.5),
-        ),
-        obscureText: true,
-        controller: _passwordController,
-      ),
+        Positioned(
+          top: 17.5,
+          right: 15,
+          child: GestureDetector(
+            onTap: () => setState(() {
+              obscure = !obscure;
+            }),
+            child: Icon(
+              obscure ? Icons.visibility_rounded : Icons.visibility_off_rounded,
+              color: Colors.black.withOpacity(0.25),
+            ),
+          ),
+        )
+      ],
     );
   }
 

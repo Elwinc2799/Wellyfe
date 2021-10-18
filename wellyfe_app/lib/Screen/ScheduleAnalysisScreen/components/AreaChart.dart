@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
+import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 
 class AreaChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Task> weeklyTaskList = Task.getWeeklyTaskList();
+    List<Task> weeklyTaskList = Provider.of<TaskProvider>(context).taskList;
     Size size = MediaQuery.of(context).size;
 
     return Padding(
@@ -58,7 +60,7 @@ class AreaChart extends StatelessWidget {
               splineType: SplineType.cardinal,
               cardinalSplineTension: 1,
               color: Color(0XFF668ED4),
-              dataSource: Task.taskDataList,
+              dataSource: weeklyTaskList,
               xValueMapper: (Task taskData, _) => DateFormat('EEEE').format(taskData.dueDate).substring(0, 3),
               yValueMapper: (Task taskData, _) => taskData.switchDateOccurrences(weeklyTaskList),
             ),

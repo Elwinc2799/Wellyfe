@@ -193,7 +193,7 @@ class _StepsBarChartState extends State<StepsBarChart> {
         bottomTitles: SideTitles(
           showTitles: true,
           getTextStyles: (build, value) =>
-          const TextStyle(
+          TextStyle(
               color: Color(0XFF394D70),
               fontWeight: FontWeight.bold,
               fontSize: 15

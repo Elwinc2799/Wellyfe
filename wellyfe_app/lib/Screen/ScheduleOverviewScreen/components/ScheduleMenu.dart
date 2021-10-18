@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
+import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/ScheduleMenuIndividual.dart';
 
 class ScheduleMenu extends StatelessWidget {
@@ -9,6 +11,7 @@ class ScheduleMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Task> weeklyTaskList = Provider.of<TaskProvider>(context).taskList;
     Size size = MediaQuery.of(context).size;
 
     return Column(
@@ -19,13 +22,13 @@ class ScheduleMenu extends StatelessWidget {
             ScheduleMenuIndividual(
               asset: "assets/logo/done.png",
               title: "Completed",
-              total: Task.countTaskStatus("Completed"),
+              total: Provider.of<TaskProvider>(context).countTaskStatus("Completed"),
               color: Color(0XFF1CB3B2),
             ),
             ScheduleMenuIndividual(
               asset: "assets/logo/pending.png",
               title: "Pending",
-              total: Task.countTaskStatus("Pending"),
+              total: Provider.of<TaskProvider>(context).countTaskStatus("Pending"),
               color: Color(0XFFFF7544),
             ),
           ],
@@ -37,13 +40,13 @@ class ScheduleMenu extends StatelessWidget {
             ScheduleMenuIndividual(
               asset: "assets/logo/cancel.png",
               title: "Canceled",
-              total: Task.countTaskStatus("Canceled"),
+              total: Provider.of<TaskProvider>(context).countTaskStatus("Canceled"),
               color: Color(0XFF8677FE),
             ),
             ScheduleMenuIndividual(
               asset: "assets/logo/ongoing.png",
               title: "Ongoing",
-              total: Task.countTaskStatus("Ongoing"),
+              total: Provider.of<TaskProvider>(context).countTaskStatus("Ongoing"),
               color: Color(0XFFFB5A7E),
             ),
           ],

@@ -30,7 +30,7 @@ class TaskTimeline extends StatelessWidget {
           GlassmorphicContainer(
             height: size.height * 0.125,
             width: size.width * 0.675,
-            border: 2.5,
+            border: 2,
             borderRadius: 10,
             blur: 2,
             linearGradient: LinearGradient(

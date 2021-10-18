@@ -18,6 +18,9 @@ class _SignUpFormState extends State<SignUpForm> {
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
 
+  bool obscure = true;
+  bool confirmObscure = true;
+
   Future<void> signUpUserWithEmail(String email, String password, String confirmPassword) async {
     bool userCreated = true;
 
@@ -101,55 +104,89 @@ class _SignUpFormState extends State<SignUpForm> {
     );
   }
 
-  Container buildPasswordFormField() {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.85,
-      height: MediaQuery.of(context).size.width * 0.135,
-      decoration: buildNeumorphicTextField(),
-      child: TextFormField(
-        decoration: InputDecoration(
-          hintText: "Enter your password",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
-          floatingLabelBehavior: FloatingLabelBehavior.always,
-          enabledBorder: outlineBorder(),
-          focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+  Stack buildPasswordFormField() {
+    return Stack(
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width * 0.85,
+          height: MediaQuery.of(context).size.width * 0.135,
+          decoration: buildNeumorphicTextField(),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "Enter your password",
+              hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              enabledBorder: outlineBorder(),
+              focusedBorder: outlineBorder(),
+              contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            ),
+            style: TextStyle(
+              fontFamily: "NunitoSans",
+              fontSize: 17.5,
+              fontWeight: FontWeight.w700,
+              color: Colors.black.withOpacity(.5),
+            ),
+            obscureText: obscure,
+            controller: _passwordController,
+          ),
         ),
-        style: TextStyle(
-          fontFamily: "NunitoSans",
-          fontSize: 17.5,
-          fontWeight: FontWeight.w700,
-          color: Colors.black.withOpacity(.5),
-        ),
-        obscureText: true,
-        controller: _passwordController,
-      ),
+        Positioned(
+          top: 17.5,
+          right: 15,
+          child: GestureDetector(
+            onTap: () => setState(() {
+              obscure = !obscure;
+            }),
+            child: Icon(
+              obscure ? Icons.visibility_rounded : Icons.visibility_off_rounded,
+              color: Colors.black.withOpacity(0.25),
+            ),
+          ),
+        )
+      ],
     );
   }
 
-  Container buildConfirmPasswordFormField() {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.85,
-      height: MediaQuery.of(context).size.width * 0.135,
-      decoration: buildNeumorphicTextField(),
-      child: TextFormField(
-        decoration: InputDecoration(
-          hintText: "Confirm your password",
-          hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
-          floatingLabelBehavior: FloatingLabelBehavior.always,
-          enabledBorder: outlineBorder(),
-          focusedBorder: outlineBorder(),
-          contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+  Stack buildConfirmPasswordFormField() {
+    return Stack(
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width * 0.85,
+          height: MediaQuery.of(context).size.width * 0.135,
+          decoration: buildNeumorphicTextField(),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "Confirm your password",
+              hintStyle: TextStyle(fontFamily: "NunitoSans", fontSize: 17.5, fontWeight: FontWeight.w700, color: Colors.black.withOpacity(.5)),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              enabledBorder: outlineBorder(),
+              focusedBorder: outlineBorder(),
+              contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            ),
+            style: TextStyle(
+              fontFamily: "NunitoSans",
+              fontSize: 17.5,
+              fontWeight: FontWeight.w700,
+              color: Colors.black.withOpacity(.5),
+            ),
+            obscureText: confirmObscure,
+            controller: _confirmPasswordController,
+          ),
         ),
-        style: TextStyle(
-          fontFamily: "NunitoSans",
-          fontSize: 17.5,
-          fontWeight: FontWeight.w700,
-          color: Colors.black.withOpacity(.5),
-        ),
-        obscureText: true,
-        controller: _confirmPasswordController,
-      ),
+        Positioned(
+          top: 17.5,
+          right: 15,
+          child: GestureDetector(
+            onTap: () => setState(() {
+              confirmObscure = !confirmObscure;
+            }),
+            child: Icon(
+              confirmObscure ? Icons.visibility_rounded : Icons.visibility_off_rounded,
+              color: Colors.black.withOpacity(0.25),
+            ),
+          ),
+        )
+      ],
     );
   }
 

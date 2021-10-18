@@ -8,47 +8,39 @@ import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/TopLevelBar
 
 class Body extends StatelessWidget {
 
-  Future<bool> _onWillPop() async {
-    Task.taskDataList = [];
-    return true;
-  }
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return WillPopScope(
-      onWillPop: _onWillPop,
-      child: Background(
-        children: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 70),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TopLevelBar(),
-              SizedBox(height: size.height * 0.065),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Column(
-                  children: [
-                    ScheduleMenu(),
-                    SizedBox(height: size.height * 0.05),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: Column(
-                        children: [
-                          MidLevelBar(),
-                          SizedBox(height: size.height * 0.025),
-                          TaskContainer(),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+    return Background(
+      children: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TopLevelBar(),
+            SizedBox(height: size.height * 0.065),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Column(
+                children: [
+                  ScheduleMenu(),
+                  SizedBox(height: size.height * 0.05),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Column(
+                      children: [
+                        MidLevelBar(),
+                        SizedBox(height: size.height * 0.025),
+                        TaskContainer(),
+                      ],
+                    ),
+                  )
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

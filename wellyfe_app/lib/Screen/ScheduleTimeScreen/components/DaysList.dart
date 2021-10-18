@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/RadioModel.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
+import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/DaysRadioItem.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/TaskTimelineList.dart';
 
@@ -57,8 +59,11 @@ class _DaysListState extends State<DaysList> {
                     setState(() {
                       daysList.forEach((element) => element.isSelected = false);
                       daysList[index].isSelected = true;
-                      Task.updateTaskDataList(daysList[index].buttonText);
-                      TaskTimelineList.listChanged();
+
+                      Provider
+                          .of<TaskProvider>(context, listen: false)
+                          .setDailyTaskList(daysList[index].buttonText);
+
                     });
                   },
                   child: DaysRadioItem(
@@ -66,29 +71,6 @@ class _DaysListState extends State<DaysList> {
                     isSelected: daysList[index].isSelected,
                   ),
                 ),
-                // child: NeumorphicRadio(
-                //   value: DateFormat('EEEE').format(days[index]).substring(0, 2),
-                //   onChanged: (dynamic value) {
-                //     setState(() {
-                //       groupValue = value;
-                //       Task.updateTaskDataList(value);
-                //       TaskTimelineList.listChanged();
-                //     });
-                //   },
-                //   groupValue: groupValue,
-                //   child: DayIndividual(
-                //     dayWord: DateFormat('EEEE').format(days[index]).substring(0, 2),
-                //     dayNumber: days[index].day,
-                //   ),
-                //   style: NeumorphicRadioStyle(
-                //     selectedColor: Colors.teal[50],
-                //     unselectedColor: Colors.white.withOpacity(0.5),
-                //     shape: NeumorphicShape.convex,
-                //     selectedDepth: 0,
-                //     unselectedDepth: 20,
-                //     lightSource: LightSource.top,
-                //   ),
-                // ),
               );
             })
           ),

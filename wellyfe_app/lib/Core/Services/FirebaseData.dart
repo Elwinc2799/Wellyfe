@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Appointment.dart';
 import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
@@ -9,6 +10,7 @@ import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Core/Model/Sleep.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Core/Model/UserProfile.dart';
+import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/HomeMoodScreen/HomeMoodScreen.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/ScheduleOverviewScreen.dart';
@@ -17,47 +19,52 @@ import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/TherapyCareOverview
 
 class FirebaseData {
   static final fireStoreInstance = FirebaseFirestore.instance;
-  static var firebaseUser =  FirebaseAuth.instance.currentUser;
+  static final firebaseUser =  FirebaseAuth.instance.currentUser;
 
   static Future<void> getAllTaskScheduleData(context) async {
-    Task.taskDataList = [];
+
+    List<Task> taskList = [];
 
     DateTime now = DateTime.now();
     DateTime firstDayOfWeek = now.subtract(Duration(days: now.weekday - 1));
     DateTime startingPoint = new DateTime(firstDayOfWeek.year, firstDayOfWeek.month, firstDayOfWeek.day);
 
     fireStoreInstance
-        .collection("tasks")
-        .doc(firebaseUser!.uid)
-        .collection("task")
-        .where("dueDate", isGreaterThanOrEqualTo: startingPoint)
-        .get()
-        .then((value) {
-      value.docs.forEach((result) {
+      .collection("tasks")
+      .doc(firebaseUser!.uid)
+      .collection("task")
+      .where("dueDate", isGreaterThanOrEqualTo: startingPoint)
+      .get()
+      .then((value) {
+        value.docs.forEach((result) {
 
-        Timestamp timestamp = result.data()["dueDate"];
+          Timestamp timestamp = result.data()["dueDate"];
 
-        Task.taskDataList.add(
-            Task(
-              result.id,
-              result.data()["taskName"],
-              result.data()["taskPriority"],
-              result.data()["taskCategory"],
-              timestamp.toDate(),
-              result.data()["startTime"],
-              result.data()["endTime"],
-              result.data()["isDone"],
-            )
-        );
+          taskList.add(
+              Task(
+                result.id,
+                result.data()["taskName"],
+                result.data()["taskPriority"],
+                result.data()["taskCategory"],
+                timestamp.toDate(),
+                result.data()["startTime"],
+                result.data()["endTime"],
+                result.data()["isDone"],
+              )
+          );
+        });
+
+        taskList.sort((a, b) => a.dueDate.compareTo(b.dueDate));
+
+        Provider
+          .of<TaskProvider>(context, listen: false)
+          .setTaskList(taskList);
+
+        Navigator.push(context, PageTransition(
+          type: PageTransitionType.fade,
+          child: ScheduleOverviewScreen(),
+        ));
       });
-
-      Task.taskDataList.sort((a, b) => a.dueDate.compareTo(b.dueDate));
-
-      Navigator.push(context, PageTransition(
-        type: PageTransitionType.fade,
-        child: ScheduleOverviewScreen(),
-      ));
-    });
   }
 
   static Future<void> getAllDiaryData(context) async {

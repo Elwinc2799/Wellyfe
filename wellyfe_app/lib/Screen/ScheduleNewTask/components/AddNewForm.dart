@@ -4,7 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
+import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 import 'package:wellyfe_app/Screen/ScheduleNewTask/components/AddTaskButton.dart';
 import 'package:wellyfe_app/Screen/ScheduleNewTask/components/TextFieldLabel.dart';
 
@@ -37,17 +39,18 @@ class _AddNewFormState extends State<AddNewForm> {
         "isDone": false,
       });
 
-    Task.taskDataList.add(
-        Task(
-          documentReference.id,
-          _taskTitleController.text,
-          taskPriority(priorityValue),
-          "Pending",
-          DateTime.parse(_taskDateController.text),
-          int.parse(startTimeValue.substring(0, 1)),
-          int.parse(endTimeValue.substring(0, 1)),
-          false,
-        )
+    Provider
+      .of<TaskProvider>(context, listen: false)
+      .addNewTask(Task(
+        documentReference.id,
+        _taskTitleController.text,
+        taskPriority(priorityValue),
+        "Pending",
+        DateTime.parse(_taskDateController.text),
+        int.parse(startTimeValue.substring(0, 1)),
+        int.parse(endTimeValue.substring(0, 1)),
+        false,
+      )
     );
 
     showNotification("New task added.");
