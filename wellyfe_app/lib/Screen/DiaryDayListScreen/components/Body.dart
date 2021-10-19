@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Diary.dart';
+import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 import 'package:wellyfe_app/Screen/DiaryDayListScreen/components/DiaryContainer.dart';
 import 'package:wellyfe_app/Screen/DiaryDayListScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/Background.dart';
@@ -8,45 +9,36 @@ import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/Background.dar
 class Body extends StatelessWidget {
   const Body({
     Key? key,
-    required this.diaryList,
     required this.month,
   }) : super(key: key);
 
-  final List<Diary> diaryList;
   final String month;
 
   @override
   Widget build(BuildContext context) {
+    List<Diary> diaryList = Provider.of<DiaryProvider>(context).monthlyDiaryList;
     Size size = MediaQuery.of(context).size;
 
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 75.0, horizontal: 15.0),
+        padding: const EdgeInsets.fromLTRB(15.0, 75.0, 15.0, 0),
         child: Column(
           children: [
             TopLevelBar(month: month),
             SizedBox(height: size.height * 0.05),
             Container(
-              height: size.height * 0.7,
+              height: size.height * 0.805,
               child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: diaryList.isNotEmpty
                   ? Column(
-                      children: List.generate(Diary.diaryDataList.length, (i) {
+                      children: List.generate(diaryList.length, (i) {
                         return Column(
                           children: [
                             DiaryContainer(
-                              dayNumber: diaryList[i].dateTime.day.toString(),
-                              dayString: DateFormat('E').format(diaryList[i].dateTime),
-                              mood: diaryList[i].mood,
-                              weather: diaryList[i].weather,
-                              containImage: (diaryList[i].picture != ""),
-                              content: diaryList[i].content,
-                              image: diaryList[i].picture,
-                              title: diaryList[i].title,
-                              id: diaryList[i].diaryID,
+                              diary: diaryList[i],
                             ),
                             SizedBox(height: size.height * 0.015),
                           ],

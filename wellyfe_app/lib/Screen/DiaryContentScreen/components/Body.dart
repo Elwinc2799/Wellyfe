@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Diary.dart';
+import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 import 'package:wellyfe_app/Screen/DiaryContentScreen/components/PictureContainer.dart';
 import 'package:wellyfe_app/Screen/DiaryContentScreen/components/TitleMoodTime.dart';
 import 'package:wellyfe_app/Screen/DiaryContentScreen/components/Background.dart';
@@ -9,13 +11,12 @@ import 'package:wellyfe_app/Screen/DiaryContentScreen/components/Background.dart
 class Body extends StatelessWidget {
   const Body({
     Key? key,
-    required this.diary
   }) : super(key: key);
 
-  final Diary diary;
 
   @override
   Widget build(BuildContext context) {
+    Diary diary = Provider.of<DiaryProvider>(context).diary;
     Size size = MediaQuery.of(context).size;
 
     return Background(

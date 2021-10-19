@@ -5,7 +5,6 @@ import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
 import 'package:wellyfe_app/Screen/HomeScreen/HomeScreen.dart';
-import 'package:wellyfe_app/Screen/PersonalQuestionnaireScreen/PersonalQuestionnaireScreen.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/SignInButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/constants.dart';

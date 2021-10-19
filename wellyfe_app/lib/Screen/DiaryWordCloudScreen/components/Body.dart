@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scatter/flutter_scatter.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/WordCount.dart';
+import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/DiaryWordCloudScreen/components/ScatterItem.dart';
 
@@ -8,7 +10,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    WordCount.getCloudText();
+    WordCount.getCloudText(Provider.of<DiaryProvider>(context).diaryList);
 
     List<Widget> widgets = [];
 

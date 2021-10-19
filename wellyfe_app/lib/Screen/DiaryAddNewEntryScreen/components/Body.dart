@@ -3,7 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Diary.dart';
+import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 import 'package:wellyfe_app/Screen/DiaryAddNewEntryScreen/components/PictureContainer.dart';
 import 'package:wellyfe_app/Screen/DiaryAddNewEntryScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/components/Background.dart';
@@ -36,49 +38,47 @@ class _BodyState extends State<Body> {
     Size size = MediaQuery.of(context).size;
 
     return Background(
-        children: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 65.0),
-          child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
-            child: Column(
-              children: [
-                TopLevelBar(
-                  function: () {
-                    addNewDiary(
-                      _titleController.text,
-                      _contentController.text,
-                      emoji.value,
-                      weather.value,
-                      favourite,
-                    );
-                    Navigator.pop(context);
-                  },
-                ),
-                SizedBox(height: size.height * 0.03),
-                Container(
-                  height: size.height * 0.76,
-                  child: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
-                    child: Column(
-                      children: [
-                        PictureContainer(),
-                        SizedBox(height: size.height * 0.03),
-                        Center(
-                            child: Form(
-                              child: Column(
-                                children: [
-                                  buildTitleContainer(),
-                                  buildEmojiContainer(),
-                                  buildContentContainer(),
-                                ],
-                              ),
-                            ),
-                        )
-                      ],
+        children: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 65.0),
+            child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  TopLevelBar(
+                    function: () {
+                      addNewDiary(
+                        _titleController.text,
+                        _contentController.text,
+                        emoji.value,
+                        weather.value,
+                        favourite,
+                      );
+
+                      Navigator.pop(context);
+                    },
+                  ),
+                  SizedBox(height: size.height * 0.03),
+                  PictureContainer(),
+                  SizedBox(height: size.height * 0.03),
+                  Container(
+                    height: size.height * 0.5,
+                    child: SingleChildScrollView(
+                      child: Form(
+                        child: Column(
+                          children: [
+                            buildTitleContainer(),
+                            buildEmojiContainer(),
+                            buildContentContainer(),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         )
@@ -100,8 +100,8 @@ class _BodyState extends State<Body> {
         "image": Diary.newImageUrl,
     });
 
-    Diary.diaryDataList.add(
-        Diary(
+    Provider.of<DiaryProvider>(context, listen: false).addNewDiary(
+      Diary(
           documentReference.id,
           title,
           content,
@@ -179,7 +179,6 @@ class _BodyState extends State<Body> {
 
     return Container(
       width: size.width * 0.8,
-      height: size.height * 0.25,
       child: TextField(
         scrollPhysics: BouncingScrollPhysics(),
         keyboardType: TextInputType.multiline,
@@ -190,7 +189,7 @@ class _BodyState extends State<Body> {
             fontSize: 20,
             fontFamily: "Montserrat",
             color: Colors.grey.shade500,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w600,
           ),
           border: InputBorder.none,
           focusedBorder: InputBorder.none,
@@ -199,8 +198,8 @@ class _BodyState extends State<Body> {
         style: TextStyle(
           fontSize: 20,
           fontFamily: "Montserrat",
-          color: Colors.grey.shade500,
-          fontWeight: FontWeight.w400,
+          color: Colors.black.withOpacity(0.75),
+          fontWeight: FontWeight.w600,
         ),
         controller: _contentController,
       ),

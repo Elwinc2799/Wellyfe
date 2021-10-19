@@ -14,11 +14,11 @@ class TopLevelBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            DateFormat('EEEE, d MMM').format(DateTime.now()),
+            "How are you today?",
             style: TextStyle(
-              fontSize: 23,
+              fontSize: 20,
               fontFamily: "NunitoSans",
-              color: Color(0XFF394D70),
+              color: Color(0XFF394D70).withOpacity(0.5),
               fontWeight: FontWeight.w700,
             ),
           ),

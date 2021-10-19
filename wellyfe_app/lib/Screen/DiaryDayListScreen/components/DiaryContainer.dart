@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Diary.dart';
+import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 import 'package:wellyfe_app/Screen/DiaryContentScreen/DiaryContentScreen.dart';
 import 'package:wellyfe_app/Screen/DiaryDayListScreen/components/DiaryLeftPart.dart';
 import 'package:wellyfe_app/Screen/DiaryDayListScreen/components/ImageRightContainer.dart';
@@ -9,26 +12,10 @@ import 'package:wellyfe_app/Screen/DiaryDayListScreen/components/NoImageRightCon
 class DiaryContainer extends StatelessWidget {
   const DiaryContainer({
     Key? key,
-    required this.dayNumber,
-    required this.dayString,
-    required this.mood,
-    required this.weather,
-    required this.containImage,
-    required this.content,
-    required this.image,
-    required this.title,
-    required this.id,
+    required this.diary,
   }) : super(key: key);
 
-  final String dayNumber;
-  final String dayString;
-  final String mood;
-  final String weather;
-  final bool containImage;
-  final String content;
-  final String image;
-  final String title;
-  final String id;
+  final Diary diary;
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +23,13 @@ class DiaryContainer extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
+        Provider
+          .of<DiaryProvider>(context, listen: false)
+          .setDiary(diary);
+
         Navigator.push(context, PageTransition(
           type: PageTransitionType.fade,
-          child: DiaryContentScreen(
-            diary: Diary.getSpecificDiary(id),
-          ),
+          child: DiaryContentScreen(),
         ));
       },
       child: Container(
@@ -59,23 +48,23 @@ class DiaryContainer extends StatelessWidget {
         child: Row(
           children: [
             DiaryLeftPart(
-              dayNumber: dayNumber,
-              dayString: dayString,
-              mood: mood,
-              weather: weather,
+              dayNumber: diary.dateTime.day.toString(),
+              dayString: DateFormat('E').format(diary.dateTime),
+              mood: diary.mood,
+              weather: diary.weather,
             ),
-            containImage
+            diary.picture != ""
                 ? SizedBox(width: size.width * 0.01)
                 : VerticalDivider(
                     thickness: 2,
                     width: size.width * 0.025,
                 ),
-            containImage
+            diary.picture != ""
                 ? ImageRightContainer(
-                    image: image,
+                    image: diary.picture,
                   )
                 : NoImageRightContainer(
-                    content: title,
+                    content: diary.title,
                   ),
           ],
         ),

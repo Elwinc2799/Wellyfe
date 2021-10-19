@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/ScheduleMenuIndividual.dart';
 
@@ -11,7 +10,6 @@ class ScheduleMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Task> weeklyTaskList = Provider.of<TaskProvider>(context).taskList;
     Size size = MediaQuery.of(context).size;
 
     return Column(

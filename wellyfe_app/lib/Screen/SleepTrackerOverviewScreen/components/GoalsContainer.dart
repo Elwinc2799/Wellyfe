@@ -8,8 +8,6 @@ class GoalsContainer extends StatefulWidget {
 }
 
 class _GoalsContainerState extends State<GoalsContainer> {
-  ValueNotifier<double> _value = ValueNotifier(2.0);
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

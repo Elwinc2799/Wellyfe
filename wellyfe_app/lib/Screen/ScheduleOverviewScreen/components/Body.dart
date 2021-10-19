@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/Background.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/MidLevelBar.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/components/ScheduleMenu.dart';

@@ -3,11 +3,11 @@ import 'dart:math';
 
 import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
-import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/SpecialistRecommendationContainerIndividual.dart';
+import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/TherapyCareIndividual.dart';
 import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/TherapyCarePsychiatristScreen.dart';
 
-class SpecialistRecommendationContainer extends StatelessWidget {
-  const SpecialistRecommendationContainer({
+class TherapyCareList extends StatelessWidget {
+  const TherapyCareList({
     Key? key,
   }) : super(key: key);
 
@@ -45,11 +45,11 @@ class SpecialistRecommendationContainer extends StatelessWidget {
               children: [
                 Positioned(
                   top: 100,
-                  left: -45,
+                  left: -55,
                   child: Transform.rotate(
                     angle: 270 * pi / 180,
                     child: Text(
-                      "Our Counsellors",
+                      "Recommendations",
                       style: TextStyle(
                         fontSize: 20,
                         fontFamily: "NunitoSans",
@@ -72,8 +72,7 @@ class SpecialistRecommendationContainer extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: List.generate(Doctor.doctorDataList.length, (index) {
-                              return SpecialistRecommendationContainerIndividual(
-                                doctor: Doctor.doctorDataList[index],
+                              return TherapyCareIndividual(
                                 function: () {
                                   Navigator.push(context, PageTransition(
                                     type: PageTransitionType.fade,

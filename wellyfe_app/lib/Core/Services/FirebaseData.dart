@@ -10,6 +10,7 @@ import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Core/Model/Sleep.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Core/Model/UserProfile.dart';
+import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/HomeMoodScreen/HomeMoodScreen.dart';
@@ -68,7 +69,7 @@ class FirebaseData {
   }
 
   static Future<void> getAllDiaryData(context) async {
-    Diary.diaryDataList = [];
+    List<Diary> diaryDataList = [];
 
     fireStoreInstance
         .collection("diaries")
@@ -80,7 +81,7 @@ class FirebaseData {
 
         Timestamp timestamp = result.data()["date"];
 
-        Diary.diaryDataList.add(
+        diaryDataList.add(
             Diary(
               result.id,
               result.data()["title"],
@@ -95,7 +96,11 @@ class FirebaseData {
 
       });
 
-      Diary.diaryDataList.sort((a, b) => a.dateTime.compareTo(b.dateTime));
+      diaryDataList.sort((a, b) => a.dateTime.compareTo(b.dateTime));
+
+      Provider
+        .of<DiaryProvider>(context, listen: false)
+        .setDiaryList(diaryDataList);
 
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wellyfe_app/Core/Model/Diary.dart';
+import 'package:provider/provider.dart';
+import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 import 'package:wellyfe_app/Screen/DiaryProfileScreen/components/DataTitle.dart';
 
 class DiariesFavourites extends StatelessWidget {
@@ -36,7 +37,7 @@ class DiariesFavourites extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             DataTitle(
-              data: Diary.diaryDataList.length.toString(),
+              data: Provider.of<DiaryProvider>(context).diaryList.length.toString(),
               title: "ALL DIARIES",
             ),
             Padding(
@@ -47,7 +48,7 @@ class DiariesFavourites extends StatelessWidget {
               ),
             ),
             DataTitle(
-              data: Diary.getFavourite().toString(),
+              data: Provider.of<DiaryProvider>(context).getFavourite().toString(),
               title: "FAVOURITES",
             ),
           ],

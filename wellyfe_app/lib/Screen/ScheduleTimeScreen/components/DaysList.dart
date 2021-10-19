@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/RadioModel.dart';
-import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
 import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/DaysRadioItem.dart';
-import 'package:wellyfe_app/Screen/ScheduleTimeScreen/components/TaskTimelineList.dart';
 
 
 class DaysList extends StatefulWidget {

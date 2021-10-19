@@ -9,9 +9,9 @@ class WordCount {
 
   static Map<String, int> wordCloud = SortedMap(Ordering.byValue());
 
-  static void getCloudText() {
+  static void getCloudText(List<Diary> diaryDataList) {
     wordCloud = SortedMap(Ordering.byValue());
-    Diary.diaryDataList.forEach((element) {
+    diaryDataList.forEach((element) {
       String word = "";
       for (var i = 0; i < element.content.length; i++) {
 

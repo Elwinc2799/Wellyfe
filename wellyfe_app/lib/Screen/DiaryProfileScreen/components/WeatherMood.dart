@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:wellyfe_app/Core/Model/Diary.dart';
+import 'package:provider/provider.dart';
+import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 
 class WeatherMood extends StatefulWidget {
   @override
@@ -12,8 +13,8 @@ class _WeatherMoodState extends State<WeatherMood> {
 
   @override
   Widget build(BuildContext context) {
-    var weatherMap = Diary.getWeatherOccurrence();
-    var moodMap = Diary.getMoodOccurrence();
+    var weatherMap = Provider.of<DiaryProvider>(context).getWeatherOccurrence();
+    var moodMap = Provider.of<DiaryProvider>(context).getMoodOccurrence();
 
     Size size = MediaQuery.of(context).size;
 
