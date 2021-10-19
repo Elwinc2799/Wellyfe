@@ -4,7 +4,6 @@ import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/ArticleC
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/SpecialistRecommendationContainer.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/Background.dart';
-import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/UpcomingEventsContainer.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -37,7 +36,7 @@ class Body extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 17.5),
               child: Text(
-                "Upcoming Events",
+                "Recent articles",
                 style: TextStyle(
                   fontSize: 25,
                   fontFamily: "NunitoSans",
@@ -47,22 +46,8 @@ class Body extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.035),
-            UpcomingEventsContainer(),
+            ArticleContainerList(),
             SizedBox(height: size.height * 0.035),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 17.5),
-              child: Text(
-                "Articles",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: "NunitoSans",
-                  color: Color(0XFF394D70),
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            SizedBox(height: size.height * 0.035),
-            ArticleContainerList()
 
 
 

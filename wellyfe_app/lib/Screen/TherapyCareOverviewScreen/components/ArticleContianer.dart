@@ -16,49 +16,56 @@ class ArticleContainer extends StatelessWidget {
         },
         child: Container(
           height: size.height * 0.275,
-          width: size.width * 0.425,
+          width: size.width * 0.45,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20.0)
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  width: size.width * 0.5 - 20,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: Image(
-                      image: AssetImage("assets/pictures/article1.jpg"),
-                      fit: BoxFit.contain,
-                    ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: size.width * 0.5,
+                height: size.height * 0.15,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20.0),
+                    topLeft: Radius.circular(20.0)
+                  ),
+                  child: Image(
+                    image: AssetImage("assets/pictures/article1.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
-                SizedBox(height: size.height * 0.025),
-                Text(
-                  "Young People’s Mental Health",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                   fontSize: 17.5,
-                   fontFamily: "NunitoSans",
-                   color: Color(0XFF394D70),
-                   fontWeight: FontWeight.w700,
-                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20.0, left: 10, right: 10.0),
+                child: Column(
+                  children: [
+                    Text(
+                      "Young People’s Mental Health",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                       fontSize: 17.5,
+                       fontFamily: "NunitoSans",
+                       color: Color(0XFF394D70),
+                       fontWeight: FontWeight.w700,
+                     ),
+                    ),
+                    Text(
+                      "by Nature Portfolio",
+                      style: TextStyle(
+                       fontSize: 15,
+                       fontFamily: "NunitoSans",
+                       color: Color(0XFF394D70).withOpacity(0.5),
+                       fontWeight: FontWeight.w700,
+                     ),
+                    )
+                  ],
                 ),
-                Text(
-                  "by Nature Portfolio",
-                  style: TextStyle(
-                   fontSize: 15,
-                   fontFamily: "NunitoSans",
-                   color: Color(0XFF394D70).withOpacity(0.5),
-                   fontWeight: FontWeight.w700,
-                 ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),
