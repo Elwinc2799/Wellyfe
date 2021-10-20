@@ -46,8 +46,8 @@ class _SignInFormState extends State<SignInForm> {
 
     if (authenticated) {
       isMoodRecorded();
-      _emailController.clear();
-      _passwordController.clear();
+      // _emailController.clear();
+      // _passwordController.clear();
     }
   }
 
@@ -55,17 +55,21 @@ class _SignInFormState extends State<SignInForm> {
     final SharedPreferences prefs = await _prefs;
 
     if (prefs.getString(lastOpenKey) == null) {
-      prefs.setString(lastOpenKey, DateTime.now().day.toString());
+      prefs.setString(lastOpenKey, DateTime.now().add(Duration(hours: 8)).day.toString());
       _isFirstOpen = true;
     }
 
+
     setState(() {
       _isFirstOpen = (prefs.getString(lastOpenKey))
-          != DateTime.now().day.toString();
+          != DateTime.now().add(Duration(hours: 8)).day.toString();
     });
 
+    print(_isFirstOpen);
+
+
     if (_isFirstOpen) {
-      prefs.setString(lastOpenKey, DateTime.now().day.toString());
+      prefs.setString(lastOpenKey, DateTime.now().add(Duration(hours: 8)).day.toString());
       Navigator.push(context, PageTransition(
         type: PageTransitionType.fade,
         child: DailyMoodScreen(),

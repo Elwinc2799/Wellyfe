@@ -27,20 +27,4 @@ class Diary {
   ];
 
   static String newImageUrl = "";
-
-
-
-  static int getDaysWithDiary(List<Diary> monthlyDiary) {
-    var map = Map();
-
-    monthlyDiary.forEach((element) {
-      if(!map.containsKey(element.dateTime.day)) {
-        map[element.dateTime.day] = 1;
-      } else {
-        map[element.dateTime.day] += 1;
-      }
-    });
-
-    return map.length;
-  }
 }

@@ -5,41 +5,57 @@ class UpcomingEventsContainerIndividual extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Padding(
-      padding: const EdgeInsets.only(right: 20.0),
+    return Container(
+      width: size.width,
       child: Stack(
-       children: [
-         Container(
-           height: size.height * 0.25,
-           width: size.width * 0.8,
-           child: ClipRRect(
-             borderRadius: BorderRadius.circular(20.0),
-             child: Image(
-               image: AssetImage("assets/pictures/poster.jpg"),
-               fit: BoxFit.fitWidth,
-             ),
-           ),
-         ),
-         Padding(
-           padding: const EdgeInsets.fromLTRB(15.0, 15.0, 0, 0.0),
-           child: Container(
-             width: size.width * 0.5,
-             child: Column(
-               children: [
-                 Text(
-                   "Take care of mental health during pandemic\n\nJoin us for the talk",
-                   style: TextStyle(
-                     fontSize: 20,
-                     fontFamily: "NunitoSans",
-                     color: Color(0XFF394D70),
-                     fontWeight: FontWeight.w700,
-                   ),
-                 ),
-               ],
-             ),
-           ),
-         )
-       ],
+        children: [
+          Container(
+            height: size.height * 0.3,
+            width: size.width,
+            child: Image(
+              image: AssetImage("assets/pictures/poster.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(15, 15, 0, 15),
+            child: Container(
+              width: size.width * 0.45,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Mental Health Day Talk",
+                     style: TextStyle(
+                      fontSize: 25,
+                      fontFamily: "NunitoSans",
+                      color: Color(0XFF394D70),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
+                    "Come and join us on FB Live!",
+                     style: TextStyle(
+                      fontSize: 17.5,
+                      fontFamily: "NunitoSans",
+                      color: Color(0XFF394D70),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
+                    "FB: Wellyfe Mental Health",
+                     style: TextStyle(
+                      fontSize: 17.5,
+                      fontFamily: "NunitoSans",
+                      color: Color(0XFF394D70),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

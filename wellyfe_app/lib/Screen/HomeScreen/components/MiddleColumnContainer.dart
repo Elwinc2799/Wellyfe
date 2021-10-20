@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Services/FirebaseData.dart';
+import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/FitnessManagementOverviewScreen/FitnessManagementOverviewScreen.dart';
 
 import 'package:wellyfe_app/Screen/HomeScreen/components/ImageHolder.dart';
@@ -48,7 +49,10 @@ class MiddleColumnContainer extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              FirebaseData.getAllDiaryData(context);
+             Navigator.push(context, PageTransition(
+                type: PageTransitionType.fade,
+                child: DiaryOverviewScreen(),
+              ));
             },
             child: Container(
               height: 112.5,

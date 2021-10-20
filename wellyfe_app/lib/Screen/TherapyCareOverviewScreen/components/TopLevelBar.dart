@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class TopLevelBar extends StatelessWidget {
   const TopLevelBar({
@@ -9,7 +8,7 @@ class TopLevelBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(17.5, 75.0, 17.5, 0),
+      padding: const EdgeInsets.fromLTRB(17.5, 25.0, 17.5, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

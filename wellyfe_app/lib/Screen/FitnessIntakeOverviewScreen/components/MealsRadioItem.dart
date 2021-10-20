@@ -20,7 +20,7 @@ class _MealsRadioItemState extends State<MealsRadioItem> {
     Size size = MediaQuery.of(context).size;
 
     return AnimatedContainer(
-      width: size.width * 0.35,
+      width: size.width * 0.3,
       height: size.height * 0.05,
       duration: const Duration(milliseconds: 300),
       curve: Curves.fastOutSlowIn,

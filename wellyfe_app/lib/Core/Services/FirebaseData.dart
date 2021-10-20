@@ -4,15 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Appointment.dart';
-import 'package:wellyfe_app/Core/Model/Diary.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
 import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Core/Model/Sleep.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
 import 'package:wellyfe_app/Core/Model/UserProfile.dart';
-import 'package:wellyfe_app/Core/Providers/DiaryProvider.dart';
 import 'package:wellyfe_app/Core/Providers/TaskProvider.dart';
-import 'package:wellyfe_app/Screen/DiaryOverviewScreen/DiaryOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/HomeMoodScreen/HomeMoodScreen.dart';
 import 'package:wellyfe_app/Screen/ScheduleOverviewScreen/ScheduleOverviewScreen.dart';
 import 'package:wellyfe_app/Screen/SleepTrackerOverviewScreen/SleepTrackerOverviewScreen.dart';
@@ -68,46 +65,6 @@ class FirebaseData {
       });
   }
 
-  static Future<void> getAllDiaryData(context) async {
-    List<Diary> diaryDataList = [];
-
-    fireStoreInstance
-        .collection("diaries")
-        .doc(firebaseUser!.uid)
-        .collection("diary")
-        .get()
-        .then((value) {
-      value.docs.forEach((result) {
-
-        Timestamp timestamp = result.data()["date"];
-
-        diaryDataList.add(
-            Diary(
-              result.id,
-              result.data()["title"],
-              result.data()["content"],
-              result.data()["mood"],
-              result.data()["weather"],
-              result.data()["image"],
-              result.data()["favourite"],
-              timestamp.toDate(),
-            )
-        );
-
-      });
-
-      diaryDataList.sort((a, b) => a.dateTime.compareTo(b.dateTime));
-
-      Provider
-        .of<DiaryProvider>(context, listen: false)
-        .setDiaryList(diaryDataList);
-
-      Navigator.push(context, PageTransition(
-        type: PageTransitionType.fade,
-        child: DiaryOverviewScreen(),
-      ));
-    });
-  }
 
   static Future<void> getAllFitnessData(context) async {
 

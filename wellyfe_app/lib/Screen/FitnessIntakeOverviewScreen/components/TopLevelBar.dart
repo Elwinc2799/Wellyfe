@@ -11,7 +11,7 @@ class TopLevelBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Calorie Plan",
+          "Ketogenic Diet",
           style: TextStyle(
             fontSize: 25,
             fontFamily: "NunitoSans",

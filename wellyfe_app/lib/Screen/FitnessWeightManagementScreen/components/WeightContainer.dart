@@ -36,7 +36,7 @@ class WeightContainer extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    "WEIGHT",
+                    "WEIGHT (Target)",
                     style: TextStyle(
                       fontSize: 17.5,
                       fontFamily: "NunitoSans",

@@ -16,11 +16,15 @@ class Mood {
   static String moodOfToday = "";
 
   static Color getMoodColor(String mood) {
-    if (mood == "awesome")
-      return Color(0XFFFFCF30);
-    else if (mood == "great")
-      return Color(0XFFB3CFFF);
-    else return Color(0XFF7CE1FF);
+    if (mood == "Awful")
+      return Color(0XFFD4B2D8);
+    else if (mood == "Sad")
+      return Color(0XFFFCBDE9);
+    else if (mood == "OK")
+      return Color(0XFFFFCDB2);
+    else if (mood == "Happy" || mood == "great")
+      return Color(0XFFF8ECBD);
+    else return Color(0XFFBCFBE4);
   }
 
   static List<Mood> getMonthList() {

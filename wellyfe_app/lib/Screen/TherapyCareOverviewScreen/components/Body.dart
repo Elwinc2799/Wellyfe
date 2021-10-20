@@ -4,6 +4,7 @@ import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/ArticleC
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/SpecialistRecommendationContainer.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/TopLevelBar.dart';
 import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/Background.dart';
+import 'package:wellyfe_app/Screen/TherapyCareOverviewScreen/components/UpcomingEventsContainer.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -16,6 +17,7 @@ class Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            UpcomingEventsContainer(),
             TopLevelBar(),
             SizedBox(height: size.height * 0.01),
             Padding(

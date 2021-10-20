@@ -15,10 +15,8 @@ class DiaryProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setMonthlyDiaryList(int month) {
-    _monthlyDiaryList = _diaryList.where(
-      (element) => (element.dateTime.month == month)
-    ).toList();
+  void setMonthlyDiaryList(List<Diary> monthlyDiaryList) {
+    _monthlyDiaryList = monthlyDiaryList;
 
     notifyListeners();
   }
