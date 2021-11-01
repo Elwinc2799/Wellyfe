@@ -33,19 +33,6 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
           "age": age,
           "gender": gender,
     });
-
-    // Provider.of<DiaryProvider>(context, listen: false).addNewDiary(
-    //     Diary(
-    //       documentReference.id,
-    //       title,
-    //       content,
-    //       mood,
-    //       weather,
-    //       Diary.newImageUrl,
-    //       favourite,
-    //       DateTime.now(),
-    //     )
-    // );
   }
 
   @override
