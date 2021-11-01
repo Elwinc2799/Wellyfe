@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/ExtroversionPersonalityScreen/ExtroversionPersonalityScreen.dart';
 import 'package:wellyfe_app/constants.dart';
 
 class NextButton extends StatelessWidget {
+
+  const NextButton({
+    Key? key,
+    required this.function,
+}) : super(key: key);
+
+  final VoidCallback function;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
     return GestureDetector(
-      onTap: () {
-        Navigator.push(context, PageTransition(
-          type: PageTransitionType.fade,
-          child: ExtroversionPersonalityScreen(),
-        ));
-      },
+      onTap: function,
       child: Container(
         height: size.height * 0.05,
         width: size.width * 0.25,

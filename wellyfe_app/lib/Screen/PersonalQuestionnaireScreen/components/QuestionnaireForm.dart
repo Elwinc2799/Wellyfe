@@ -1,7 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Screen/PersonalQuestionnaireScreen/components/NextButton.dart';
 import 'package:wellyfe_app/Screen/SignInScreen/components/TextFieldLabel.dart';
 import 'package:wellyfe_app/constants.dart';
+import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/ExtroversionPersonalityScreen/ExtroversionPersonalityScreen.dart';
 
 class QuestionnaireForm extends StatefulWidget {
   @override
@@ -12,6 +17,36 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
   final _nameController = TextEditingController();
   final _ageController = TextEditingController();
   String _genderValue = "Male";
+  var firebaseUser =  FirebaseAuth.instance.currentUser;
+  final firestoreInstance = FirebaseFirestore.instance;
+
+  Future<void> addNewUser(String name, String age, String gender) async {
+
+    firestoreInstance
+        .collection("users")
+        .doc(firebaseUser!.uid)
+        .collection("user")
+        .add({
+          "name": name,
+          "imageUrl": "None",
+          "personality": "None",
+          "age": age,
+          "gender": gender,
+    });
+
+    // Provider.of<DiaryProvider>(context, listen: false).addNewDiary(
+    //     Diary(
+    //       documentReference.id,
+    //       title,
+    //       content,
+    //       mood,
+    //       weather,
+    //       Diary.newImageUrl,
+    //       favourite,
+    //       DateTime.now(),
+    //     )
+    // );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +65,18 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
             TextFieldLabel(label: "Gender"),
             buildGenderFormField(),
             SizedBox(height: size.height * 0.075),
-            NextButton()
+            NextButton(
+              function: () {
+                addNewUser(
+                    _nameController.text,
+                    _ageController.text,
+                    _genderValue);
+                Navigator.push(context, PageTransition(
+                  type: PageTransitionType.fade,
+                  child: ExtroversionPersonalityScreen(),
+                ));
+                },
+            )
           ],
         ),
     );
