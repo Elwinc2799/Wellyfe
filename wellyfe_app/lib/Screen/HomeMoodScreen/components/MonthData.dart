@@ -22,10 +22,10 @@ class MonthData extends StatelessWidget {
 
     return Container(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            width: size.width * 0.25,
+            width: size.width * 0.3,
             child: Text(
               month,
               textAlign: TextAlign.right,
@@ -49,7 +49,6 @@ class MonthData extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-
                           for (var j = i; j < i + 10 && j < moodList.length; j++)
                             Row(
                               children: [

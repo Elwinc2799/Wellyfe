@@ -41,7 +41,7 @@ class Body extends StatelessWidget {
                           return Column(
                             children: [
                               MonthData(
-                                month: DateFormat('MMMM').format(uniqueMonth[index].date),
+                                month: DateFormat('yMMM').format(uniqueMonth[index].date),
                                 moodList: Mood.getMonthlyMoodList(uniqueMonth[index].date.month),
                               ),
                               SizedBox(height: size.height * 0.025),

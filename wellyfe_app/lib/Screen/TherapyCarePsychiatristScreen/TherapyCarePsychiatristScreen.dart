@@ -4,10 +4,12 @@ import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/Body
 
 class TherapyCarePsychiatristScreen extends StatelessWidget {
   final String doctorID;
+  final String imageUrl;
 
   const TherapyCarePsychiatristScreen({
     Key? key,
-    required this.doctorID
+    required this.doctorID,
+    required this.imageUrl,
   }) : super(key: key);
 
   @override
@@ -15,6 +17,7 @@ class TherapyCarePsychiatristScreen extends StatelessWidget {
     return Scaffold(
       body: Body(
         doctor: Doctor.getDoctor(doctorID),
+        imageUrl: imageUrl,
       ),
     );
   }

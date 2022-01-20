@@ -10,10 +10,12 @@ import 'package:wellyfe_app/Screen/TherapyCarePsychiatristScreen/components/Back
 
 class Body extends StatefulWidget {
   final Doctor doctor;
+  final String imageUrl;
 
   const Body({
     Key? key,
-    required this.doctor
+    required this.doctor,
+    required this.imageUrl,
   }) : super(key: key);
 
   @override
@@ -46,9 +48,9 @@ class _BodyState extends State<Body> {
                     Positioned(
                       top: 0,
                       child: Image(
-                        image: AssetImage("assets/pictures/doctor1.png"),
+                        image: AssetImage(widget.imageUrl),
                         height: size.height * 0.35,
-                        width: size.width * 0.85,
+                        width: size.width * 0.80,
                       ),
                     ),
                     DoctorLowContainer(

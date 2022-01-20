@@ -78,6 +78,7 @@ class TherapyCareList extends StatelessWidget {
                                     type: PageTransitionType.fade,
                                     child: TherapyCarePsychiatristScreen(
                                       doctorID: Doctor.doctorDataList[index].doctorID,
+                                      imageUrl: "assets/pictures/doctor" + (index + 1).toString() + ".png"
                                     ),
                                   ));
                                 },

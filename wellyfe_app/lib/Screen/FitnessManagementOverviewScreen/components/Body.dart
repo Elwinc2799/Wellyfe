@@ -54,9 +54,9 @@ class Body extends StatelessWidget {
                   firstUnit: "kcal",
                   firstPercentage: 0.6,
                   firstColor: Color(0XFFC9DFEE),
-                  secondData: "5239",
+                  secondData: "0",
                   secondUnit: "steps",
-                  secondPercentage: 1,
+                  secondPercentage: 0.05,
                   secondColor: Color(0XFF68F8D6),
                   function: () {
                     Navigator.push(context, PageTransition(

@@ -6,10 +6,12 @@ class SpecialistRecommendationContainerIndividual extends StatelessWidget {
     Key? key,
     required this.doctor,
     required this.function,
+    required this.imageUrl,
   }) : super(key: key);
 
   final Doctor doctor;
   final VoidCallback function;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +43,11 @@ class SpecialistRecommendationContainerIndividual extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                right: -145,
-                top: 10,
+                right: -100,
+                top: 20,
                 child: Container(
                     width: size.width * 0.8,
-                    child: Image(image: AssetImage("assets/pictures/doctor1.png"), width: 225, height: 225,)
+                    child: Image(image: AssetImage(imageUrl), width: 125, height: 125,)
                 ),
               ),
               Padding(

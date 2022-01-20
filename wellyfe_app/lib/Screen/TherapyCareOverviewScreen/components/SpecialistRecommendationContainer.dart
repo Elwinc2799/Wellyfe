@@ -11,9 +11,11 @@ class SpecialistRecommendationContainer extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    String imageUrl = "assets/pictures/doctor";
 
     return Container(
       width: size.width,
@@ -74,11 +76,13 @@ class SpecialistRecommendationContainer extends StatelessWidget {
                             children: List.generate(Doctor.doctorDataList.length, (index) {
                               return SpecialistRecommendationContainerIndividual(
                                 doctor: Doctor.doctorDataList[index],
+                                imageUrl: imageUrl + (index+1).toString() + ".png",
                                 function: () {
                                   Navigator.push(context, PageTransition(
                                     type: PageTransitionType.fade,
                                     child: TherapyCarePsychiatristScreen(
                                       doctorID: Doctor.doctorDataList[index].doctorID,
+                                      imageUrl: imageUrl + (index+1).toString() + ".png",
                                     ),
                                   ));
                                 },
