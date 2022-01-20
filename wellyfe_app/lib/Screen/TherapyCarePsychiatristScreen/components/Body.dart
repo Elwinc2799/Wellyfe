@@ -77,7 +77,7 @@ class _BodyState extends State<Body> {
     return DatePicker(
       DateTime.now(),
       width: size.width * 0.15,
-      height: size.height * 0.1,
+      height: size.height * 0.105,
       controller: controller,
       initialSelectedDate: DateTime.now(),
       selectionColor: Colors.black,

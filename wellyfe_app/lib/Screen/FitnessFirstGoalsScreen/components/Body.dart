@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
     
     return Background(
       children: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 70.0),
+        padding: const EdgeInsets.only(left: 25.0, right: 25.0, top: 70.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

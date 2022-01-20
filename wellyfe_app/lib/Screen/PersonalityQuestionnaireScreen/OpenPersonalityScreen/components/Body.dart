@@ -1,9 +1,14 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Model/Questionnaire.dart';
 import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
 import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/QuestionnaireButton.dart';
 import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/SelectionButton.dart';
+import 'dart:math';
+
+import 'package:wellyfe_app/Screen/SignInScreen/SignInScreen.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -11,6 +16,33 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  var firebaseUser =  FirebaseAuth.instance.currentUser;
+  final firestoreInstance = FirebaseFirestore.instance;
+
+  Future<void> submitPersonality() async {
+      var rng = new Random();
+      List<String> personalityList = ["extroversion", "neuroticism", "agreeable", "conscientious", "open minded"];
+      String res = personalityList[rng.nextInt(5)];
+
+      firestoreInstance
+          .collection("users")
+          .doc(firebaseUser!.uid)
+          .update({
+        "personality": res,
+      });
+
+
+    Navigator.pushAndRemoveUntil(
+        context,
+        PageTransition(
+          type: PageTransitionType.fade,
+          child: SignInScreen(),
+        ),
+        ModalRoute.withName('/')
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -66,16 +98,7 @@ class _BodyState extends State<Body> {
                     ),
                     QuestionnaireButton(
                       title: "Done",
-                      function: () {
-                        Navigator.pushAndRemoveUntil(
-                            context,
-                            PageTransition(
-                              type: PageTransitionType.fade,
-                              child: DailyMoodScreen(),
-                            ),
-                            ModalRoute.withName('/')
-                        );
-                      },
+                      function: (){submitPersonality();},
                     )
                   ],
                 ),

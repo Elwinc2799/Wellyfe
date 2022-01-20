@@ -25,8 +25,7 @@ class _QuestionnaireFormState extends State<QuestionnaireForm> {
     firestoreInstance
         .collection("users")
         .doc(firebaseUser!.uid)
-        .collection("user")
-        .add({
+        .set({
           "name": name,
           "imageUrl": "None",
           "personality": "None",

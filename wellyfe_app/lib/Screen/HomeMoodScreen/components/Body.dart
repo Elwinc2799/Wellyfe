@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                DateFormat('y').format(DateTime.now()),
+                "My Mood",
                 style: TextStyle(
                   fontSize: 25,
                   fontFamily: "Montserrat",

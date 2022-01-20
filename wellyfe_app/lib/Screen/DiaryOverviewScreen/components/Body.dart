@@ -61,7 +61,7 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                DateFormat('y').format(DateTime.now()),
+                "My Diary",
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: "Montserrat",

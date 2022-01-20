@@ -48,7 +48,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
   Container buildWeightGoalContainer(Size size) {
     return Container(
       width: size.height * 0.5,
-      height: size.width * 0.4575,
+      height: size.width * 0.48,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
         color: Color(0XFFF4F9FF),
@@ -95,7 +95,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
               },
             ),
             Container(
-              height: 110,
+              height: 112,
               child: HorizontalPicker(
                 minValue: 45,
                 maxValue: 90,
@@ -119,7 +119,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
   Container buildDaysGoalContainer(Size size) {
     return Container(
       width: size.height * 0.5,
-      height: size.width * 0.4575,
+      height: size.width * 0.48,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           color: Color(0XFFF4F9FF),
@@ -165,7 +165,7 @@ class _FitnessInputFormState extends State<FitnessInputForm> {
               },
             ),
             Container(
-              height: 110,
+              height: 112,
               alignment: Alignment.center,
               child: HorizontalPicker(
                 minValue: 1,

@@ -63,6 +63,8 @@ dependencies:
   firebase_storage: ^10.0.5
   responsive_framework: ^0.1.4
   flare_flutter: ^3.0.2
+  pedometer: ^3.0.0
+  permission_handler: ^8.2.5
 
 dev_dependencies:
   flutter_test:

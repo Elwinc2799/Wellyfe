@@ -39,7 +39,7 @@ class _SignInFormState extends State<SignInForm> {
         showNotification("Wrong password.\nPlease try again.");
       } else if (e.code == 'invalid-email') {
         showNotification("Please enter a valid email.");
-      }
+      } else showNotification("No internet connection");
 
       authenticated = false;
     }

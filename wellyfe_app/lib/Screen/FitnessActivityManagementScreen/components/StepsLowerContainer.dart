@@ -1,10 +1,80 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:intl/intl.dart';
+import 'package:pedometer/pedometer.dart';
 
-class StepsLowerContainer extends StatelessWidget {
+class StepsLowerContainer extends StatefulWidget {
   const StepsLowerContainer({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<StepsLowerContainer> createState() => _StepsLowerContainerState();
+}
+
+class _StepsLowerContainerState extends State<StepsLowerContainer> {
+  late Stream<StepCount> _stepCountStream;
+  late Stream<PedestrianStatus> _pedestrianStatusStream;
+  String _status = '?', _steps = '?';
+
+  ToastFuture showNotification(String content) {
+    return showToast(
+      content,
+      context: context,
+      animation: StyledToastAnimation.fade,
+      reverseAnimation: StyledToastAnimation.fade,
+      duration: Duration(seconds: 3),
+      position: StyledToastPosition.center,
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initPlatformState();
+  }
+
+  void onStepCount(StepCount event) {
+    print(event);
+    setState(() {
+      _steps = event.steps.toString();
+    });
+  }
+
+  void onPedestrianStatusChanged(PedestrianStatus event) {
+    print(event);
+    setState(() {
+      _status = event.status;
+    });
+  }
+
+  void onPedestrianStatusError(error) {
+    print('onPedestrianStatusError: $error');
+    setState(() {
+      _status = 'Pedestrian Status not available';
+    });
+    showNotification(_status);
+  }
+
+  void onStepCountError(error) {
+    print('onStepCountError: $error');
+    setState(() {
+      _steps = '0';
+    });
+    showNotification('Step count not available');
+  }
+
+  void initPlatformState() {
+    _pedestrianStatusStream = Pedometer.pedestrianStatusStream;
+    _pedestrianStatusStream
+        .listen(onPedestrianStatusChanged)
+        .onError(onPedestrianStatusError);
+
+    _stepCountStream = Pedometer.stepCountStream;
+    _stepCountStream.listen(onStepCount).onError(onStepCountError);
+
+    if (!mounted) return;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +139,7 @@ class StepsLowerContainer extends StatelessWidget {
                 text: TextSpan(
                     children: [
                       TextSpan(
-                        text: "4219",
+                        text: _steps,
                         style: TextStyle(
                           fontSize: 30,
                           fontFamily: "NunitoSans",

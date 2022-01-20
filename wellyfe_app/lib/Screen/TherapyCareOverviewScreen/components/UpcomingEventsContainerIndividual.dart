@@ -13,7 +13,7 @@ class UpcomingEventsContainerIndividual extends StatelessWidget {
             height: size.height * 0.3,
             width: size.width,
             child: Image(
-              image: AssetImage("assets/pictures/poster.jpg"),
+              image: AssetImage("assets/pictures/poster.png"),
               fit: BoxFit.cover,
             ),
           ),
