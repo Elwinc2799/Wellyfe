@@ -1,25 +1,31 @@
 class Food {
+  final String foodID;
   final String foodName;
-  final List<String> foodIngredients;
+  final List<dynamic> foodIngredients;
   final String foodCategory;
   final String foodImageUrl;
-  final int calories;
-  final int preparationTime;
-  final double fat;
-  final double protein;
-  final double carb;
+  final num calories;
+  final num fat;
+  final num protein;
+  final num carbs;
 
   Food(
+    this.foodID,
     this.foodName,
     this.foodIngredients,
     this.foodCategory,
     this.foodImageUrl,
     this.calories,
-    this.preparationTime,
     this.fat,
     this.protein,
-    this.carb
+    this.carbs
   );
 
+  static List<Food> foodDataList = [];
 
+  static List<Food> mealsCategoryList(String meals) {
+    return foodDataList.where(
+            (element) => (element.foodCategory == (meals))
+    ).toList();
+  }
 }

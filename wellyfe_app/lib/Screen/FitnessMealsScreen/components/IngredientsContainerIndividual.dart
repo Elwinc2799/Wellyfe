@@ -5,12 +5,10 @@ class IngredientsContainerIndividual extends StatelessWidget {
     Key? key,
     required this.image,
     required this.ingredients,
-    required this.grams,
   }) : super(key: key);
 
   final String image;
   final String ingredients;
-  final String grams;
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +33,7 @@ class IngredientsContainerIndividual extends StatelessWidget {
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20.0),
-                          child: Image(
-                            image: AssetImage(image),
-                            fit: BoxFit.cover,
-                          ),
+                          child: Image.network(image, fit: BoxFit.contain),
                         )
                     ),
                   ),
@@ -53,15 +48,15 @@ class IngredientsContainerIndividual extends StatelessWidget {
                   )
                 ],
               ),
-              Text(
-                "$grams gram",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: "NunitoSans",
-                  color: Color(0XFF394D70),
-                  fontWeight: FontWeight.w800,
-                ),
-              )
+              // Text(
+              //   "$grams gram",
+              //   style: TextStyle(
+              //     fontSize: 20,
+              //     fontFamily: "NunitoSans",
+              //     color: Color(0XFF394D70),
+              //     fontWeight: FontWeight.w800,
+              //   ),
+              // )
             ],
           ),
         ),

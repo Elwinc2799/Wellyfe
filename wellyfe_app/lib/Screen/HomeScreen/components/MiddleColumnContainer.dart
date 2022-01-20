@@ -78,6 +78,8 @@ class MiddleColumnContainer extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
+              FirebaseData.getAllMealsData();
+              FirebaseData.getAllIngredients();
               Navigator.push(context, PageTransition(
                 type: PageTransitionType.fade,
                 child: FitnessManagementOverviewScreen(),

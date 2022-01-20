@@ -1,9 +1,19 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wellyfe_app/Core/Model/Food.dart';
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/CategoryData.dart';
 
 class DietContainer extends StatelessWidget {
+
+  const DietContainer({
+    Key? key,
+    required this.mealsList,
+  }) : super(key: key);
+
+  final List<Food> mealsList;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -13,7 +23,15 @@ class DietContainer extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: size.height * 0.04),
+          Text(
+            mealsList[1].foodName,
+            style: TextStyle(
+              fontSize: 22.5,
+              fontFamily: "NunitoSans",
+              color: Colors.black.withOpacity(0.75),
+              fontWeight: FontWeight.w700,
+            ),
+          ),
           Row(
             children: [
               Image(
@@ -22,7 +40,7 @@ class DietContainer extends StatelessWidget {
                 width: size.width * 0.06
               ),
               Text(
-                "1500" + " kcal",
+                mealsList[1].calories.toString() + " kcal",
                 style: TextStyle(
                   fontSize: 22.5,
                   fontFamily: "NunitoSans",
@@ -32,32 +50,65 @@ class DietContainer extends StatelessWidget {
               ),
             ],
           ),
-          CategoryData(
-            category: "Carb",
-            data: "100",
+
+          Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CategoryData(
+                    category: "Carb",
+                    data: mealsList[1].carbs.toString(),
+                  ),
+                  CategoryData(
+                    category: "Protein",
+                    data: mealsList[1].protein.toString(),
+                  ),
+                  CategoryData(
+                    category: "Fat",
+                    data: mealsList[1].fat.toString(),
+                  ),
+                ],
+              ),
+              SizedBox(width: size.width * 0.03),
+              Container(
+                  height: size.height * 0.25,
+                  width: size.width * 0.6,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(
+                      Radius.circular(20.0)
+                  ),
+                  child: Image.network(mealsList[1].foodImageUrl,fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
+            ],
           ),
-          CategoryData(
-            category: "Protein",
-            data: "100",
-          ),
-          CategoryData(
-            category: "Fat",
-            data: "100",
-          )
+
+
         ],
       ),
     );
   }
 
   // Transform.rotate(
-        //   angle: pi,
-        //   child: Container(
-        //     height: 200,
-        //     width: 160,
-        //     child: Image(
-        //       image: AssetImage("assets/pictures/breakfast.png"),
-        //       fit: BoxFit.cover,
-        //     ),
-        //   ),
-        // ),
+  //         angle: pi,
+  //         child: Container(
+  //           height: 200,
+  //           width: 160,
+  //           child: Image(
+  //             image: AssetImage("assets/pictures/breakfast.png"),
+  //             fit: BoxFit.cover,
+  //           ),
+  //         ),
+  //       ),
+
+  // ClipRRect(
+  // borderRadius: BorderRadius.all(
+  // Radius.circular(20.0)
+  // ),
+  // child: Image.network(mealsList[index].foodImageUrl,fit: BoxFit.fitHeight,
+  // ),
+  // ),
 }

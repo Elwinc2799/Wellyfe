@@ -8,6 +8,9 @@ import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/MealsC
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/MealsRadioClass.dart';
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/MealsRadioItem.dart';
 import 'package:wellyfe_app/Screen/FitnessIntakeOverviewScreen/components/TopLevelBar.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:wellyfe_app/Core/Model/Food.dart';
 
 
 class Body extends StatefulWidget {
@@ -16,6 +19,9 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  var firebaseUser =  FirebaseAuth.instance.currentUser;
+  final firestoreInstance = FirebaseFirestore.instance;
+
   Future<bool> _onWillPop() async {
     return true;
   }
@@ -30,12 +36,12 @@ class _BodyState extends State<Body> {
     mealsTypeList.add(new MealsRadioClass("Dinner", false));
   }
 
-  String _selected = "Breakfast";
-
-
+  String _selected = "breakfast";
 
   @override
   Widget build(BuildContext context) {
+    List<Food> mealsList = Food.mealsCategoryList(_selected.toLowerCase());
+
     Size size = MediaQuery.of(context).size;
 
     return WillPopScope(
@@ -47,7 +53,7 @@ class _BodyState extends State<Body> {
               padding: const EdgeInsets.fromLTRB(40.0, 75.0, 40.0, 20.0),
               child: TopLevelBar(),
             ),
-            DietContainer(),
+            DietContainer(mealsList: mealsList),
             SizedBox(height: size.height * 0.075),
             buildLeftSideBar(),
             SizedBox(height: size.height * 0.025),
@@ -63,6 +69,7 @@ class _BodyState extends State<Body> {
             SizedBox(height: size.height * 0.01),
             MealsContainer(
               category: _selected,
+              mealsList: mealsList,
             )
           ],
         ),
@@ -80,6 +87,7 @@ class _BodyState extends State<Body> {
               mealsTypeList.forEach((element) => element.isSelected = false);
               mealsTypeList[index].isSelected = true;
               _selected = mealsTypeList[index].text;
+              _selected = _selected.toLowerCase();
             });
           },
           child: MealsRadioItem(item: mealsTypeList[index]),

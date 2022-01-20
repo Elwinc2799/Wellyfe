@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wellyfe_app/Core/Model/Food.dart';
+import 'package:wellyfe_app/Core/Services/FirebaseData.dart';
 import 'package:wellyfe_app/Screen/FitnessMealsScreen/FitnessMealsScreen.dart';
 
 class MealsContainer extends StatelessWidget {
 
   const MealsContainer({
     Key? key,
-    required this.category
+    required this.category,
+    required this.mealsList,
   }) : super(key: key);
 
 
   final String category;
+  final List<Food> mealsList;
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +29,17 @@ class MealsContainer extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           child: Row(
-            children: List.generate(3, (index) =>
+            children: List.generate(mealsList.length, (index) =>
                 Padding(
                   padding: const EdgeInsets.only(right: 20.0),
                   child: GestureDetector(
-                    onTap: () => Navigator.push(context, PageTransition(
+
+                    onTap: () {
+                      Navigator.push(context, PageTransition(
                       type: PageTransitionType.fade,
-                      child: FitnessMealsScreen(),
-                    )),
+                      child: FitnessMealsScreen(mealsList: mealsList[index]),
+                    ));
+                    },
                     child: Container(
                       height: size.height * 0.2,
                       width: size.width * 0.25,
@@ -52,8 +59,7 @@ class MealsContainer extends StatelessWidget {
                         borderRadius: BorderRadius.all(
                             Radius.circular(20.0)
                         ),
-                        child: Image(
-                            image: AssetImage("assets/pictures/${category.toLowerCase()}1.jpg"), fit: BoxFit.fitHeight,
+                        child: Image.network(mealsList[index].foodImageUrl,fit: BoxFit.fitHeight,
                         ),
                       ),
                     ),

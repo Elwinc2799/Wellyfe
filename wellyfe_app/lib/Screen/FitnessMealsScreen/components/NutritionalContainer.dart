@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:wellyfe_app/Screen/FitnessMealsScreen/components/NutrionalContainerIndividual.dart';
+import 'package:wellyfe_app/Core/Model/Food.dart';
 
 class NutritionalContainer extends StatelessWidget {
+
+  const NutritionalContainer({
+    Key? key,
+    required this.mealsList,
+  }) : super(key: key);
+
+  final Food mealsList;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -13,19 +22,19 @@ class NutritionalContainer extends StatelessWidget {
         children: [
           NutritionalContainerIndividual(
             category: "Calories",
-            nutritional: "432 kcal",
+            nutritional: mealsList.calories.toString()+" kcal",
           ),
           NutritionalContainerIndividual(
             category: "Carbs",
-            nutritional: "26 g",
+            nutritional: mealsList.carbs.toString()+" g",
           ),
           NutritionalContainerIndividual(
             category: "Protein",
-            nutritional: "5 g",
+            nutritional: mealsList.protein.toString()+" g",
           ),
           NutritionalContainerIndividual(
             category: "Fat",
-            nutritional: "6.7 g",
+            nutritional: mealsList.fat.toString()+" g",
           )
         ],
       ),

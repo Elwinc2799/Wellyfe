@@ -5,6 +5,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:wellyfe_app/Core/Model/Appointment.dart';
 import 'package:wellyfe_app/Core/Model/Doctor.dart';
+import 'package:wellyfe_app/Core/Model/Food.dart';
+import 'package:wellyfe_app/Core/Model/Ingredients.dart';
 import 'package:wellyfe_app/Core/Model/Mood.dart';
 import 'package:wellyfe_app/Core/Model/Sleep.dart';
 import 'package:wellyfe_app/Core/Model/Task.dart';
@@ -145,6 +147,52 @@ class FirebaseData {
               result.data()["patientsHelped"],
               result.data()["ratings"],
               result.data()["biography"],
+            )
+        );
+      });
+    }
+    );
+  }
+
+  static Future<void> getAllMealsData() async {
+    Food.foodDataList = [];
+
+    fireStoreInstance
+        .collection("meals")
+        .get()
+        .then((querySnapshot) {
+      querySnapshot.docs.forEach((result) {
+        Food.foodDataList.add(
+            Food(
+              result.id,
+              result.data()["name"],
+              result.data()["ingredients"],
+              result.data()["type"],
+              result.data()["image"],
+                result.data()["calories"],
+                result.data()["fat"],
+                result.data()["protein"],
+                result.data()["carbs"]
+            )
+        );
+      });
+    }
+    );
+  }
+
+  static Future<void> getAllIngredients() async {
+    Ingredients.ingredientsList = [];
+
+    fireStoreInstance
+        .collection("ingredients")
+        .get()
+        .then((querySnapshot) {
+      querySnapshot.docs.forEach((result) {
+        Ingredients.ingredientsList.add(
+            Ingredients(
+                result.id,
+                result.data()["name"],
+                result.data()["image"],
             )
         );
       });

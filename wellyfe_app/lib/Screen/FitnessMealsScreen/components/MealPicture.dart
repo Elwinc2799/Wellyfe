@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class MealPicture extends StatelessWidget {
   const MealPicture({
     Key? key,
-    required this.image,
+    required this.foodImageUrl,
   }) : super(key: key);
 
-  final String image;
+  final String foodImageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,7 @@ class MealPicture extends StatelessWidget {
       child: Container(
         height: size.height * 0.25,
         width: size.width * 0.65,
-        child: Image(
-          image: AssetImage(image),
-          fit: BoxFit.cover,
-        ),
+        child: Image.network(foodImageUrl,fit: BoxFit.fitHeight),
       ),
     );
   }
