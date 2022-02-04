@@ -47,10 +47,6 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pages = [
-      DiaryProfileScreen(),
-      DiaryWordCloudScreen(),
-    ];
 
     Size size = MediaQuery.of(context).size;
 
@@ -118,9 +114,7 @@ class Body extends StatelessWidget {
                 function: () {
                   Navigator.push(context, PageTransition(
                     type: PageTransitionType.fade,
-                    child: Builder(
-                      builder: (context) => LiquidSwipe(pages: pages)
-                    ),
+                    child: DiaryProfileScreen(),
                   ));
                 },
                 title: "View My Profile",

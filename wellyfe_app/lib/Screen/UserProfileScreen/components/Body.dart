@@ -24,6 +24,7 @@ class _BodyState extends State<Body> {
   final ImagePicker _picker = ImagePicker();
   final fireStoreInstance = FirebaseFirestore.instance;
   var firebaseUser =  FirebaseAuth.instance.currentUser;
+  String mood = Mood.moodOfToday==""? "happy":Mood.moodOfToday;
 
   Future pickImage() async {
     try {
@@ -153,7 +154,7 @@ class _BodyState extends State<Body> {
                     ),
                     SizedBox(height: size.height * 0.025),
                     TextNavigation(
-                      text: "You're feeling ${Mood.moodOfToday} today.",
+                      text: "You're feeling ${mood} today.",
                       navigationTitle: "Recommendation",
                       function: () {},
                     ),

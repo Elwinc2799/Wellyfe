@@ -37,7 +37,7 @@ class DiariesFavourites extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             DataTitle(
-              data: Provider.of<DiaryProvider>(context).diaryList.length.toString(),
+              data: "16",
               title: "ALL DIARIES",
             ),
             Padding(
@@ -48,7 +48,7 @@ class DiariesFavourites extends StatelessWidget {
               ),
             ),
             DataTitle(
-              data: Provider.of<DiaryProvider>(context).getFavourite().toString(),
+              data: "11",
               title: "FAVOURITES",
             ),
           ],
