@@ -7,6 +7,7 @@ import 'package:wellyfe_app/Screen/DailyMoodScreen/DailyMoodScreen.dart';
 import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/QuestionnaireButton.dart';
 import 'package:wellyfe_app/Screen/PersonalityQuestionnaireScreen/OpenPersonalityScreen/components/SelectionButton.dart';
 import 'dart:math';
+import 'package:tflite/tflite.dart';
 
 import 'package:wellyfe_app/Screen/SignInScreen/SignInScreen.dart';
 
@@ -18,9 +19,12 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   var firebaseUser =  FirebaseAuth.instance.currentUser;
   final firestoreInstance = FirebaseFirestore.instance;
+  bool loading = true;
+  var response = " ";
 
   Future<void> submitPersonality() async {
       var rng = new Random();
+      // pickPersonality();
       List<String> personalityList = ["extroversion", "neuroticism", "agreeable", "conscientious", "open minded"];
       String res = personalityList[rng.nextInt(5)];
 
@@ -42,6 +46,43 @@ class _BodyState extends State<Body> {
     );
   }
 
+  void runModel(){
+    super.initState();
+
+    loadModel().then((value) {
+      setState(() {
+        loading = false;
+      });
+    });
+  }
+
+  loadModel() async {
+    await Tflite.loadModel(
+      model: "assets/model.tflite",
+    );
+  }
+
+  pickPersonality() async {
+    loading = false;
+    var responses = '';
+    if (responses == null) return null;
+    setState(() {
+      loading = true;
+      //Declare File _image in the class which is used to display the image on the screen.
+      response = responses;
+    });
+    classifyPersonality(response);
+  }
+
+  classifyPersonality(var response) async {
+    var output = await Tflite.runModelOnImage(
+      path: response,
+      numResults: 2,
+    );
+    setState(() {
+      loading = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
