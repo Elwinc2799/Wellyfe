@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppointmentButton extends StatelessWidget {
   const AppointmentButton({
@@ -10,7 +11,10 @@ class AppointmentButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () async {
+        String url = 'https://wa.me/601139022271';
+        await launch(url);
+        },
       child: Container(
         height: size.height * 0.05,
         width: size.width * 0.525,

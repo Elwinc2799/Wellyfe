@@ -1,7 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:wellyfe_app/Core/Services/FirebaseDiary.dart';
 import 'package:wellyfe_app/Screen/DiaryAddNewEntryScreen/DiaryAddNewEntryScreen.dart';

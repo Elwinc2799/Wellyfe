@@ -12,7 +12,7 @@ class ArticleContainer extends StatelessWidget {
         onTap: () async {
           String url = 'https://www.nature.com/articles/d41586-021-02690-5';
 
-          await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
+          await launch(url);
         },
         child: Container(
           height: size.height * 0.275,

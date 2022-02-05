@@ -50,7 +50,7 @@ class Body extends StatelessWidget {
                 FitnessOverviewIndividual(
                   title: "Burnt",
                   image: "assets/logo/flame.png",
-                  firstData: "1928",
+                  firstData: "1429",
                   firstUnit: "kcal",
                   firstPercentage: 0.6,
                   firstColor: Color(0XFFC9DFEE),

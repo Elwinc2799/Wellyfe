@@ -44,11 +44,15 @@ class _SignInFormState extends State<SignInForm> {
       authenticated = false;
     }
 
-    if (authenticated) {
-      isMoodRecorded();
-      // _emailController.clear();
-      // _passwordController.clear();
-    }
+    // if (authenticated) {
+    //   isMoodRecorded();
+    //   // _emailController.clear();
+    //   // _passwordController.clear();
+    // }
+    Navigator.push(context, PageTransition(
+      type: PageTransitionType.fade,
+      child: DailyMoodScreen(),
+    ));
   }
 
   void isMoodRecorded() async {
